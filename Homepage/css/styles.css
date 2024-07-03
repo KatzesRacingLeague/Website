@@ -1,33 +1,89 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: rgb(20, 20, 20);
-    color: turquoise;
-  }
-  
-  .navbar-brand {
-    font-weight: bold;
-    font-style: italic;
-    font-size: 50px;
-  }
-  
-  .nav-item .nav-link {
-    color: #007bff;
-  }
-  
-  .nav-item .nav-link:hover {
-    color: #0056b3;
-  }
-  
-  .footer {
-    padding: 10px 0;
-    text-align: center;
-  }
-  
-  h1 {
-    margin-top: 20px;
-  }
+  font-family: Arial, sans-serif;
+  background-color: rgb(20, 20, 20);
+  color: white;
+}
 
-  nav {
-    text-align: end;
-  }
-  
+.navbar-brand {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 50px;
+}
+
+.nav-item .nav-link {
+  color: #007bff;
+}
+
+.nav-item .nav-link:hover {
+  color: #0056b3;
+}
+
+.footer {
+  padding: 10px 0;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+nav {
+  text-align: end;
+}
+
+/* Teams */
+.drivers {
+  /* padding: 15px; */
+  justify-content: end;
+  text-align: right;
+}
+
+.redbull {
+  margin: 15px;
+  background-color: #000285;
+}
+
+.mercedes {
+  margin: 15px;
+  background-color: #00ffff;
+}
+
+.ferrari {
+  margin: 15px;
+  background-color: #ff0000;
+}
+
+.mclaren {
+  margin: 15px;
+  background-color: #f7981d;
+}
+
+.astonmartin {
+  margin: 15px;
+  background-color: #00ffb3;
+}
+
+.alpine {
+  margin: 15px;
+  background-color: #ff62bd;
+}
+
+.williams {
+  margin: 15px;
+  background-color: #2b53d6;
+}
+
+.vcarb {
+  margin: 15px;
+  background-color: #0000ff;
+}
+
+.sauber {
+  margin: 15px;
+  background-color: #00ff00;
+}
+
+.haas {
+  margin: 15px;
+  background-color: #ffffff;
+}
