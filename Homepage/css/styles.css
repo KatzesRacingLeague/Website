@@ -1,89 +1,490 @@
+/* General */
+@font-face {
+  font-family: "UniversLTStd";
+  src: url("../resources/fonts/UniversLTStd.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "UniversLTStdLight";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../resources/fonts/UniversLTStd-Light.woff") format("woff");
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: rgb(20, 20, 20);
+  font-family: "UniversLTStd", Arial, sans-serif;
+  background-color: #050e0e;
   color: white;
+  overflow-x: hidden;
+}
+
+button {
+  padding: 10px;
+  margin: 20px;
+  margin-bottom: 35px;
+  background-color: #050e0e;
+  color: #29e0e1;
+  border-color: #29e0e1;
+  border-width: 3px;
+  border-style: solid;
+}
+
+button:hover {
+  background-color: #29e0e1;
+  color: #050e0e;
+}
+
+.blocktext {
+  font-family: "UniversLTStdLight", Arial, sans-serif;
+  padding-bottom: 40px;
+}
+
+.linkintext {
+  text-decoration: none;
+  cursor: pointer;
+  color: #29e0e1;
+}
+
+.linkintext:hover {
+  text-decoration: underline;
+  color: #29e0e1;
+}
+
+.main {
+  padding: 0 18vw;
+}
+
+.pageTitle {
+  padding: 0 12.5vw;
+}
+
+.top-picture {
+  position: relative;
+  background-image: url("../resources/pictures/_landing_page.png");
+  height: 110vh;
+  background-size: cover;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #050e0e;
+}
+.navbar-nav .nav-link {
+  color: white;
+}
+.navbar-nav .nav-link:hover {
+  color: #29e0e1;
 }
 
 .navbar-brand {
+  font-size: 60px;
   font-weight: bold;
-  font-style: italic;
-  font-size: 50px;
+  color: white;
 }
 
-.nav-item .nav-link {
-  color: #007bff;
+.navbar-brand:hover {
+  color: #29e0e1;
 }
 
-.nav-item .nav-link:hover {
-  color: #0056b3;
+.navbar-brand .coloredheader {
+  color: #29e0e1;
+}
+
+.dropdown-menu {
+  background-color: white;
+}
+
+.dropdown-item:hover {
+  background-color: #29e0e1;
+}
+
+.welcomequote {
+  color: #29e0e1;
+  font-size: 120px;
+  font-style: bolder;
+}
+
+.welcome {
+  font-size: 60px;
+  position: relative;
+  bottom: 12px;
+}
+
+.button-container-f1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.button-container-f1 a {
+  text-align: center;
+  text-decoration: none;
+}
+
+.button-container-f1 button {
+  width: 100%;
+  height: 50vh;
+  padding: 10px;
+  background-color: #29e0e1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button-container-f1 button:hover {
+  background-color: #0056b3;
+}
+
+.button-container-f1 img {
+  height: 40vh;
+  padding: 10px;
+}
+
+.button-container-f1 img:hover {
+  transform: scale(1.02);
+}
+
+.button-container {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.button-container a {
+  text-align: center;
+  text-decoration: none;
+}
+
+.button-container button {
+  width: 100%;
+  height: 50vh;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button-container button:hover {
+  background-color: #0056b3;
+}
+
+.button-container img {
+  height: 40vh;
+  padding: 10px;
+}
+
+.button-container img:hover {
+  transform: scale(1.02);
+}
+
+.calender {
+  display: block;
+  width: auto;
+  height: 70vh;
+  margin: 0 auto;
+}
+
+.calenderdetail {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.center-button {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer {
-  padding: 10px 0;
+  margin-top: 70px;
+  padding: 20px;
   text-align: center;
 }
 
-h1 {
-  margin-top: 20px;
+.footer a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
-nav {
-  text-align: end;
+.footer a:hover {
+  text-decoration: underline;
 }
 
-/* Teams */
-.drivers {
-  /* padding: 15px; */
-  justify-content: end;
-  text-align: right;
+.footer img {
+  height: 20vh;
+  width: auto;
+}
+
+.footer img:hover {
+  transform: scale(1.02);
 }
 
 .redbull {
-  margin: 15px;
-  background-color: #000285;
+  background-image: url("../resources/pictures/drivers/RedBull.png");
+  padding-right: 30px;
+  margin-bottom: 30px;
+  height: 175px;
+  width: auto;
+  background-size: cover;
+  text-align: end;
+}
+
+.redbull h2 {
+  position: relative;
+  top: 25%;
+  color: #213374;
+  font-weight: bold;
 }
 
 .mercedes {
-  margin: 15px;
-  background-color: #00ffff;
+  background-image: url("../resources/pictures/drivers/Mercedes.png");
+  padding-right: 30px;
+  margin-bottom: 30px;
+  height: 175px;
+  width: auto;
+  background-size: cover;
+  text-align: end;
+}
+
+.mercedes h2 {
+  position: relative;
+  top: 25%;
+  color: #097b6e;
+  font-weight: bold;
 }
 
 .ferrari {
-  margin: 15px;
-  background-color: #ff0000;
+  background-image: url("../resources/pictures/drivers/Ferrari.png");
+  padding-right: 30px;
+  margin-bottom: 30px;
+  height: 175px;
+  width: auto;
+  background-size: cover;
+  text-align: end;
+}
+
+.ferrari h2 {
+  position: relative;
+  top: 25%;
+  color: #85160e;
+  font-weight: bold;
 }
 
 .mclaren {
-  margin: 15px;
-  background-color: #f7981d;
+  background-image: url("../resources/pictures/drivers/McLaren.png");
+  padding-right: 30px;
+  margin-bottom: 30px;
+  height: 175px;
+  width: auto;
+  background-size: cover;
+  text-align: end;
+}
+
+.mclaren h2 {
+  position: relative;
+  top: 25%;
+  color: #9b5411;
+  font-weight: bold;
 }
 
 .astonmartin {
-  margin: 15px;
-  background-color: #00ffb3;
+  background-image: url("../resources/pictures/drivers/Aston_Martin.png");
+  padding-right: 30px;
+  margin-bottom: 30px;
+  height: 175px;
+  width: auto;
+  background-size: cover;
+  text-align: end;
+}
+
+.astonmartin h2 {
+  position: relative;
+  top: 25%;
+  color: #00352d;
+  font-weight: bold;
 }
 
 .alpine {
-  margin: 15px;
-  background-color: #ff62bd;
+  background-image: url("../resources/pictures/drivers/Alpine.png");
+  padding-right: 30px;
+  margin-bottom: 30px;
+  height: 175px;
+  width: auto;
+  background-size: cover;
+  text-align: end;
+}
+
+.alpine h2 {
+  position: relative;
+  top: 25%;
+  color: #135089;
+  font-weight: bold;
 }
 
 .williams {
-  margin: 15px;
-  background-color: #2b53d6;
+  background-image: url("../resources/pictures/drivers/Williams.png");
+  padding-right: 30px;
+  margin-bottom: 30px;
+  height: 175px;
+  width: auto;
+  background-size: cover;
+  text-align: end;
+}
+
+.williams h2 {
+  position: relative;
+  top: 25%;
+  color: #1a3979;
+  font-weight: bold;
 }
 
 .vcarb {
-  margin: 15px;
-  background-color: #0000ff;
+  background-image: url("../resources/pictures/drivers/VCARB.png");
+  padding-right: 30px;
+  margin-bottom: 30px;
+  height: 175px;
+  width: auto;
+  background-size: cover;
+  text-align: end;
+}
+
+.vcarb h2 {
+  position: relative;
+  top: 25%;
+  color: #1f2a66;
+  font-weight: bold;
 }
 
 .sauber {
-  margin: 15px;
-  background-color: #00ff00;
+  background-image: url("../resources/pictures/drivers/Sauber.png");
+  padding-right: 30px;
+  margin-bottom: 30px;
+  height: 175px;
+  width: auto;
+  background-size: cover;
+  text-align: end;
+}
+
+.sauber h2 {
+  position: relative;
+  top: 25%;
+  color: #1b832b;
+  font-weight: bold;
 }
 
 .haas {
-  margin: 15px;
-  background-color: #ffffff;
+  background-image: url("../resources/pictures/drivers/Haas.png");
+  padding-right: 30px;
+  margin-bottom: 70px;
+  height: 175px;
+  width: auto;
+  background-size: cover;
+  text-align: end;
+}
+
+.haas h2 {
+  position: relative;
+  top: 25%;
+  color: #919292;
+  font-weight: bold;
+}
+
+.wdllogos {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  width: 100%;
+  margin: 0, auto;
+  padding-bottom: 50px;
+  align-items: center;
+}
+
+.wdllogos img {
+  width: 100%;
+  padding: 10px;
+}
+
+.wdllogos img:hover {
+  transform: scale(1.02);
+}
+
+.wdlimages {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+.wdlhistorie {
+  font-family: "UniversLTStdLight", Arial, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+  margin: 0, auto;
+  padding-bottom: 50px;
+  align-items: center;
+}
+
+.endurancedrivers {
+  font-family: "UniversLTStdLight", Arial, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+  margin: 0, auto;
+  padding-bottom: 50px;
+  align-items: center;
+}
+
+.teamligaleitung {
+  font-family: "UniversLTStdLight", Arial, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+  margin: 0, auto;
+  padding-bottom: 50px;
+  align-items: center;
+}
+
+.teamadmins {
+  font-family: "UniversLTStdLight", Arial, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  width: 100%;
+  margin: 0, auto;
+  padding-bottom: 50px;
+  align-items: center;
+}
+
+.teamrecruiting {
+  font-family: "UniversLTStdLight", Arial, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  margin: 0, auto;
+  padding-bottom: 50px;
+  align-items: center;
 }
