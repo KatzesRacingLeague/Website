@@ -90,8 +90,24 @@ button:hover {
   color: #29e0e1;
 }
 
-.navbar-brand .coloredheader {
+.navbar-brand .defaultcoloredheader {
   color: #29e0e1;
+}
+
+.navbar-brand .saturdaycoloredheader {
+  color: #2d36cb;
+}
+
+.navbar-brand .fridaycoloredheader {
+  color: #54d960;
+}
+
+.navbar-brand .wdlcoloredheader {
+  color: #fd2225;
+}
+
+.navbar-brand .endurancecoloredheader {
+  color: #e66a03;
 }
 
 .dropdown-menu {
@@ -241,7 +257,7 @@ button:hover {
   background-image: url("../resources/pictures/drivers/RedBull.png");
   padding-right: 30px;
   margin-bottom: 30px;
-  height: 175px;
+  height: 25vh;
   width: auto;
   background-size: cover;
   text-align: end;
@@ -258,7 +274,7 @@ button:hover {
   background-image: url("../resources/pictures/drivers/Mercedes.png");
   padding-right: 30px;
   margin-bottom: 30px;
-  height: 175px;
+  height: 25vh;
   width: auto;
   background-size: cover;
   text-align: end;
@@ -275,7 +291,7 @@ button:hover {
   background-image: url("../resources/pictures/drivers/Ferrari.png");
   padding-right: 30px;
   margin-bottom: 30px;
-  height: 175px;
+  height: 25vh;
   width: auto;
   background-size: cover;
   text-align: end;
@@ -292,7 +308,7 @@ button:hover {
   background-image: url("../resources/pictures/drivers/McLaren.png");
   padding-right: 30px;
   margin-bottom: 30px;
-  height: 175px;
+  height: 25vh;
   width: auto;
   background-size: cover;
   text-align: end;
@@ -309,7 +325,7 @@ button:hover {
   background-image: url("../resources/pictures/drivers/Aston_Martin.png");
   padding-right: 30px;
   margin-bottom: 30px;
-  height: 175px;
+  height: 25vh;
   width: auto;
   background-size: cover;
   text-align: end;
@@ -326,7 +342,7 @@ button:hover {
   background-image: url("../resources/pictures/drivers/Alpine.png");
   padding-right: 30px;
   margin-bottom: 30px;
-  height: 175px;
+  height: 25vh;
   width: auto;
   background-size: cover;
   text-align: end;
@@ -343,7 +359,7 @@ button:hover {
   background-image: url("../resources/pictures/drivers/Williams.png");
   padding-right: 30px;
   margin-bottom: 30px;
-  height: 175px;
+  height: 25vh;
   width: auto;
   background-size: cover;
   text-align: end;
@@ -360,7 +376,7 @@ button:hover {
   background-image: url("../resources/pictures/drivers/VCARB.png");
   padding-right: 30px;
   margin-bottom: 30px;
-  height: 175px;
+  height: 25vh;
   width: auto;
   background-size: cover;
   text-align: end;
@@ -377,7 +393,7 @@ button:hover {
   background-image: url("../resources/pictures/drivers/Sauber.png");
   padding-right: 30px;
   margin-bottom: 30px;
-  height: 175px;
+  height: 25vh;
   width: auto;
   background-size: cover;
   text-align: end;
@@ -394,7 +410,7 @@ button:hover {
   background-image: url("../resources/pictures/drivers/Haas.png");
   padding-right: 30px;
   margin-bottom: 70px;
-  height: 175px;
+  height: 25vh;
   width: auto;
   background-size: cover;
   text-align: end;
@@ -437,7 +453,7 @@ button:hover {
 .wdlhistorie {
   font-family: "UniversLTStdLight", Arial, sans-serif;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   width: 100%;
   margin: 0, auto;
@@ -454,6 +470,14 @@ button:hover {
   margin: 0, auto;
   padding-bottom: 50px;
   align-items: center;
+}
+
+.enduranceimages {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding-bottom: 20px;
 }
 
 .teamligaleitung {
@@ -487,4 +511,21 @@ button:hover {
   margin: 0, auto;
   padding-bottom: 50px;
   align-items: center;
+}
+
+.joinus {
+  color: #29e0e1;
+}
+
+.friday:hover {
+  background-color: #54d960;
+}
+
+.saturday:hover {
+  background-color: #2d36cb;
+}
+
+.team button {
+  height: 10vh;
+  width: 10vw;
 }
