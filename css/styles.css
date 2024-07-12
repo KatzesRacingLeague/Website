@@ -52,6 +52,28 @@ button:hover {
   color: #29e0e1;
 }
 
+.endurancelinkintext {
+  text-decoration: none;
+  cursor: pointer;
+  color: #e66a03;
+}
+
+.endurancelinkintext:hover {
+  text-decoration: underline;
+  color: #e66a03;
+}
+
+.wdllinkintext {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fd2225;
+}
+
+.wdllinkintext:hover {
+  text-decoration: underline;
+  color: #fd2225;
+}
+
 .main {
   padding: 0 18vw;
 }
@@ -110,6 +132,22 @@ button:hover {
   color: #e66a03;
 }
 
+.fridayheader:hover{
+  color: #54d960;
+}
+
+.saturdayheader:hover{
+  color: #2d36cb;
+}
+
+.wdlheader:hover{
+  color: #fd2225;
+}
+
+.enduranceheader:hover{
+  color: #e66a03;
+}
+
 .dropdown-menu {
   background-color: white;
 }
@@ -144,22 +182,6 @@ button:hover {
   text-decoration: none;
 }
 
-.button-container-f1 button {
-  width: 100%;
-  height: 50vh;
-  padding: 10px;
-  background-color: #29e0e1;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.button-container-f1 button:hover {
-  background-color: #0056b3;
-}
-
 .button-container-f1 img {
   height: 40vh;
   padding: 10px;
@@ -180,22 +202,6 @@ button:hover {
 .button-container a {
   text-align: center;
   text-decoration: none;
-}
-
-.button-container button {
-  width: 100%;
-  height: 50vh;
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.button-container button:hover {
-  background-color: #0056b3;
 }
 
 .button-container img {
@@ -529,3 +535,43 @@ button:hover {
   height: 10vh;
   width: 10vw;
 }
+
+.fridaybutton {
+  color: #54d960;
+  border-color: #54d960;
+}
+
+.fridaybutton:hover {
+  background-color: #54d960;
+  color: #050e0e;
+}
+
+.saturdaybutton {
+  color: #2d36cb;
+  border-color: #2d36cb;
+}
+
+.saturdaybutton:hover {
+  background-color: #2d36cb;
+  color: #050e0e;
+}
+
+.wdlbutton {
+  color: #fd2225;
+  border-color: #fd2225;
+}
+
+.wdlbutton:hover {
+  background-color: #fd2225;
+  color: #050e0e;
+}
+
+/* .endurancebutton {
+  color: #e66a03;
+  border-color: #e66a03;
+}
+
+.endurancebutton:hover {
+  background-color: #e66a03;
+  color: #050e0e;
+} */
