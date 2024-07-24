@@ -566,12 +566,9 @@ button:hover {
   color: #050e0e;
 }
 
-/* .endurancebutton {
-  color: #e66a03;
-  border-color: #e66a03;
+.standingsimages {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
-
-.endurancebutton:hover {
-  background-color: #e66a03;
-  color: #050e0e;
-} */
