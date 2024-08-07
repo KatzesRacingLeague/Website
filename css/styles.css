@@ -132,19 +132,19 @@ button:hover {
   color: #e66a03;
 }
 
-.fridayheader:hover{
+.fridayheader:hover {
   color: #54d960;
 }
 
-.saturdayheader:hover{
+.saturdayheader:hover {
   color: #2d36cb;
 }
 
-.wdlheader:hover{
+.wdlheader:hover {
   color: #fd2225;
 }
 
-.enduranceheader:hover{
+.enduranceheader:hover {
   color: #e66a03;
 }
 
@@ -168,59 +168,7 @@ button:hover {
   bottom: 12px;
 }
 
-.button-container-f1 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  width: 100%;
-  margin: 0 auto;
-  padding-bottom: 50px;
-}
-
-.button-container-f1 a {
-  text-align: center;
-  text-decoration: none;
-}
-
-.button-container-f1 img {
-  height: 40vh;
-  padding: 10px;
-}
-
-.button-container-f1 img:hover {
-  transform: scale(1.02);
-}
-
-.button-container {
-  display: grid;
-  gap: 10px;
-  width: 100%;
-  margin: 0 auto;
-  padding-bottom: 50px;
-}
-
-.button-container a {
-  text-align: center;
-  text-decoration: none;
-}
-
-.button-container img {
-  height: 40vh;
-  padding: 10px;
-}
-
-.button-container img:hover {
-  transform: scale(1.02);
-}
-
 .calender {
-  display: block;
-  width: auto;
-  height: 70vh;
-  margin: 0 auto;
-}
-
-.calenderdetail {
   display: block;
   width: 100%;
   height: auto;
@@ -571,4 +519,79 @@ button:hover {
   width: 100%;
   height: auto;
   margin: 0 auto;
+}
+
+.leaguesundaylogo {
+  position: relative;
+  background-image: url("../resources/pictures/krl-logos/KRL\ 1\ LOGO.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.leaguesundaylogo:hover {
+  transform: scale(1.02);
+}
+
+.leaguesaturdaylogo {
+  position: relative;
+  background-image: url("../resources/pictures/krl-logos/KRL\ 2\ LOGO.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.leaguesaturdaylogo:hover {
+  transform: scale(1.02);
+}
+
+.leaguefridaylogo {
+  position: relative;
+  background-image: url("../resources/pictures/krl-logos/KRL\ 3\ LOGO.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40vh;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+}
+
+.leaguefridaylogo:hover {
+  transform: scale(1.02);
+}
+
+.wdllogo {
+  position: relative;
+  background-image: url("../resources/pictures/krl-logos/WDL LOGO RUND.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40vh;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+}
+
+.wdllogo:hover {
+  transform: scale(1.02);
+}
+
+.endurancelogo {
+  position: relative;
+  background-image: url("../resources/pictures/krl-logos/KRL\ E\ LOGO.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40vh;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+}
+
+.endurancelogo:hover {
+  transform: scale(1.02);
 }
