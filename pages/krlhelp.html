@@ -8,21 +8,17 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="../../css/styles.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="../../resources/KRL-Logo-Icon.png"
-    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="icon" type="image/png" href="../resources/KRL-Logo-Icon.png" />
   </head>
   <body>
     <header class="sticky-header">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand enduranceheader" href="../../index.html"
-            ><span class="endurancecoloredheader">K</span>ATZES
-            <span class="endurancecoloredheader">R</span>ACING
-            <span class="endurancecoloredheader">L</span>EAGUE</a
+          <a class="navbar-brand" href="../index.html"
+            ><span class="defaultcoloredheader">K</span>ATZES
+            <span class="defaultcoloredheader">R</span>ACING
+            <span class="defaultcoloredheader">L</span>EAGUE</a
           >
           <button
             class="navbar-toggler"
@@ -51,15 +47,19 @@
                   Formel 1 Ligen
                 </a>
                 <div class="dropdown-menu" aria-labelledby="formel1Dropdown">
-                  <a class="dropdown-item friday" href="F1Leagues/friday.html"
+                  <a
+                    class="dropdown-item friday"
+                    href="DetailViews/F1Leagues/friday.html"
                     >Freitagsliga</a
                   >
                   <a
                     class="dropdown-item saturday"
-                    href="F1Leagues/saturday.html"
+                    href="DetailViews/F1Leagues/saturday.html"
                     >Samstagsliga</a
                   >
-                  <a class="dropdown-item" href="F1Leagues/sunday.html"
+                  <a
+                    class="dropdown-item"
+                    href="DetailViews/F1Leagues/sunday.html"
                     >Sonntagsliga</a
                   >
                 </div>
@@ -67,12 +67,16 @@
 
               <!-- Wettkampf der Ligen -->
               <li class="nav-item">
-                <a class="nav-link" href="wdl.html">Wettkampf der Ligen</a>
+                <a class="nav-link" href="DetailViews/wdl.html"
+                  >Wettkampf der Ligen</a
+                >
               </li>
 
               <!-- Endurance Team -->
               <li class="nav-item">
-                <a class="nav-link" href="endurance.html">Endurance Team</a>
+                <a class="nav-link" href="DetailViews/endurance.html"
+                  >Endurance Team</a
+                >
               </li>
 
               <!-- Sonstiges -->
@@ -92,16 +96,16 @@
                   class="dropdown-menu dropdown-menu-right"
                   aria-labelledby="sonstigesDropdown"
                 >
-                  <a class="dropdown-item" href="../../pages/rdn.html"
+                  <a class="dropdown-item" href="../pages/rdn.html"
                     >Race-Director-Notes</a
                   >
-                  <a class="dropdown-item" href="../../pages/rules.html"
+                  <a class="dropdown-item" href="../pages/rules.html"
                     >Regelwerk</a
                   >
-                  <a class="dropdown-item" href="../../pages/team.html"
+                  <a class="dropdown-item" href="../pages/team.html"
                     >Unser Team</a
-                  >                  
-                  <a class="dropdown-item" href="../../pages/krlhelp.html"
+                  >
+                  <a class="dropdown-item" href="../pages/krlhelp.html"
                     >KRL Help</a
                   >
                   <a
@@ -124,29 +128,53 @@
 
     <main>
       <div class="main">
-        <h1>ENDURANCE TEAM</h1>
+        <h1>KRL HELP</h1>
         <div class="blocktext">
-          Das KRL Endurance Team wurde Ende 2020 ins Leben gerufen. Unter der
-          Führung von Hammdall und LuxH1994 agieren die Fahrer im neu
-          geschaffenen Endurance Team. Weitere Fahrer sind herzlichst eingeladen
-          sich dem KRL Endurance Team anzuschließen um beispielsweise gemeinsam
-          in Endurance Rennen anzutreten.
+          Auf dieser Seite befinden sich hilfreiche Guides zu verschiedenen
+          Themen, welche die KRL betreffen.
         </div>
+        <h3>FORMEL 1</h3>
         <div class="blocktext">
-          Das KRL Endurance Team freut sich über Verstärkung. Interessierte
-          Rennfahrer können sich bei der iRacing Administration melden.
-          <a class="endurancelinkintext" href="../team.html"
-            >- siehe "Unser Team".</a
-          >
+          Hier sind alle Guides rund um unsere Formel 1 Ligen zu finden.
         </div>
-        <h3>FAHRER</h3>
-        <div>
-          <img
-            class="enduranceimages"
-            src="../../resources/pictures/endurance/Endurance_Team.png"
-          />
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <div>Whisperlisten TeamSpeak 3</div>
+            <div>
+              <a
+                href="../resources/files/guides/Whisperliste.pdf"
+                download="Guide_Whisperliste_TS3.pdf"
+                ><button>Guide herunterladen</button></a
+              >
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div>Rennleitungsanhang</div>
+            <div>
+              <a
+                href="../resources/files/guides/Rennleitungsanhang.pdf"
+                download="Rennleitungsanhang.pdf"
+                ><button>Guide herunterladen</button></a
+              >
+            </div>
+          </div>
         </div>
-        <div class="blocktext">Gaststarter: Fabian Heggli</div>
+        <h3>IRACING</h3>
+        <div class="blocktext">
+          Hier sind alle Guides rund um unser iRacing Programm zu finden.
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div>Einsteigerguide</div>
+            <div>
+              <a
+                href="../resources/files/guides/Einsteigerguide_iRacing.pdf"
+                download="Einsteigerguide_iRacing.pdf"
+                ><button>Guide herunterladen</button></a
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
@@ -155,35 +183,29 @@
         <span
           >© 2024 Katzes Racing League. All rights reserved. - Version: 01.03.00
           - </span
-        ><a href="../../pages/impressum.html">Impressum</a>
+        ><a href="impressum.html">Impressum</a>
       </div>
       <div>
         <a href="https://discord.gg/2r9wDfKdSB">
-          <img
-            src="../../resources/pictures/social/discord.png"
-            alt="discord"
-          />
+          <img src="../resources/pictures/social/discord.png" alt="discord" />
         </a>
         <a href="https://www.twitch.tv/katzesracingleague">
-          <img src="../../resources/pictures/social/twitch.png" alt="twitch" />
+          <img src="../resources/pictures/social/twitch.png" alt="twitch" />
         </a>
         <a href="https://www.youtube.com/@KatzesRacingLeague">
-          <img
-            src="../../resources/pictures/social/youtube.png"
-            alt="youtube"
-          />
+          <img src="../resources/pictures/social/youtube.png" alt="youtube" />
         </a>
         <a href="https://www.instagram.com/katzesracingleague">
           <img
-            src="../../resources/pictures/social/instagram.png"
+            src="../resources/pictures/social/instagram.png"
             alt="instagram"
           />
         </a>
         <a href="https://www.tiktok.com/@katzesracingleaguef1">
-          <img src="../../resources/pictures/social/tiktok.png" alt="tiktok" />
+          <img src="../resources/pictures/social/tiktok.png" alt="tiktok" />
         </a>
         <a href="https://www.twitter.com/KatzesLeague">
-          <img src="../../resources/pictures/social/X.png" alt="x" />
+          <img src="../resources/pictures/social/X.png" alt="x" />
         </a>
       </div>
     </footer>
