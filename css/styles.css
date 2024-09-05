@@ -74,6 +74,11 @@ button:hover {
   color: #fd2225;
 }
 
+body {
+  width: 100%;
+  /* padding: 0 18vw; */
+}
+
 .main {
   padding: 0 18vw;
 }
@@ -432,39 +437,6 @@ button:hover {
   height: auto;
   margin: 0 auto;
   padding-bottom: 20px;
-}
-
-.teamligaleitung {
-  font-family: "UniversLTStdLight", Arial, sans-serif;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  width: 100%;
-  margin: 0, auto;
-  padding-bottom: 50px;
-  align-items: center;
-}
-
-.teamadmins {
-  font-family: "UniversLTStdLight", Arial, sans-serif;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
-  width: 100%;
-  margin: 0, auto;
-  padding-bottom: 50px;
-  align-items: center;
-}
-
-.teamrecruiting {
-  font-family: "UniversLTStdLight", Arial, sans-serif;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  width: 100%;
-  margin: 0, auto;
-  padding-bottom: 50px;
-  align-items: center;
 }
 
 .joinus {
