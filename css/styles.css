@@ -1,24 +1,3 @@
-/* General */
-@font-face {
-  font-family: "UniversLTStd";
-  src: url("../resources/fonts/UniversLTStd.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "UniversLTStdLight";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../resources/fonts/UniversLTStd-Light.woff") format("woff");
-}
-
-body {
-  font-family: "UniversLTStd", Arial, sans-serif;
-  background-color: #050e0e;
-  color: white;
-  overflow-x: hidden;
-}
 
 button {
   padding: 10px;
@@ -74,104 +53,126 @@ button:hover {
   color: #fd2225;
 }
 
+
+
+
 body {
   width: 100%;
   /* padding: 0 18vw; */
 }
 
-.main {
-  padding: 0 18vw;
-}
 
-.pageTitle {
-  padding: 0 12.5vw;
-}
-
-.top-picture {
-  position: relative;
-  background-image: url("../resources/pictures/_landing_page.png");
-  height: 110vh;
+/* Styling für die Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(../resources/beispiel.png);
   background-size: cover;
-}
-
-.sticky-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: #050e0e;
-}
-.navbar-nav .nav-link {
-  color: white;
-}
-.navbar-nav .nav-link:hover {
-  color: #29e0e1;
-}
-
-.navbar-brand {
-  font-size: 60px;
-  font-weight: bold;
-  color: white;
-}
-
-.navbar-brand:hover {
-  color: #29e0e1;
-}
-
-.navbar-brand .defaultcoloredheader {
-  color: #29e0e1;
-}
-
-.navbar-brand .saturdaycoloredheader {
-  color: #2d36cb;
-}
-
-.navbar-brand .fridaycoloredheader {
-  color: #54d960;
-}
-
-.navbar-brand .wdlcoloredheader {
-  color: #fd2225;
-}
-
-.navbar-brand .endurancecoloredheader {
-  color: #e66a03;
-}
-
-.fridayheader:hover {
-  color: #54d960;
-}
-
-.saturdayheader:hover {
-  color: #2d36cb;
-}
-
-.wdlheader:hover {
-  color: #fd2225;
-}
-
-.enduranceheader:hover {
-  color: #e66a03;
-}
-
-.dropdown-menu {
-  background-color: white;
-}
-
-.dropdown-item:hover {
-  background-color: #29e0e1;
-}
-
-.welcomequote {
-  color: #29e0e1;
-  font-size: 120px;
-  font-style: bolder;
-}
-
-.welcome {
-  font-size: 60px;
+  padding: 20px;
   position: relative;
-  bottom: 12px;
+  list-style: none;
+  height: 135px;
 }
+
+
+/* Logo-Design */
+.logo img {
+  width: 100px;
+  transition: transform 0.3s ease; /* Sanfte Vergrößerung beim Hover */
+}
+
+.logo img:hover {
+  transform: scale(1.1); /* Vergrößert das Logo beim Hover */
+}
+
+/* Zentrierte Navigationslinks */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Navigationslink-Styling */
+.nav-links li {
+  position: relative;
+  margin: 0 15px;
+  list-style-type: none;
+  transition: transform 0.3s ease; /* Sanfte Bewegungseffekte */
+}
+
+.nav-links li:hover {
+  transform: translateY(-3px); /* Leichtes Anheben beim Hover */
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Sanfte Übergänge */
+  text-align: center; /* Zentriert den Text */
+  border-radius: 5px; /* Runde Ecken */
+}
+
+.nav-links a:hover {
+  background-color: #00509e; /* Hellblau */
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Schatten für Hover-Effekte */
+}
+
+/* Dropdown-Menü Styling */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* Positioniert das Dropdown direkt unter dem Parent */
+  left: 0; /* Stellt sicher, dass es am linken Rand des Parent beginnt */
+  background-color: #003366; /* Dunkelblau */
+  min-width: 180px;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(10px); /* Startet das Dropdown leicht versetzt */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Sanfte Einblend- und Ausblend-Effekte */
+  text-align: center; /* Text im Dropdown zentrieren */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Schatten für visuelle Tiefe */
+  padding: 0; /* Entfernt zusätzliche Polsterung */
+  margin: 0; /* Entfernt zusätzliche Margen */
+}
+
+/* Dropdown-Links Styling */
+.dropdown-content li {
+  margin: 0; /* Entfernt zusätzliche Margen */
+}
+
+.dropdown-content a {
+  padding: 12px 15px;
+  color: #fff;
+  display: block;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Sanfte Übergänge */
+}
+
+.dropdown-content a:hover {
+  background-color: #00509e; /* Hellblau */
+  transform: translateX(5px); /* Leichtes Verschieben beim Hover */
+}
+
+/* Dropdown bei Hover anzeigen */
+.nav-links li:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0); /* Dropdown bewegt sich nach oben */
+}
+
+
+
+
+
+
+
 
 .calender {
   display: block;
@@ -493,77 +494,408 @@ body {
   margin: 0 auto;
 }
 
-.leaguesundaylogo {
+
+
+
+/* Variablen*/
+:root{
+  --fridaysplit: #54d960;
+  --saturdaysplit: #2d36cb;
+  --sundaysplit: #29e0e1;
+  --endurance: #e66a03;
+  --wdl: #a70808;
+  --fontfamilyheadline: "Playpen Sans";
+  --fontfamilytext: "Concert One", sans-serif;
+  --fontsizeheadline: 100px;
+  --font-sizetext:28px ;
+  --borderpictureradius: 40px;
+  --borderpicturesize: 0 8px 32px 0;
+}
+ 
+/*Background Image Index Site*/
+
+
+body{
+  
+  background-image: url('../resources/backgorund/background.png');
+  background-position: center center; /* Zentriert das Bild */
+  background-attachment: fixed;
+  color: white;
+  
+  
+  
+}
+
+.main {
+  padding: 0 18vw;
+}
+
+
+/*Hintergrund loading Screen*/
+.loadingpicture{
+  background-image: url(../resources/pictures/_landing_page.png);
+  background-size: cover; /* Lässt das Bild die ganze Fläche füllen */
+  background-position: center; /* Zentriert das Bild */
+  width: 100%; /* Breite auf 100% setzen */
+  height: 100vh; /* Die Höhe auf den ganzen Viewport setzen */
+  box-shadow: var(--borderpicturesize) var(--sundaysplit);
+}
+/*Willkommen*/
+.welcomequote {
+  color: #29e0e1;
+  font-size: 120px;
+  font-style: bolder;
+}
+
+.welcome {
+  font-size: 60px;
   position: relative;
-  background-image: url("../resources/pictures/krl-logos/KRL\ 1\ LOGO.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 40vh;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  bottom: 12px;
 }
 
-.leaguesundaylogo:hover {
-  transform: scale(1.02);
+
+
+/*Icons*/
+.features {
+  display: flex;
+  flex-wrap: wrap; /* Symbole umbrechen, wenn nicht genug Platz ist */
+  justify-content:space-evenly;
+  gap: 20px;
+  margin-top: 30px;
 }
 
-.leaguesaturdaylogo {
-  position: relative;
-  background-image: url("../resources/pictures/krl-logos/KRL\ 2\ LOGO.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 40vh;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px; /* Größe für jedes Feature-Element */
+  text-align: center;
 }
 
-.leaguesaturdaylogo:hover {
-  transform: scale(1.02);
+.feature-item i {
+  font-size: 60px;
+  color: var(--sundaysplit); /* Farbe der Icons */
+  margin-top: 60px;
+
 }
 
-.leaguefridaylogo {
-  position: relative;
-  background-image: url("../resources/pictures/krl-logos/KRL\ 3\ LOGO.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 40vh;
-  margin-top: 5vh;
-  margin-bottom: 10vh;
+.feature-item p {
+  font-family: var(--fontfamilytext);
+  margin-top: 10px;
+  font-size:27px;
+  margin-bottom: 30px;
 }
 
-.leaguefridaylogo:hover {
-  transform: scale(1.02);
+/*Button Join NOW*/
+.headline-Index-join-button {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+  font-family: var(--fontfamilytext);
+ 
+ }
+ .join-button{
+  display: flex;
+  margin: 40px auto; /* Fügt Abstände hinzu und zentriert den Button in der Mitte */
+  padding: 20px 40px; /* Fügt Polsterung hinzu, um den Button größer zu machen */
+  background-color:var(--sundaysplit);
+  color: white; /* Textfarbe weiß für guten Kontrast */
+  border-radius: 8px; /* Abgerundete Ecken */
+  font-size: 40px;
+  box-shadow: var(--borderpicturesize) var(--sundaysplit); /* Leichter Schatteneffekt */
 }
 
-.wdllogo {
-  position: relative;
-  background-image: url("../resources/pictures/krl-logos/WDL LOGO RUND.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 40vh;
-  margin-top: 5vh;
-  margin-bottom: 10vh;
+.join-button:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  background: white ;
+  box-shadow: var(--borderpicturesize) white;
+  transform: scale(1.1); /* Leicht vergrößern bei Hover */
+  transition: 0.3s ease; /* Weicher Übergang bei Hover */
+  cursor: pointer; /* Zeigt eine Hand an, wenn man über den Button fährt */
 }
 
-.wdllogo:hover {
-  transform: scale(1.02);
+
+.Quotes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ margin-left: 100px;
+  gap: 80px;
+margin-top: 30px;  
+margin-bottom: 75px;
+  
+ 
+}
+/* Container Zitat*/
+.quote-container{
+  display: flex;
+  border-radius: 12px;
+  flex-wrap: nowrap;
 }
 
-.endurancelogo {
-  position: relative;
-  background-image: url("../resources/pictures/krl-logos/KRL\ E\ LOGO.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 40vh;
-  margin-top: 5vh;
-  margin-bottom: 10vh;
+/* Styling für den Namen */
+.quote-text > h2 {
+  font-size: 24px;
+  margin: 10px 0 0 0;
+  color: #ffffff;
+  font-family: var(--fontfamilyheadline);
+  font-weight: bolder;
+  font-size: 28px;
+  margin-bottom: 20px;
+  gap: 40px;
+  text-align: center;
+ 
+}
+.quote-text > h3{
+  font-size: 24px;
+  margin: 10px 0 0 0;
+  color: #ffffff;
+  font-family: var(--fontfamilytext);
+  font-size: 30px;
+  text-align: center;
+ 
+
 }
 
-.endurancelogo:hover {
-  transform: scale(1.02);
+/* Styling für die Sprechblase */
+.quote-text{
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: var(--borderpicturesize) var(--sundaysplit);
+
 }
+
+
+
+
+/*H1 Headlines*/
+  .header > h1{
+    font-family: var(--fontfamilyheadline);
+    font-size: var(--fontsizeheadline);;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 40px;
+  
+  }
+  
+
+/*Flex-every Logo*/
+.flex-leaugelogos{
+  display: flex;
+  flex-direction: row ;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+  margin-top: 40px;
+  font-family: var(--fontfamilytext);
+  font-weight: bolder;
+  font-size: var(--font-sizetext);
+  gap: 90px;
+
+
+}
+
+/*league1*/
+
+.overview1{
+  display: flex;
+  flex-direction: column ;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--borderpicturesize) var(--sundaysplit);
+  border-radius: var(--borderpictureradius);
+
+}
+/*league2*/
+.overview2{
+  display: flex;
+  flex-direction: column ;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--borderpicturesize) var(--saturdaysplit);
+  border-radius: var(--borderpictureradius);
+}
+/*league3*/
+.overview3{
+  display: flex;
+  flex-direction: column ;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--borderpicturesize) var(--fridaysplit);
+  border-radius: var(--borderpictureradius);
+}
+/*WDL*/
+.overview4{
+  display: flex;
+  flex-direction: column ;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  box-shadow: var(--borderpicturesize) var(--wdl);
+  border-radius: var(--borderpictureradius);
+}
+/*Endurance*/
+.overview5{
+  display: flex;
+  flex-direction: column ;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  box-shadow: var(--borderpicturesize) var(--endurance);
+  border-radius: var(--borderpictureradius);
+}
+
+
+.overview1:hover, .overview2:hover, .overview3:hover, .overview4:hover , .overview5:hover  {
+  transform: scale(1.10);
+  cursor: pointer; /* Zeigt eine Hand an, wenn man über den Button fährt */
+  transition: all 0.3s ease; 
+}
+
+
+/*Logos*/
+.Logosoftheleague {
+ max-height: 100%;
+ max-width: 400px;
+
+}
+
+ .image-rennkalender > img{
+  max-height: 100%;
+  max-width: 1185px;
+  border-radius: var(--borderpicture);
+  display: flex;
+  align-items: center;
+  box-shadow: var(--borderpicturesize) var(--sundaysplit);
+  border-radius: var(--borderpictureradius);
+  margin-top: 100px;
+  margin-bottom: 100px;
+  
+ }
+
+ .footer{
+  box-shadow: var(--borderpicturesize) var(--sundaysplit);
+  font-family: var(--fontfamilytext);
+  background-color: transparent;
+ }
+
+
+ /* Responsive Design für Handys */
+ @media (max-width: 700px) {
+   /* Background Image Index Site */
+   body {
+     background-size: cover;
+   }
+ 
+   /* Hintergrund loading Screen */
+   .loadingpicture {
+     background-size: cover;
+     background-position: center;
+   }
+ 
+   /* Icons */
+   .feature-item {
+     width: 120px; /* Kleinere Größe für kleine Bildschirme */
+   }
+ 
+   .feature-item i {
+     font-size: 40px; /* Kleinere Icons für bessere Anpassung */
+     margin-top: 30px; /* Weniger Abstand oben */
+   }
+ 
+   .feature-item p {
+     font-size: 20px; /* Kleinere Schriftgröße */
+     margin-bottom: 20px; /* Weniger Abstand unten */
+   }
+ 
+   /* Button Join NOW */
+   .join-button {
+     font-size: 24px; /* Kleinere Schriftgröße */
+     padding: 15px 30px; /* Kleinere Polsterung */
+   }
+ 
+   /* Quotes */
+   .Quotes {
+     flex-direction: column; /* Spaltenrichtung für kleinere Bildschirme */
+     margin-left: 0;
+     gap: 40px; /* Mehr Platz zwischen den Zitaten */
+ 
+   }
+ 
+   .quote-container {
+     width: 100%; /* Breite auf 100% setzen */
+     height: auto; /* Höhe automatisch anpassen */
+   
+   }
+ 
+   .quote-text {
+     font-size: 16px; /* Kleinere Schriftgröße */
+     padding: 15px; /* Weniger Polsterung */
+   }
+ 
+   /* H1 Headlines */
+   .header > h1 {
+     font-size: 25px; /* Kleinere Schriftgröße für kleinere Bildschirme */
+   }
+ 
+   /* Flex-every Logo */
+   .flex-leaugelogos {
+     flex-direction: column; /* Spaltenrichtung für kleinere Bildschirme */
+     gap: 30px; /* Weniger Abstand zwischen den Logos */
+   }
+ 
+   /* League Overviews */
+
+   .overview1 {
+    width: 100%; /* Breite auf 100% setzen */
+    max-width: 300px; /* Maximalbreite für kleinere Bildschirme */
+    box-shadow: var(--borderpicturesize) var(--sundaysplit);
+  }
+  .overview2{
+    width: 100%; /* Breite auf 100% setzen */
+    max-width: 300px; /* Maximalbreite für kleinere Bildschirme */
+    box-shadow: var(--borderpicturesize) var(--saturdaysplit);
+  }
+ .overview3{
+    width: 100%; /* Breite auf 100% setzen */
+    max-width: 300px; /* Maximalbreite für kleinere Bildschirme */
+    box-shadow: var(--borderpicturesize) var(--fridaysplit);
+  }
+  .overview4{
+    width: 100%; /* Breite auf 100% setzen */
+    max-width: 300px; /* Maximalbreite für kleinere Bildschirme */
+    box-shadow: var(--borderpicturesize) var(--wdl);
+  }
+  .overview5 {
+    width: 100%; /* Breite auf 100% setzen */
+    max-width: 300px; /* Maximalbreite für kleinere Bildschirme */
+    box-shadow: var(--borderpicturesize) var(--endurance);
+  }
+
+  
+ 
+   /* Logos */
+   .Logosoftheleague {
+     max-width: 200px; /* Kleinere maximale Breite für Logos */
+     
+   }
+ 
+   .image-rennkalender > img {
+     max-width: 300px; /* Kleinere maximale Breite für Bilder */
+     margin-top: 50px; /* Weniger Abstand oben */
+     margin-bottom: 50px; /* Weniger Abstand unten */
+   }
+ }
+
+
+
+
+
+
+
+
+
+ 
