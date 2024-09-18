@@ -1,89 +1,57 @@
-
-button {
-  padding: 10px;
-  margin: 20px;
-  margin-bottom: 35px;
-  background-color: #050e0e;
-  color: #29e0e1;
-  border-color: #29e0e1;
-  border-width: 3px;
-  border-style: solid;
-}
-
-button:hover {
-  background-color: #29e0e1;
-  color: #050e0e;
-}
-
-.blocktext {
-  font-family: "UniversLTStdLight", Arial, sans-serif;
-  padding-bottom: 40px;
-}
-
-.linkintext {
-  text-decoration: none;
-  cursor: pointer;
-  color: #29e0e1;
-}
-
-.linkintext:hover {
-  text-decoration: underline;
-  color: #29e0e1;
-}
-
-.endurancelinkintext {
-  text-decoration: none;
-  cursor: pointer;
-  color: #e66a03;
-}
-
-.endurancelinkintext:hover {
-  text-decoration: underline;
-  color: #e66a03;
-}
-
-.wdllinkintext {
-  text-decoration: none;
-  cursor: pointer;
-  color: #fd2225;
-}
-
-.wdllinkintext:hover {
-  text-decoration: underline;
-  color: #fd2225;
-}
-
-
-
-
 body {
   width: 100%;
   /* padding: 0 18vw; */
 }
 
-
-/* Styling für die Navigation */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-image: url(../resources/beispiel.png);
-  background-size: cover;
-  padding: 20px;
-  position: relative;
-  list-style: none;
-  height: 135px;
+/* Variablen*/
+:root{
+  --fridaysplit: #54d960;
+  --saturdaysplit: #2d36cb;
+  --sundaysplit: #29e0e1;
+  --endurance: #e66a03;
+  --wdl: #be1d1d;
+  --fontfamilyheadline: "Playpen Sans";
+  --fontfamilytext: "Concert One", sans-serif;
+  --fontsizeheadline: 110px;
+  --font-sizetext:28px ;
+  --borderpictureradius: 40px;
+  --borderpicturesize: 0 8px 32px 0;
 }
 
+
+/* NAVIGATION DEFAULT FOR EVERY PAGE */
+
+/* Grundlegendes Styling für die Navigation */
+.navbar {
+  display: flex;
+  flex-wrap: wrap; /* Erlaubt Umbrüche bei Bedarf */
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(../resources/pictures/HeaderNavigation/test.png);
+  background-size: cover;
+  padding: 10px;
+  position: relative;
+  list-style: none;
+  height: auto; /* Höhe anpassen, damit sie sich an den Inhalt anpasst */
+
+}
 
 /* Logo-Design */
 .logo img {
-  width: 100px;
+  width: 120px;
   transition: transform 0.3s ease; /* Sanfte Vergrößerung beim Hover */
+  margin-left: 10px;
+ 
 }
 
-.logo img:hover {
-  transform: scale(1.1); /* Vergrößert das Logo beim Hover */
+/* Menü-Button für mobile Ansicht */
+.menu-toggle {
+  display: none; /* Standardmäßig versteckt */
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
 }
 
 /* Zentrierte Navigationslinks */
@@ -102,6 +70,8 @@ body {
   margin: 0 15px;
   list-style-type: none;
   transition: transform 0.3s ease; /* Sanfte Bewegungseffekte */
+  font-family: var(--fontfamilytext);
+  font-size: 28px;
 }
 
 .nav-links li:hover {
@@ -119,19 +89,13 @@ body {
   border-radius: 5px; /* Runde Ecken */
 }
 
-.nav-links a:hover {
-  background-color: #00509e; /* Hellblau */
-  color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Schatten für Hover-Effekte */
-}
-
 /* Dropdown-Menü Styling */
 .dropdown-content {
   display: none;
   position: absolute;
   top: 100%; /* Positioniert das Dropdown direkt unter dem Parent */
   left: 0; /* Stellt sicher, dass es am linken Rand des Parent beginnt */
-  background-color: #003366; /* Dunkelblau */
+  background-color: black;
   min-width: 180px;
   z-index: 1;
   opacity: 0;
@@ -155,11 +119,6 @@ body {
   transition: background-color 0.3s ease, transform 0.2s ease; /* Sanfte Übergänge */
 }
 
-.dropdown-content a:hover {
-  background-color: #00509e; /* Hellblau */
-  transform: translateX(5px); /* Leichtes Verschieben beim Hover */
-}
-
 /* Dropdown bei Hover anzeigen */
 .nav-links li:hover .dropdown-content {
   display: block;
@@ -167,350 +126,94 @@ body {
   transform: translateY(0); /* Dropdown bewegt sich nach oben */
 }
 
-
-
-
-
-
-
-
-.calender {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
+/* Hover-Effekte für Text */
+.text1:hover {
+  transform: translateX(5px); /* Leichtes Verschieben beim Hover */
+  background-color: var(--fridaysplit);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Schatten für Hover-Effekte */
 }
 
-.center-button {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.text2:hover {
+  transform: translateX(5px); /* Leichtes Verschieben beim Hover */
+  background-color: var(--saturdaysplit);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Schatten für Hover-Effekte */
 }
 
-.footer {
-  margin-top: 70px;
-  padding: 20px;
-  text-align: center;
+.text3:hover {
+  transform: translateX(5px); /* Leichtes Verschieben beim Hover */
+  background-color: var(--sundaysplit);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Schatten für Hover-Effekte */
 }
 
-.footer a {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
+.Formel1:hover {
+  color: var(--sundaysplit);
 }
 
-.footer a:hover {
-  text-decoration: underline;
+.WDL-nav:hover {
+  color: var(--wdl);
 }
 
-.footer img {
-  height: 20vh;
-  width: auto;
+.ETeam:hover {
+  color: var(--endurance);
 }
 
-.footer img:hover {
-  transform: scale(1.02);
-}
+/* Responsives Styling für mobile Geräte */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stellt sicher, dass die Navigation in einer Spalte dargestellt wird */
+    align-items: flex-start; /* Richtet die Elemente am Anfang aus */
+    height: auto; /* Höhe anpassen */
+  }
 
-.redbull {
-  background-image: url("../resources/pictures/drivers/RedBull.png");
-  padding-right: 30px;
-  margin-bottom: 30px;
-  height: 25vh;
-  width: auto;
-  background-size: cover;
-  text-align: end;
-}
+  .menu-toggle {
+    display: block; /* Zeigt den Button auf mobilen Geräten */
+  }
 
-.redbull h2 {
-  position: relative;
-  top: 25%;
-  color: #213374;
-  font-weight: bold;
-}
+  .nav-links {
+    flex-direction: column; /* Stellt die Links untereinander dar */
+    width: 100%; /* Breite auf 100% setzen */
+    display: none; /* Standardmäßig verstecken */
+  }
 
-.mercedes {
-  background-image: url("../resources/pictures/drivers/Mercedes.png");
-  padding-right: 30px;
-  margin-bottom: 30px;
-  height: 25vh;
-  width: auto;
-  background-size: cover;
-  text-align: end;
-}
+  .nav-links.active {
+    display: flex; /* Zeigt die Links an, wenn das Menü geöffnet ist */
+  }
 
-.mercedes h2 {
-  position: relative;
-  top: 25%;
-  color: #097b6e;
-  font-weight: bold;
-}
+  .dropdown-content {
+    position: static; /* Positionieren, um sich in der Spalte auszubreiten */
+    opacity: 1;
+    transform: none;
+    box-shadow: none; /* Entfernt den Schatten für mobile Ansicht */
+    min-width: 100%; /* Breite auf 100% setzen */
+  }
 
-.ferrari {
-  background-image: url("../resources/pictures/drivers/Ferrari.png");
-  padding-right: 30px;
-  margin-bottom: 30px;
-  height: 25vh;
-  width: auto;
-  background-size: cover;
-  text-align: end;
-}
+  .logo img {
+    width: 100px; /* Verkleinert das Logo für kleinere Bildschirme */
+    margin: 0; /* Entfernt zusätzliche Margen */
+  }
 
-.ferrari h2 {
-  position: relative;
-  top: 25%;
-  color: #85160e;
-  font-weight: bold;
-}
+  .nav-links li {
+    margin: 10px 0; /* Margin anpassen für vertikale Links */
+  }
 
-.mclaren {
-  background-image: url("../resources/pictures/drivers/McLaren.png");
-  padding-right: 30px;
-  margin-bottom: 30px;
-  height: 25vh;
-  width: auto;
-  background-size: cover;
-  text-align: end;
-}
-
-.mclaren h2 {
-  position: relative;
-  top: 25%;
-  color: #9b5411;
-  font-weight: bold;
-}
-
-.astonmartin {
-  background-image: url("../resources/pictures/drivers/Aston_Martin.png");
-  padding-right: 30px;
-  margin-bottom: 30px;
-  height: 25vh;
-  width: auto;
-  background-size: cover;
-  text-align: end;
-}
-
-.astonmartin h2 {
-  position: relative;
-  top: 25%;
-  color: #00352d;
-  font-weight: bold;
-}
-
-.alpine {
-  background-image: url("../resources/pictures/drivers/Alpine.png");
-  padding-right: 30px;
-  margin-bottom: 30px;
-  height: 25vh;
-  width: auto;
-  background-size: cover;
-  text-align: end;
-}
-
-.alpine h2 {
-  position: relative;
-  top: 25%;
-  color: #135089;
-  font-weight: bold;
-}
-
-.williams {
-  background-image: url("../resources/pictures/drivers/Williams.png");
-  padding-right: 30px;
-  margin-bottom: 30px;
-  height: 25vh;
-  width: auto;
-  background-size: cover;
-  text-align: end;
-}
-
-.williams h2 {
-  position: relative;
-  top: 25%;
-  color: #1a3979;
-  font-weight: bold;
-}
-
-.vcarb {
-  background-image: url("../resources/pictures/drivers/VCARB.png");
-  padding-right: 30px;
-  margin-bottom: 30px;
-  height: 25vh;
-  width: auto;
-  background-size: cover;
-  text-align: end;
-}
-
-.vcarb h2 {
-  position: relative;
-  top: 25%;
-  color: #1f2a66;
-  font-weight: bold;
-}
-
-.sauber {
-  background-image: url("../resources/pictures/drivers/Sauber.png");
-  padding-right: 30px;
-  margin-bottom: 30px;
-  height: 25vh;
-  width: auto;
-  background-size: cover;
-  text-align: end;
-}
-
-.sauber h2 {
-  position: relative;
-  top: 25%;
-  color: #1b832b;
-  font-weight: bold;
-}
-
-.haas {
-  background-image: url("../resources/pictures/drivers/Haas.png");
-  padding-right: 30px;
-  margin-bottom: 70px;
-  height: 25vh;
-  width: auto;
-  background-size: cover;
-  text-align: end;
-}
-
-.haas h2 {
-  position: relative;
-  top: 25%;
-  color: #919292;
-  font-weight: bold;
-}
-
-.wdllogos {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
-  width: 100%;
-  margin: 0, auto;
-  padding-bottom: 50px;
-  align-items: center;
-}
-
-.wdllogos img {
-  width: 100%;
-  padding: 10px;
-}
-
-.wdllogos img:hover {
-  transform: scale(1.02);
-}
-
-.wdlimages {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  padding-bottom: 80px;
-}
-
-.wdlhistorie {
-  font-family: "UniversLTStdLight", Arial, sans-serif;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  width: 100%;
-  margin: 0, auto;
-  padding-bottom: 50px;
-  align-items: center;
-}
-
-.endurancedrivers {
-  font-family: "UniversLTStdLight", Arial, sans-serif;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  width: 100%;
-  margin: 0, auto;
-  padding-bottom: 50px;
-  align-items: center;
-}
-
-.enduranceimages {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  padding-bottom: 20px;
-}
-
-.joinus {
-  color: #29e0e1;
-}
-
-.friday:hover {
-  background-color: #54d960;
-}
-
-.saturday:hover {
-  background-color: #2d36cb;
-}
-
-.team button {
-  height: 10vh;
-  width: 10vw;
-}
-
-.fridaybutton {
-  color: #54d960;
-  border-color: #54d960;
-}
-
-.fridaybutton:hover {
-  background-color: #54d960;
-  color: #050e0e;
-}
-
-.saturdaybutton {
-  color: #2d36cb;
-  border-color: #2d36cb;
-}
-
-.saturdaybutton:hover {
-  background-color: #2d36cb;
-  color: #050e0e;
-}
-
-.wdlbutton {
-  color: #fd2225;
-  border-color: #fd2225;
-}
-
-.wdlbutton:hover {
-  background-color: #fd2225;
-  color: #050e0e;
-}
-
-.standingsimages {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
+  .nav-links a {
+    font-size: 1em; /* Schriftgröße anpassen */
+    padding: 15px; /* Mehr Padding für einfache Klickbarkeit */
+  }
 }
 
 
 
 
-/* Variablen*/
-:root{
-  --fridaysplit: #54d960;
-  --saturdaysplit: #2d36cb;
-  --sundaysplit: #29e0e1;
-  --endurance: #e66a03;
-  --wdl: #a70808;
-  --fontfamilyheadline: "Playpen Sans";
-  --fontfamilytext: "Concert One", sans-serif;
-  --fontsizeheadline: 100px;
-  --font-sizetext:28px ;
-  --borderpictureradius: 40px;
-  --borderpicturesize: 0 8px 32px 0;
-}
+
+
+
+
+
+
+
+
+
  
 /*Background Image Index Site*/
 
@@ -548,7 +251,7 @@ body{
 }
 
 .welcome {
-  font-size: 60px;
+  font-size: 80px;
   position: relative;
   bottom: 12px;
 }
@@ -587,15 +290,16 @@ body{
 }
 
 /*Button Join NOW*/
-.headline-Index-join-button {
+.button {
   display: flex;
   align-items: center;
   justify-content:center;
   flex-direction: column;
   font-family: var(--fontfamilytext);
+
  
  }
- .join-button{
+ .class-button{
   display: flex;
   margin: 40px auto; /* Fügt Abstände hinzu und zentriert den Button in der Mitte */
   padding: 20px 40px; /* Fügt Polsterung hinzu, um den Button größer zu machen */
@@ -604,9 +308,11 @@ body{
   border-radius: 8px; /* Abgerundete Ecken */
   font-size: 40px;
   box-shadow: var(--borderpicturesize) var(--sundaysplit); /* Leichter Schatteneffekt */
+  text-transform: uppercase;
+  
 }
 
-.join-button:hover {
+.class-button:hover {
   color: rgb(0, 0, 0);
   text-decoration: none;
   background: white ;
@@ -614,65 +320,17 @@ body{
   transform: scale(1.1); /* Leicht vergrößern bei Hover */
   transition: 0.3s ease; /* Weicher Übergang bei Hover */
   cursor: pointer; /* Zeigt eine Hand an, wenn man über den Button fährt */
-}
-
-
-.Quotes{
-  display: flex;
-  justify-content: center;
-  align-items: center;
- margin-left: 100px;
-  gap: 80px;
-margin-top: 30px;  
-margin-bottom: 75px;
   
- 
-}
-/* Container Zitat*/
-.quote-container{
-  display: flex;
-  border-radius: 12px;
-  flex-wrap: nowrap;
 }
 
-/* Styling für den Namen */
-.quote-text > h2 {
-  font-size: 24px;
-  margin: 10px 0 0 0;
-  color: #ffffff;
-  font-family: var(--fontfamilyheadline);
-  font-weight: bolder;
-  font-size: 28px;
-  margin-bottom: 20px;
-  gap: 40px;
-  text-align: center;
- 
-}
-.quote-text > h3{
-  font-size: 24px;
-  margin: 10px 0 0 0;
-  color: #ffffff;
-  font-family: var(--fontfamilytext);
-  font-size: 30px;
-  text-align: center;
- 
 
-}
-
-/* Styling für die Sprechblase */
-.quote-text{
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: var(--borderpicturesize) var(--sundaysplit);
-
-}
 
 
 
 
 /*H1 Headlines*/
   .header > h1{
-    font-family: var(--fontfamilyheadline);
+    font-family: var(--fontfamilytext);
     font-size: var(--fontsizeheadline);;
     font-weight: bold;
     text-transform: uppercase;
@@ -680,9 +338,70 @@ margin-bottom: 75px;
     margin-top: 40px;
   
   }
-  
 
-/*Flex-every Logo*/
+  /*H1 Headlines Enduracne +  WDL*/
+  .header2 > h1{
+    font-family: var(--fontfamilytext);
+    font-size:54px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+
+  
+  
+  }
+
+  @media (max-width: 700px) {
+    .header2 >  h1{
+      font-size: 30px;
+    
+    }
+  }
+
+
+
+/*Flex-every Logo WDL + E Team*/
+.flex-leaugelogosnext{
+  display: flex;
+  flex-direction: row ;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fontfamilytext);
+  font-weight: bolder;
+  font-size: var(--font-sizetext);
+  margin-top: 60px;
+  gap: 150px;
+}
+
+.Logosoftheleaguenext {
+  max-height: 100%;
+  max-width: 400px;
+ 
+ }
+/*WDL*/
+.overview4{
+  display: flex;
+  flex-direction: column ;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--borderpicturesize) var(--wdl);
+  border-radius: var(--borderpictureradius);
+  
+}
+/*Endurance*/
+.overview5{
+  display: flex;
+  flex-direction: column ;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: var(--borderpicturesize) var(--endurance);
+  border-radius: var(--borderpictureradius);
+  
+}
+
+
+
 .flex-leaugelogos{
   display: flex;
   flex-direction: row ;
@@ -694,10 +413,7 @@ margin-bottom: 75px;
   font-weight: bolder;
   font-size: var(--font-sizetext);
   gap: 90px;
-
-
 }
-
 /*league1*/
 
 .overview1{
@@ -727,26 +443,6 @@ margin-bottom: 75px;
   box-shadow: var(--borderpicturesize) var(--fridaysplit);
   border-radius: var(--borderpictureradius);
 }
-/*WDL*/
-.overview4{
-  display: flex;
-  flex-direction: column ;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  box-shadow: var(--borderpicturesize) var(--wdl);
-  border-radius: var(--borderpictureradius);
-}
-/*Endurance*/
-.overview5{
-  display: flex;
-  flex-direction: column ;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  box-shadow: var(--borderpicturesize) var(--endurance);
-  border-radius: var(--borderpictureradius);
-}
 
 
 .overview1:hover, .overview2:hover, .overview3:hover, .overview4:hover , .overview5:hover  {
@@ -762,13 +458,19 @@ margin-bottom: 75px;
  max-width: 400px;
 
 }
+.image-rennkalender{
+display: flex;
+align-items: center;
+flex-direction: column;
 
+}
  .image-rennkalender > img{
   max-height: 100%;
   max-width: 1185px;
   border-radius: var(--borderpicture);
   display: flex;
   align-items: center;
+  justify-content: center;
   box-shadow: var(--borderpicturesize) var(--sundaysplit);
   border-radius: var(--borderpictureradius);
   margin-top: 100px;
@@ -776,12 +478,45 @@ margin-bottom: 75px;
   
  }
 
- .footer{
+
+
+
+
+
+
+
+
+
+
+
+ /* Footer DEFAULT FOR EVERY PAGE */
+ .footer {
+  margin-top: 70px;
+  padding: 20px;
+  text-align: center;
   box-shadow: var(--borderpicturesize) var(--sundaysplit);
   font-family: var(--fontfamilytext);
   background-color: transparent;
- }
+}
 
+.footer a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer img {
+  height: 20vh;
+  width: auto;
+}
+
+.footer img:hover {
+  transform: scale(1.02);
+}
 
  /* Responsive Design für Handys */
  @media (max-width: 700px) {
@@ -789,7 +524,11 @@ margin-bottom: 75px;
    body {
      background-size: cover;
    }
+
  
+ .welcome {
+  font-size: 28px;
+ }
    /* Hintergrund loading Screen */
    .loadingpicture {
      background-size: cover;
@@ -799,11 +538,13 @@ margin-bottom: 75px;
    /* Icons */
    .feature-item {
      width: 120px; /* Kleinere Größe für kleine Bildschirme */
+     gap: -10px;
    }
  
    .feature-item i {
      font-size: 40px; /* Kleinere Icons für bessere Anpassung */
      margin-top: 30px; /* Weniger Abstand oben */
+     
    }
  
    .feature-item p {
@@ -811,12 +552,7 @@ margin-bottom: 75px;
      margin-bottom: 20px; /* Weniger Abstand unten */
    }
  
-   /* Button Join NOW */
-   .join-button {
-     font-size: 24px; /* Kleinere Schriftgröße */
-     padding: 15px 30px; /* Kleinere Polsterung */
-   }
- 
+  
    /* Quotes */
    .Quotes {
      flex-direction: column; /* Spaltenrichtung für kleinere Bildschirme */
@@ -844,9 +580,14 @@ margin-bottom: 75px;
    /* Flex-every Logo */
    .flex-leaugelogos {
      flex-direction: column; /* Spaltenrichtung für kleinere Bildschirme */
-     gap: 30px; /* Weniger Abstand zwischen den Logos */
+     gap: 80px; /* Weniger Abstand zwischen den Logos */
    }
  
+   .flex-leaugelogosnext {
+    flex-direction: column; /* Spaltenrichtung für kleinere Bildschirme */
+    gap: 80px; /* Weniger Abstand zwischen den Logos */
+  }
+
    /* League Overviews */
 
    .overview1 {
@@ -882,6 +623,11 @@ margin-bottom: 75px;
      max-width: 200px; /* Kleinere maximale Breite für Logos */
      
    }
+   /* Logos */
+   .Logosoftheleaguenext {
+    max-width: 200px; /* Kleinere maximale Breite für Logos */
+    
+  }
  
    .image-rennkalender > img {
      max-width: 300px; /* Kleinere maximale Breite für Bilder */
@@ -890,7 +636,23 @@ margin-bottom: 75px;
    }
  }
 
+ @media (max-width: 768px) {
+  .class-button {
+    padding: 15px 30px;
+    font-size: 25px;
+    width: auto; /* Stellt sicher, dass der Button sich an die Breite anpasst */
+    margin: 0 auto; /* Zentriert den Button auf mobilen Geräten */
+  }
+}
 
+@media (max-width: 480px) {
+  .class-button {
+    padding: 10px 20px;
+    font-size: 24px;
+    width: auto; /* Stellt sicher, dass der Button auf sehr kleinen Bildschirmen anpassbar bleibt */
+    margin: 0 auto; /* Sorgt dafür, dass der Button in der Mitte bleibt */
+  }
+}
 
 
 
