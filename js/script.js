@@ -15,8 +15,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     document.body.style.backgroundSize = `${width}px ${height}px`;
   }
   
-  window.addEventListener('resize', adjustBackgroundSize);
-  window.addEventListener('load', adjustBackgroundSize);
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const dropdowns = document.querySelectorAll('.dropdown');
   
-
+    menuToggle.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+    });
   
+    dropdowns.forEach(dropdown => {
+      dropdown.addEventListener('click', function() {
+        this.querySelector('.dropdown-content').classList.toggle('show');
+      });
+    });
+  });

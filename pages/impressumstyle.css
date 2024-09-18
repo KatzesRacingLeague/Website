@@ -1,0 +1,373 @@
+body {
+    width: 100%;
+    /* padding: 0 18vw; */
+  }
+  
+  /* Variablen*/
+  :root{
+    --fridaysplit: #54d960;
+    --saturdaysplit: #2d36cb;
+    --sundaysplit: #29e0e1;
+    --endurance: #e66a03;
+    --wdl: #be1d1d;
+    --fontfamilyheadline: "Playpen Sans";
+    --fontfamilytext: "Concert One", sans-serif;
+    --fontsizeheadline: 110px;
+    --font-sizetext:28px ;
+    --borderpictureradius: 40px;
+    --borderpicturesize: 0 8px 32px 0;
+  }
+  
+  
+  /* NAVIGATION DEFAULT FOR EVERY PAGE */
+  
+  /* Grundlegendes Styling für die Navigation */
+  .navbar {
+    display: flex;
+    flex-wrap: wrap; /* Erlaubt Umbrüche bei Bedarf */
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../resources/pictures/HeaderNavigation/test.png);
+    background-size: cover;
+    padding: 10px;
+    position: relative;
+    list-style: none;
+    height: auto; /* Höhe anpassen, damit sie sich an den Inhalt anpasst */
+    position: relative;
+  
+  }
+  
+  /* Logo-Design */
+  .logo img {
+    width: 120px;
+    transition: transform 0.3s ease; /* Sanfte Vergrößerung beim Hover */
+    margin-left: 10px;
+   
+  }
+  
+  /* Menü-Button für mobile Ansicht */
+  .menu-toggle {
+    display: none; /* Standardmäßig versteckt */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  /* Zentrierte Navigationslinks */
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  /* Navigationslink-Styling */
+  .nav-links li {
+    position: relative;
+    margin: 0 15px;
+    list-style-type: none;
+    transition: transform 0.3s ease; /* Sanfte Bewegungseffekte */
+    font-family: var(--fontfamilytext);
+    font-size: 28px;
+  }
+  
+  .nav-links li:hover {
+    transform: translateY(-3px); /* Leichtes Anheben beim Hover */
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Sanfte Übergänge */
+    text-align: center; /* Zentriert den Text */
+    border-radius: 5px; /* Runde Ecken */
+  }
+  
+  /* Dropdown-Menü Styling */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Positioniert das Dropdown direkt unter dem Parent */
+    left: 0; /* Stellt sicher, dass es am linken Rand des Parent beginnt */
+    background-color: black;
+    min-width: 180px;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(10px); /* Startet das Dropdown leicht versetzt */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Sanfte Einblend- und Ausblend-Effekte */
+    text-align: center; /* Text im Dropdown zentrieren */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Schatten für visuelle Tiefe */
+    padding: 0; /* Entfernt zusätzliche Polsterung */
+    margin: 0; /* Entfernt zusätzliche Margen */
+  }
+  
+  /* Dropdown-Links Styling */
+  .dropdown-content li {
+    margin: 0; /* Entfernt zusätzliche Margen */
+  }
+  
+  .dropdown-content a {
+    padding: 12px 15px;
+    color: #fff;
+    display: block;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Sanfte Übergänge */
+  }
+  
+  /* Dropdown bei Hover anzeigen */
+  .nav-links li:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0); /* Dropdown bewegt sich nach oben */
+  }
+  
+  /* Hover-Effekte für Text */
+  .text1:hover {
+    transform: translateX(5px); /* Leichtes Verschieben beim Hover */
+    background-color: var(--fridaysplit);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Schatten für Hover-Effekte */
+  }
+  
+  .text2:hover {
+    transform: translateX(5px); /* Leichtes Verschieben beim Hover */
+    background-color: var(--saturdaysplit);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Schatten für Hover-Effekte */
+  }
+  
+  .text3:hover {
+    transform: translateX(5px); /* Leichtes Verschieben beim Hover */
+    background-color: var(--sundaysplit);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Schatten für Hover-Effekte */
+  }
+  
+  .Formel1:hover {
+    color: var(--sundaysplit);
+  }
+  
+  .WDL-nav:hover {
+    color: var(--wdl);
+  }
+  
+  .ETeam:hover {
+    color: var(--endurance);
+  }
+  
+  /* Responsives Styling für mobile Geräte */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column; /* Stellt sicher, dass die Navigation in einer Spalte dargestellt wird */
+      align-items: flex-start; /* Richtet die Elemente am Anfang aus */
+      height: auto; /* Höhe anpassen */
+    }
+  
+    .menu-toggle {
+      display: block; /* Zeigt den Button auf mobilen Geräten */
+    }
+  
+    .nav-links {
+      flex-direction: column; /* Stellt die Links untereinander dar */
+      width: 100%; /* Breite auf 100% setzen */
+      display: none; /* Standardmäßig verstecken */
+    }
+  
+    .nav-links.active {
+      display: flex; /* Zeigt die Links an, wenn das Menü geöffnet ist */
+    }
+  
+    .dropdown-content {
+      position: static; /* Positionieren, um sich in der Spalte auszubreiten */
+      opacity: 1;
+      transform: none;
+      box-shadow: none; /* Entfernt den Schatten für mobile Ansicht */
+      min-width: 100%; /* Breite auf 100% setzen */
+    }
+  
+    .logo img {
+      width: 100px; /* Verkleinert das Logo für kleinere Bildschirme */
+      margin: 0; /* Entfernt zusätzliche Margen */
+    }
+  
+    .nav-links li {
+      margin: 10px 0; /* Margin anpassen für vertikale Links */
+    }
+  
+    .nav-links a {
+      font-size: 1em; /* Schriftgröße anpassen */
+      padding: 15px; /* Mehr Padding für einfache Klickbarkeit */
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
+  /*Background Image Index Site*/
+  
+  
+  body{
+    
+    background-image: url('../resources/backgorund/background.png');
+    background-position: center center; /* Zentriert das Bild */
+    background-attachment: fixed;
+    color: white;
+;
+    
+    
+    
+  }
+  
+  .main {
+    padding: 0 18vw;
+
+    
+  }
+  
+
+  .Angaben {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Schattierung */
+    max-width: 1500px; /* Maximale Breite, um die Lesbarkeit zu verbessern */
+    ; /* Maximale Breite, um die Lesbarkeit zu verbessern */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px;
+    background-color:transparent;
+   box-shadow: var(--borderpicturesize) var(--sundaysplit);
+   font-family: var(--fontfamilytext);
+   margin-top: 50px;
+    
+}
+
+.Angaben  h1 {
+
+  
+    font-size: var(--fontsizeheadline);
+    color: var(--sundaysplit);
+    margin-bottom: 40px;
+    text-align: center;
+
+}
+
+.Angaben h2 {
+   
+
+    font-size:var(--font-sizetext);
+    color: #ffffff;
+  
+  
+}
+
+.Angaben h3 {
+
+
+    font-size:var(--font-sizetext);
+    color: #ffffff;
+    margin-bottom: 10px;
+
+}
+
+
+.Angaben a {
+    color: var(--sundaysplit);
+    text-decoration: none;
+    
+
+}
+
+.Angaben a:hover {
+    text-decoration: underline;
+    color: #000000;
+}
+
+@media (max-width: 850px) {
+    .Angaben {
+        padding: 20px;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+   /* Footer DEFAULT FOR EVERY PAGE */
+   .footer {
+    margin-top: 70px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: var(--borderpicturesize) var(--sundaysplit);
+    font-family: var(--fontfamilytext);
+    background-color: transparent;
+  }
+  
+  .footer a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer img {
+    height: 20vh;
+    width: auto;
+  }
+  
+  .footer img:hover {
+    transform: scale(1.02);
+  }
+
+  
+   /* Responsive Design für Handys */
+   @media (max-width: 700px) {
+     /* Background Image Index Site */
+     body {
+       background-size: cover;
+     } }
+  
+   
+
+  
+   
+  
+  
+  
+  
+  
+  
+  
+   

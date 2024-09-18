@@ -6,282 +6,311 @@
     <title>Katzes Racing League</title>
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="../../css/styles.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="../../resources/KRL-Logo-Icon.png"
-    />
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../DetailViews/wdl.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../resources/KRL-Logo-Icon.png" />
   </head>
+
   <body>
-    <header class="sticky-header">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand wdlheader" href="../../index.html"
-            ><span class="wdlcoloredheader">K</span>ATZES
-            <span class="wdlcoloredheader">R</span>ACING
-            <span class="wdlcoloredheader">L</span>EAGUE</a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <!-- Formel 1 Ligen -->
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="formel1Dropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Formel 1 Ligen
-                </a>
-                <div class="dropdown-menu" aria-labelledby="formel1Dropdown">
-                  <a class="dropdown-item friday" href="F1Leagues/friday.html"
-                    >Freitagsliga</a
-                  >
-                  <a
-                    class="dropdown-item saturday"
-                    href="F1Leagues/saturday.html"
-                    >Samstagsliga</a
-                  >
-                  <a class="dropdown-item" href="F1Leagues/sunday.html"
-                    >Sonntagsliga</a
-                  >
+    <header>
+                <nav class="navbar">
+                  <!-- Logo der Liga -->
+                  <div class="logo">
+                    <img href="#" src="../DetailViews/F1Leagues/Ressources/krl-logos/WDL LOGO RUND.png" alt="Liga Logo">
+                  </div>
+              
+                  <!-- Menü-Button für mobile Ansicht -->
+                  <button class="menu-toggle">☰</button>
+              
+                  <!-- Hauptnavigationslinks -->
+                  <ul class="nav-links">
+                    <li class="dropdown">
+                      <a class="Formel1" href="#">KRL F1 Liga</a>
+                      <ul class="dropdown-content">
+                        <li class="text1"><a href="#">Freitagsliga</a></li>
+                        <li class="text2"><a href="#">Samstagsliga</a></li>
+                        <li class="text3"><a href="#">Sonntagsliga</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="WDL-nav" href="#">Wettkampf der Ligen</a></li>
+                    <li><a class="ETeam" href="#">Endurance</a></li>
+                    <li class="dropdown">
+                      <a class="Formel1" href="#">Sonstiges</a>
+                      <ul class="dropdown-content">
+                        <li class="text3"><a href="#">Race Director Notes</a></li>
+                        <li class="text3"><a href="#">Regelwerk</a></li>
+                        <li class="text3"><a href="#">Unser Team</a></li>
+                        <li class="text3"><a href="#">KRL Help</a></li>
+                        <li class="text3"><a href="#">Merch Shop</a></li>
+                        <li class="text3"><a href="#">Teilnahme Formular</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              
+                <script src="script.js"></script> 
+              </header>    
+              
+              <main>
+                <div class="Fahrerfeldheader">
+                  <h1>FAHRERFELD</h1>
                 </div>
-              </li>
-
-              <!-- Wettkampf der Ligen -->
-              <li class="nav-item">
-                <a class="nav-link" href="wdl.html">Wettkampf der Ligen</a>
-              </li>
-
-              <!-- Endurance Team -->
-              <li class="nav-item">
-                <a class="nav-link" href="endurance.html">Endurance Team</a>
-              </li>
-
-              <!-- Sonstiges -->
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="sonstigesDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Sonstiges
-                </a>
-                <div
-                  class="dropdown-menu dropdown-menu-right"
-                  aria-labelledby="sonstigesDropdown"
-                >
-                  <a class="dropdown-item" href="../../pages/rdn.html"
-                    >Race-Director-Notes</a
-                  >
-                  <a class="dropdown-item" href="../../pages/rules.html"
-                    >Regelwerk</a
-                  >
-                  <a class="dropdown-item" href="../../pages/team.html"
-                    >Unser Team</a
-                  >
-                  <a class="dropdown-item" href="../../pages/krlhelp.html"
-                    >KRL Help</a
-                  >
-                  <a
-                    class="dropdown-item"
-                    href="https://www.xoose.de/produkt-kategorie/katzes-racing-league/"
-                    >Merchshop</a
-                  >
-                  <a
-                    class="dropdown-item"
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSczZykzGcael-D0ulAxffcyaZ096hAEbzIVa8AaAmLcRS8dWg/viewform"
-                    >Teilnahmeformular</a
-                  >
+  
+                <div class="line-up">
+                  <!-- Team Red Bull -->
+                  <div class="team redbull">
+                    <img class="team-logo" src="../DetailViews/F1Leagues/Ressources/Teamlogos/RED BULL.png">
+                    <img class="liga" src="../DetailViews/F1Leagues/Ressources/krl-logos/KRL LOGO.png">
+                  </div>
+                
+                  <!-- Team Mercedes -->
+                  <div class="team mercedes">
+                    <img class="team-logo" src="../DetailViews/F1Leagues/Ressources/Teamlogos/MERCEDESTRANSPARENTNEW.png">
+                    <img class="liga" src="../DetailViews/F1Leagues/Ressources/krl-logos/KRL LOGO.png">
+                  </div>
+                
+                  <!-- Team Ferrari -->
+                  <div class="team ferrari">
+                    <img class="team-logo" src="../DetailViews/F1Leagues/Ressources/Teamlogos/FERRARI.png">
+                    <img class="liga" src="../DetailViews/F1Leagues/Ressources/krl-logos/KRL LOGO.png">
+                  </div>
+                
+                  <!-- Team McLaren -->
+                  <div class="team mclaren">
+                    <img class="team-logo" src="../DetailViews/F1Leagues/Ressources/Teamlogos/MCLAREN ORANGE.png">
+                    <img class="liga" src="../DetailViews/F1Leagues/Ressources/krl-logos/KRL LOGO.png">
+      
+                  </div>
+                
+                  <!-- Team Aston Martin -->
+                  <div class="team aston-martin">
+                    <img class="team-logo" src="../DetailViews/F1Leagues/Ressources/Teamlogos/ASTON MARTIN TRANSPARENT.png">
+                    <img class="liga" src="../DetailViews/F1Leagues/Ressources/krl-logos/KRL LOGO.png">
+                  
+                  </div>
+                
+                  <!-- Team Alpine -->
+                  <div class="team alpine">
+                    <img class="team-logo" src="../DetailViews/F1Leagues/Ressources/Teamlogos/ALPINE.png">
+                    <img class="liga" src="../DetailViews/F1Leagues/Ressources/krl-logos/KRL LOGO.png">
+                    
+                  </div>
+                
+                  <!-- Team Williams -->
+                  <div class="team williams">
+                    <img class="team-logo" src="../DetailViews/F1Leagues/Ressources/Teamlogos/WILLIAMS.png">
+                    <img class="liga" src="../DetailViews/F1Leagues/Ressources/krl-logos/KRL LOGO.png">
+                   
+                  </div>
+                
+                  <!-- Team VCRB -->
+                  <div class="team vcrb">
+                    <img class="team-logo" src="../DetailViews/F1Leagues/Ressources/Teamlogos/VCRB.png">
+                    <img class="liga" src="../DetailViews/F1Leagues/Ressources/krl-logos/KRL LOGO.png">
+                   
+                  </div>
+                
+                  <!-- Team Kick Sauber -->
+                  <div class="team kick-sauber">
+                    <img class="team-logo" src="../DetailViews/F1Leagues/Ressources/Teamlogos/KICK SAUBER GRÜN.png">
+                    <img class="liga" src="../DetailViews/F1Leagues/Ressources/krl-logos/KRL LOGO.png">
+                  </div>
+                
+                  <!-- Team Haas -->
+                  <div class="team haas">
+                    <img class="team-logo" src="../DetailViews/F1Leagues/Ressources/Teamlogos/HAAS.png">
+                    <img class="liga" src="../DetailViews/F1Leagues/Ressources/krl-logos/KRL LOGO.png">
+                    </div>
+                  </div>
                 </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
 
-    <main>
-      <div class="main">
-        <h1>WETTKAMPF DER LIGEN</h1>
-        <div class="blocktext">
-          Beim „Wettkampf der Ligen“ treten zehn F1-Ligen mit jeweils 2 Fahrern
-          in einem Team gegeneinander an. Für zukünftige Auflagen der WDL sind
-          interessierte Ligen jederzeit willkommen.
-        </div>
-        <div class="blocktext">
-          Für die Teilnahme an dem WDL sollte die Liga eine stabile
-          Fahrersituation haben, da man aufgrund eines Einsatzlimits nicht immer
-          die gleichen Fahrer ins Rennen schicken kann. Wenn deine Liga
-          teilnehmen möchte, kontaktiert einen der WDL-Organisatoren.
-          <a class="wdllinkintext" href="../team.html">- siehe "Unser Team".</a>
-        </div>
-        <div class="blocktext">
-          Die Rennen werden jeweils um 20:20 Uhr auf
-          <a
-            class="wdllinkintext"
-            href="https://www.twitch.tv/katzesracingleague"
-            >Twitch</a
-          >
-          gestreamt. (Termine Siehe Rennkalender)
-        </div>
-        <h3>WM-STAND</h3>
-        <div class="row">
-          <div class="col-md-6">
-            <img
-              class="standingsimages"
-              src="../../resources/pictures/wdl/Driver_Standings_S9_WdL.png"
-            />
-          </div>
-          <div class="col-md-6">
-            <img
-              class="standingsimages"
-              src="../../resources/pictures/wdl/League_Standings_S9_WdL.png"
-            />
-          </div>
-        </div>
-        <div class="center-button">
-          <a
-            href="https://docs.google.com/spreadsheets/d/1R2uX54t8MvYZuadbEX8i5OvcPL4niThnCDE5aTU2A_A/edit?usp=sharing"
-          >
-            <button class="wdlbutton">WM-Tabelle</button>
-          </a>
-        </div>
-        <h3>TEILNEHMENDE LIGEN</h3>
-        <div class="wdllogos">
-          <a href="../../index.html">
-            <img src="../../resources/KRL LOGO.png" />
-          </a>
-          <a href="https://playing-ducks.com/ducks-f1-league/">
-            <img src="../../resources/pictures/wdl/Logo PD.png" />
-          </a>
-          <a href="https://steamcommunity.com/groups/ErdiRacingCommunity">
-            <img src="../../resources/pictures/wdl/ERCLogoHighRes1.png" />
-          </a>
-          <a href="https://airborne-racing.de/">
-            <img src="../../resources/pictures/wdl/ARL-logo-klein.png" />
-          </a>
-          <a href="https://www.ircf1.de/">
-            <img src="../../resources/pictures/wdl/Irc neu 2.png" />
-          </a>
-          <a href="https://goldfinger-racing-league.jimdosite.com/">
-            <img src="../../resources/pictures/wdl/GRL_LOGO.png" />
-          </a>
-          <a href="https://discord.gg/YYc75rsDp3">
-            <img src="../../resources/pictures/wdl/CRL_Logo.png" />
-          </a>
-          <a href="https://www.mulchianracingleague.de/">
-            <img src="../../resources/pictures/wdl/mrl_logo.png" />
-          </a>
-          <!-- <a href="https://www.f1-onlineliga.com/">
-            <img src="../../resources/pictures/wdl/pageLogo-71fe5705.png" />
-          </a> -->
-          <a href="https://youtube.com/@racefriends1?si=xccHwCGB3R-T_KN9">
-            <img src="../../resources/pictures/wdl/channels4_profile.jpg" />
-          </a>
-        </div>
-        <h3>RENNKALENDER</h3>
-        <div>
-          <img
-            class="wdlimages"
-            src="../../resources/pictures/wdl/Kalender_S9_WDL.png"
-          />
-        </div>
-        <h3>PUNKTEVERGABE</h3>
-        <div>
-          <img
-            class="wdlimages"
-            src="../../resources/pictures/wdl/Punkteverteilung_S9_WDL.png"
-          />
-        </div>
-        <h3>HISTORIE</h3>
-        <div class="wdlhistorie">
-          <div>Saison</div>
-          <div>Fahrerweltmeister</div>
-          <div>Ligaweltmeister</div>
-          <div>2017</div>
-          <div>[KRL] Schenico</div>
-          <div>Mulchian Formula 1 Liga</div>
-          <div>2018</div>
-          <div>[KRL] Corni</div>
-          <div>Katzes Racing League</div>
-          <div>2019</div>
-          <div>[KRL] Corni</div>
-          <div>Katzes Racing League</div>
-          <div>2020</div>
-          <div>[AIR] tbschmd</div>
-          <div>Airborne Racing League</div>
-          <div>2021</div>
-          <div>[AIR] Fsks100</div>
-          <div>Katzes Racing League</div>
-          <div>2022</div>
-          <div>[AIR] ripsn</div>
-          <div>Airborne Racing League</div>
-          <div>2023 S1</div>
-          <div>[KRL] Corni</div>
-          <div>Katzes Racing League</div>
-          <div>2023 S2</div>
-          <div>[KRL] Corni</div>
-          <div>Katzes Racing League</div>
-        </div>
-      </div>
-    </main>
+
+
+
+
+   <!-- WM Standings -->
+
+                <div class="Header">
+                  <h1>WM-Stände</h1>
+
+                </div>
+
+                <div class="WMStandings">
+
+                <img class="BilderWM" src="../DetailViews/wdl/Driver_Standings_S9_WdL.png">
+                <img class="BilderWM" src="../DetailViews/wdl/League_Standings_S9_WdL.png">
+                
+                </div>
+
+   <!--Button-->
+
+              <div class="button">
+                <a href="#" class="class-button">Tabellen</a>
+             </div> 
+
+              <div class="Sonstiges">
+                <div class="SonstigesPicture">
+                  <h1 class="Header">KALENDER</h1>
+                  <img src="../DetailViews/wdl/Kalender_S9_WDL.png">
+                </div>
+                <div class="SonstigesPicture">
+                  <h1>GP-Result</h1>
+                  <img  src="../DetailViews/wdl/GP_Ergebnis_S9_WdL.png"> 
+                </div>
+                 
+                 
+                </div>
+
+                <h1 class="Headerh1">Punkteverteilung</h1>
+
+              
+                <div class="point-boxen">
+                
+                <div class="point-box" data-points="1. Platz" data-score="25 Punkte">P1 </div>
+                <div class="point-box" data-points="2. Platz"  data-score="21 Punkte">P2</div>
+                <div class="point-box" data-points="3. Platz" data-score="18 Punkte">P3</div> 
+                <div class="point-box" data-points="4. Platz" data-score="16 Punkte">P4</div>
+                <div class="point-box" data-points="5. Platz." data-score="14 Punkte">P5</div>
+                <div class="point-box" data-points="6. Platz" data-score="12 Punkte">P6</div> 
+                <div class="point-box" data-points="7. Platz" data-score="10 Punkte">P7</div>
+                <div class="point-box" data-points="8. Platz" data-score="08 Punkte">P8</div>
+                <div class="point-box" data-points="9. Platz" data-score="07 Punkte">P9</div> 
+                <div class="point-box" data-points="10. Platz" data-score="06 Punkte">P10</div>
+                <div class="point-box" data-points="11. Platz" data-score="05 Punkte">P11</div>
+                <div class="point-box" data-points="12. Platz" data-score="04 Punkte">P12</div> 
+                <div class="point-box" data-points="13. Platz" data-score="03 Punkte">P13</div>
+                <div class="point-box" data-points="14. Platz" data-score="02 Punkte">P14</div>
+                <div class="point-box" data-points="15. Platz" data-score="01 Punkt">P15</div> 
+                <div class="point-box" data-points="16. Platz" data-score="0 Punkte">P16</div>
+                <div class="point-box" data-points="17. Platz" data-score="0 Punkte">P17</div> 
+                <div class="point-box" data-points="18. Platz" data-score="0 Punkte">P18</div>
+                <div class="point-box" data-points="19. Platz" data-score="0 Punkte">P19</div>
+                <div class="point-box" data-points="20. Platz" data-score="0 Punkte">P20</div> 
+                <div class="point-box" data-points="Fastes Lap" data-score="1 Punkt">Fastes Lap</div> 
+
+              </div>
+
+        <!-- Historie-->
+
+              <section class="history">
+                <h1>Historie</h1>
+                <div class="history-container">
+                  <div class="history-item">
+                    <h2>2017</h2>
+                    <p>Fahrerweltmeister:<br> 
+                      [KRL] Schenico </p>
+                    <p>Ligaweltmeister:<br> Mulchian Formula 1 Liga
+                    </p>
+                  </div>
+                  <div class="history-item">
+                    <h2>2018</h2>
+                    <p>Fahrerweltmeister:<br> [KRL] Corni</p>
+                    <p>Ligaweltmeister:<br> Katzes Racing League
+                    </p>
+                  </div>
+                  <div class="history-item">
+                    <h2>2019</h2>
+                    <p>Fahrerweltmeister:<br> [KRL] Corni</p>
+                    <p>Ligaweltmeister:<br> Katzes Racing League</p>
+                  </div>
+                  <div class="history-item">
+                    <h2>2020</h2>
+                    <p>Fahrerweltmeister: <br> [AIR] tbschmd
+                    </p>
+                    <p>Ligaweltmeister:<br> Airborne Racing League
+                    </p>
+                  </div>
+                  <div class="history-item">
+                    <h2>2021</h2>
+                    <p>Fahrerweltmeister:<br> [AIR] Fsks100
+                    </p>
+                    <p>Ligaweltmeister:<br> Katzes Racing League
+                    </p>
+                  </div>
+                  <div class="history-item">
+                    <h2>2022</h2>
+                    <p>Fahrerweltmeister: <br> [AIR] ripsn
+                    </p>
+                    <p>Ligaweltmeister:<br>Airborne Racing League
+                    </p>
+                  </div>
+                  <div class="history-item">
+                    <h2>2023 Season 1</h2>
+                    <p>Fahrerweltmeister:<br> [KRL] Corni
+                    </p>
+                    <p>Ligaweltmeister:<br> Katzes Racing League
+                    </p>
+                  </div>
+                  <div class="history-item">
+                    <h2>2023 Season 2</h2>
+                    <p>Fahrerweltmeister:<br> [KRL] Corni
+                    </p>
+                    <p>Ligaweltmeister:<br> Katzes Racing League
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              </main>
+    </body>
+         
+          
+    
+    </html>
+    
+    
+
+
+    
+
+        <!-- Footer-->
 
     <footer class="footer">
       <div class="container">
         <span
           >© 2024 Katzes Racing League. All rights reserved. - Version: 01.03.01
           - </span
-        ><a href="../../pages/impressum.html">Impressum</a>
+        ><a href="../../impressum.html">Impressum</a>
       </div>
       <div>
         <a href="https://discord.gg/2r9wDfKdSB">
           <img
-            src="../../resources/pictures/social/discord.png"
+            src="../../../resources/pictures/social/discord.png"
             alt="discord"
           />
         </a>
         <a href="https://www.twitch.tv/katzesracingleague">
-          <img src="../../resources/pictures/social/twitch.png" alt="twitch" />
+          <img
+            src="../../../resources/pictures/social/twitch.png"
+            alt="twitch"
+          />
         </a>
         <a href="https://www.youtube.com/@KatzesRacingLeague">
           <img
-            src="../../resources/pictures/social/youtube.png"
+            src="../../../resources/pictures/social/youtube.png"
             alt="youtube"
           />
         </a>
         <a href="https://www.instagram.com/katzesracingleague">
           <img
-            src="../../resources/pictures/social/instagram.png"
+            src="../../../resources/pictures/social/instagram.png"
             alt="instagram"
           />
         </a>
         <a href="https://www.tiktok.com/@katzesracingleaguef1">
-          <img src="../../resources/pictures/social/tiktok.png" alt="tiktok" />
+          <img
+            src="../../../resources/pictures/social/tiktok.png"
+            alt="tiktok"
+          />
         </a>
         <a href="https://www.twitter.com/KatzesLeague">
-          <img src="../../resources/pictures/social/X.png" alt="x" />
+          <img src="../../../resources/pictures/social/X.png" alt="x" />
         </a>
       </div>
     </footer>
@@ -289,5 +318,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
-</html>
+
+
