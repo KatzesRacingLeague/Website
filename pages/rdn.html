@@ -4,265 +4,233 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Katzes Racing League</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
     <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="icon" type="image/png" href="../resources/KRL-Logo-Icon.png" />
+    <link rel="stylesheet" href="../css/rdn.styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../resources/pictures/general/krllogos/KRL_LOGO.png"
+    />
   </head>
   <body>
-    <header class="sticky-header">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html"
-            ><span class="defaultcoloredheader">K</span>ATZES
-            <span class="defaultcoloredheader">R</span>ACING
-            <span class="defaultcoloredheader">L</span>EAGUE</a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="formel1Dropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Formel 1 Ligen
-                </a>
-                <div class="dropdown-menu" aria-labelledby="formel1Dropdown">
-                  <a
-                    class="dropdown-item friday"
-                    href="DetailViews/F1Leagues/friday.html"
-                    >Freitagsliga</a
-                  >
-                  <a
-                    class="dropdown-item saturday"
-                    href="DetailViews/F1Leagues/saturday.html"
-                    >Samstagsliga</a
-                  >
-                  <a
-                    class="dropdown-item"
-                    href="DetailViews/F1Leagues/sunday.html"
-                    >Sonntagsliga</a
-                  >
-                </div>
+    <header>
+      <nav class="navbar">
+        <!-- Logo der Liga -->
+        <a href="../index.html">
+          <div class="logo">
+            <img
+              src="../resources/pictures/general/krllogos/KRL_LOGO.png"
+              alt="Liga Logo"
+            />
+          </div>
+        </a>
+
+        <!-- Menü-Button für mobile Ansicht -->
+        <button class="menu-toggle">☰</button>
+
+        <!-- Hauptnavigationslinks -->
+        <ul class="nav-links">
+          <li class="dropdown">
+            <a class="Formel1">KRL F1 Liga</a>
+            <ul class="dropdown-content">
+              <li class="text1">
+                <a href="DetailViews/F1Leagues/friday.html">Freitagsliga</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="DetailViews/wdl.html"
-                  >Wettkampf der Ligen</a
-                >
+              <li class="text2">
+                <a href="DetailViews/F1Leagues/saturday.html">Samstagsliga</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="DetailViews/endurance.html"
-                  >Endurance Team</a
-                >
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="sonstigesDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Sonstiges
-                </a>
-                <div
-                  class="dropdown-menu dropdown-menu-right"
-                  aria-labelledby="sonstigesDropdown"
-                >
-                  <a class="dropdown-item" href="../pages/rdn.html"
-                    >Race-Director-Notes</a
-                  >
-                  <a class="dropdown-item" href="../pages/rules.html"
-                    >Regelwerk</a
-                  >
-                  <a class="dropdown-item" href="../pages/team.html"
-                    >Unser Team</a
-                  >
-                  <a class="dropdown-item" href="../pages/krlhelp.html"
-                    >KRL Help</a
-                  >
-                  <a
-                    class="dropdown-item"
-                    href="https://www.xoose.de/produkt-kategorie/katzes-racing-league/"
-                    >Merchshop</a
-                  >
-                  <a
-                    class="dropdown-item"
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSczZykzGcael-D0ulAxffcyaZ096hAEbzIVa8AaAmLcRS8dWg/viewform"
-                    >Teilnahmeformular</a
-                  >
-                </div>
+              <li class="text3">
+                <a href="DetailViews/F1Leagues/sunday.html">Sonntagsliga</a>
               </li>
             </ul>
-          </div>
-        </div>
+          </li>
+          <li>
+            <a class="WDL-nav" href="DetailViews/wdl.html"
+              >Wettkampf der Ligen</a
+            >
+          </li>
+          <li>
+            <a class="ETeam" href="DetailViews/endurance.html">Endurance</a>
+          </li>
+          <li class="dropdown">
+            <a class="Formel1">Sonstiges</a>
+            <ul class="dropdown-content">
+              <li class="text3">
+                <a href="rdn.html">Race-Director-Notes</a>
+              </li>
+              <li class="text3"><a href="rules.html">Regelwerk</a></li>
+              <li class="text3"><a href="team.html">Unser Team</a></li>
+              <li class="text3"><a href="krlhelp.html">KRL Help</a></li>
+              <li class="text3">
+                <a
+                  href="https://www.xoose.de/produkt-kategorie/katzes-racing-league/"
+                  >Merch Shop</a
+                >
+              </li>
+              <li class="text3">
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSczZykzGcael-D0ulAxffcyaZ096hAEbzIVa8AaAmLcRS8dWg/viewform"
+                  >Teilnahme Formular</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
       </nav>
     </header>
 
-    <main>
-      <div class="main">
+    <section class="background">
+      <!--Header H1-->
+      <div class="header">
         <h1>RACE-DIRECTOR-NOTES</h1>
-        <div>
-          <div class="row">
-            <div class="col-md-6 col-sm-12">
-              <div>7. Saisonrennen: Japan</div>
-              <div>
-                <a
-                  href="../resources/files/rdns/Race_director_notes_fur_Japan.pdf"
-                  download="Race_director_notes_fur_Japan.pdf"
-                >
-                  <button>Race-Director-Notes herunterladen</button>
-                </a>
-              </div>
-            </div>
-            <div class="col-md-6 col-sm-12">
-              <div>6. Saisonrennen: Italien</div>
-              <div>
-                <a
-                  href="../resources/files/rdns/Race_director_notes_fur_Italien.pdf"
-                  download="Race_director_notes_fur_Italien.pdf"
-                >
-                  <button>Race-Director-Notes herunterladen</button>
-                </a>
-              </div>
-            </div>
-            <div class="col-md-6 col-sm-12">
-              <div>5. Saisonrennen: Singapur</div>
-              <div>
-                <a
-                  href="../resources/files/rdns/Race_director_notes_fur_Singapur.pdf"
-                  download="Race_director_notes_fur_Singapur.pdf"
-                >
-                  <button>Race-Director-Notes herunterladen</button>
-                </a>
-              </div>
-            </div>
-            <div class="col-md-6 col-sm-12">
-              <div>4. Saisonrennen: China</div>
-              <div>
-                <a
-                  href="../resources/files/rdns/Race_director_notes_fur_China.pdf"
-                  download="Race_director_notes_fur_China.pdf"
-                >
-                  <button>Race-Director-Notes herunterladen</button>
-                </a>
-              </div>
-            </div>
-            <div class="col-md-6 col-sm-12">
-              <div>3. Saisonrennen: Katar</div>
-              <div>
-                <a
-                  href="../resources/files/rdns/Race_director_notes_fur_Katar.pdf"
-                  download="Race_director_notes_fur_Katar.pdf"
-                >
-                  <button>Race-Director-Notes herunterladen</button>
-                </a>
-              </div>
-            </div>
-            <div class="col-md-6 col-sm-12">
-              <div>2. Saisonrennen: Abu Dhabi</div>
-              <div>
-                <a
-                  href="../resources/files/rdns/Race_director_notes_fur_AbuDhabi.pdf"
-                  download="Race_director_notes_fur_AbuDhabi.pdf"
-                >
-                  <button>Race-Director-Notes herunterladen</button>
-                </a>
-              </div>
-            </div>
-            <div class="col-md-6 col-sm-12">
-              <div>1. Saisonrennen: Großbritannien</div>
-              <div>
-                <a
-                  href="../resources/files/rdns/Race_director_notes_fur_Großbritannien.pdf"
-                  download="Race_director_notes_fur_Großbritannien.pdf"
-                >
-                  <button>Race-Director-Notes herunterladen</button>
-                </a>
-              </div>
-            </div>
-            <div class="col-md-6 col-sm-12">
-              <div>2. Testtag: Großbritannien</div>
-              <div>
-                <a
-                  href="../resources/files/rdns/Race_director_notes_fur_Großbritannien.pdf"
-                  download="Race_director_notes_fur_Großbritannien.pdf"
-                >
-                  <button>Race-Director-Notes herunterladen</button>
-                </a>
-              </div>
-            </div>
-            <div class="col-md-6 col-sm-12">
-              <div>1. Testtag: Belgien</div>
-              <div>
-                <a
-                  href="../resources/files/rdns/Race_director_notes_fur_Testtag_Belgien.pdf"
-                  download="Race_director_notes_fur_Testtag_Belgien.pdf"
-                >
-                  <button>Race-Director-Notes herunterladen</button>
-                </a>
-              </div>
-            </div>
-            <div class="col-md-6"></div>
-          </div>
+      </div>
+
+      <!--Kasten RDN-->
+      <div class="rdncontainer">
+        <div class="rdnitem">
+          <h2>8. Saisonrennen: Portugal</h2>
+          <a
+            href="../resources/files/race-director-notes/Race_director_notes_fur_Portugal.pdf"
+            download="Race_director_notes_fur_Portugal.pdf"
+            class="rdn-button"
+            >Datei herunterladen</a
+          >
+        </div>
+        <div class="rdnitem">
+          <h2>7. Saisonrennen: Japan</h2>
+          <a
+            href="../resources/files/race-director-notes/Race_director_notes_fur_Japan.pdf"
+            download="Race_director_notes_fur_Japan.pdf"
+            class="rdn-button"
+            >Datei herunterladen</a
+          >
+        </div>
+        <div class="rdnitem">
+          <h2>6. Saisonrennen: Italien</h2>
+          <a
+            href="../resources/files/race-director-notes/Race_director_notes_fur_Italien.pdf"
+            download="Race_director_notes_fur_Italien.pdf"
+            class="rdn-button"
+            >Datei herunterladen</a
+          >
+        </div>
+        <div class="rdnitem">
+          <h2>5. Saisonrennen: Singapur</h2>
+          <a
+            href="../resources/files/race-director-notes/Race_director_notes_fur_Singapur.pdf"
+            download="Race_director_notes_fur_Singapur.pdf"
+            class="rdn-button"
+            >Datei herunterladen</a
+          >
+        </div>
+        <div class="rdnitem">
+          <h2>4. Saisonrennen: China</h2>
+          <a
+            href="../resources/files/race-director-notes/Race_director_notes_fur_China.pdf"
+            download="Race_director_notes_fur_China.pdf"
+            class="rdn-button"
+            >Datei herunterladen</a
+          >
+        </div>
+        <div class="rdnitem">
+          <h2>3. Saisonrennen: Katar</h2>
+          <a
+            href="../resources/files/race-director-notes/Race_director_notes_fur_Katar.pdf"
+            download="Race_director_notes_fur_Katar.pdf"
+            class="rdn-button"
+            >Datei herunterladen</a
+          >
+        </div>
+        <div class="rdnitem">
+          <h2>2. Saisonrennen: Abu Dhabi</h2>
+          <a
+            href="../resources/files/race-director-notes/Race_director_notes_fur_AbuDhabi.pdf"
+            download="Race_director_notes_fur_Testtag_AbuDhabi.pdf"
+            class="rdn-button"
+            >Datei herunterladen</a
+          >
+        </div>
+        <div class="rdnitem">
+          <h2>1. Saisonrennen: Großbritannien</h2>
+          <a
+            href="../resources/files/race-director-notes/Race_director_notes_fur_Großbritannien.pdf"
+            download="Race_director_notes_fur_Testtag_Großbritannien.pdf"
+            class="rdn-button"
+            >Datei herunterladen</a
+          >
+        </div>
+        <div class="rdnitem">
+          <h2>2. Testtag: Großbritannien</h2>
+          <a
+            href="../resources/files/race-director-notes/Race_director_notes_fur_Großbritannien.pdf"
+            download="Race_director_notes_fur_Testtag_Großbritannien.pdf"
+            class="rdn-button"
+            >Datei herunterladen</a
+          >
+        </div>
+        <div class="rdnitem">
+          <h2>1. Testtag: Belgien</h2>
+          <a
+            href="../resources/files/race-director-notes/Race_director_notes_fur_Testtag_Belgien.pdf"
+            download="Race_director_notes_fur_Testtag_Belgien.pdf"
+            class="rdn-button"
+            >Datei herunterladen</a
+          >
         </div>
       </div>
-    </main>
+    </section>
 
     <footer class="footer">
       <div class="container">
         <span
-          >© 2024 Katzes Racing League. All rights reserved. - Version: 01.03.01
+          >© 2024 Katzes Racing League. All rights reserved. - Version: 02.00.00
           - </span
         ><a href="impressum.html">Impressum</a>
       </div>
       <div>
         <a href="https://discord.gg/2r9wDfKdSB">
-          <img src="../resources/pictures/social/discord.png" alt="discord" />
+          <img
+            src="../resources/pictures/general/socials/discord.png"
+            alt="discord"
+          />
         </a>
         <a href="https://www.twitch.tv/katzesracingleague">
-          <img src="../resources/pictures/social/twitch.png" alt="twitch" />
+          <img
+            src="../resources/pictures/general/socials/twitch.png"
+            alt="twitch"
+          />
         </a>
         <a href="https://www.youtube.com/@KatzesRacingLeague">
-          <img src="../resources/pictures/social/youtube.png" alt="youtube" />
+          <img
+            src="../resources/pictures/general/socials/youtube.png"
+            alt="youtube"
+          />
         </a>
         <a href="https://www.instagram.com/katzesracingleague">
           <img
-            src="../resources/pictures/social/instagram.png"
+            src="../resources/pictures/general/socials/instagram.png"
             alt="instagram"
           />
         </a>
         <a href="https://www.tiktok.com/@katzesracingleaguef1">
-          <img src="../resources/pictures/social/tiktok.png" alt="tiktok" />
+          <img
+            src="../resources/pictures/general/socials/tiktok.png"
+            alt="tiktok"
+          />
         </a>
         <a href="https://www.twitter.com/KatzesLeague">
-          <img src="../resources/pictures/social/X.png" alt="x" />
+          <img src="../resources/pictures/general/socials/X.png" alt="x" />
         </a>
       </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>

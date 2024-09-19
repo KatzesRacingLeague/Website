@@ -1,0 +1,30 @@
+:root {
+  --font-sizetext: 20px;
+}
+
+/* Hauptbereich zentrieren */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  /* padding: 20px; */
+  text-align: left;
+  padding: 0 18vw;
+}
+
+.blocktext {
+  font-size: var(--font-sizetext);
+  font-family: var(--fontfamilytext);
+  margin: 10px 0 10px 0;
+}
+
+h2 {
+  font-family: var(--fontfamilytext);
+  font-size: 50px;
+}
+
+h3 {
+  font-family: var(--fontfamilytext);
+  font-size: 30px;
+}

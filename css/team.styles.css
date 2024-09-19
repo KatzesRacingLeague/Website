@@ -1,0 +1,146 @@
+/*Download HELP*/
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.team-item {
+  width: 17%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--fontfamilytext);
+  gap: 90px;
+  box-shadow: var(--borderpicturesize) var(--sundaysplit);
+  border-radius: var(--borderpictureradius);
+}
+
+.team-item:hover {
+  transform: scale(1.1);
+  cursor: pointer; /* Zeigt eine Hand an, wenn man über den Button fährt */
+  transition: all 0.3s ease;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-family: var(--fontfamilytext);
+}
+
+.team-feature-item i {
+  font-size: 75px;
+  color: var(--sundaysplit); /* Farbe der Icons */
+  margin: 20px;
+}
+
+.team-item:hover {
+  transform: scale(1.1);
+  cursor: pointer; /* Zeigt eine Hand an, wenn man über den Button fährt */
+  transition: all 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Responsive Design für Handys */
+@media (max-width: 700px) {
+  .team-container {
+    flex-direction: column; /* Spaltenrichtung für kleinere Bildschirme */
+    align-items: center;
+    padding: 0px;
+  }
+
+  .team-item {
+    width: 70%;
+    margin-bottom: 50px;
+  }
+
+  h2 {
+    font-size: 20px; /* Kleinere Schriftgröße für kleinere Bildschirme */
+  }
+}
+
+/* Farbe Ligaleiter */
+.ligaleiter {
+  box-shadow: var(--borderpicturesize) var(--ligaleiter);
+}
+
+.ligaleiter a > .team-feature-item i {
+  color: var(--ligaleiter); /* Farbe der Icons */
+}
+
+/* Farbe Administration */
+.administration {
+  box-shadow: var(--borderpicturesize) var(--administration);
+}
+
+.administration a > .team-feature-item i {
+  color: var(--administration); /* Farbe der Icons */
+}
+
+/* Farbe WDL */
+.wdl {
+  box-shadow: var(--borderpicturesize) var(--wdl);
+}
+
+.wdl a > .team-feature-item i {
+  color: var(--wdl); /* Farbe der Icons */
+}
+
+/* Farbe Endurance */
+.endurance {
+  box-shadow: var(--borderpicturesize) var(--endurance);
+}
+
+.endurance a > .team-feature-item i {
+  color: var(--endurance); /* Farbe der Icons */
+}
+
+/* Farbe Recruiting */
+.recruitingadm {
+  box-shadow: var(--borderpicturesize) var(--recruitingadm);
+}
+
+.recruitingadm a > .team-feature-item i {
+  color: var(--recruitingadm); /* Farbe der Icons */
+}
+
+/* Farbe Rennleitungsvoristz */
+.rennleitungsvorsitz {
+  box-shadow: var(--borderpicturesize) var(--rennleitungsvorsitz);
+}
+
+.rennleitungsvorsitz a > .team-feature-item i {
+  color: var(--rennleitungsvorsitz); /* Farbe der Icons */
+}
+
+/* Farbe Kommentatoren Freitag */
+.commentatorfriday {
+  box-shadow: var(--borderpicturesize) var(--fridaysplit);
+}
+
+.commentatorfriday a > .team-feature-item i {
+  color: var(--fridaysplit); /* Farbe der Icons */
+}
+
+/* Farbe Kommentatoren Samstag */
+.commentatorsatuday {
+  box-shadow: var(--borderpicturesize) var(--saturdaysplit);
+}
+
+.commentatorsatuday a > .team-feature-item i {
+  color: var(--saturdaysplit); /* Farbe der Icons */
+}
+
+/* Farbe Kommentatoren Sonntag */
+.commentatorsunday {
+  box-shadow: var(--borderpicturesize) var(--sundaysplit);
+}
+
+.commentatorsunday a > .team-feature-item i {
+  color: var(--sundaysplit); /* Farbe der Icons */
+}

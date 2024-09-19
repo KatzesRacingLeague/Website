@@ -1,0 +1,376 @@
+:root {
+  --borderpoints: 0 8px 24px 0;
+}
+
+/* Hauptbereich zentrieren */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.navbar {
+  background-image: url(../resources/pictures/general/headers/wdl.png);
+}
+
+/* Überschrift Styling */
+.Header h1,
+.Sonstiges h1,
+.Sonstiges h1,
+.Header h1,
+.history > h1,
+.Header > h1,
+.Headerh1,
+.Fahrerfeldheader > h1 {
+  font-size: var(--fontsizeheadline);
+  font-family: var(--fontfamilytext);
+  color: white; /* Ansprechende Farbe */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  animation: titleAnimation 2s ease-in-out infinite; /* Titel-Effekt */
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+
+.WMStandings,
+.Sonstiges {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* Bild Styling */
+
+.WMStandings > img {
+  max-width: 38%;
+  /* max-width: auto; */
+  height: 40%;
+  height: auto;
+  border-radius: 30px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Tiefer Schatten */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  opacity: 0.9; /* Leicht transparent */
+  box-shadow: var(--borderpicturesize) var(--wdl);
+}
+
+.SonstigesPicture > img {
+  max-width: 80%;
+  border-radius: 30px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Tiefer Schatten */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  opacity: 0.9; /* Leicht transparent */
+  box-shadow: var(--borderpicturesize) var(--wdl);
+}
+
+/* Hover-Effekt für die Bilder */
+.WMStandings > img:hover,
+.SonstigesPicture > img:hover {
+  transform: scale(1.05); /* Zoom und leichte Rotation */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Tieferer Schatten beim Hover */
+  opacity: 1; /* Volle Sichtbarkeit */
+}
+
+.feature-item {
+  width: 420px;
+}
+
+.feature-item i {
+  color: var(--wdl);
+}
+
+.footer {
+  background-image: url(../resources/pictures/general/footers/wdl.png);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    background-image: url(../resources/pictures/general/footers/wdl.png);
+  }
+
+  .WMStandings {
+    flex-direction: column;
+    max-width: auto;
+    gap: 30px;
+  }
+
+  .WMStandings > img {
+    flex-direction: column;
+    max-width: 80vw;
+    height: 100%;
+  }
+  .Sonstiges {
+    flex-direction: column;
+    max-width: auto;
+  }
+  .Sonstiges h1,
+  .Header > h1,
+  .history > h1,
+  .Header > h1,
+  .Headerh1 > h1,
+  .Fahrerfeldheader > h1 {
+    font-size: 30px;
+  }
+}
+
+/* Line-Up Container */
+
+.line-up {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 40px; /* Abstand zwischen den Boxen */
+}
+
+/* Team Container */
+.team {
+  display: flex;
+  flex-direction: column; /* Vertikale Anordnung von Logo und Namen */
+  align-items: center; /* Zentriert den Inhalt horizontal */
+  text-align: center;
+  width: 15%; /* Breite der Boxen reduziert */
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-color: rgba(136, 114, 114, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.team:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05); /* Leichter Zoom bei Hover */
+}
+
+/* Team Logo Styling */
+.team-logo {
+  max-height: 60px;
+  margin-bottom: 25px; /* Platz unter dem Logo für die Namen */
+  text-align: center;
+}
+
+.liga {
+  max-height: auto;
+  width: 101px;
+}
+
+/* Driver Names Styling */
+.driver-names {
+  display: flex;
+  flex-direction: column; /* Fahrer-Namen vertikal anordnen */
+  align-items: center; /* Fahrer-Namen horizontal zentrieren */
+}
+
+.driver-names p {
+  font-family: var(--fontfamilytext);
+  font-size: 20px; /* Schriftgröße etwas verkleinert */
+  margin: 3px 0;
+  color: #fff;
+  text-align: center;
+}
+
+/* Team specific styles */
+.redbull {
+  box-shadow: 0 4px 15px rgba(0, 0, 255, 0.5); /* Blauer Schatten für Red Bull */
+}
+
+.mercedes {
+  box-shadow: 0 4px 15px rgba(0, 255, 242, 0.5); /* Hellblauer Schatten für Mercedes */
+}
+
+.ferrari {
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.5); /* Roter Schatten für Ferrari */
+}
+
+.mclaren {
+  box-shadow: 0 4px 15px rgba(255, 165, 0, 0.5); /* Orangener Schatten für McLaren */
+}
+
+.aston-martin {
+  box-shadow: 0 4px 15px rgba(59, 201, 31, 0.5); /* Grüner Schatten für Aston Martin */
+}
+
+.alpine {
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.5); /* Pinker Schatten für Alpine */
+}
+
+.williams {
+  box-shadow: 0 4px 15px rgba(0, 70, 128, 0.5); /* Dunkelblauer Schatten für Williams */
+}
+
+.vcrb {
+  box-shadow: 0 4px 15px rgba(0, 0, 139, 0.5); /* Dunkelblauer Schatten für VCRB */
+}
+
+.kick-sauber {
+  box-shadow: 0 4px 15px rgba(0, 255, 0, 0.5); /* Grüner Schatten für Kick Sauber */
+}
+
+.haas {
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5); /* Weißer Schatten für Haas */
+}
+
+.class-button {
+  background-color: var(--wdl);
+  box-shadow: var(--borderpicturesize) var(--wdl); /* Leichter Schatteneffekt */
+}
+
+.class-button:hover {
+  box-shadow: var(--borderpicturesize) var(--wdl);
+}
+
+/* Mobile Anpassungen */
+@media (max-width: 768px) {
+  .line-up {
+    flex-direction: column; /* Teams werden untereinander angeordnet */
+    width: 100%; /* Nimmt die gesamte Breite ein */
+    gap: 30px; /* Weniger Abstand zwischen den Teams */
+  }
+
+  .team {
+    width: 100%; /* Breite der Teams auf 90% verringert, bleibt gleich groß wie vorher */
+  }
+
+  .team-logo {
+    max-width: 100px; /* Größe des Logos bleibt konstant */
+    height: auto;
+  }
+}
+
+.history-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px; /* Abstand zwischen den Kästen */
+
+  width: auto;
+  text-transform: uppercase;
+}
+
+.history-item {
+  width: 15%;
+  min-width: 200px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-color: rgba(136, 114, 114, 0.1);
+  box-shadow: var(--borderpicturesize) var(--wdl);
+}
+
+.history-item:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.history-item h2 {
+  font-family: var(--fontfamilytext);
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.history-item p {
+  font-family: var(--fontfamilytext);
+  font-size: 18px;
+  margin: 5px 0;
+  color: #fff;
+}
+
+.test {
+  font-family: var(--fontfamilytext);
+}
+
+.point-box {
+  width: 15vw;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-family: var(--fontfamilytext);
+}
+
+.point-box::before,
+.point-box::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+/* Vorderseite (Platzierung) */
+.point-box::before {
+  content: attr(data-points); /* Zeigt die Platzierung (P1, P2, etc.) */
+  border: 1px solid #ccc;
+  background-color: rgba(136, 114, 114, 0.1);
+  box-shadow: var(--borderpoints) var(--wdl);
+}
+
+/* Rückseite (Punkte) */
+.point-box::after {
+  content: attr(data-score); /* Zeigt die Punkte */
+  transform: rotateY(180deg); /* Rückseite der Box dreht sich */
+  border: 1px solid #ccc;
+  background-color: rgba(136, 114, 114, 0.1);
+  box-shadow: var(--borderpoints) var(--wdlblue);
+}
+
+.point-box:hover {
+  transform: rotateY(180deg);
+}
+
+/* Container für die Boxen */
+.point-boxen {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  font-family: var(--fontfamilyheadline);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .history-item {
+    width: 100%; /* Auf mobilen Geräten größer */
+  }
+
+  .history-item p {
+    font-family: var(--fontfamilytext);
+    font-size: 20px;
+    margin: 5px 0;
+    color: #fff;
+  }
+  .history > h1,
+  .Fahrerfeldheader > h1,
+  .BilderResult > h1,
+  .WmStände > h1,
+  .Headerh1 {
+    margin-top: 50px;
+    font-size: 35px;
+  }
+
+  .point-box {
+    width: 25%;
+  }
+}
