@@ -1,0 +1,59 @@
+/* Hauptbereich zentrieren */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.navbar {
+  background-image: url(../resources/pictures/general/headers/endurance.png);
+}
+
+.feature-item {
+  width: 350px;
+}
+
+.feature-item i {
+  color: var(--endurance);
+}
+
+.endurance-image {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  /* width: 60vw;
+    height: auto; */
+}
+
+.endurance-image > img {
+  width: 80%;
+  border-radius: 30px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Tiefer Schatten */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  opacity: 0.9; /* Leicht transparent */
+  box-shadow: var(--borderpicturesize) var(--endurance);
+}
+
+h2 {
+  margin-top: 40px;
+  font-size: 40px;
+  font-family: var(--fontfamilytext);
+}
+
+.footer {
+  background-image: url(../resources/pictures/general/footers/endurance.png);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    background-image: url(../resources/pictures/general/footers/endurance.png);
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}

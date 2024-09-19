@@ -1,0 +1,65 @@
+/*Button Download RDN*/
+.rdncontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.rdnitem {
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--fontfamilytext);
+  gap: 90px;
+}
+
+.rdn-button {
+  display: flex;
+  margin: 40px auto; /* Fügt Abstände hinzu und zentriert den Button in der Mitte */
+  padding: 20px 40px; /* Fügt Polsterung hinzu, um den Button größer zu machen */
+  background-color: var(--sundaysplit);
+  color: white; /* Textfarbe weiß für guten Kontrast */
+  text-decoration: none; /* Unterstrich entfernen */
+  border-radius: 8px; /* Abgerundete Ecken */
+  font-size: 40px;
+  box-shadow: var(--borderpicturesize) var(--sundaysplit); /* Leichter Schatteneffekt */
+  width: fit-content;
+}
+
+.rdn-button:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  background: white;
+  box-shadow: var(--borderpicturesize) white;
+  transform: scale(1.1); /* Leicht vergrößern bei Hover */
+  transition: 0.3s ease; /* Weicher Übergang bei Hover */
+  cursor: pointer; /* Zeigt eine Hand an, wenn man über den Button fährt */
+}
+
+h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design für Handys */
+@media (max-width: 700px) {
+  .rdncontainer {
+    flex-direction: column; /* Spaltenrichtung für kleinere Bildschirme */
+    padding: 0px;
+  }
+
+  .rdnitem {
+    width: 100%;
+  }
+
+  .rdn-button {
+    font-size: 24px; /* Kleinere Schriftgröße */
+    padding: 15px 30px; /* Kleinere Polsterung */
+  }
+
+  h2 {
+    font-size: 20px; /* Kleinere Schriftgröße für kleinere Bildschirme */
+  }
+}
