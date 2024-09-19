@@ -4,207 +4,180 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Katzes Racing League</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/krlhelp.styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="icon" type="image/png" href="../resources/KRL-Logo-Icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../resources/pictures/general/krllogos/KRL_LOGO.png"
+    />
   </head>
   <body>
-    <header class="sticky-header">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html"
-            ><span class="defaultcoloredheader">K</span>ATZES
-            <span class="defaultcoloredheader">R</span>ACING
-            <span class="defaultcoloredheader">L</span>EAGUE</a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="formel1Dropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Formel 1 Ligen
-                </a>
-                <div class="dropdown-menu" aria-labelledby="formel1Dropdown">
-                  <a
-                    class="dropdown-item friday"
-                    href="DetailViews/F1Leagues/friday.html"
-                    >Freitagsliga</a
-                  >
-                  <a
-                    class="dropdown-item saturday"
-                    href="DetailViews/F1Leagues/saturday.html"
-                    >Samstagsliga</a
-                  >
-                  <a
-                    class="dropdown-item"
-                    href="DetailViews/F1Leagues/sunday.html"
-                    >Sonntagsliga</a
-                  >
-                </div>
+    <header>
+      <nav class="navbar">
+        <!-- Logo der Liga -->
+        <a href="../index.html">
+          <div class="logo">
+            <img
+              src="../resources/pictures/general/krllogos/KRL_LOGO.png"
+              alt="Liga Logo"
+            />
+          </div>
+        </a>
+
+        <!-- Menü-Button für mobile Ansicht -->
+        <button class="menu-toggle">☰</button>
+
+        <!-- Hauptnavigationslinks -->
+        <ul class="nav-links">
+          <li class="dropdown">
+            <a class="Formel1">KRL F1 Liga</a>
+            <ul class="dropdown-content">
+              <li class="text1">
+                <a href="DetailViews/F1Leagues/friday.html">Freitagsliga</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="DetailViews/wdl.html"
-                  >Wettkampf der Ligen</a
-                >
+              <li class="text2">
+                <a href="DetailViews/F1Leagues/saturday.html">Samstagsliga</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="DetailViews/endurance.html"
-                  >Endurance Team</a
-                >
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="sonstigesDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Sonstiges
-                </a>
-                <div
-                  class="dropdown-menu dropdown-menu-right"
-                  aria-labelledby="sonstigesDropdown"
-                >
-                  <a class="dropdown-item" href="../pages/rdn.html"
-                    >Race-Director-Notes</a
-                  >
-                  <a class="dropdown-item" href="../pages/rules.html"
-                    >Regelwerk</a
-                  >
-                  <a class="dropdown-item" href="../pages/team.html"
-                    >Unser Team</a
-                  >
-                  <a class="dropdown-item" href="../pages/krlhelp.html"
-                    >KRL Help</a
-                  >
-                  <a
-                    class="dropdown-item"
-                    href="https://www.xoose.de/produkt-kategorie/katzes-racing-league/"
-                    >Merchshop</a
-                  >
-                  <a
-                    class="dropdown-item"
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSczZykzGcael-D0ulAxffcyaZ096hAEbzIVa8AaAmLcRS8dWg/viewform"
-                    >Teilnahmeformular</a
-                  >
-                </div>
+              <li class="text3">
+                <a href="DetailViews/F1Leagues/sunday.html">Sonntagsliga</a>
               </li>
             </ul>
-          </div>
-        </div>
+          </li>
+          <li>
+            <a class="WDL-nav" href="DetailViews/wdl.html"
+              >Wettkampf der Ligen</a
+            >
+          </li>
+          <li>
+            <a class="ETeam" href="DetailViews/endurance.html">Endurance</a>
+          </li>
+          <li class="dropdown">
+            <a class="Formel1">Sonstiges</a>
+            <ul class="dropdown-content">
+              <li class="text3">
+                <a href="rdn.html">Race-Director-Notes</a>
+              </li>
+              <li class="text3"><a href="rules.html">Regelwerk</a></li>
+              <li class="text3"><a href="team.html">Unser Team</a></li>
+              <li class="text3"><a href="krlhelp.html">KRL Help</a></li>
+              <li class="text3">
+                <a
+                  href="https://www.xoose.de/produkt-kategorie/katzes-racing-league/"
+                  >Merch Shop</a
+                >
+              </li>
+              <li class="text3">
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSczZykzGcael-D0ulAxffcyaZ096hAEbzIVa8AaAmLcRS8dWg/viewform"
+                  >Teilnahme Formular</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
       </nav>
     </header>
 
-    <main>
-      <div class="main">
-        <h1>KRL HELP</h1>
-        <div class="blocktext">
-          Auf dieser Seite befinden sich hilfreiche Guides zu verschiedenen
-          Themen, welche die KRL betreffen.
-        </div>
-        <h3>FORMEL 1</h3>
-        <div class="blocktext">
-          Hier sind alle Guides rund um unsere Formel 1 Ligen zu finden.
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-sm-12">
-            <div>Whisperlisten TeamSpeak 3</div>
-            <div>
-              <a
-                href="../resources/files/guides/Whisperliste.pdf"
-                download="Guide_Whisperliste_TS3.pdf"
-                ><button>Guide herunterladen</button></a
-              >
+    <section class="background">
+      <!--Header H1-->
+      <div class="header">
+        <h1>KRL-HELP</h1>
+      </div>
+
+      <!--Kasten Help-->
+      <div class="help-container">
+        <div class="help-item">
+          <a
+            href="../resources/files/krl-guides/Whisperliste.pdf"
+            download="Guide_Whisperliste_TS3.pdf"
+          >
+            <div class="help-feature-item">
+              <h2>Whisperliste TeamSpeak 3</h2>
+              <i class="far fa-file"></i>
             </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <div>Rennleitungsanhang</div>
-            <div>
-              <a
-                href="../resources/files/guides/Rennleitungsanhang.pdf"
-                download="Rennleitungsanhang.pdf"
-                ><button>Guide herunterladen</button></a
-              >
-            </div>
-          </div>
+          </a>
         </div>
-        <h3>IRACING</h3>
-        <div class="blocktext">
-          Hier sind alle Guides rund um unser iRacing Programm zu finden.
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <div>Einsteigerguide</div>
-            <div>
-              <a
-                href="../resources/files/guides/Einsteigerguide_iRacing.pdf"
-                download="Einsteigerguide_iRacing.pdf"
-                ><button>Guide herunterladen</button></a
-              >
+        <div class="help-item">
+          <a
+            href="../resources/files/krl-guides/Rennleitungsanhang.pdf"
+            download="Rennleitungsanhang.pdf"
+          >
+            <div class="help-feature-item">
+              <h2>Rennleitungsanhang</h2>
+              <i class="far fa-file"></i>
             </div>
-          </div>
+          </a>
+        </div>
+        <div class="help-item">
+          <a
+            href="../resources/files/krl-guides/Einsteigerguide_iRacing.pdf"
+            download="Einsteigerguide_iRacing.pdf"
+          >
+            <div class="help-feature-item">
+              <h2>Einsteigerguide iRacing</h2>
+              <i class="far fa-file"></i>
+            </div>
+          </a>
         </div>
       </div>
-    </main>
+    </section>
 
     <footer class="footer">
       <div class="container">
         <span
-          >© 2024 Katzes Racing League. All rights reserved. - Version: 01.03.01
+          >© 2024 Katzes Racing League. All rights reserved. - Version: 02.00.00
           - </span
         ><a href="impressum.html">Impressum</a>
       </div>
       <div>
         <a href="https://discord.gg/2r9wDfKdSB">
-          <img src="../resources/pictures/social/discord.png" alt="discord" />
+          <img
+            src="../resources/pictures/general/socials/discord.png"
+            alt="discord"
+          />
         </a>
         <a href="https://www.twitch.tv/katzesracingleague">
-          <img src="../resources/pictures/social/twitch.png" alt="twitch" />
+          <img
+            src="../resources/pictures/general/socials/twitch.png"
+            alt="twitch"
+          />
         </a>
         <a href="https://www.youtube.com/@KatzesRacingLeague">
-          <img src="../resources/pictures/social/youtube.png" alt="youtube" />
+          <img
+            src="../resources/pictures/general/socials/youtube.png"
+            alt="youtube"
+          />
         </a>
         <a href="https://www.instagram.com/katzesracingleague">
           <img
-            src="../resources/pictures/social/instagram.png"
+            src="../resources/pictures/general/socials/instagram.png"
             alt="instagram"
           />
         </a>
         <a href="https://www.tiktok.com/@katzesracingleaguef1">
-          <img src="../resources/pictures/social/tiktok.png" alt="tiktok" />
+          <img
+            src="../resources/pictures/general/socials/tiktok.png"
+            alt="tiktok"
+          />
         </a>
         <a href="https://www.twitter.com/KatzesLeague">
-          <img src="../resources/pictures/social/X.png" alt="x" />
+          <img src="../resources/pictures/general/socials/X.png" alt="x" />
         </a>
       </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>

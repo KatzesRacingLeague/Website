@@ -1,0 +1,320 @@
+.navbar {
+  background-image: url(../resources/pictures/general/headers/freitag.png);
+}
+
+/* Hauptbereich zentrieren */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Überschrift Styling */
+.WmStände h1 {
+  font-size: var(--fontsizeheadline);
+  font-family: var(--fontfamilytext);
+  color: white; /* Ansprechende Farbe */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  animation: titleAnimation 2s ease-in-out infinite; /* Titel-Effekt */
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+
+/* Bilder Wrapper */
+.Bilder {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Abstand zwischen den Bildern */
+  flex-wrap: nowrap; /* Bilder umbrechen bei kleinen Bildschirmen */
+  gap: 90px;
+}
+
+/* Bild Styling */
+.BilderWM {
+  max-width: 35%;
+  height: auto;
+  border-radius: 30px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Tiefer Schatten */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  opacity: 0.9; /* Leicht transparent */
+  box-shadow: var(--borderpicturesize) var(--fridaysplit);
+}
+
+/* Hover-Effekt für die Bilder */
+.BilderWM:hover {
+  transform: scale(1.05); /* Zoom und leichte Rotation */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Tieferer Schatten beim Hover */
+  opacity: 1; /* Volle Sichtbarkeit */
+}
+
+.footer {
+  background-image: url(../resources/pictures/general/footers/freitag.png);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    background-image: url(../resources/pictures/general/footers/freitag.png);
+  }
+
+  .Bilder {
+    flex-direction: column; /* Bilder untereinander anzeigen */
+  }
+
+  .BilderWM {
+    width: 100%; /* Volle Breite auf mobilen Geräten */
+    max-width: 100%; /* Begrenzung auf die Bildschirmbreite */
+  }
+}
+
+/*Standings*/
+.BilderResult {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Abstand zwischen den Bildern */
+  flex-wrap: nowrap; /* Bilder umbrechen bei kleinen Bildschirmen */
+  gap: 90px;
+}
+
+/*Standings*/
+.BilderResultIMG {
+  max-width: 65%;
+  height: auto;
+  border-radius: 30px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Tiefer Schatten */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  opacity: 0.9; /* Leicht transparent */
+  box-shadow: var(--borderpicturesize) var(--fridaysplit);
+}
+
+/* Hover-Effekt für die Bilder */
+.BilderResultIMG:hover {
+  transform: scale(1.05); /* Zoom und leichte Rotation */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Tieferer Schatten beim Hover */
+  opacity: 1; /* Volle Sichtbarkeit */
+}
+
+.BilderResult h1 {
+  font-size: var(--fontsizeheadline);
+  font-family: var(--fontfamilytext);
+  color: white; /* Ansprechende Farbe */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  animation: titleAnimation 2s ease-in-out infinite; /* Titel-Effekt */
+  margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+  .BilderResult {
+    flex-direction: column; /* Bilder untereinander anzeigen */
+  }
+
+  .BilderResultIMG {
+    width: 100%; /* Volle Breite auf mobilen Geräten */
+    max-width: 100%; /* Begrenzung auf die Bildschirmbreite */
+  }
+}
+
+/* Line-Up Container */
+
+.Fahrerfeldheader > h1 {
+  margin-top: 50px;
+  font-family: var(--fontfamilytext);
+  font-size: var(--fontsizeheadline);
+}
+.line-up {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 40px; /* Abstand zwischen den Boxen */
+}
+
+/* Team Container */
+.team {
+  display: flex;
+  flex-direction: column; /* Vertikale Anordnung von Logo und Namen */
+  align-items: center; /* Zentriert den Inhalt horizontal */
+  text-align: center;
+  width: 15%; /* Breite der Boxen reduziert */
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-color: rgba(136, 114, 114, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.team:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05); /* Leichter Zoom bei Hover */
+}
+
+/* Team Logo Styling */
+.team-logo {
+  max-height: 60px;
+  margin-bottom: 25px; /* Platz unter dem Logo für die Namen */
+  text-align: center;
+}
+
+/* Driver Names Styling */
+.driver-names {
+  display: flex;
+  flex-direction: column; /* Fahrer-Namen vertikal anordnen */
+  align-items: center; /* Fahrer-Namen horizontal zentrieren */
+}
+
+.driver-names p {
+  font-family: var(--fontfamilytext);
+  font-size: 20px; /* Schriftgröße etwas verkleinert */
+  margin: 3px 0;
+  color: #fff;
+  text-align: center;
+}
+
+/* Team specific styles */
+.redbull {
+  box-shadow: 0 4px 15px rgba(0, 0, 255, 0.5); /* Blauer Schatten für Red Bull */
+}
+
+.mercedes {
+  box-shadow: 0 4px 15px rgba(0, 255, 242, 0.5); /* Hellblauer Schatten für Mercedes */
+}
+
+.ferrari {
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.5); /* Roter Schatten für Ferrari */
+}
+
+.mclaren {
+  box-shadow: 0 4px 15px rgba(255, 165, 0, 0.5); /* Orangener Schatten für McLaren */
+}
+
+.aston-martin {
+  box-shadow: 0 4px 15px rgba(59, 201, 31, 0.5); /* Grüner Schatten für Aston Martin */
+}
+
+.alpine {
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.5); /* Pinker Schatten für Alpine */
+}
+
+.williams {
+  box-shadow: 0 4px 15px rgba(0, 70, 128, 0.5); /* Dunkelblauer Schatten für Williams */
+}
+
+.vcrb {
+  box-shadow: 0 4px 15px rgba(0, 0, 139, 0.5); /* Dunkelblauer Schatten für VCRB */
+}
+
+.kick-sauber {
+  box-shadow: 0 4px 15px rgba(0, 255, 0, 0.5); /* Grüner Schatten für Kick Sauber */
+}
+
+.haas {
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5); /* Weißer Schatten für Haas */
+}
+
+.class-button {
+  background-color: var(--fridaysplit);
+  box-shadow: var(--borderpicturesize) var(--fridaysplit); /* Leichter Schatteneffekt */
+}
+
+.class-button:hover {
+  box-shadow: var(--borderpicturesize) var(--fridaysplit);
+}
+
+/* Mobile Anpassungen */
+@media (max-width: 768px) {
+  .line-up {
+    flex-direction: column; /* Teams werden untereinander angeordnet */
+    width: 100%; /* Nimmt die gesamte Breite ein */
+    gap: 30px; /* Weniger Abstand zwischen den Teams */
+  }
+
+  .team {
+    width: 100%; /* Breite der Teams auf 90% verringert, bleibt gleich groß wie vorher */
+  }
+
+  .team-logo {
+    max-width: 100px; /* Größe des Logos bleibt konstant */
+    height: auto;
+  }
+
+  .driver-names p {
+    font-size: 30px; /* Schriftgröße bleibt unverändert */
+    font-size: 60px; /* Kleinere Schriftgröße auf mobilen Geräten */
+  }
+}
+.history > h1 {
+  margin-top: 50px;
+  font-family: var(--fontfamilytext);
+  font-size: var(--fontsizeheadline);
+  text-transform: uppercase;
+}
+
+.history-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px; /* Abstand zwischen den Kästen */
+  content: fixed;
+  width: auto;
+  text-transform: uppercase;
+}
+
+.history-item {
+  width: 15%;
+  min-width: 200px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-color: rgba(136, 114, 114, 0.1);
+  box-shadow: var(--borderpicturesize) rgba(59, 201, 31, 0.5);
+}
+
+.history-item:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.history-item h2 {
+  font-family: var(--fontfamilytext);
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.history-item p {
+  font-family: var(--fontfamilytext);
+  font-size: 18px;
+  margin: 5px 0;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .history-item {
+    width: 100%; /* Auf mobilen Geräten größer */
+  }
+
+  .history-item p {
+    font-family: var(--fontfamilytext);
+    font-size: 20px;
+    margin: 5px 0;
+    color: #fff;
+  }
+  .history > h1,
+  .Fahrerfeldheader h1,
+  .BilderResult h1,
+  .WmStände h1 {
+    margin-top: 50px;
+    font-size: 70px;
+  }
+}

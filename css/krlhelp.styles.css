@@ -1,0 +1,58 @@
+/*Download HELP*/
+.help-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.help-item {
+  width: 28%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--fontfamilytext);
+  gap: 90px;
+  box-shadow: var(--borderpicturesize) var(--sundaysplit); 
+  border-radius: var(--borderpictureradius);
+}
+
+.help-item:hover {
+  transform: scale(1.1);
+  cursor: pointer; /* Zeigt eine Hand an, wenn man über den Button fährt */
+  transition: all 0.3s ease;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.help-feature-item i {
+  font-size: 100px;
+  color: var(--sundaysplit); /* Farbe der Icons */
+  margin: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Responsive Design für Handys */
+@media (max-width: 700px) {
+  .help-container {
+    flex-direction: column; /* Spaltenrichtung für kleinere Bildschirme */
+    align-items: center;
+    padding: 0px;
+  }
+
+  .help-item {
+    width: 70%;
+    margin-bottom: 50px;
+  }
+
+  h2 {
+    font-size: 20px; /* Kleinere Schriftgröße für kleinere Bildschirme */
+  }
+}

@@ -5,100 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Katzes Racing League</title>
     <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="icon"
+      type="image/png"
+      href="../resources/pictures/general/krllogos/KRL_LOGO.png"
     />
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="js/script.js"></script>
-    <link rel="icon" type="image/png" href="resources/KRL-Logo-Icon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dangrek&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
-            
-</head>
-
-<body>
-
-  
-<header>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Itim&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dangrek&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
   <body>
-    <nav class="navbar">
-      <!-- Logo der Liga -->
-      <div class="logo">
-        <img src="../Website/resources/KRL LOGO.png" alt="Liga Logo">
+    <header>
+      <nav class="navbar">
+        <!-- Logo der Liga -->
+        <a href="index.html">
+          <div class="logo">
+            <img
+              src="resources/pictures/general/krllogos/KRL_LOGO.png"
+              alt="Liga Logo"
+            />
+          </div>
+        </a>
+
+        <!-- Menü-Button für mobile Ansicht -->
+        <button class="menu-toggle">☰</button>
+
+        <!-- Hauptnavigationslinks -->
+        <ul class="nav-links">
+          <li class="dropdown">
+            <a class="Formel1">KRL F1 Liga</a>
+            <ul class="dropdown-content">
+              <li class="text1">
+                <a href="pages/DetailViews/F1Leagues/friday.html"
+                  >Freitagsliga</a
+                >
+              </li>
+              <li class="text2">
+                <a href="pages/DetailViews/F1Leagues/saturday.html"
+                  >Samstagsliga</a
+                >
+              </li>
+              <li class="text3">
+                <a href="pages/DetailViews/F1Leagues/sunday.html"
+                  >Sonntagsliga</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="WDL-nav" href="pages/DetailViews/wdl.html"
+              >Wettkampf der Ligen</a
+            >
+          </li>
+          <li>
+            <a class="ETeam" href="pages/DetailViews/endurance.html"
+              >Endurance</a
+            >
+          </li>
+          <li class="dropdown">
+            <a class="Formel1">Sonstiges</a>
+            <ul class="dropdown-content">
+              <li class="text3">
+                <a href="pages/rdn.html">Race-Director-Notes</a>
+              </li>
+              <li class="text3"><a href="pages/rules.html">Regelwerk</a></li>
+              <li class="text3"><a href="pages/team.html">Unser Team</a></li>
+              <li class="text3"><a href="pages/krlhelp.html">KRL Help</a></li>
+              <li class="text3">
+                <a
+                  href="https://www.xoose.de/produkt-kategorie/katzes-racing-league/"
+                  >Merch Shop</a
+                >
+              </li>
+              <li class="text3">
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSczZykzGcael-D0ulAxffcyaZ096hAEbzIVa8AaAmLcRS8dWg/viewform"
+                  >Teilnahme Formular</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="background">
+      <!--Hintergrund top-->
+      <div>
+        <img class="landing_page" src="resources/pictures/general/landing_page.png">
       </div>
-  
-      <!-- Menü-Button für mobile Ansicht -->
-      <button class="menu-toggle">☰</button>
-  
-      <!-- Hauptnavigationslinks -->
-      <ul class="nav-links">
-        <li class="dropdown">
-          <a class="Formel1" href="#">KRL F1 Liga</a>
-          <ul class="dropdown-content">
-            <li class="text1"><a href="#">Freitagsliga</a></li>
-            <li class="text2"><a href="#">Samstagsliga</a></li>
-            <li class="text3"><a href="#">Sonntagsliga</a></li>
-          </ul>
-        </li>
-        <li><a class="WDL-nav" href="#">Wettkampf der Ligen</a></li>
-        <li><a class="ETeam" href="#">Endurance</a></li>
-        <li class="dropdown">
-          <a class="Formel1" href="#">Sonstiges</a>
-          <ul class="dropdown-content">
-            <li class="text3"><a href="#">Race Director Notes</a></li>
-            <li class="text3"><a href="#">Regelwerk</a></li>
-            <li class="text3"><a href="#">Unser Team</a></li>
-            <li class="text3"><a href="#">KRL Help</a></li>
-            <li class="text3"><a href="#">Merch Shop</a></li>
-            <li class="text3"><a href="#">Teilnahme Formular</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  
-    <script src="script.js"></script> 
-    
-  </body>
- 
-  
-  
 
-</header>
-
-
-
-
-<section class="background">
-
-<!--Hintergrund top-->
-    <main>
-      <div class="loadingpicture">
-     
-     </div> 
-
-    <!--Welcome Quote-->
+      <!--Welcome Quote-->
       <div class="header">
         <h1>
           <span class="welcomequote">&laquo;</span>
@@ -106,7 +134,7 @@
           <span class="welcomequote">&raquo;</span>
         </h1>
       </div>
-      
+
       <!--Icons-->
       <div class="features">
         <div class="feature-item">
@@ -139,93 +167,136 @@
         </div>
       </div>
 
-        <!--Join Now Button-->
-    
-    <div class="button">
-      <a href="https://discord.gg/2r9wDfKdSB" class="class-button">Jetzt Beitreten</a>
-   </div> 
+      <!--Join Now Button-->
+      <div class="button">
+        <a class="class-button" href="https://discord.gg/2r9wDfKdSB"
+          >Jetzt Beitreten</a
+        >
+      </div>
 
-
-
-        
       <!--Header H1-->
-        <div class="header">
-        <h1>KRL F1 Liga</h1></div>
+      <div class="header">
+        <h1>KRL F1 LIGA</h1>
+      </div>
 
       <!--Logos der Ligen-->
-        <div class="flex-leaugelogos">
-            <div class="overview3">
-            <img class="Logosoftheleague" src="../Website/resources/pictures/krl-logos/KRL3LogoNew.png">
+      <div class="flex-leaugelogos">
+        <a href="pages/DetailViews/F1Leagues/friday.html">
+          <div class="overview3">
+            <img
+              class="Logosoftheleague"
+              src="resources/pictures/general/krllogos/KRL_FR_LOGO.png"
+            />
             <h2>Freitagsliga</h2>
             <p>19:30 Uhr</p>
-             </div>
-             <div class="overview2">
-              <img class="Logosoftheleague" src="../Website/resources/pictures/krl-logos/KRL_Logo2 NEW.png">
-              <h2>Samstagsliga</h2>
-              <p>18:00 Uhr</p>
-               </div>
-               <div class="overview1">
-                <img class="Logosoftheleague" src="resources/pictures/krl-logos/KRL_LOGO1 NEW.png">
-                <h2>Sonntagsliga</h2>
-                <p>19:00 Uhr</p>
-                 </div>
-                  </div>
-                
-                  <div class="image-rennkalender">
-                    <img src= "../Website/resources/pictures/Kalender_S9.png">
-                      <div class="button">
-                        <a href="#" class="class-button">Kalender Datei</a></div> 
-                  </div>
-      
- 
-                     <!--WDL & E TEAM-->
-                  <div class="flex-leaugelogosnext">
-                    <div class="overview4">
-                    <img class="Logosoftheleague" src="../Website/resources/pictures/krl-logos/WDL LOGO RUND.png">
-                    <div class="header2">
-                      <h1 >WDL</h1></div>
-                     </div>
-                     <div class="overview5">
-                     
-                      <img class="Logosoftheleaguenext" src="../Website/resources/pictures/krl-logos/KRL E LOGO.png">
-                      <div class="header2">
-                        <h1 >Endurance </h1></div>
-                       </div>
-       
+          </div>
+        </a>
+        <a href="pages/DetailViews/F1Leagues/saturday.html">
+          <div class="overview2">
+            <img
+              class="Logosoftheleague"
+              src="resources/pictures/general/krllogos/KRL_SA_LOGO.png"
+            />
+            <h2>Samstagsliga</h2>
+            <p>18:00 Uhr</p>
+          </div>
+        </a>
+        <a href="pages/DetailViews/F1Leagues/sunday.html">
+          <div class="overview1">
+            <img
+              class="Logosoftheleague"
+              src="resources/pictures/general/krllogos/KRL_SO_LOGO.png"
+            />
+            <h2>Sonntagsliga</h2>
+            <p>19:00 Uhr</p>
+          </div>
+        </a>
+      </div>
 
-        </section>
+      <div class="image-rennkalender">
+        <img src="resources/pictures/general/Kalender_S9.png" />
+        <div class="button">
+          <a
+            class="class-button"
+            href="resources/files/Rennkalender_KRL_S9.ics"
+            download="Rennkalender_KRL_S9.ics"
+            >Kalender Datei</a
+          >
+        </div>
+      </div>
 
+      <!--WDL & E TEAM-->
+      <div class="flex-leaugelogosnext">
+        <a href="pages/DetailViews/wdl.html">
+          <div class="overview4">
+            <img
+              class="Logosoftheleague"
+              src="resources/pictures/general/krllogos/WDL_LOGO_RUND.png"
+            />
+            <div class="header2">
+              <h1>WDL</h1>
+            </div>
+          </div>
+        </a>
+        <a href="pages/DetailViews/endurance.html">
+          <div class="overview5">
+            <img
+              class="Logosoftheleague"
+              src="resources/pictures/general/krllogos/KRL_E_LOGO.png"
+            />
+            <div class="header2">
+              <h1>ENDURANCE</h1>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
 
     <footer class="footer">
       <div class="container">
         <span
-          >© 2024 Katzes Racing League. All rights reserved. - Version: 01.03.01
+          >© 2024 Katzes Racing League. All rights reserved. - Version: 02.00.00
           - </span
         ><a href="pages/impressum.html">Impressum</a>
       </div>
       <div>
         <a href="https://discord.gg/2r9wDfKdSB">
-          <img src="resources/pictures/social/discord.png" alt="discord" />
+          <img
+            src="resources/pictures/general/socials/discord.png"
+            alt="discord"
+          />
         </a>
         <a href="https://www.twitch.tv/katzesracingleague">
-          <img src="resources/pictures/social/twitch.png" alt="twitch" />
+          <img
+            src="resources/pictures/general/socials/twitch.png"
+            alt="twitch"
+          />
         </a>
         <a href="https://www.youtube.com/@KatzesRacingLeague">
-          <img src="resources/pictures/social/youtube.png" alt="youtube" />
+          <img
+            src="resources/pictures/general/socials/youtube.png"
+            alt="youtube"
+          />
         </a>
         <a href="https://www.instagram.com/katzesracingleague">
-          <img src="resources/pictures/social/instagram.png" alt="instagram" />
+          <img
+            src="resources/pictures/general/socials/instagram.png"
+            alt="instagram"
+          />
         </a>
         <a href="https://www.tiktok.com/@katzesracingleaguef1">
-          <img src="resources/pictures/social/tiktok.png" alt="tiktok" />
+          <img
+            src="resources/pictures/general/socials/tiktok.png"
+            alt="tiktok"
+          />
         </a>
         <a href="https://www.twitter.com/KatzesLeague">
-          <img src="resources/pictures/social/X.png" alt="x" />
+          <img src="resources/pictures/general/socials/X.png" alt="x" />
         </a>
       </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-
+    <script src="js/script.js"></script>
   </body>
 </html>
