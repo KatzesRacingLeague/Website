@@ -15,26 +15,6 @@ main {
   background-image: url(../resources/pictures/general/headers/wdl.png);
 }
 
-/* Überschrift Styling */
-.Header h1,
-.Sonstiges h1,
-.Sonstiges h1,
-.Header h1,
-.history > h1,
-.Header > h1,
-.Headerh1,
-.Fahrerfeldheader > h1 {
-  font-size: var(--fontsizeheadline);
-  font-family: var(--fontfamilytext);
-  color: white; /* Ansprechende Farbe */
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom: 30px;
-  animation: titleAnimation 2s ease-in-out infinite; /* Titel-Effekt */
-  margin-bottom: 30px;
-  margin-top: 40px;
-}
-
 .WMStandings,
 .Sonstiges {
   display: flex;
@@ -107,14 +87,6 @@ main {
     flex-direction: column;
     max-width: auto;
   }
-  .Sonstiges h1,
-  .Header > h1,
-  .history > h1,
-  .Header > h1,
-  .Headerh1 > h1,
-  .Fahrerfeldheader > h1 {
-    font-size: 30px;
-  }
 }
 
 /* Line-Up Container */
@@ -127,13 +99,18 @@ main {
   gap: 40px; /* Abstand zwischen den Boxen */
 }
 
+.line-up > a {
+  color: white;
+  text-decoration: none;
+  width: 17%;
+}
+
 /* Team Container */
 .team {
   display: flex;
   flex-direction: column; /* Vertikale Anordnung von Logo und Namen */
   align-items: center; /* Zentriert den Inhalt horizontal */
   text-align: center;
-  width: 15%; /* Breite der Boxen reduziert */
   margin-bottom: 20px;
   padding: 15px;
   border: 1px solid #ccc;
@@ -232,6 +209,10 @@ main {
     gap: 30px; /* Weniger Abstand zwischen den Teams */
   }
 
+  .line-up > a {
+    width: 90%;
+  }
+
   .team {
     width: 100%; /* Breite der Teams auf 90% verringert, bleibt gleich groß wie vorher */
   }
@@ -247,13 +228,16 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   gap: 80px; /* Abstand zwischen den Kästen */
+  padding: 15px;
+}
 
-  width: auto;
-  text-transform: uppercase;
+.history-container > a {
+  color: white;
+  text-decoration: none;
+  width: 17.5%;
 }
 
 .history-item {
-  width: 15%;
   min-width: 200px;
   padding: 20px;
   text-align: center;
@@ -280,10 +264,6 @@ main {
   font-size: 18px;
   margin: 5px 0;
   color: #fff;
-}
-
-.test {
-  font-family: var(--fontfamilytext);
 }
 
 .point-box {
@@ -351,6 +331,16 @@ main {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .history-container {
+    flex-direction: column; /* Teams werden untereinander angeordnet */
+    width: 100%; /* Nimmt die gesamte Breite ein */
+    gap: 30px; /* Abstand zwischen den Kästen */
+  }
+
+  .history-container > a {
+    width: 100%;
+  }
+
   .history-item {
     width: 100%; /* Auf mobilen Geräten größer */
   }
@@ -360,14 +350,6 @@ main {
     font-size: 20px;
     margin: 5px 0;
     color: #fff;
-  }
-  .history > h1,
-  .Fahrerfeldheader > h1,
-  .BilderResult > h1,
-  .WmStände > h1,
-  .Headerh1 {
-    margin-top: 50px;
-    font-size: 35px;
   }
 
   .point-box {
