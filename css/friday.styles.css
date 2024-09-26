@@ -12,19 +12,6 @@ main {
   text-align: center;
 }
 
-/* Überschrift Styling */
-.WmStände h1 {
-  font-size: var(--fontsizeheadline);
-  font-family: var(--fontfamilytext);
-  color: white; /* Ansprechende Farbe */
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom: 30px;
-  animation: titleAnimation 2s ease-in-out infinite; /* Titel-Effekt */
-  margin-bottom: 30px;
-  margin-top: 40px;
-}
-
 /* Bilder Wrapper */
 .Bilder {
   display: flex;
@@ -100,17 +87,6 @@ main {
   opacity: 1; /* Volle Sichtbarkeit */
 }
 
-.BilderResult h1 {
-  font-size: var(--fontsizeheadline);
-  font-family: var(--fontfamilytext);
-  color: white; /* Ansprechende Farbe */
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom: 30px;
-  animation: titleAnimation 2s ease-in-out infinite; /* Titel-Effekt */
-  margin-top: 100px;
-}
-
 @media (max-width: 768px) {
   .BilderResult {
     flex-direction: column; /* Bilder untereinander anzeigen */
@@ -123,12 +99,6 @@ main {
 }
 
 /* Line-Up Container */
-
-.Fahrerfeldheader > h1 {
-  margin-top: 50px;
-  font-family: var(--fontfamilytext);
-  font-size: var(--fontsizeheadline);
-}
 .line-up {
   display: flex;
   flex-wrap: wrap;
@@ -251,12 +221,6 @@ main {
     font-size: 60px; /* Kleinere Schriftgröße auf mobilen Geräten */
   }
 }
-.history > h1 {
-  margin-top: 50px;
-  font-family: var(--fontfamilytext);
-  font-size: var(--fontsizeheadline);
-  text-transform: uppercase;
-}
 
 .history-container {
   display: flex;
@@ -268,8 +232,13 @@ main {
   text-transform: uppercase;
 }
 
+.history-container > a {
+  color: white;
+  text-decoration: none;
+  width: 17.5%;
+}
+
 .history-item {
-  width: 15%;
   min-width: 200px;
   padding: 20px;
   text-align: center;
@@ -299,7 +268,11 @@ main {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 768px) {  
+  .history-container > a {
+    width: 90%;
+  }
+
   .history-item {
     width: 100%; /* Auf mobilen Geräten größer */
   }
@@ -309,12 +282,5 @@ main {
     font-size: 20px;
     margin: 5px 0;
     color: #fff;
-  }
-  .history > h1,
-  .Fahrerfeldheader h1,
-  .BilderResult h1,
-  .WmStände h1 {
-    margin-top: 50px;
-    font-size: 70px;
   }
 }

@@ -1,7 +1,8 @@
 body {
-  top: 0;
-  left: 0;
-  width: auto;
+  position: relative;
+  top: -8px;
+  left: -8px;
+  width: 100%;
   /* padding: 0 18vw; */
 }
 
@@ -102,7 +103,7 @@ body {
   position: absolute;
   top: 100%; /* Positioniert das Dropdown direkt unter dem Parent */
   left: 0; /* Stellt sicher, dass es am linken Rand des Parent beginnt */
-  background-color: black;
+  background-color: var(--backgroundcolor);
   min-width: 180px;
   z-index: 1;
   opacity: 0;
@@ -366,6 +367,7 @@ body {
   justify-content: center;
   box-shadow: var(--borderpicturesize) var(--wdl);
   border-radius: var(--borderpictureradius);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 /*Endurance*/
 .overview5 {
@@ -376,6 +378,7 @@ body {
 
   box-shadow: var(--borderpicturesize) var(--endurance);
   border-radius: var(--borderpictureradius);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .flex-leaugelogos {
@@ -399,6 +402,7 @@ body {
   justify-content: center;
   box-shadow: var(--borderpicturesize) var(--sundaysplit);
   border-radius: var(--borderpictureradius);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 /*league2*/
 .overview2 {
@@ -408,6 +412,7 @@ body {
   justify-content: center;
   box-shadow: var(--borderpicturesize) var(--saturdaysplit);
   border-radius: var(--borderpictureradius);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 /*league3*/
 .overview3 {
@@ -417,6 +422,7 @@ body {
   justify-content: center;
   box-shadow: var(--borderpicturesize) var(--fridaysplit);
   border-radius: var(--borderpictureradius);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .overview1:hover,
@@ -424,9 +430,9 @@ body {
 .overview3:hover,
 .overview4:hover,
 .overview5:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   cursor: pointer; /* Zeigt eine Hand an, wenn man über den Button fährt */
-  transition: all 0.3s ease;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Tieferer Schatten beim Hover */
 }
 
 /*Logos*/
