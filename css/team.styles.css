@@ -1,4 +1,4 @@
-/*Download HELP*/
+/*Download TEAM*/
 .team-container {
   display: flex;
   flex-wrap: wrap;
@@ -7,7 +7,7 @@
 }
 
 .team-item {
-  width: 17%;
+  width: 20%;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -15,6 +15,7 @@
   gap: 90px;
   box-shadow: var(--borderpicturesize) var(--sundaysplit);
   border-radius: var(--borderpictureradius);
+  border: 1px solid #ccc;
 }
 
 .team-item:hover {
@@ -39,6 +40,7 @@ h2 {
   transform: scale(1.1);
   cursor: pointer; /* Zeigt eine Hand an, wenn man über den Button fährt */
   transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Schatten für Hover-Effekte */
 }
 
 a {

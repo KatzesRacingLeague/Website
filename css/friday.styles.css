@@ -246,6 +246,7 @@ main {
   border-radius: 15px;
   background-color: rgba(136, 114, 114, 0.1);
   box-shadow: var(--borderpicturesize) rgba(59, 201, 31, 0.5);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .history-item:hover {

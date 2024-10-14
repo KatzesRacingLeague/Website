@@ -15,12 +15,14 @@
   gap: 90px;
   box-shadow: var(--borderpicturesize) var(--sundaysplit); 
   border-radius: var(--borderpictureradius);
+  border: 1px solid #ccc;
 }
 
 .help-item:hover {
   transform: scale(1.1);
   cursor: pointer; /* Zeigt eine Hand an, wenn man über den Button fährt */
   transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Schatten für Hover-Effekte */
 }
 
 h2 {

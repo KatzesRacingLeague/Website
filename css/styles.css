@@ -48,8 +48,7 @@ body {
 .logo img {
   width: 120px;
   transition: transform 0.3s ease; /* Sanfte Vergrößerung beim Hover */
-  margin-left: 10px;
- 
+  margin-left: 10px; 
 }
 
 /* Menü-Button für mobile Ansicht */
@@ -368,6 +367,7 @@ body {
   box-shadow: var(--borderpicturesize) var(--wdl);
   border-radius: var(--borderpictureradius);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border: 1px solid #ccc;
 }
 /*Endurance*/
 .overview5 {
@@ -375,10 +375,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   box-shadow: var(--borderpicturesize) var(--endurance);
   border-radius: var(--borderpictureradius);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border: 1px solid #ccc;
 }
 
 .flex-leaugelogos {
@@ -403,6 +403,7 @@ body {
   box-shadow: var(--borderpicturesize) var(--sundaysplit);
   border-radius: var(--borderpictureradius);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border: 1px solid #ccc;
 }
 /*league2*/
 .overview2 {
@@ -413,6 +414,7 @@ body {
   box-shadow: var(--borderpicturesize) var(--saturdaysplit);
   border-radius: var(--borderpictureradius);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border: 1px solid #ccc;
 }
 /*league3*/
 .overview3 {
@@ -423,6 +425,7 @@ body {
   box-shadow: var(--borderpicturesize) var(--fridaysplit);
   border-radius: var(--borderpictureradius);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border: 1px solid #ccc;
 }
 
 .overview1:hover,
