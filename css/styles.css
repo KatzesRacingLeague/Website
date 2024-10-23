@@ -13,7 +13,7 @@ body {
   --saturdaysplit: #2d36cb;
   --sundaysplit: #29e0e1;
   --endurance: #e66a03;
-  --wdl: #be1d1d;  
+  --wdl: #be1d1d;
   --wdlblue: #429396;
   --ligaleiter: #ff0000;
   --administration: #fff318;
@@ -41,14 +41,13 @@ body {
   position: relative;
   list-style: none;
   height: auto; /* Höhe anpassen, damit sie sich an den Inhalt anpasst */
-
 }
 
 /* Logo-Design */
 .logo img {
   width: 120px;
   transition: transform 0.3s ease; /* Sanfte Vergrößerung beim Hover */
-  margin-left: 10px; 
+  margin-left: 10px;
 }
 
 /* Menü-Button für mobile Ansicht */
@@ -459,6 +458,14 @@ body {
   border-radius: var(--borderpictureradius);
   margin-top: 100px;
   margin-bottom: 100px;
+  opacity: 0.9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.image-rennkalender > img:hover {
+  transform: scale(1.05); /* Zoom und leichte Rotation */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Tieferer Schatten beim Hover */
+  opacity: 1; /* Volle Sichtbarkeit */
 }
 
 /* Footer DEFAULT FOR EVERY PAGE */
