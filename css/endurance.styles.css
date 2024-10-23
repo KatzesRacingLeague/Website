@@ -38,6 +38,12 @@ main {
   box-shadow: var(--borderpicturesize) var(--endurance);
 }
 
+.endurance-image > img:hover {
+  transform: scale(1.05); /* Zoom und leichte Rotation */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Tieferer Schatten beim Hover */
+  opacity: 1; /* Volle Sichtbarkeit */
+}
+
 h2 {
   margin-top: 40px;
   font-size: 40px;
