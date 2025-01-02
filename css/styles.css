@@ -25,9 +25,6 @@ body {
   --font-sizetext: 28px;
   --borderpictureradius: 40px;
   --borderpicturesize: 0 8px 32px 0;
-  --christmas-red: #e63946;
-  --christmas-green: #1d3557;
-  --christmas-gold: #ffd700;
 }
 
 /* NAVIGATION DEFAULT FOR EVERY PAGE */
@@ -155,15 +152,15 @@ body {
 }
 
 .Formel1:hover {
-  color: var(--christmas-gold);
+  color: var(--sundaysplit);
 }
 
 .WDL-nav:hover {
-  color: var(--christmas-gold);
+  color: var(--wdl);
 }
 
 .ETeam:hover {
-  color: var(--christmas-gold);
+  color: var(--endurance);
 }
 
 /* Responsives Styling für mobile Geräte */
@@ -231,7 +228,7 @@ body {
 
 .landing_page {
   width: 100%;
-  box-shadow: var(--borderpicturesize) white;
+  box-shadow: var(--borderpicturesize) var(--sundaysplit);
 }
 
 /*Willkommen*/
@@ -246,36 +243,6 @@ body {
   position: relative;
   bottom: 12px;
 }
-
-/*XMAS*/
-.snowflake {
-  position: fixed;
-  top: -10px;
-  color: white;
-  font-size: 20px;
-  animation: snow 3s linear infinite; /* Verkürzt auf 3 Sekunden */
-  opacity: 0.8;
-}
-
-.snowflake:nth-child(odd) {
-  animation-duration: 2s; /* Kürzere Dauer für ungerade Schneeflocken */
-}
-
-.snowflake:nth-child(even) {
-  animation-duration: 1.5s; /* Noch kürzer für gerade Schneeflocken */
-}
-
-/* Schneeflocken-Animation */
-@keyframes snow {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  100% {
-    transform: translateY(100vh) rotate(360deg);
-  }
-}
-
-
 
 /*Icons*/
 .features {
