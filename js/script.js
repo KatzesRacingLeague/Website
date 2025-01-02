@@ -30,11 +30,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-
-
-
-
-
-
-
-
