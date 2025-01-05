@@ -15,21 +15,17 @@ main {
 
 .blocktext {
   font-size: var(--font-sizetext);
-  margin: 10px 0 10px 0;
+  margin: 20px 0 40px 0;
 }
 
 h2 {
   font-size: 50px;
 }
 
-h3 {
-  font-size: 30px;
-}
-
 details {
   align-items: center;
   justify-content: center;
-  box-shadow: var(--borderpicturesize) var(--sundaysplit);
+  box-shadow: var(--borderpicturesize) var(--icons);
   border-radius: var(--borderpictureradius);
   border: 1px solid #ccc;
   margin-bottom: 50px;
@@ -52,10 +48,6 @@ details > summary::-webkit-details-marker {
 @media (max-width: 768px) {
   h2 {
     font-size: 21px;
-  }
-
-  h3 {
-    font-size: 18px;
   }
 
   details {

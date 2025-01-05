@@ -11,55 +11,75 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-family: var(--fontfamilytext);
   gap: 90px;
+  box-shadow: var(--borderpicturesize) var(--sundaysplit);
+  border-radius: var(--borderpictureradius);
+  border: 1px solid #ccc;
+  margin-bottom: 50px;
 }
 
-.rdn-button {
-  display: flex;
-  margin: 40px auto; /* Fügt Abstände hinzu und zentriert den Button in der Mitte */
-  padding: 20px 40px; /* Fügt Polsterung hinzu, um den Button größer zu machen */
-  background-color: var(--sundaysplit);
-  color: white; /* Textfarbe weiß für guten Kontrast */
-  text-decoration: none; /* Unterstrich entfernen */
-  border-radius: 8px; /* Abgerundete Ecken */
-  font-size: 40px;
-  box-shadow: var(--borderpicturesize) var(--sundaysplit); /* Leichter Schatteneffekt */
-  width: fit-content;
-}
-
-.rdn-button:hover {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  background: white;
-  box-shadow: var(--borderpicturesize) white;
-  transform: scale(1.1); /* Leicht vergrößern bei Hover */
-  transition: 0.3s ease; /* Weicher Übergang bei Hover */
+.rdnitem:hover {
+  transform: scale(1.1);
   cursor: pointer; /* Zeigt eine Hand an, wenn man über den Button fährt */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Schatten für Hover-Effekte */
 }
 
 h2 {
-  font-size: 50px;
-  margin-bottom: 20px;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.rdn-feature-item i {
+  font-size: 100px;
+  color: var(--sundaysplit); /* Farbe der Icons */
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.currentRDN {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.pdf {
+  height: 100vh;
+  width: 50%;
+  box-shadow: var(--borderpicturesize) var(--sundaysplit);
+  border-radius: 10px;
+  border: 1px solid #ccc;
 }
 
 /* Responsive Design für Handys */
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .rdncontainer {
     flex-direction: column; /* Spaltenrichtung für kleinere Bildschirme */
+    align-items: center;
     padding: 0px;
   }
 
   .rdnitem {
-    width: 100%;
-  }
-
-  .rdn-button {
-    font-size: 24px; /* Kleinere Schriftgröße */
-    padding: 15px 30px; /* Kleinere Polsterung */
+    width: 70%;
+    margin-bottom: 50px;
   }
 
   h2 {
     font-size: 20px; /* Kleinere Schriftgröße für kleinere Bildschirme */
+  }
+
+  .currentRDN {
+    gap: 20px;
+  }
+
+  .pdf {
+    height: 60vh;
+    width: 75%;
   }
 }

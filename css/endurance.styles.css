@@ -47,7 +47,6 @@ main {
 h2 {
   margin-top: 40px;
   font-size: 40px;
-  font-family: var(--fontfamilytext);
 }
 
 .footer {

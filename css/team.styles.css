@@ -11,7 +11,6 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-family: var(--fontfamilytext);
   gap: 90px;
   box-shadow: var(--borderpicturesize) var(--sundaysplit);
   border-radius: var(--borderpictureradius);
@@ -27,7 +26,6 @@
 h2 {
   font-size: 40px;
   margin-bottom: 20px;
-  font-family: var(--fontfamilytext);
 }
 
 .team-feature-item i {
@@ -49,7 +47,7 @@ a {
 }
 
 /* Responsive Design für Handys */
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .team-container {
     flex-direction: column; /* Spaltenrichtung für kleinere Bildschirme */
     align-items: center;

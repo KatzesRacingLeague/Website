@@ -11,9 +11,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-family: var(--fontfamilytext);
   gap: 90px;
-  box-shadow: var(--borderpicturesize) var(--sundaysplit); 
+  box-shadow: var(--borderpicturesize) var(--sundaysplit);
   border-radius: var(--borderpictureradius);
   border: 1px solid #ccc;
 }
@@ -42,7 +41,7 @@ a {
 }
 
 /* Responsive Design für Handys */
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .help-container {
     flex-direction: column; /* Spaltenrichtung für kleinere Bildschirme */
     align-items: center;
