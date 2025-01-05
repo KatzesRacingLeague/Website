@@ -138,7 +138,6 @@ main {
 }
 
 .driver-names p {
-  font-family: var(--fontfamilytext);
   font-size: 20px; /* Schriftgröße etwas verkleinert */
   margin: 3px 0;
   color: #fff;
@@ -242,14 +241,12 @@ main {
 }
 
 .history-item h2 {
-  font-family: var(--fontfamilytext);
   font-size: 32px;
   margin-bottom: 10px;
   color: #ffffff;
 }
 
 .history-item p {
-  font-family: var(--fontfamilytext);
   font-size: 18px;
   margin: 5px 0;
   color: #fff;
@@ -266,7 +263,6 @@ main {
   }
 
   .history-item p {
-    font-family: var(--fontfamilytext);
     font-size: 20px;
     margin: 5px 0;
     color: #fff;

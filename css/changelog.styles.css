@@ -1,6 +1,5 @@
-.Angaben {
+.log {
   display: flex;
-  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
   border-radius: 10px;
@@ -8,45 +7,46 @@
   max-width: 1500px; /* Maximale Breite, um die Lesbarkeit zu verbessern */ /* Maximale Breite, um die Lesbarkeit zu verbessern */
   margin-left: auto;
   margin-right: auto;
-  padding: 60px;
+  padding: 30px;
   background-color: transparent;
   box-shadow: var(--borderpicturesize) var(--sundaysplit);
   margin-top: 50px;
 }
 
-.Angaben h1 {
+.log h1 {
   font-size: var(--fontsizeheadline);
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.Angaben h2 {
+.log h2 {
   font-size: var(--font-sizetext);
   color: #ffffff;
+  text-align: center;
 }
 
-.Angaben h3 {
+.log h3 {
   font-size: var(--font-sizetext);
   color: #ffffff;
   margin-bottom: 10px;
 }
 
-.Angaben a {
+.log a {
   color: var(--sundaysplit);
   text-decoration: none;
 }
 
-.Angaben a:hover {
+.log a:hover {
   text-decoration: underline;
   color: #000000;
 }
 
 @media (max-width: 850px) {
-  .Angaben h1 {
+  h1 {
     font-size: var(--font-sizetext);
   }
 
-  .Angaben {
+  section {
     padding: 20px;
     max-width: 100%;
     margin-top: 20px;

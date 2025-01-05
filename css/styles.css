@@ -3,6 +3,7 @@ body {
   top: -8px;
   left: -8px;
   width: 100%;
+  font-family: var(--fontfamilytext);
   /* padding: 0 18vw; */
 }
 
@@ -19,7 +20,7 @@ body {
   --administration: #fff318;
   --recruitingadm: #fdcf00;
   --rennleitungsvorsitz: #992d22;
-  --fontfamilyheadline: "Playpen Sans";
+  --icons: #ff2d82;
   --fontfamilytext: "Concert One", sans-serif;
   --fontsizeheadline: 110px;
   --font-sizetext: 28px;
@@ -76,7 +77,6 @@ body {
   margin: 0 15px;
   list-style-type: none;
   transition: transform 0.3s ease; /* Sanfte Bewegungseffekte */
-  font-family: var(--fontfamilytext);
   font-size: 28px;
 }
 
@@ -88,21 +88,16 @@ body {
   color: #fff;
   text-decoration: none;
   padding: 10px 15px;
-  display: block;
   font-size: 1.1em;
   transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Sanfte Übergänge */
-  text-align: center; /* Zentriert den Text */
-  border-radius: 5px; /* Runde Ecken */
 }
 
 /* Dropdown-Menü Styling */
 .dropdown-content {
-  display: none;
   position: absolute;
   top: 100%; /* Positioniert das Dropdown direkt unter dem Parent */
-  left: 0; /* Stellt sicher, dass es am linken Rand des Parent beginnt */
   background-color: var(--backgroundcolor);
-  min-width: 180px;
+  min-width: 330px;
   z-index: 1;
   opacity: 0;
   transform: translateY(10px); /* Startet das Dropdown leicht versetzt */
@@ -111,6 +106,14 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Schatten für visuelle Tiefe */
   padding: 0; /* Entfernt zusätzliche Polsterung */
   margin: 0; /* Entfernt zusätzliche Margen */
+}
+
+.f1ligen {
+  left: -39%;
+}
+
+.sonstiges {
+  left: -50%;
 }
 
 /* Dropdown-Links Styling */
@@ -127,7 +130,7 @@ body {
 
 /* Dropdown bei Hover anzeigen */
 .nav-links li:hover .dropdown-content {
-  display: block;
+  /* display: block; */
   opacity: 1;
   transform: translateY(0); /* Dropdown bewegt sich nach oben */
 }
@@ -241,7 +244,7 @@ body {
 .welcome {
   font-size: 80px;
   position: relative;
-  bottom: 12px;
+  bottom: 9px;
 }
 
 /*Icons*/
@@ -268,7 +271,6 @@ body {
 }
 
 .feature-item p {
-  font-family: var(--fontfamilytext);
   margin-top: 10px;
   font-size: 27px;
   margin-bottom: 30px;
@@ -280,7 +282,6 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  font-family: var(--fontfamilytext);
 }
 .class-button {
   display: flex;
@@ -307,7 +308,6 @@ body {
 
 /*H1 Headlines*/
 .header > h1 {
-  font-family: var(--fontfamilytext);
   font-size: var(--fontsizeheadline);
   font-weight: bold;
   text-transform: uppercase;
@@ -317,14 +317,13 @@ body {
 
 /*H1 Headlines Enduracne +  WDL*/
 .header2 > h1 {
-  font-family: var(--fontfamilytext);
   font-size: 54px;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .header2 > h1 {
     font-size: 30px;
   }
@@ -336,7 +335,6 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-family: var(--fontfamilytext);
   font-weight: bolder;
   font-size: var(--font-sizetext);
   margin-top: 60px;
@@ -387,7 +385,6 @@ body {
   justify-content: center;
   margin-bottom: 60px;
   margin-top: 40px;
-  font-family: var(--fontfamilytext);
   font-weight: bolder;
   font-size: var(--font-sizetext);
   gap: 90px;
@@ -470,13 +467,14 @@ body {
 
 /* Footer DEFAULT FOR EVERY PAGE */
 .footer {
+  position: relative;
   margin-top: 70px;
   padding: 20px;
   text-align: center;
-  font-family: var(--fontfamilytext);
   background-image: url(../resources/pictures/general/footers/startseite.png);
   background-repeat: no-repeat;
   background-size: cover;
+  bottom: -16px;
 }
 
 .footer a {
@@ -485,7 +483,7 @@ body {
   cursor: pointer;
 }
 
-.footer a:hover {
+.container a:hover {
   text-decoration: underline;
 }
 
@@ -499,7 +497,7 @@ body {
 }
 
 /* Responsive Design für Handys */
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   /* Background Image Index Site */
   body {
     background-size: cover;
