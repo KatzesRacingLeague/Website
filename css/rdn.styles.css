@@ -27,7 +27,6 @@
 
 h2 {
   font-size: 40px;
-  margin-bottom: 10px;
 }
 
 .rdn-feature-item i {
@@ -46,7 +45,6 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 40px;
 }
 
 .pdf {
@@ -55,6 +53,10 @@ a {
   box-shadow: var(--borderpicturesize) var(--sundaysplit);
   border-radius: 10px;
   border: 1px solid #ccc;
+}
+
+.header > h2 {
+  font-size: 70px;
 }
 
 /* Responsive Design für Handys */
@@ -71,15 +73,21 @@ a {
   }
 
   h2 {
-    font-size: 20px; /* Kleinere Schriftgröße für kleinere Bildschirme */
+    font-size: 20px;
   }
 
   .currentRDN {
+    height: max-content;
     gap: 20px;
   }
 
   .pdf {
     height: 60vh;
     width: 75%;
+    overflow-y: scroll;
+  }
+
+  .header > h2 {
+    font-size: 20px;
   }
 }
