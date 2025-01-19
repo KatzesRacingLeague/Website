@@ -384,11 +384,13 @@ body {
 .racecalendar {
   width: 65%;
   display: flex;
-  align-self: center;
-  justify-self: center;
-  text-align: center;  
+  justify-content: center; /* Center horizontally */
+  align-items: center;    /* Center vertically */
+  margin: 0 auto; /* Ensures container is centered horizontally within parent */
+  text-align: center;
   cursor: pointer;
-  padding:  100px 0;
+  padding: 100px 0;
+  box-sizing: border-box; /* Avoids padding affecting width */
 }
 
 .racecalendar img {
@@ -503,5 +505,9 @@ h1 {
   .f1leaguecard {
     width: 70%;
     font-size: 20px;
+  }
+
+  .racecalendar {
+    padding: 50px 0;
   }
 }
