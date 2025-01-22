@@ -15,20 +15,19 @@ main {
   background-image: url(../resources/pictures/general/headers/wdl.png);
 }
 
-.WMStandings,
-.Sonstiges {
+.picutres,
+.picutresSON {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  width: 90%;
+  gap: 90px;
 }
 
-/* Bild Styling */
-
-.WMStandings > img {
-  max-width: 38%;
-  /* max-width: auto; */
-  height: 40%;
-  height: auto;
+.BilderWM,
+.BilderSON
+ {
+  width: 45%;
   border-radius: 30px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Tiefer Schatten */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -37,19 +36,12 @@ main {
   box-shadow: var(--borderpicturesize) var(--wdl);
 }
 
-.SonstigesPicture > img {
-  max-width: 80%;
-  border-radius: 30px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Tiefer Schatten */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  opacity: 0.9; /* Leicht transparent */
-  box-shadow: var(--borderpicturesize) var(--wdl);
+.BilderSON {
+  width: 90%;
 }
 
-/* Hover-Effekt für die Bilder */
-.WMStandings > img:hover,
-.SonstigesPicture > img:hover {
+.BilderWM:hover,
+.BilderSON:hover {
   transform: scale(1.05); /* Zoom und leichte Rotation */
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Tieferer Schatten beim Hover */
   opacity: 1; /* Volle Sichtbarkeit */
@@ -65,28 +57,6 @@ main {
 
 .footer {
   background-image: url(../resources/pictures/general/footers/wdl.png);
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    background-image: url(../resources/pictures/general/footers/wdl.png);
-  }
-
-  .WMStandings {
-    flex-direction: column;
-    max-width: auto;
-    gap: 30px;
-  }
-
-  .WMStandings > img {
-    flex-direction: column;
-    max-width: 80vw;
-    height: 100%;
-  }
-  .Sonstiges {
-    flex-direction: column;
-    max-width: auto;
-  }
 }
 
 /* Line-Up Container */
@@ -200,32 +170,11 @@ main {
   box-shadow: var(--borderpicturesize) var(--wdl);
 }
 
-/* Mobile Anpassungen */
-@media (max-width: 768px) {
-  .line-up {
-    flex-direction: column; /* Teams werden untereinander angeordnet */
-    width: 100%; /* Nimmt die gesamte Breite ein */
-    gap: 30px; /* Weniger Abstand zwischen den Teams */
-  }
-
-  .line-up > a {
-    width: 90%;
-  }
-
-  .team {
-    width: 100%; /* Breite der Teams auf 90% verringert, bleibt gleich groß wie vorher */
-  }
-
-  .team-logo {
-    max-width: 100px; /* Größe des Logos bleibt konstant */
-    height: auto;
-  }
-}
-
 .history-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
   gap: 80px; /* Abstand zwischen den Kästen */
   padding: 15px;
 }
@@ -238,7 +187,7 @@ main {
 
 .history-item {
   min-width: 200px;
-  padding: 20px;
+  padding: 0 0 25px 0;
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 15px;
@@ -327,10 +276,45 @@ main {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .history-container {
+  .navbar {
+    background-image: url(../resources/pictures/general/footers/wdl.png);
+  }
+
+  .picutres,
+  .picutresSON {
+    flex-direction: column;
+    gap: 40px;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+  }
+
+  .BilderWM,
+  .BilderSON {
+    width: 90%;
+  }
+
+  .line-up {
     flex-direction: column; /* Teams werden untereinander angeordnet */
-    width: 100%; /* Nimmt die gesamte Breite ein */
-    gap: 30px; /* Abstand zwischen den Kästen */
+    width: 90%; /* Nimmt die gesamte Breite ein */
+    gap: 30px; /* Weniger Abstand zwischen den Teams */
+  }
+
+  .line-up > a {
+    width: 90%;
+  }
+
+  .team {
+    width: 100%; /* Breite der Teams auf 90% verringert, bleibt gleich groß wie vorher */
+  }
+
+  .team-logo {
+    max-width: 100px; /* Größe des Logos bleibt konstant */
+    height: auto;
+  }
+
+  .history-container {
+    width: 80%;
+    margin-left: 4%;
   }
 
   .history-container > a {
@@ -338,7 +322,7 @@ main {
   }
 
   .history-item {
-    width: 100%; /* Auf mobilen Geräten größer */
+    width: 100%;
   }
 
   .history-item p {

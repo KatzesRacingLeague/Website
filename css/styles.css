@@ -1,10 +1,14 @@
 body {
+  overflow-x: hidden;
   position: relative;
   top: -8px;
   left: -8px;
   width: 100%;
   font-family: var(--fontfamilytext);
-  /* padding: 0 18vw; */
+  background-image: url(../resources/pictures/general/background.png);
+  background-position: center center; /* Zentriert das Bild */
+  background-attachment: fixed;
+  color: white;
 }
 
 /* Variablen*/
@@ -166,69 +170,6 @@ body {
   color: var(--endurance);
 }
 
-/* Responsives Styling für mobile Geräte */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: row; /* Stellt sicher, dass die Navigation in einer Spalte dargestellt wird */
-    align-items: flex-start; /* Richtet die Elemente am Anfang aus */
-    height: auto; /* Höhe anpassen */
-    background-image: url(../resources/pictures/general/footers/startseite.png);
-  }
-
-  .menu-toggle {
-    display: block; /* Zeigt den Button auf mobilen Geräten */
-    align-self: center;
-    margin-right: 30px;
-    margin-bottom: 10px;
-    font-size: 50px;
-  }
-
-  .nav-links {
-    flex-direction: column; /* Stellt die Links untereinander dar */
-    width: 100%; /* Breite auf 100% setzen */
-    display: none; /* Standardmäßig verstecken */
-  }
-
-  .nav-links.active {
-    display: flex; /* Zeigt die Links an, wenn das Menü geöffnet ist */
-  }
-
-  .dropdown-content {
-    position: static; /* Positionieren, um sich in der Spalte auszubreiten */
-    opacity: 1;
-    transform: none;
-    box-shadow: none; /* Entfernt den Schatten für mobile Ansicht */
-    min-width: 100%; /* Breite auf 100% setzen */
-  }
-
-  .logo img {
-    width: 100px; /* Verkleinert das Logo für kleinere Bildschirme */
-    margin: 0; /* Entfernt zusätzliche Margen */
-  }
-
-  .nav-links li {
-    margin: 10px 0; /* Margin anpassen für vertikale Links */
-  }
-
-  .nav-links a {
-    font-size: 1em; /* Schriftgröße anpassen */
-    padding: 15px; /* Mehr Padding für einfache Klickbarkeit */
-  }
-}
-
-/*Background Image Index Site*/
-
-body {
-  background-image: url(../resources/pictures/general/background.png);
-  background-position: center center; /* Zentriert das Bild */
-  background-attachment: fixed;
-  color: white;
-}
-
-.main {
-  padding: 0 18vw;
-}
-
 .landing_page {
   width: 100%;
   box-shadow: var(--borderpicturesize) var(--sundaysplit);
@@ -283,6 +224,7 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+
 .class-button {
   display: flex;
   margin: 40px auto; /* Fügt Abstände hinzu und zentriert den Button in der Mitte */
@@ -313,156 +255,6 @@ body {
   text-transform: uppercase;
   text-align: center;
   margin-top: 40px;
-}
-
-/*H1 Headlines Enduracne +  WDL*/
-.header2 > h1 {
-  font-size: 54px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  .header2 > h1 {
-    font-size: 30px;
-  }
-}
-
-/*Flex-every Logo WDL + E Team*/
-.flex-leaugelogosnext {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-weight: bolder;
-  font-size: var(--font-sizetext);
-  margin-top: 60px;
-  gap: 150px;
-}
-
-.flex-leaugelogos > a {
-  color: white;
-  text-decoration: none;
-}
-
-.flex-leaugelogosnext > a {
-  color: white;
-  text-decoration: none;
-}
-
-.Logosoftheleaguenext {
-  max-height: 100%;
-  max-width: 400px;
-}
-/*WDL*/
-.overview4 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--borderpicturesize) var(--wdl);
-  border-radius: var(--borderpictureradius);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  border: 1px solid #ccc;
-}
-/*Endurance*/
-.overview5 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--borderpicturesize) var(--endurance);
-  border-radius: var(--borderpictureradius);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  border: 1px solid #ccc;
-}
-
-.flex-leaugelogos {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 60px;
-  margin-top: 40px;
-  font-weight: bolder;
-  font-size: var(--font-sizetext);
-  gap: 90px;
-}
-/*league1*/
-
-.overview1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--borderpicturesize) var(--sundaysplit);
-  border-radius: var(--borderpictureradius);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  border: 1px solid #ccc;
-}
-/*league2*/
-.overview2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--borderpicturesize) var(--saturdaysplit);
-  border-radius: var(--borderpictureradius);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  border: 1px solid #ccc;
-}
-/*league3*/
-.overview3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--borderpicturesize) var(--fridaysplit);
-  border-radius: var(--borderpictureradius);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  border: 1px solid #ccc;
-}
-
-.overview1:hover,
-.overview2:hover,
-.overview3:hover,
-.overview4:hover,
-.overview5:hover {
-  transform: scale(1.05);
-  cursor: pointer; /* Zeigt eine Hand an, wenn man über den Button fährt */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Tieferer Schatten beim Hover */
-}
-
-/*Logos*/
-.Logosoftheleague {
-  max-height: 100%;
-  max-width: 400px;
-}
-.image-rennkalender {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.image-rennkalender > img {
-  max-height: 100%;
-  max-width: 1185px;
-  border-radius: var(--borderpicture);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--borderpicturesize) var(--sundaysplit);
-  border-radius: var(--borderpictureradius);
-  margin-top: 100px;
-  margin-bottom: 100px;
-  opacity: 0.9;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-.image-rennkalender > img:hover {
-  transform: scale(1.05); /* Zoom und leichte Rotation */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Tieferer Schatten beim Hover */
-  opacity: 1; /* Volle Sichtbarkeit */
 }
 
 /* Footer DEFAULT FOR EVERY PAGE */
@@ -496,11 +288,135 @@ body {
   transform: scale(1.02);
 }
 
-/* Responsive Design für Handys */
+/* Section F1Leagues */
+.leaguecontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 60px;
+}
+
+.f1leaguecard {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 24%;
+  font-weight: bolder;
+  font-size: var(--font-sizetext);
+}
+
+.f1leaguecard > a {
+  color: white;
+  text-decoration: none;
+}
+
+.f1leaguelogo {
+  width: 100%;
+}
+
+.fridaycard {
+  border-radius: var(--borderpictureradius);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border: 1px solid #ccc;
+  box-shadow: var(--borderpicturesize) var(--fridaysplit);
+}
+
+.fridaycard:hover {
+  transform: scale(1.05);
+  cursor: pointer; /* Zeigt eine Hand an, wenn man über den Button fährt */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Tieferer Schatten beim Hover */
+}
+
+.saturdaycard {
+  border-radius: var(--borderpictureradius);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border: 1px solid #ccc;
+  box-shadow: var(--borderpicturesize) var(--saturdaysplit);
+}
+
+.saturdaycard:hover {
+  transform: scale(1.05);
+  cursor: pointer; /* Zeigt eine Hand an, wenn man über den Button fährt */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Tieferer Schatten beim Hover */
+}
+
+.sundaycard {
+  border-radius: var(--borderpictureradius);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border: 1px solid #ccc;
+  box-shadow: var(--borderpicturesize) var(--sundaysplit);
+}
+
+.sundaycard:hover {
+  transform: scale(1.05);
+  cursor: pointer; /* Zeigt eine Hand an, wenn man über den Button fährt */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Tieferer Schatten beim Hover */
+}
+
+.wdlcard {
+  border-radius: var(--borderpictureradius);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border: 1px solid #ccc;
+  box-shadow: var(--borderpicturesize) var(--wdl);
+}
+
+.wdlcard:hover {
+  transform: scale(1.05);
+  cursor: pointer; /* Zeigt eine Hand an, wenn man über den Button fährt */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Tieferer Schatten beim Hover */
+}
+
+.endurancecard {
+  border-radius: var(--borderpictureradius);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border: 1px solid #ccc;
+  box-shadow: var(--borderpicturesize) var(--endurance);
+}
+
+.endurancecard:hover {
+  transform: scale(1.05);
+  cursor: pointer; /* Zeigt eine Hand an, wenn man über den Button fährt */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Tieferer Schatten beim Hover */
+}
+
+/* SECTION Racecalendar */
+.racecalendar {
+  width: 65%;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;    /* Center vertically */
+  margin: 0 auto; /* Ensures container is centered horizontally within parent */
+  text-align: center;
+  cursor: pointer;
+  padding: 100px 0;
+  box-sizing: border-box; /* Avoids padding affecting width */
+}
+
+.racecalendar img {
+  width: 100%;
+  box-shadow: var(--borderpicturesize) var(--sundaysplit);
+  border-radius: var(--borderpictureradius);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.racecalendar img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+
+}
+
+h1 {
+  font-size: 6vw;
+}
+
 @media (max-width: 768px) {
-  /* Background Image Index Site */
   body {
     background-size: cover;
+  }
+
+  .welcomequote {
+    font-size: 100px;
   }
 
   .welcome {
@@ -523,97 +439,75 @@ body {
     margin-bottom: 20px; /* Weniger Abstand unten */
   }
 
-  /* Quotes */
-  .Quotes {
-    flex-direction: column; /* Spaltenrichtung für kleinere Bildschirme */
-    margin-left: 0;
-    gap: 40px; /* Mehr Platz zwischen den Zitaten */
-  }
-
-  .quote-container {
-    width: 100%; /* Breite auf 100% setzen */
-    height: auto; /* Höhe automatisch anpassen */
-  }
-
-  .quote-text {
-    font-size: 16px; /* Kleinere Schriftgröße */
-    padding: 15px; /* Weniger Polsterung */
-  }
-
   /* H1 Headlines */
   .header > h1 {
-    font-size: 25px; /* Kleinere Schriftgröße für kleinere Bildschirme */
+    font-size: 25px; 
   }
 
-  /* Flex-every Logo */
-  .flex-leaugelogos {
-    flex-direction: column; /* Spaltenrichtung für kleinere Bildschirme */
-    gap: 80px; /* Weniger Abstand zwischen den Logos */
-  }
-
-  .flex-leaugelogosnext {
-    flex-direction: column; /* Spaltenrichtung für kleinere Bildschirme */
-    gap: 80px; /* Weniger Abstand zwischen den Logos */
-  }
-
-  /* League Overviews */
-
-  .overview1 {
-    width: 100%; /* Breite auf 100% setzen */
-    max-width: 300px; /* Maximalbreite für kleinere Bildschirme */
-    box-shadow: var(--borderpicturesize) var(--sundaysplit);
-  }
-  .overview2 {
-    width: 100%; /* Breite auf 100% setzen */
-    max-width: 300px; /* Maximalbreite für kleinere Bildschirme */
-    box-shadow: var(--borderpicturesize) var(--saturdaysplit);
-  }
-  .overview3 {
-    width: 100%; /* Breite auf 100% setzen */
-    max-width: 300px; /* Maximalbreite für kleinere Bildschirme */
-    box-shadow: var(--borderpicturesize) var(--fridaysplit);
-  }
-  .overview4 {
-    width: 100%; /* Breite auf 100% setzen */
-    max-width: 300px; /* Maximalbreite für kleinere Bildschirme */
-    box-shadow: var(--borderpicturesize) var(--wdl);
-  }
-  .overview5 {
-    width: 100%; /* Breite auf 100% setzen */
-    max-width: 300px; /* Maximalbreite für kleinere Bildschirme */
-    box-shadow: var(--borderpicturesize) var(--endurance);
-  }
-
-  /* Logos */
-  .Logosoftheleague {
-    max-width: 200px; /* Kleinere maximale Breite für Logos */
-  }
-  /* Logos */
-  .Logosoftheleaguenext {
-    max-width: 200px; /* Kleinere maximale Breite für Logos */
-  }
-
-  .image-rennkalender > img {
-    max-width: 300px; /* Kleinere maximale Breite für Bilder */
-    margin-top: 50px; /* Weniger Abstand oben */
-    margin-bottom: 50px; /* Weniger Abstand unten */
-  }
-}
-
-@media (max-width: 768px) {
   .class-button {
     padding: 15px 30px;
     font-size: 25px;
     width: auto; /* Stellt sicher, dass der Button sich an die Breite anpasst */
     margin: 0 auto; /* Zentriert den Button auf mobilen Geräten */
   }
-}
 
-@media (max-width: 480px) {
-  .class-button {
-    padding: 10px 20px;
-    font-size: 24px;
-    width: auto; /* Stellt sicher, dass der Button auf sehr kleinen Bildschirmen anpassbar bleibt */
-    margin: 0 auto; /* Sorgt dafür, dass der Button in der Mitte bleibt */
+  .navbar {
+    flex-direction: row; /* Stellt sicher, dass die Navigation in einer Spalte dargestellt wird */
+    align-items: flex-start; /* Richtet die Elemente am Anfang aus */
+    height: auto; /* Höhe anpassen */
+    background-image: url(../resources/pictures/general/footers/startseite.png);
+  }
+
+  .menu-toggle {
+    display: block; /* Zeigt den Button auf mobilen Geräten */
+    align-self: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 50px;
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stellt die Links untereinander dar */
+    width: 100%; /* Breite auf 100% setzen */
+    display: none; /* Standardmäßig verstecken */
+  }
+
+  .nav-links.active {
+    display: flex; /* Zeigt die Links an, wenn das Menü geöffnet ist */
+  }
+
+  .dropdown-content {
+    position: static; /* Positionieren, um sich in der Spalte auszubreiten */
+    opacity: 1;
+    transform: none;
+    box-shadow: none; /* Entfernt den Schatten für mobile Ansicht */
+    min-width: 100%; /* Breite auf 100% setzen */
+  }
+
+  .logo img {
+    width: 100px; /* Verkleinert das Logo für kleinere Bildschirme */
+    margin: 0; /* Entfernt zusätzliche Margen */
+  }
+
+  .nav-links li {
+    margin: 10px 0; /* Margin anpassen für vertikale Links */
+  }
+
+  .nav-links a {
+    font-size: 1em; /* Schriftgröße anpassen */
+    padding: 15px; /* Mehr Padding für einfache Klickbarkeit */
+  }
+
+  .leaguecontainer {
+    flex-direction: column;
+  }
+
+  .f1leaguecard {
+    width: 70%;
+    font-size: 20px;
+  }
+
+  .racecalendar {
+    padding: 50px 0;
   }
 }
