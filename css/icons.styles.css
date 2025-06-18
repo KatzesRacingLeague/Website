@@ -25,9 +25,9 @@ h2 {
 details {
   align-items: center;
   justify-content: center;
-  box-shadow: var(--borderpicturesize) var(--icons);
-  border-radius: var(--borderpictureradius);
-  border: 1px solid #ccc;
+border-radius: 20px;
+
+  border: 1px solid #ff2d82;
   margin-bottom: 50px;
   padding: 0 50px;
 }

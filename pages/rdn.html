@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Katzes Racing League</title>
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/rdn.styles.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/rdn.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,24 +19,24 @@
     <link
       rel="icon"
       type="image/png"
-      href="../resources/pictures/general/krllogos/KRL_LOGO.png"
+      href="/resources/pictures/general/krllogos/KRL_Community4.png"
     />
   </head>
   <body>
-    <header>
+     <header>
       <nav class="navbar">
         <!-- Logo der Liga -->
-        <a href="../index.html">
+        <a href="https://katzes-racing-league.de/">
           <div class="logo">
             <img
-              src="../resources/pictures/general/krllogos/KRL_LOGO.png"
+              src="/resources/pictures/general/krllogos/KRL_Community4.png"
               alt="Liga Logo"
             />
           </div>
         </a>
 
         <!-- Menü-Button für mobile Ansicht -->
-        <button class="menu-toggle">☰</button>
+       <button class="menu-toggle">☰</button>
 
         <!-- Hauptnavigationslinks -->
         <ul class="nav-links">
@@ -77,7 +77,7 @@
             <ul class="dropdown-content sonstiges">
               <li class="text3">
                 <a href="https://katzes-racing-league.de/race-director-notes"
-                  >Race-Director-Notes</a
+                  >RDN</a
                 >
               </li>
               <li class="text3">
@@ -86,15 +86,7 @@
                 >
               </li>
               <li class="text3">
-                <a href="https://katzes-racing-league.de/unser-team"
-                  >Unser Team</a
-                >
-              </li>
-              <li class="text3">
                 <a href="https://katzes-racing-league.de/icons">Icons</a>
-              </li>
-              <li class="text3">
-                <a href="https://katzes-racing-league.de/krlhelp">KRL Help</a>
               </li>
               <li class="text3">
                 <a
@@ -102,325 +94,99 @@
                   >Merch Shop</a
                 >
               </li>
-              <li class="text3">
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSczZykzGcael-D0ulAxffcyaZ096hAEbzIVa8AaAmLcRS8dWg/viewform"
-                  >Teilnahme Formular</a
-                >
-              </li>
             </ul>
           </li>
         </ul>
       </nav>
+      
+      <script>
+      
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+  });
+
+  // Optional: Klick außerhalb schließt das Menü
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest("nav")) {
+      navLinks.classList.remove("open");
+    }
+  });
+  //Scroolbar
+  window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const scrollPercent = (scrollTop / docHeight) * 100;
+  document.getElementById('progressBar').style.width = scrollPercent + '%';
+});
+
+      </script>
+     
+      <div id="progressBar"></div>
     </header>
 
-    <section class="background">
-      <div class="header">
-        <h1>RACE-DIRECTOR-NOTES</h1>
-      </div>
 
-      <div class="currentRDN">
-        <div class="header">
-          <h2>21. SAISONRENNEN: AUSTRALIEN</h2>
-        </div>
-        <iframe
-          class="pdf"
-          src="../resources/files/race-director-notes/Race_director_notes_fur_Australien.pdf"
-          frameborder="0"
-        ></iframe>
-        <a
-          class="class-button"
-          href="../resources/files/race-director-notes/Race_director_notes_fur_Australien.pdf"
-          download="Race_director_notes_fur_Australien.pdf"
-        >
-          DATEI HERUNTERLADEN
-        </a>
-      </div>
+ <section class="background">
+  <div class="header">
+    <h1>Race-Director-Notes</h1>
+  </div>
 
-      <div class="header">
-        <h1>WEITERE DATEIEN</h1>
-      </div>
+  <div class="currentRDN">
+    <div class="header">
+      <h2>2. Testtag: Japan</h2>
+    </div>
+    <iframe
+      class="pdf"
+      src="../resources/files/race-director-notes/Race_director_notes_fuer_Japan_Testtag.pdf"
+      frameborder="0"
+    ></iframe>
+    <a
+      class="class-button"
+      href="../resources/files/race-director-notes/Race_director_notes_fur_Australien.pdf"
+      download="Race_director_notes_fur_Australien.pdf"
+    >
+      Datei herunterladen
+    </a>
+  </div>
+<!--Kästen als Archiv
+  <div class="header">
+    <h1>Weitere Dateien</h1>
+  </div>
 
-      <!--Kasten RDN-->
-      <div class="rdncontainer">
+  <div class="rdncontainer">
+    <div class="rdnitem">
+      <a href="../resources/files/race-director-notes/Race_director_notes_fur_Österreich.pdf" download>
+        <div class="rdn-feature-item">
+          <h2>20. Saisonrennen</h2>
+          <i class="far fa-file"></i>
+          <h2>ÖSTERREICH</h2>
+        </div>
+      </a>
+    </div>
+    <div class="rdnitem">
+      <a href="../resources/files/race-director-notes/Race_director_notes_fur_USA.pdf" download>
+        <div class="rdn-feature-item">
+          <h2>19. Saisonrennen</h2>
+          <i class="far fa-file"></i>
+          <h2>USA</h2>
+        </div>
+      </a>
+    </div>
+     Weitere RDN-Elemente können nach Bedarf manuell hinzugefügt werden -->
+  </div> 
+</section>
 
-        <div class="rdnitem">
-          <a
-            href="../resources/files/race-director-notes/Race_director_notes_fur_Österreich.pdf"
-            download="Race_director_notes_fur_Österreich.pdf"
-          >
-            <div class="rdn-feature-item">
-              <h2>20. SAISONRENNEN</h2>
-              <i class="far fa-file"></i>
-              <h2>ÖSTERREICH</h2>
-            </div>
-          </a>
-        </div>
-        
-        <div class="rdnitem">
-          <a
-            href="../resources/files/race-director-notes/Race_director_notes_fur_USA.pdf"
-            download="Race_director_notes_fur_USA.pdf"
-          >
-            <div class="rdn-feature-item">
-              <h2>19. SAISONRENNEN</h2>
-              <i class="far fa-file"></i>
-              <h2>USA</h2>
-            </div>
-          </a>
-        </div>
-        
-        <div class="rdnitem">
-          <a
-            href="../resources/files/race-director-notes/Race_director_notes_fur_SaudiArabien.pdf"
-            download="Race_director_notes_fur_SaudiArabien.pdf"
-          >
-            <div class="rdn-feature-item">
-              <h2>18. SAISONRENNEN</h2>
-              <i class="far fa-file"></i>
-              <h2>SAUDI ARABIEN</h2>
-            </div>
-          </a>
-        </div>
 
-        <div class="rdnitem">
-          <a
-            href="../resources/files/race-director-notes/Race_director_notes_fur_Imola.pdf"
-            download="Race_director_notes_fur_Imola.pdf"
-          >
-            <div class="rdn-feature-item">
-              <h2>17. SAISONRENNEN</h2>
-              <i class="far fa-file"></i>
-              <h2>IMOLA</h2>
-            </div>
-          </a>
-        </div>
 
-        <div class="rdnitem">
-          <a
-            href="../resources/files/race-director-notes/Race_director_notes_fur_Brasilien.pdf"
-            download="Race_director_notes_fur_Brasilien.pdf"
-          >
-            <div class="rdn-feature-item">
-              <h2>16. SAISONRENNEN</h2>
-              <i class="far fa-file"></i>
-              <h2>BRASILIEN</h2>
-            </div>
-          </a>
-        </div>
-        <div class="rdnitem">
-          <a
-            href="../resources/files/race-director-notes/Race_director_notes_fur_Bahrain.pdf"
-            download="Race_director_notes_fur_Bahrain.pdf"
-          >
-            <div class="rdn-feature-item">
-              <h2>15. SAISONRENNEN</h2>
-              <i class="far fa-file"></i>
-              <h2>BAHRAIN</h2>
-            </div>
-          </a>
-        </div>
-        <div class="rdnitem">
-          <a
-            href="../resources/files/race-director-notes/Race_director_notes_fur_Ungarn.pdf"
-            download="Race_director_notes_fur_Ungarn.pdf"
-          >
-            <div class="rdn-feature-item">
-              <h2>14. SAISONRENNEN</h2>
-              <i class="far fa-file"></i>
-              <h2>UNGARN</h2>
-            </div>
-          </a>
-        </div>
-        <div class="rdnitem">
-          <a
-            href="../resources/files/race-director-notes/Race_director_notes_fur_Belgien.pdf"
-            download="Race_director_notes_fur_Belgien.pdf"
-          >
-            <div class="rdn-feature-item">
-              <h2>13. SAISONRENNEN</h2>
-              <i class="far fa-file"></i>
-              <h2>BELGIEN</h2>
-            </div>
-          </a>
-        </div>
-        <div class="rdnitem">
-          <a
-            href="../resources/files/race-director-notes/Race_director_notes_fur_Monaco.pdf"
-            download="Race_director_notes_fur_Monaco.pdf"
-          >
-            <div class="rdn-feature-item">
-              <h2>12. SAISONRENNEN</h2>
-              <i class="far fa-file"></i>
-              <h2>MONACO</h2>
-            </div>
-          </a>
-        </div>
-        <div class="rdnitem">
-          <a
-            href="../resources/files/race-director-notes/Race_director_notes_fur_Mexiko.pdf"
-            download="Race_director_notes_fur_Mexiko.pdf"
-          >
-            <div class="rdn-feature-item">
-              <h2>11. SAISONRENNEN</h2>
-              <i class="far fa-file"></i>
-              <h2>MEXIKO</h2>
-            </div>
-          </a>
-        </div>
-        <div class="rdnitem">
-          <a
-            href="../resources/files/race-director-notes/Race_director_notes_fur_Spanien.pdf"
-            download="Race_director_notes_fur_Spanien.pdf"
-          >
-            <div class="rdn-feature-item">
-              <h2>10. SAISONRENNEN</h2>
-              <i class="far fa-file"></i>
-              <h2>SPANIEN</h2>
-            </div>
-          </a>
-        </div>
-        <div class="rdnitem">
-          <a
-            href="../resources/files/race-director-notes/Race_director_notes_fur_Niederlande.pdf"
-            download="Race_director_notes_fur_Niederlande.pdf"
-          >
-            <div class="rdn-feature-item">
-              <h2>9. SAISONRENNEN</h2>
-              <i class="far fa-file"></i>
-              <h2>NIEDERLANDE</h2>
-            </div>
-          </a>
-        </div>
-        <div class="rdnitem">
-          <a
-            href="../resources/files/race-director-notes/Race_director_notes_fur_Portugal.pdf"
-            download="Race_director_notes_fur_Portugal.pdf"
-          >
-            <div class="rdn-feature-item">
-              <h2>8. SAISONRENNEN</h2>
-              <i class="far fa-file"></i>
-              <h2>PORTUGAL</h2>
-            </div>
-          </a>
-        </div>
-        <div class="rdnitem">
-          <a
-            href="../resources/files/race-director-notes/Race_director_notes_fur_Japan.pdf"
-            download="Race_director_notes_fur_Japan.pdf"
-          >
-            <div class="rdn-feature-item">
-              <h2>7. SAISONRENNEN</h2>
-              <i class="far fa-file"></i>
-              <h2>JAPAN</h2>
-            </div>
-          </a>
-        </div>
-        <div class="rdnitem">
-          <a
-            href="../resources/files/race-director-notes/Race_director_notes_fur_Italien.pdf"
-            download="Race_director_notes_fur_Italien.pdf"
-          >
-            <div class="rdn-feature-item">
-              <h2>6. SAISONRENNEN</h2>
-              <i class="far fa-file"></i>
-              <h2>ITALIEN</h2>
-            </div>
-          </a>
-        </div>
-        <div class="rdnitem">
-          <a
-            href="../resources/files/race-director-notes/Race_director_notes_fur_Singapur.pdf"
-            download="Race_director_notes_fur_Singapur.pdf"
-          >
-            <div class="rdn-feature-item">
-              <h2>5. SAISONRENNEN</h2>
-              <i class="far fa-file"></i>
-              <h2>SINGAPUR</h2>
-            </div>
-          </a>
-        </div>
-        <div class="rdnitem">
-          <a
-            href="../resources/files/race-director-notes/Race_director_notes_fur_China.pdf"
-            download="Race_director_notes_fur_China.pdf"
-          >
-            <div class="rdn-feature-item">
-              <h2>4. SAISONRENNEN</h2>
-              <i class="far fa-file"></i>
-              <h2>CHINA</h2>
-            </div>
-          </a>
-        </div>
-        <div class="rdnitem">
-          <a
-            href="../resources/files/race-director-notes/Race_director_notes_fur_Katar.pdf"
-            download="Race_director_notes_fur_Katar.pdf"
-          >
-            <div class="rdn-feature-item">
-              <h2>3. SAISONRENNEN</h2>
-              <i class="far fa-file"></i>
-              <h2>KATAR</h2>
-            </div>
-          </a>
-        </div>
-        <div class="rdnitem">
-          <a
-            href="../resources/files/race-director-notes/Race_director_notes_fur_AbuDhabi.pdf"
-            download="Race_director_notes_fur_Testtag_AbuDhabi.pdf"
-          >
-            <div class="rdn-feature-item">
-              <h2>2. SAISONRENNEN</h2>
-              <i class="far fa-file"></i>
-              <h2>ABU DHABI</h2>
-            </div>
-          </a>
-        </div>
-        <div class="rdnitem">
-          <a
-            href="../resources/files/race-director-notes/Race_director_notes_fur_Großbritannien.pdf"
-            download="Race_director_notes_fur_Großbritannien.pdf"
-          >
-            <div class="rdn-feature-item">
-              <h2>1. SAISONRENNEN</h2>
-              <i class="far fa-file"></i>
-              <h2>GROßBRITANNIEN</h2>
-            </div>
-          </a>
-        </div>
-        <div class="rdnitem">
-          <a
-            href="../resources/files/race-director-notes/Race_director_notes_fur_Großbritannien.pdf"
-            download="Race_director_notes_fur_Testtag_Großbritannien.pdf"
-          >
-            <div class="rdn-feature-item">
-              <h2>2. TESTTAG</h2>
-              <i class="far fa-file"></i>
-              <h2>GROßBRITANNIEN</h2>
-            </div>
-          </a>
-        </div>
-        <div class="rdnitem">
-          <a
-            href="../resources/files/race-director-notes/Race_director_notes_fur_Testtag_Belgien.pdf"
-            download="Race_director_notes_fur_Testtag_Belgien.pdf"
-          >
-            <div class="rdn-feature-item">
-              <h2>1. TESTTAG</h2>
-              <i class="far fa-file"></i>
-              <h2>BELGIEN</h2>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
 
     <footer class="footer">
       <div class="container">
         <span
           >© 2024-2025 Katzes Racing League. All rights reserved. -
           <a href="https://katzes-racing-league.de/changelog"
-            >Version: 02.01.01</a
+            >Version: 03.00.00</a
           >
           - </span
         ><a href="https://katzes-racing-league.de/impressum">Impressum</a>
@@ -450,15 +216,13 @@
             alt="instagram"
           />
         </a>
-        <a href="https://tiktok.com/@katzesracingleaguef1">
+        <a href="https://tiktok.com/@katzesracingleaguef1liga">
           <img
             src="../resources/pictures/general/socials/tiktok.png"
             alt="tiktok"
           />
         </a>
-        <a href="https://twitter.com/KatzesLeague">
-          <img src="../resources/pictures/general/socials/X.png" alt="x" />
-        </a>
+
       </div>
     </footer>
 

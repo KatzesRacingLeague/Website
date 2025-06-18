@@ -1,0 +1,198 @@
+.headlineHistorie{
+margin-top: 100px;
+}
+
+.timeline-container {
+  position: relative;
+  margin-left: 200px;
+  margin-right: 200px;
+  text-align: center;
+}
+
+.timeline-line {
+  height: 4px;
+  left: 0;
+  right: 0;
+}
+
+.info-box {
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: 12px;
+  padding: 15px;
+  margin-right: 180px;
+  margin-top: 10px;
+  max-width: 2350px;
+  text-align: center;
+  margin-left: 180px;
+}
+
+.year-marker {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.year-button {
+  font-family: var(--fontfamilytext);
+  margin-top: 20px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
+  transition: transform 0.2s;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  position: relative;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.2s ease;
+  transform-origin: center;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.6); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.info-box h2 {
+  color: #ffffff;
+  font-size: 40px;
+}
+
+.info-box p {
+  font-size: 30px;
+}
+
+/* MEDIA QUERY FÜR RESPONSIVE DESIGN */
+@media (max-width: 678px) {
+  .timeline-container {
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow-x: auto;
+  }
+
+  .year-marker {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding-top: 20px; /* Platz für die Punkte */
+  }
+
+  .year-button {
+    position: relative; /* Eltern für .dot */
+    font-size: 12px;
+    padding: 3px 6px;
+    min-width: 60px;
+    text-align: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+    background-color: #ccc;
+    border-radius: 6px;
+    margin-top: 10px;
+  }
+
+  .dot {
+    position: absolute;
+    top: -12px; /* Punkt über dem Button */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 50%;
+    z-index: 10;
+  }
+
+  .info-box {
+    font-size: 12px;
+    max-width: 100%;
+    padding: 8px;
+    margin: 10px;
+  }
+
+  .info-box h2 {
+    font-size: 16px;
+  }
+
+  .info-box p {
+    font-size: 12px;
+  }
+  @media (max-width: 678px) {
+  .timeline-container {
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow-x: auto;
+  }
+
+  .year-marker {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding-top: 20px;
+  }
+
+  .year-button {
+    position: relative;
+    font-size: 12px;
+    padding: 3px 6px;
+    min-width: 60px;
+    text-align: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+    background-color: #ccc;
+    border-radius: 6px;
+    margin-top: 10px;
+  }
+
+  .dot {
+    display: none; /* Punkt wird auf Handys ausgeblendet */
+  }
+
+  .info-box {
+    font-size: 12px;
+    max-width: 100%;
+    padding: 8px;
+    margin: 10px;
+  }
+
+  .info-box h2 {
+    font-size: 16px;
+  }
+
+  .info-box p {
+    font-size: 12px;
+  }
+}
+  .timeline-line {
+ 
+    display: none; /* Punkt wird auf Handys ausgeblendet */
+
+}
+
+
+}
+
+
+
+

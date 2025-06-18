@@ -1,0 +1,116 @@
+/* Slideshow  */
+
+.slider-container,
+.slider-container2 {
+  overflow: hidden;
+  border-left: none;
+  border-right: none;
+  margin-top: 70px;
+  border: 5px var(--sundaysplit);
+}
+
+.slider-track {
+  display: flex;
+  gap: 100px; /* Abstand zwischen Bildern */
+  animation: scroll 30s linear infinite;
+  width: max-content;
+     border-bottom: 5px solid var(--sundaysplit);
+  border-top: 5px solid var(--sundaysplit);
+
+}
+
+.slider-track2 {
+  display: flex;
+  gap: 100px; /* Abstand zwischen Bildern */
+  margin-top: 4px;
+   margin-bottom: 4px;
+  animation: scroll 30s linear infinite;
+  width: max-content;
+     border-bottom: 5px solid var(--sundaysplit);
+  border-top: 5px solid var(--sundaysplit);
+
+
+}
+
+.slider-track img {
+  width: 120px;
+  height: auto;
+  margin-top: 4px;
+   margin-bottom: 4px;
+}
+
+
+
+.text-slide {
+  font-size: 25px; /* größerer Text */
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 4px;
+  margin-bottom: 4px;
+
+}
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-25%); } 
+}
+
+
+/*Counter*/
+.counter-container {
+  position: relative; /* wichtig für die absolute Positionierung des Labels */
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 180px;
+}
+
+
+.counter-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+
+}
+
+.counter-number {
+  font-size: 70px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+
+}
+
+.counter-number.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.counter-label {
+  margin-top: 10px;
+  font-size: 27px;
+}
+
+.highlight {
+  font-weight: bold;
+  animation: pop 0.8s ease-out forwards;
+  color: var(--sundaysplit);
+}
+
+.gold-highlight {
+  color: var(--gold);
+  animation: pop 0.8s ease-out forwards;
+  text-shadow: 0 0 10px black, 0 0 20px var(--gold);
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1.2); }
+}
+
+
+

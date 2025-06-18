@@ -1,0 +1,81 @@
+.background {
+
+
+  margin: auto;
+  color: white;
+  font-family: "Concert One", sans-serif;
+}
+
+.header h1 {
+    font-size: 127px    ;
+  text-align: center;
+  text-transform: uppercase;
+
+}
+.header h2 {
+        font-size: 40px    ;
+  text-align: center;
+  text-transform: uppercase;
+  
+}
+.pdf {
+  width: 100%;
+  height: 600px;
+  border: none;
+
+  border-radius: 12px;
+}
+
+.class-button {
+  display: inline-block;
+  background-color: var(--sundaysplit);
+  color: white;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 20px auto;
+  display: block;
+  width: fit-content;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 0 10px var(--sundaysplit);
+}
+
+.rdncontainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.rdnitem a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.rdn-feature-item {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+  border: 2px solid var(--sundaysplit);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.rdn-feature-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.03);
+}
+
+.rdn-feature-item h2 {
+  margin: 12px 0;
+  font-size: 1.4rem;
+}
+
+.rdn-feature-item i {
+  font-size: 2.4rem;
+  color: var(--sundaysplit);
+}

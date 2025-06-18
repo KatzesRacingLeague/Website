@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Katzes Racing League</title>
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
     <link rel="stylesheet" href="../css/krlhelp.styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap"
       rel="stylesheet"
     />
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -24,12 +25,12 @@
   </head>
   <body>
     <header>
-      <nav class="navbar">
+     <nav class="navbar">
         <!-- Logo der Liga -->
-        <a href="../index.html">
+        <a href="https://katzes-racing-league.de/">
           <div class="logo">
             <img
-              src="../resources/pictures/general/krllogos/KRL_LOGO.png"
+              src="/resources/pictures/general/krllogos/KRL_Community4.png"
               alt="Liga Logo"
             />
           </div>
@@ -77,17 +78,12 @@
             <ul class="dropdown-content sonstiges">
               <li class="text3">
                 <a href="https://katzes-racing-league.de/race-director-notes"
-                  >Race-Director-Notes</a
+                  >RDN</a
                 >
               </li>
               <li class="text3">
                 <a href="https://katzes-racing-league.de/regelwerk"
                   >Regelwerk</a
-                >
-              </li>
-              <li class="text3">
-                <a href="https://katzes-racing-league.de/unser-team"
-                  >Unser Team</a
                 >
               </li>
               <li class="text3">
@@ -102,61 +98,45 @@
                   >Merch Shop</a
                 >
               </li>
-              <li class="text3">
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSczZykzGcael-D0ulAxffcyaZ096hAEbzIVa8AaAmLcRS8dWg/viewform"
-                  >Teilnahme Formular</a
-                >
-              </li>
             </ul>
           </li>
         </ul>
       </nav>
-    </header>
+      <script>
+      
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
 
-    <section class="background">
-      <!--Header H1-->
-      <div class="header">
-        <h1>KRL-HELP</h1>
-      </div>
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+  });
 
-      <!--Kasten Help-->
-      <div class="help-container">
-        <div class="help-item">
-          <a
-            href="../resources/files/krl-guides/Whisperliste.pdf"
-            download="Guide_Whisperliste_TS3.pdf"
-          >
-            <div class="help-feature-item">
-              <h2>WHISPERLISTE TEAMSPEAK 3</h2>
-              <i class="far fa-file"></i>
-            </div>
-          </a>
-        </div>
-        <div class="help-item">
-          <a
-            href="../resources/files/krl-guides/Rennleitungsanhang.pdf"
-            download="Rennleitungsanhang.pdf"
-          >
-            <div class="help-feature-item">
-              <h2>RENNLEITUNGSANHANG</h2>
-              <i class="far fa-file"></i>
-            </div>
-          </a>
-        </div>
-        <div class="help-item">
-          <a
-            href="../resources/files/krl-guides/Einsteigerguide_iRacing.pdf"
-            download="Einsteigerguide_iRacing.pdf"
-          >
-            <div class="help-feature-item">
-              <h2>EINSTEIGERGUIDE IRACING</h2>
-              <i class="far fa-file"></i>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
+  // Optional: Klick außerhalb schließt das Menü
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest("nav")) {
+      navLinks.classList.remove("open");
+    }
+  });
+  //Scroolbar
+  window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const scrollPercent = (scrollTop / docHeight) * 100;
+  document.getElementById('progressBar').style.width = scrollPercent + '%';
+});
+
+ </script>
+<main> 
+
+</main>
+
+
+
+
+
+
+
+
 
     <footer class="footer">
       <div class="container">

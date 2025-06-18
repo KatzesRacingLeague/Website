@@ -1,64 +1,73 @@
-/* Hauptbereich zentrieren */
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
+
 
 .navbar {
-  background-image: url(../resources/pictures/general/headers/endurance.png);
+  background-image: url();
 }
 
-.feature-item {
-  width: 350px;
-}
-
-.feature-item i {
-  color: var(--endurance);
-}
-
-.endurance-image {
-  display: flex;
+.container-3col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 150px;
   align-items: center;
-  justify-content: space-evenly;
-  flex-direction: row;
-  /* width: 60vw;
-    height: auto; */
+  max-width: 1400px;
+  margin: 50px auto;
 }
 
-.endurance-image > img {
-  width: 80%;
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.driver-box {
+  background-color: transparent;
+  padding: 30px 40px;
   border-radius: 30px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Tiefer Schatten */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  opacity: 0.9; /* Leicht transparent */
-  box-shadow: var(--borderpicturesize) var(--endurance);
+  text-align: center;
+  font-size: 1.8rem;
+  border: 4px solid var(--endurance);
+  text-transform: uppercase;
 }
 
-.endurance-image > img:hover {
-  transform: scale(1.05); /* Zoom und leichte Rotation */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Tieferer Schatten beim Hover */
-  opacity: 1; /* Volle Sichtbarkeit */
+
+.header{
+  text-align: center;
+    font-size: 127px    ;
+  text-transform: uppercase;
+
 }
 
-h2 {
-  margin-top: 40px;
-  font-size: 40px;
-}
 
-.footer {
-  background-image: url(../resources/pictures/general/footers/endurance.png);
-}
 
 @media (max-width: 768px) {
-  .navbar {
-    background-image: url(../resources/pictures/general/footers/endurance.png);
+  .container-3col {
+    grid-template-columns: 1fr; /* Eine Spalte statt drei */
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .column {
+    align-items: center;
+    gap: 30px;
+  }
+
+  .driver-box {
+    width: 100%;
+    max-width: 320px;
+    padding: 20px 25px;
+    font-size: 1.2rem;
+    border-width: 2px;
+  }
+
+  .header {
+    font-size: 48px;
+    padding: 10px;
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
   }
 }
+

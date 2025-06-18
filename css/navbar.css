@@ -1,0 +1,345 @@
+body {
+ overflow-x: hidden;
+  position: relative;
+
+  width: 100%;
+  font-family: var(--fontfamilytext);
+  background-image: url(../resources/pictures/general/Season10.png);
+  background-position: center center; /* Zentriert das Bild */
+  background-attachment: fixed;
+  color: white;
+
+}
+body h1 {
+  font-size: var(--fontsizeheadline);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  body h1 {
+  font-size: 80px;
+  text-transform: uppercase;
+  text-align: center;
+}
+}
+
+
+/* Variablen*/
+:root {
+  --backgroundcolor: #171717;
+  --fridaysplit: #6ef28a;
+  --saturdaysplit: #c56ef2;
+  --sundaysplit:#6ef2f2;
+  --gold: #B8860B;
+  --endurance: #f09d51;
+  --wdl: #f26e6e;
+  --wdlblue: #429396;
+  --ligaleiter: #ff0000;
+  --administration: #f2ec6e;
+  --recruitingadm: #fdcf00;
+  --rennleitungsvorsitz: #992d22;
+  --icons: #ff2d82;
+  --fontfamilytext: "Concert One", sans-serif;
+  --fontsizeheadline: 127px;
+  --fontsizeh2: 62px;
+  --font-sizetext: 28px;
+  --borderpictureradius: 40px;
+  --borderpicturesize: 0 8px 32px 0;
+  --rennleitung:#6e6ef2;
+}
+
+/* NAVIGATION DEFAULT FOR EVERY PAGE */
+
+/* Grundlegendes Styling für die Navigation */
+:root {
+  --main-bg: rgba(0, 0, 0, 0.7);
+  --accent-color: #ffffff;
+  --hover-bg: rgba(255, 255, 255, 0.1);
+  --transition: 0.3s ease;
+}
+#progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: var(--sundaysplit);
+  width: 0%;
+  z-index: 100;
+}
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--main-bg);
+  backdrop-filter: blur(5px);
+  padding: 0.5rem 1rem;
+  top: 0;
+  transition: box-shadow 0.3s ease;
+  text-transform: uppercase;
+}
+
+
+
+
+
+
+
+    .logo img {
+      width: 100px;
+      transition: transform var(--transition);
+      margin
+    }
+
+    .logo img:hover {
+      transform: scale(1.05);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 28px;
+      color: var(--accent-color);
+      cursor: pointer;
+    }
+
+.nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  list-style: none;
+  gap: 120px;
+  text-align: center;
+    white-space: nowrap;
+
+}
+
+
+
+
+    .nav-links li {
+      position: relative;
+      list-style: none;
+      transition: transform var(--transition);
+
+    
+    }
+
+    .nav-links a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 0.5rem;
+      border-radius: 4px;
+      transition: background-color var(--transition), color var(--transition);
+       font-size: 30px;
+      
+    }
+
+    .nav-links a:hover {
+      background-color: var(--hover-bg);
+    }
+
+    .dropdown-content {
+      position: absolute;
+      top: 130%;
+      left: 0;
+      background-color: var(--main-bg);
+      min-width: 200px;
+      padding: 0.5rem 0;
+      border-radius: 6px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: var(--transition);
+      z-index: 10;
+    }
+
+    .nav-links li:hover .dropdown-content {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown-content li a {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: var(--accent-color);
+      transition: background-color var(--transition);
+    }
+
+    .dropdown-content li a:hover {
+      background-color: var(--hover-bg);
+    }
+
+    /* Responsive: Burger-Menü */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .nav-links.open {
+        max-height: 500px;
+      }
+
+      .nav-links li {
+        width: 100%;
+      }
+
+      .dropdown-content {
+        position: relative;
+        top: 0;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        background-color: transparent;
+        box-shadow: none;
+      }
+
+      .dropdown-content li a {
+        padding-left: 2rem;
+      }
+    }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+ 
+
+.footer {
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  backdrop-filter: blur(8px); /* moderner Blur-Effekt */
+  position: relative;
+  z-index: 10;
+   padding: 20px;
+  text-align: center;
+  background-size: cover;
+  bottom: -16px;
+    background-color: rgba(0, 0, 0, 0.6); /* 60 % transparent schwarz */
+  backdrop-filter: blur(6px);           /* moderner Weichzeichner */
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #ffffffcc;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer img {
+  height: 120px;
+  width: 120px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.2));
+}
+
+.footer img:hover {
+  transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+  }
+  .navbar {
+    flex-direction: row; /* Stellt sicher, dass die Navigation in einer Spalte dargestellt wird */
+    align-items: flex-start; /* Richtet die Elemente am Anfang aus */
+    height: auto; /* Höhe anpassen */
+    background-image: url(../resources/pictures/general/footers/startseite.png);
+  }
+
+  .menu-toggle {
+    display: block; /* Zeigt den Button auf mobilen Geräten */
+    align-self: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 50px;
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stellt die Links untereinander dar */
+    width: 100%; /* Breite auf 100% setzen */
+    display: none; /* Standardmäßig verstecken */
+  }
+
+  .nav-links.active {
+    display: flex; /* Zeigt die Links an, wenn das Menü geöffnet ist */
+  }
+
+  .dropdown-content {
+    position: static; /* Positionieren, um sich in der Spalte auszubreiten */
+    opacity: 1;
+    transform: none;
+    box-shadow: none; /* Entfernt den Schatten für mobile Ansicht */
+    min-width: 100%; /* Breite auf 100% setzen */
+  }
+
+  .logo img {
+    width: 100px; /* Verkleinert das Logo für kleinere Bildschirme */
+    margin: 0; /* Entfernt zusätzliche Margen */
+  }
+
+  .nav-links li {
+    margin: 10px 0; /* Margin anpassen für vertikale Links */
+  }
+
+  .nav-links a {
+    font-size: 1em; /* Schriftgröße anpassen */
+    padding: 15px; /* Mehr Padding für einfache Klickbarkeit */
+  }
+
+ 
+}
+
+

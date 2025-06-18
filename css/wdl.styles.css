@@ -1,337 +1,270 @@
-:root {
-  --borderpoints: 0 8px 24px 0;
+year-button:hover {
+      color: var(--wdl);
+    
+    }
+
+  .timeline-line {
+ 
+  background: var(--wdl);
+
+}
+.info-box {
+
+  border: 2px solid var(--wdl);
+}
+.active-dot {
+  background-color: var(--wdl);
 }
 
-/* Hauptbereich zentrieren */
-main {
+.carousel-btn {
+  
+  background-color: var(--wdl);
+  
+}
+.team-card {
+border-left: 4px solid var(--wdl);
+border-right: 4px solid var(--sundaysplit);
+}
+
+.middle-carousel {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+
+}
+
+.headerGP-Ergebnisse{
+  font-size: var( --fontsizeheadline);
+  margin-top: 50px;
+
+}
+
+.middle-carousel .carousel,
+.middle-carousel .carousel-track-container {
+  margin-top: -50px;
+  width: 1351px;
+  height: 760px;
+}
+
+.middle-carousel .carousel-track img {
+width: 1351px;
+  height: 760px;
+  border-radius: 20px;
+}
+
+.carousel-btn.prev {
+  left: -60px;
+}
+
+.carousel-btn.next {
+  right: -60px;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.points-container {
   text-align: center;
+  margin: 40px auto;
+  max-width: 900px;
+  font-family: var(--fontfamilytext);
 }
 
-.navbar {
-  background-image: url(../resources/pictures/general/headers/wdl.png);
-}
+#toggle-points-btn {
+  background: transparent;
+  border: 4px solid var(--wdl);
+  color: #cc0000;
+  padding: 10px 18px;
 
-.picutres,
-.picutresSON {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 90%;
-  gap: 90px;
-}
-
-.BilderWM,
-.BilderSON
- {
-  width: 45%;
-  border-radius: 30px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Tiefer Schatten */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  opacity: 0.9; /* Leicht transparent */
-  box-shadow: var(--borderpicturesize) var(--wdl);
-}
-
-.BilderSON {
-  width: 90%;
-}
-
-.BilderWM:hover,
-.BilderSON:hover {
-  transform: scale(1.05); /* Zoom und leichte Rotation */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Tieferer Schatten beim Hover */
-  opacity: 1; /* Volle Sichtbarkeit */
-}
-
-.feature-item {
-  width: 420px;
-}
-
-.feature-item i {
-  color: var(--wdl);
-}
-
-.footer {
-  background-image: url(../resources/pictures/general/footers/wdl.png);
-}
-
-/* Line-Up Container */
-
-.line-up {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
-  gap: 40px; /* Abstand zwischen den Boxen */
-}
-
-.line-up > a {
-  color: white;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  font-size: 40px;
+  font-family: var(--fontfamilytext);
+    margin: 40px auto; /* Fügt Abstände hinzu und zentriert den Button in der Mitte */
+  padding: 20px 40px; /* Fügt Polsterung hinzu, um den Button größer zu machen */
+  border: 5px solid var(--wdl);
+  color: white; /* Textfarbe weiß für guten Kontrast */
+  border-radius: 8px; /* Abgerundete Ecken */
+  font-size: 50px;
+  text-transform: uppercase;
   text-decoration: none;
-  width: 17%;
+
+}
+.slider-track2 img {
+  width: 60px;
+  height: 2000px;
+  height: auto;
 }
 
-/* Team Container */
-.team {
-  display: flex;
-  flex-direction: column; /* Vertikale Anordnung von Logo und Namen */
-  align-items: center; /* Zentriert den Inhalt horizontal */
-  text-align: center;
-  margin-bottom: 20px;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 15px;
-  background-color: rgba(136, 114, 114, 0.1);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
 
-.team:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  transform: scale(1.05); /* Leichter Zoom bei Hover */
-}
-
-/* Team Logo Styling */
-.team-logo {
-  max-height: 60px;
-  margin-bottom: 25px; /* Platz unter dem Logo für die Namen */
+.punkte-container {
+  max-width: 800px;
+  margin: 40px auto;
   text-align: center;
 }
 
-.liga {
-  max-height: auto;
-  width: 101px;
+.punkte-container h2 {
+  font-size:70px;
+ 
 }
 
-/* Driver Names Styling */
-.driver-names {
-  display: flex;
-  flex-direction: column; /* Fahrer-Namen vertikal anordnen */
-  align-items: center; /* Fahrer-Namen horizontal zentrieren */
+.punkte-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+
 }
 
-.driver-names p {
-  font-size: 20px; /* Schriftgröße etwas verkleinert */
-  margin: 3px 0;
-  color: #fff;
-  text-align: center;
+.punkte-item {
+  background: transparent;
+  border: 1px solid #ddd;
+  padding: 12px;
+  font-size: 25px;
+  border: 4px solid;
+  border-image: linear-gradient(70deg, #f26e6e, #6ef2f2) 1;
+  text-transform: uppercase;
+
+  transition: transform 0.2s ease;
 }
 
-/* Team specific styles */
-.redbull {
-  box-shadow: 0 4px 15px rgba(0, 0, 255, 0.5); /* Blauer Schatten für Red Bull */
-}
 
-.mercedes {
-  box-shadow: 0 4px 15px rgba(0, 255, 242, 0.5); /* Hellblauer Schatten für Mercedes */
-}
-
-.ferrari {
-  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.5); /* Roter Schatten für Ferrari */
-}
-
-.mclaren {
-  box-shadow: 0 4px 15px rgba(255, 165, 0, 0.5); /* Orangener Schatten für McLaren */
-}
-
-.aston-martin {
-  box-shadow: 0 4px 15px rgba(59, 201, 31, 0.5); /* Grüner Schatten für Aston Martin */
-}
-
-.alpine {
-  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.5); /* Pinker Schatten für Alpine */
-}
-
-.williams {
-  box-shadow: 0 4px 15px rgba(0, 70, 128, 0.5); /* Dunkelblauer Schatten für Williams */
-}
-
-.vcrb {
-  box-shadow: 0 4px 15px rgba(0, 0, 139, 0.5); /* Dunkelblauer Schatten für VCRB */
-}
-
-.kick-sauber {
-  box-shadow: 0 4px 15px rgba(0, 255, 0, 0.5); /* Grüner Schatten für Kick Sauber */
-}
-
-.haas {
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5); /* Weißer Schatten für Haas */
-}
-
-.class-button {
-  background-color: var(--wdl);
-  box-shadow: var(--borderpicturesize) var(--wdl); /* Leichter Schatteneffekt */
-}
-
-.class-button:hover {
-  box-shadow: var(--borderpicturesize) var(--wdl);
-}
-
-.history-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 80px; /* Abstand zwischen den Kästen */
-  padding: 15px;
-}
-
-.history-container > a {
+.punkte-platz {
   color: white;
-  text-decoration: none;
-  width: 17.5%;
+  margin-bottom: 4px;
+
 }
 
-.history-item {
-  min-width: 200px;
-  padding: 0 0 25px 0;
-  text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 15px;
-  background-color: rgba(136, 114, 114, 0.1);
-  box-shadow: var(--borderpicturesize) var(--wdl);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.history-item:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  transform: scale(1.05);
-}
-
-.history-item h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
+.punkte-wert {
+  font-size: 20px;
   color: #ffffff;
 }
 
-.history-item p {
-  font-size: 18px;
-  margin: 5px 0;
-  color: #fff;
+
+
+
+
+
+/* Team Zordnung  */
+.team-mapping-section {
+  padding: 3rem 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
-.point-box {
-  width: 15vw;
-  height: 100px;
+
+.team-mapping-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 Spalten */
+  gap: 1rem 5rem; /* vertikal / horizontal Abstand */
+}
+
+
+.mapping-item {
+  background: transparent;
+  border: 4px solid;
+  border-image: linear-gradient(70deg, #f26e6e, #6ef2f2) 1;
+  padding: 1rem 1.5rem;
+  border-radius: 20px; /* stärker abgerundet */
+  color: white;
+  font-size: 1.1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-  position: relative;
-  cursor: pointer;
-  font-size: 1.4rem;
 }
 
-.point-box::before,
-.point-box::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  backface-visibility: hidden;
-  border-radius: 10px;
+
+.league-name {
+  text-transform: uppercase;
+  font-size: var(--font-sizetext)
 }
 
-/* Vorderseite (Platzierung) */
-.point-box::before {
-  content: attr(data-points); /* Zeigt die Platzierung (P1, P2, etc.) */
-  border: 1px solid #ccc;
-  background-color: rgba(136, 114, 114, 0.1);
-  box-shadow: var(--borderpoints) var(--wdl);
+.team-name {
+  color: #ffffff;
+    font-size: var(--font-sizetext);
+      text-transform: uppercase;
 }
 
-/* Rückseite (Punkte) */
-.point-box::after {
-  content: attr(data-score); /* Zeigt die Punkte */
-  transform: rotateY(180deg); /* Rückseite der Box dreht sich */
-  border: 1px solid #ccc;
-  background-color: rgba(136, 114, 114, 0.1);
-  box-shadow: var(--borderpoints) var(--wdlblue);
-}
 
-.point-box:hover {
-  transform: rotateY(180deg);
-}
-
-/* Container für die Boxen */
-.point-boxen {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  gap: 32px;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-top: 50px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .navbar {
-    background-image: url(../resources/pictures/general/footers/wdl.png);
-  }
-
-  .picutres,
-  .picutresSON {
-    flex-direction: column;
-    gap: 40px;
-    justify-content: space-evenly;
-    margin-bottom: 40px;
-  }
-
-  .BilderWM,
-  .BilderSON {
-    width: 90%;
-  }
-
-  .line-up {
-    flex-direction: column; /* Teams werden untereinander angeordnet */
-    width: 90%; /* Nimmt die gesamte Breite ein */
-    gap: 30px; /* Weniger Abstand zwischen den Teams */
-  }
-
-  .line-up > a {
-    width: 90%;
-  }
-
-  .team {
-    width: 100%; /* Breite der Teams auf 90% verringert, bleibt gleich groß wie vorher */
-  }
-
-  .team-logo {
-    max-width: 100px; /* Größe des Logos bleibt konstant */
+/* ========== Responsive Anpassung für Mobile & Tablet ========== */
+@media (max-width: 1024px) {
+  .middle-carousel .carousel,
+  .middle-carousel .carousel-track-container,
+  .middle-carousel .carousel-track img {
+    width: 100%;
     height: auto;
   }
 
-  .history-container {
-    width: 80%;
-    margin-left: 4%;
+  .carousel-btn.prev {
+    left: -30px;
   }
 
-  .history-container > a {
-    width: 100%;
+  .carousel-btn.next {
+    right: -30px;
   }
 
-  .history-item {
-    width: 100%;
+  .punkte-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 Spalten auf Tablet */
+    gap: 20px;
   }
 
-  .history-item p {
+  .punkte-container h2 {
+    font-size: 50px;
+  }
+
+  .punkte-item {
     font-size: 20px;
-    margin: 5px 0;
-    color: #fff;
+    padding: 10px;
   }
 
-  .point-box {
-    width: 25%;
+  .punkte-wert {
+    font-size: 18px;
+  }
+
+  .team-mapping-list {
+    grid-template-columns: 1fr; /* nur 1 Spalte */
+    gap: 1rem;
+  }
+
+  .mapping-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .punkte-grid {
+    grid-template-columns: 1fr; /* 1 Spalte auf Smartphones */
+  }
+
+  .punkte-container h2 {
+    font-size: 36px;
+  }
+
+  .punkte-item {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .punkte-wert {
+    font-size: 16px;
+  }
+
+  .carousel-btn {
+    display: none; /* Pfeile auf kleinen Geräten ausblenden */
+  }
+
+  .mapping-item {
+    font-size: 1rem;
   }
 }
