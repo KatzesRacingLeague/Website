@@ -1,29 +1,3 @@
-body {
-  overflow-x: hidden;
-  position: relative;
-  width: 100%;
-  font-family: var(--fontfamilytext);
-  background-image: url(../resources/pictures/general/Season10.png);
-  background-position: center center; /* Zentriert das Bild */
-  background-attachment: fixed;
-  color: white;
-}
-
-body h1 {
-  font-size: var(--fontsizeheadline);
-  text-transform: uppercase;
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  body h1 {
-    font-size: 80px;
-    text-transform: uppercase;
-    text-align: center;
-  }
-}
-
-/* Variablen*/
 :root {
   --backgroundcolor: #171717;
   --fridaysplit: #6ef28a;
@@ -44,18 +18,40 @@ body h1 {
   --font-sizetext: 28px;
   --borderpictureradius: 40px;
   --borderpicturesize: 0 8px 32px 0;
-  --rennleitung: #6e6ef2;
-}
 
-/* NAVIGATION DEFAULT FOR EVERY PAGE */
-
-/* Grundlegendes Styling für die Navigation */
-:root {
+  /* Navigation */
   --main-bg: rgba(0, 0, 0, 0.7);
   --accent-color: #ffffff;
   --hover-bg: rgba(255, 255, 255, 0.1);
   --transition: 0.3s ease;
 }
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  font-family: var(--fontfamilytext);
+  background-image: url(../resources/pictures/general/Season10.png);
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  margin: 0;
+  height: 100%;
+}
+
+body h1 {
+  font-size: var(--fontsizeheadline);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  body h1 {
+    font-size: 80px;
+  }
+}
+
 #progressBar {
   position: fixed;
   top: 0;
@@ -66,16 +62,19 @@ body h1 {
   z-index: 100;
 }
 
+/* === NAVIGATION === */
+
 .navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   background-color: var(--main-bg);
   backdrop-filter: blur(5px);
   padding: 0.5rem 1rem;
+  position: relative;
   top: 0;
-  transition: box-shadow 0.3s ease;
   text-transform: uppercase;
+  z-index: 1000;
 }
 
 .logo img {
@@ -91,42 +90,42 @@ body h1 {
   display: none;
   background: none;
   border: none;
-  font-size: 28px;
+  font-size: 32px;
   color: var(--accent-color);
   cursor: pointer;
 }
 
+/* Desktop-Navigation */
 .nav-links {
+  display: flex;
+  gap: 120px;
+  list-style: none;
+  text-align: center;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  list-style: none;
-  gap: 120px;
-  text-align: center;
   white-space: nowrap;
 }
 
 .nav-links li {
   position: relative;
-  list-style: none;
   transition: transform var(--transition);
 }
 
 .nav-links a {
   color: var(--accent-color);
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 30px;
   padding: 0.5rem;
   border-radius: 4px;
-  transition: background-color var(--transition), color var(--transition);
-  font-size: 30px;
+  transition: background-color var(--transition);
 }
 
 .nav-links a:hover {
   background-color: var(--hover-bg);
 }
 
+/* Dropdown-Menü */
 .dropdown-content {
   position: absolute;
   top: 130%;
@@ -159,74 +158,129 @@ body h1 {
   background-color: var(--hover-bg);
 }
 
-/* Responsive: Burger-Menü */
+/* === MOBILE ANSICHT === */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
+    font-size: 40px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1100;
   }
 
   .nav-links {
-    flex-direction: column;
-    max-height: 0;
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    width: 220px;
+    background-color: rgba(0, 0, 0, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
     overflow: hidden;
-    width: 100%;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    flex-direction: column;
+    display: flex;
+    z-index: 1000;
+    padding: 0.5rem 0;
   }
 
   .nav-links.open {
-    max-height: 500px;
+    max-height: 800px;
+    opacity: 1;
   }
 
   .nav-links li {
-    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+     margin: 0;
+  padding: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  line-height: 1.2; /* kompaktere Zeilenhöhe */
   }
 
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links > li > a {
+   font-weight: bold;
+  padding: 0.6rem 1rem; /* Weniger Padding oben/unten */
+  font-size: 0.95rem;   /* Etwas kleinerer Text */
+  display: block;
+  text-align: left;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  /* Dropdown kompakt eingerückt */
   .dropdown-content {
-    position: relative;
-    top: 0;
-    transform: none;
+    padding-left: 0;
+    background: none;
+    box-shadow: none;
     opacity: 1;
     visibility: visible;
-    background-color: transparent;
-    box-shadow: none;
+    position: static;
+    transform: none;
+    margin-top: 0;
   }
 
   .dropdown-content li a {
-    padding-left: 2rem;
+  
+    font-size: 0.9rem;
+    border-left: 2px solid rgba(255, 255, 255, 0.15);
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+     padding: 0.4rem 1.5rem; /* Etwas schmaler */
+  font-size: 0.85rem;     /* Kleinerer Dropdown-Text */
+}
+  }
+
+
+  .dropdown-content li a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .logo img {
+    width: 90px;
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
   }
 }
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
 
-main {
-  flex: 1;
-}
+
+
+
+/* === FOOTER (unverändert gelassen) === */
 
 .footer {
-  position: fixed;
-  bottom: 0;
+  position: relative;
+  bottom: -16px;
   left: 0;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
   color: white;
   padding: 30px 20px;
   text-align: center;
-  backdrop-filter: blur(8px); /* moderner Blur-Effekt */
-  position: relative;
   z-index: 10;
-  padding: 20px;
-  text-align: center;
-  background-size: cover;
-  bottom: -16px;
-  background-color: rgba(0, 0, 0, 0.6); /* 60 % transparent schwarz */
-  backdrop-filter: blur(6px); /* moderner Weichzeichner */
-  color: white;
-  padding: 30px 20px;
-  text-align: center;
 }
 
 .footer-container {
@@ -266,56 +320,4 @@ main {
 
 .footer img:hover {
   transform: scale(1.15);
-}
-
-@media (max-width: 768px) {
-  body {
-    background-size: cover;
-  }
-  .navbar {
-    flex-direction: row; /* Stellt sicher, dass die Navigation in einer Spalte dargestellt wird */
-    align-items: flex-start; /* Richtet die Elemente am Anfang aus */
-    height: auto; /* Höhe anpassen */
-    background-image: url(../resources/pictures/general/footers/startseite.png);
-  }
-
-  .menu-toggle {
-    display: block; /* Zeigt den Button auf mobilen Geräten */
-    align-self: center;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    font-size: 50px;
-  }
-
-  .nav-links {
-    flex-direction: column; /* Stellt die Links untereinander dar */
-    width: 100%; /* Breite auf 100% setzen */
-    display: none; /* Standardmäßig verstecken */
-  }
-
-  .nav-links.active {
-    display: flex; /* Zeigt die Links an, wenn das Menü geöffnet ist */
-  }
-
-  .dropdown-content {
-    position: static; /* Positionieren, um sich in der Spalte auszubreiten */
-    opacity: 1;
-    transform: none;
-    box-shadow: none; /* Entfernt den Schatten für mobile Ansicht */
-    min-width: 100%; /* Breite auf 100% setzen */
-  }
-
-  .logo img {
-    width: 100px; /* Verkleinert das Logo für kleinere Bildschirme */
-    margin: 0; /* Entfernt zusätzliche Margen */
-  }
-
-  .nav-links li {
-    margin: 10px 0; /* Margin anpassen für vertikale Links */
-  }
-
-  .nav-links a {
-    font-size: 1em; /* Schriftgröße anpassen */
-    padding: 15px; /* Mehr Padding für einfache Klickbarkeit */
-  }
 }
