@@ -1,0 +1,153 @@
+h2 {
+  font-size: 80px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 100px;
+}
+
+.carousel-btn.prev {
+  left: -60px;
+}
+
+.carousel-btn.next {
+  right: -60px;
+}
+
+.carousel-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Abstand zwischen den Zeilen */
+}
+
+.top-carousels {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  gap: 200px; /* vorher 100px */
+}
+
+.carousel-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.carousel,
+.carousel-track-container,
+.carousel-track img {
+  width: 620px;
+  height: 800px;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: max-content;
+}
+
+.carousel-track img {
+  border-radius: 20px;
+}
+
+/* Navigationspfeile */
+.carousel-btn {
+  position: absolute;
+  z-index: 10;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 15px;
+  user-select: none;
+}
+
+.carousel-btn:hover {
+  background-color: white;
+}
+
+/* Mittleres Karussell gleiche Maße wie oben */
+.middle-carousel .carousel,
+.middle-carousel .carousel-track-container,
+.middle-carousel .carousel-track img {
+  width: 620px;
+  height: 800px;
+}
+
+.middle-carousel > h2 {
+  margin-top: 20px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.class-button {
+  margin: 40px auto;
+  padding: 20px 40px;
+  color: white; /* Textfarbe weiß für guten Kontrast */
+  border-radius: 8px; /* Abgerundete Ecken */
+  font-size: 50px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.class-button:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease; /* Weicher Übergang bei Hover */
+  cursor: pointer; /* Zeigt eine Hand an, wenn man über den Button fährt */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel,
+  .carousel-track-container,
+  .carousel-track img,
+  .middle-carousel .carousel,
+  .middle-carousel .carousel-track-container,
+  .middle-carousel .carousel-track img {
+    width: 90vw;
+    height: auto;
+  }
+
+  .top-carousels {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .carousel-btn.prev {
+    left: 10px;
+  }
+
+  .carousel-btn.next {
+    right: 10px;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+
+  .class-button {
+    padding: 15px 30px;
+    font-size: 25px;
+    width: auto; /* Stellt sicher, dass der Button sich an die Breite anpasst */
+    margin: 0 auto; /* Zentriert den Button auf mobilen Geräten */
+  }
+}

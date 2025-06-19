@@ -1,64 +1,149 @@
 :root {
-  --font-sizetext: 20px;
+  --padding-block: 1.5rem;
+  --padding-inline: 1rem;
 }
 
-/* Hauptbereich zentrieren */
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
-  /* padding: 20px; */
-  text-align: left;
-  padding: 0 18vw;
+/* Allgemeines Regelwerk Layout */
+.regelwerk {
+  padding: 60px 20px;
+  max-width: 1400px;
+  margin: auto;
+  color: white;
+  font-family: "Concert One", sans-serif;
 }
 
-.blocktext {
-  font-size: var(--font-sizetext);
-  margin: 10px 0 10px 0;
+/* Regelblöcke */
+.regel-block {
+  margin-bottom: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid var(--sundaysplit);
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 }
 
-h2 {
-  font-size: 50px;
+.regel-block h2 {
+  color: var(--sundaysplit);
+  margin-bottom: 12px;
+  text-transform: uppercase;
 }
 
-h3 {
-  font-size: 30px;
+/* Navigation */
+nav.regelwerk-nav {
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+  max-width: 700px;
+  font-size: 60px;
 }
 
-details {
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--borderpicturesize) var(--sundaysplit);
-  border-radius: var(--borderpictureradius);
-  border: 1px solid #ccc;
-  margin-bottom: 50px;
-  padding: 0 50px;
+nav.regelwerk-nav input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.6em 0.75em;
+  margin: 1em auto 2em;
+  border: none;
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: block;
 }
 
-details:hover {
-  cursor: pointer; /* Zeigt eine Hand an, wenn man über den Button fährt */
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Schatten für Hover-Effekte */
+nav.regelwerk-nav input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
 }
 
-details > summary {
+nav.regelwerk-nav ul {
   list-style: none;
-}
-details > summary::-webkit-details-marker {
-  display: none;
+  padding: 0;
+  margin: 0;
 }
 
+nav.regelwerk-nav li {
+  margin: 0.5em 0;
+}
+
+nav.regelwerk-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+nav.regelwerk-nav a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Artikel & Inhalt */
+article.regel-block {
+  margin-bottom: 2.5rem;
+}
+
+article.regel-block h2 {
+  border-left: 4px solid white;
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+  color: white;
+  font-size: 1.25rem;
+}
+
+article.regel-block p,
+article.regel-block ul {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+article.regel-block ul {
+  padding-left: 1.2rem;
+}
+
+/* Responsive Anpassung für Mobilgeräte */
 @media (max-width: 768px) {
-  h2 {
-    font-size: 21px;
+  nav.regelwerk-nav {
+    font-size: 1.75rem;
+    padding: 1rem 0.5rem;
   }
 
-  h3 {
-    font-size: 18px;
+  nav.regelwerk-nav input {
+    font-size: 0.95rem;
   }
 
-  details {
-    padding: 0 20px;
+  article.regel-block {
+    padding: 1rem;
+  }
+
+  article.regel-block h2 {
+    font-size: 1.1rem;
+  }
+
+  article.regel-block p,
+  article.regel-block ul {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .regelwerk {
+    padding: 40px 10px;
+  }
+
+  nav.regelwerk-nav {
+    font-size: 1.5rem;
+  }
+
+  nav.regelwerk-nav input {
+    font-size: 0.9rem;
+    padding: 0.5em;
+  }
+
+  article.regel-block h2 {
+    font-size: 1rem;
+  }
+
+  article.regel-block p,
+  article.regel-block ul {
+    font-size: 0.9rem;
   }
 }

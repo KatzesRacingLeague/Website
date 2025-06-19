@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Katzes Racing League</title>
-    <link rel="stylesheet" href="../../../css/styles.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
     <link rel="stylesheet" href="../../../css/friday.styles.css" />
+    <link rel="stylesheet" href="/css/Details/Cockpit.css" />
+    <link rel="stylesheet" href="/css/Details/ZeitstrahlLigen.css" />
+    <link rel="stylesheet" href="/css/Details/StandingsLigenSeiten.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,17 +18,17 @@
     <link
       rel="icon"
       type="image/png"
-      href="../../../resources/pictures/general/krllogos/KRL_FR_LOGO.png"
+      href="/resources/pictures/general/krllogos/KRL_Freitag.png"
     />
   </head>
   <body>
     <header>
       <nav class="navbar">
         <!-- Logo der Liga -->
-        <a href="../../../index.html">
+        <a href="https://katzes-racing-league.de/">
           <div class="logo">
             <img
-              src="../../../resources/pictures/general/krllogos/KRL_FR_LOGO.png"
+              src="/resources/pictures/general/krllogos/KRL_Freitag.png"
               alt="Liga Logo"
             />
           </div>
@@ -73,7 +76,7 @@
             <ul class="dropdown-content sonstiges">
               <li class="text3">
                 <a href="https://katzes-racing-league.de/race-director-notes"
-                  >Race-Director-Notes</a
+                  >RDN</a
                 >
               </li>
               <li class="text3">
@@ -82,15 +85,7 @@
                 >
               </li>
               <li class="text3">
-                <a href="https://katzes-racing-league.de/unser-team"
-                  >Unser Team</a
-                >
-              </li>
-              <li class="text3">
                 <a href="https://katzes-racing-league.de/icons">Icons</a>
-              </li>
-              <li class="text3">
-                <a href="https://katzes-racing-league.de/krlhelp">KRL Help</a>
               </li>
               <li class="text3">
                 <a
@@ -98,282 +93,352 @@
                   >Merch Shop</a
                 >
               </li>
-              <li class="text3">
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSczZykzGcael-D0ulAxffcyaZ096hAEbzIVa8AaAmLcRS8dWg/viewform"
-                  >Teilnahme Formular</a
-                >
-              </li>
             </ul>
           </li>
         </ul>
       </nav>
+
+      <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuToggle.addEventListener("click", () => {
+          navLinks.classList.toggle("open");
+        });
+
+        // Optional: Klick außerhalb schließt das Menü
+        document.addEventListener("click", (e) => {
+          if (!e.target.closest("nav")) {
+            navLinks.classList.remove("open");
+          }
+        });
+        //Scroolbar
+        window.addEventListener("scroll", () => {
+          const scrollTop = window.scrollY;
+          const docHeight = document.body.scrollHeight - window.innerHeight;
+          const scrollPercent = (scrollTop / docHeight) * 100;
+          document.getElementById("progressBar").style.width =
+            scrollPercent + "%";
+        });
+      </script>
+
+      <div id="progressBar"></div>
     </header>
 
     <main>
-      <div class="header">
-        <h1>FAHRERFELD</h1>
-      </div>
-      <div class="line-up">
-        <!-- Team Red Bull -->
-        <div class="team redbull">
+      <h1>FAHRERFELD</h1>
+      <section class="f1-driver-grid">
+        <!-- Red Bull Racing -->
+        <div class="team-card redbull">
           <img
-            class="team-logo"
+            class="image-RedBull"
             src="../../../resources/pictures/general/f1teams/RED BULL.png"
+            alt="Red Bull Racing"
+            class="team-logo"
           />
-          <div class="driver-names">
-            <p>RACERMARCO20</p>
-            <p>REASTIX</p>
+          <div class="drivers">
+            <div>
+              <h2>Cheader</h2>
+            </div>
+            <div>
+              <h2>Cheesy</h2>
+            </div>
           </div>
         </div>
-
-        <!-- Team Mercedes -->
-        <div class="team mercedes">
+        <!-- Mercedes -->
+        <div class="team-card mercedes">
           <img
-            class="team-logo"
             src="../../../resources/pictures/general/f1teams/MERCEDESTRANSPARENTNEW.png"
+            alt="Mercedes"
+            class="team-logo"
           />
-          <div class="driver-names">
-            <p>LENNARD</p>
-            <p>CHEADER</p>
+          <div class="drivers">
+            <div>
+              <h2>MangoMax</h2>
+            </div>
+            <div>
+              <h2>Kaan</h2>
+            </div>
           </div>
         </div>
-
-        <!-- Team Ferrari -->
-        <div class="team ferrari">
+        <!-- Ferrari -->
+        <div class="team-card ferrari">
           <img
-            class="team-logo"
             src="../../../resources/pictures/general/f1teams/FERRARI.png"
+            alt="Ferrari"
+            class="team-logo"
           />
-          <div class="driver-names">
-            <p>CHEESYSNICE</p>
-            <p>ARCADIA</p>
+          <div class="drivers">
+            <div>
+              <h2>Yannick</h2>
+            </div>
+            <div>
+              <h2>Vex0</h2>
+            </div>
           </div>
         </div>
-
-        <!-- Team McLaren -->
-        <div class="team mclaren">
+        <!-- McLaren -->
+        <div class="team-card mclaren">
           <img
-            class="team-logo"
             src="../../../resources/pictures/general/f1teams/MCLAREN ORANGE.png"
+            alt="McLaren"
+            class="team-logo"
           />
-          <div class="driver-names">
-            <p>TIMBLIM</p>
-            <p>SLIM</p>
+          <div class="drivers">
+            <div>
+              <h2>TIM BLIM</h2>
+            </div>
+            <div>
+              <h2>SLIM</h2>
+            </div>
           </div>
         </div>
-
-        <!-- Team Aston Martin -->
-        <div class="team aston-martin">
+        <!-- Aston Martin -->
+        <div class="team-card aston-martin">
           <img
-            class="team-logo"
+            class="image-astonmartin"
             src="../../../resources/pictures/general/f1teams/ASTON MARTIN TRANSPARENT.png"
+            alt="Aston Martin"
+            class="team-logo"
           />
-          <div class="driver-names">
-            <p>RENE K.</p>
-            <p>LINO</p>
+          <div class="drivers">
+            <div>
+              <h2>HUDALLA</h2>
+            </div>
+            <div>
+              <h2>N30n</h2>
+            </div>
           </div>
         </div>
-
-        <!-- Team Alpine -->
-        <div class="team alpine">
+        <!-- Alpine -->
+        <div class="team-card alpine">
           <img
-            class="team-logo"
             src="../../../resources/pictures/general/f1teams/ALPINE.png"
+            alt="Alpine"
+            class="team-logo"
           />
-          <div class="driver-names">
-            <p>FISCHERKEV</p>
-            <p>SKS1997</p>
+          <div class="drivers">
+            <div>
+              <h2>RacerMarco20</h2>
+            </div>
+            <div>
+              <h2>Reastix</h2>
+            </div>
           </div>
         </div>
-
-        <!-- Team Williams -->
-        <div class="team williams">
+        <!-- Williams -->
+        <div class="team-card williams">
           <img
-            class="team-logo"
             src="../../../resources/pictures/general/f1teams/WILLIAMS.png"
+            alt="Williams"
+            class="team-logo"
           />
-          <div class="driver-names">
-            <p>ANDEON</p>
-            <p>TAZ</p>
+          <div class="drivers">
+            <div>
+              <h2>Rene K.</h2>
+            </div>
+            <div>
+              <h2>Lino</h2>
+            </div>
           </div>
         </div>
-
-        <!-- Team VCARB -->
-        <div class="team vcrb">
+        <!-- VCARB -->
+        <div class="team-card vcrb">
           <img
-            class="team-logo"
             src="../../../resources/pictures/general/f1teams/VCRB.png"
+            alt="VCARB"
+            class="team-logo"
           />
-          <div class="driver-names">
-            <p>ARTIT</p>
-            <p>ILLU</p>
+          <div class="drivers">
+            <div>
+              <h2>DarioGamingTM</h2>
+            </div>
+            <div>
+              <h2>ILLU</h2>
+            </div>
           </div>
         </div>
-
-        <!-- Team Kick Sauber -->
-        <div class="team kick-sauber">
+        <!-- Kick Sauber -->
+        <div class="team-card kick-sauber">
           <img
-            class="team-logo"
             src="../../../resources/pictures/general/f1teams/KICK SAUBER GRÜN.png"
-          />
-          <div class="driver-names">
-            <p>ROBBSELL</p>
-            <p>YANNICK</p>
-          </div>
-        </div>
-
-        <!-- Team Haas -->
-        <div class="team haas">
-          <img
+            alt="Kick Sauber"
             class="team-logo"
-            src="../../../resources/pictures/general/f1teams/HAAS.png"
           />
-          <div class="driver-names">
-            <p>ALFINIO147</p>
-            <p>HUDALLA</p>
+          <div class="drivers">
+            <div>
+              <h2>SKS1997</h2>
+            </div>
+            <div>
+              <h2>Artit</h2>
+            </div>
           </div>
         </div>
-      </div>
-
-      <!-- WM-Stände -->
-      <div class="header">
-        <h1>WM-STÄNDE</h1>
-      </div>
-
-      <div class="Bilder">
-        <img
-          class="BilderWM"
-          src="../../../resources/pictures/f1leagues/friday/standings/Driver_Standings_S9_Freitag.png"
-        />
-        <img
-          class="BilderWM"
-          src="../../../resources/pictures/f1leagues/friday/standings/Team_Standings_S9_Freitag.png"
-        />
-      </div>
-
-      <div class="button">
-        <a
-          class="class-button"
-          href="https://docs.google.com/spreadsheets/d/1kilK9t6rgADmmGJiOHVjQiEvBQMlaC7L0YeokjBSVMg/edit"
-          >TABELLEN</a
-        >
-      </div>
-
-      <div class="header">
-        <h1>GP-ERGEBNIS</h1>
-      </div>
-
-      <div class="BilderResult">
-        <img
-          class="BilderResultIMG"
-          src="../../../resources/pictures/f1leagues/friday/GP_Ergebnis_S9.png"
-        />
-      </div>
-
-      <section class="history">
-        <div class="header">
-          <h1>Historie</h1>
-        </div>
-        <div class="history-container">
-          <a
-            href="https://youtube.com/playlist?list=PLb80FYxFeJXwUaFF6Blg-Qi7P-hz9HQxF&si=H1LOHY2_maQ9psmM"
-          >
-            <div class="history-item">
-              <h2>2019</h2>
-              <p>
-                FAHRERWELTMEISTER<br />
-                VORSTEPPEN
-              </p>
-              <br />
-              <p>
-                KONSTRUKTEURSWELTMEISTER<br />
-                RED BULL
-              </p>
+        <!-- Haas -->
+        <div class="team-card haas">
+          <img
+            src="../../../resources/pictures/general/f1teams/HAAS.png"
+            alt="Haas"
+            class="team-logo"
+          />
+          <div class="drivers">
+            <div>
+              <h2>Fischerkev</h2>
             </div>
-          </a>
-          <a
-            href="https://youtube.com/playlist?list=PLb80FYxFeJXzeyAKpai_WO2W9sikaLVwt&si=o36cBtdA3jyUOO3G"
-          >
-            <div class="history-item">
-              <h2>2020</h2>
-              <p>
-                FAHRERWELTMEISTER<br />
-                SENDEOX
-              </p>
-              <br />
-              <p>
-                KONSTRUKTEURSWELTMEISTER<br />
-                FERRARI
-              </p>
+            <div>
+              <h2>Andeon</h2>
             </div>
-          </a>
-          <a
-            href="https://youtube.com/playlist?list=PLb80FYxFeJXwPNwepFZSJxHnoNV4snyqR&si=kKWK2VRs3oVjf1lL"
-          >
-            <div class="history-item">
-              <h2>2021</h2>
-              <p>
-                FAHRERWELTMEISTER<br />
-                SENDEOX
-              </p>
-              <br />
-              <p>
-                KONSTRUKTEURSWELTMEISTER<br />
-                ALPINE
-              </p>
-            </div>
-          </a>
-          <a
-            href="https://youtube.com/playlist?list=PLb80FYxFeJXw5ksDcZiajLdNT4TPGh1wN&si=sQ6HxM0q6lRgLdlm"
-          >
-            <div class="history-item">
-              <h2>2022</h2>
-              <p>
-                FAHRERWELTMEISTER<br />
-                CARBON
-              </p>
-              <br />
-              <p>
-                KONSTRUKTEURSWELTMEISTER<br />
-                RED BULL
-              </p>
-            </div>
-          </a>
-          <a
-            href="https://youtube.com/playlist?list=PLb80FYxFeJXyH00Ds0WiD6vTI2_HFd1_i&si=mGR0fIGEGf3O-6Vc"
-          >
-            <div class="history-item">
-              <h2>2023</h2>
-              <p>
-                FAHRERWELTMEISTER<br />
-                CHEESYSNICE
-              </p>
-              <br />
-              <p>
-                KONSTRUKTEURSWELTMEISTER<br />
-                ASTON MARTIN
-              </p>
-            </div>
-          </a>
-          <a
-            href="https://youtube.com/playlist?list=PLb80FYxFeJXxbD4oObCTekThl-WU28gCu&si=WdzZ83V9Pj49BF1p"
-          >
-            <div class="history-item">
-              <h2>2024</h2>
-              <p>
-                FAHRERWELTMEISTER<br />
-                TIMBLIM
-              </p>
-              <br />
-              <p>
-                KONSTRUKTEURSWELTMEISTER<br />
-                MCLAREN
-              </p>
-            </div>
-          </a>
+          </div>
         </div>
       </section>
+
+      <section class="carousel-section">
+        <div class="top-carousels">
+          <div class="carousel-box">
+            <h2>Fahrerstände</h2>
+            <div class="carousel" id="fahrer-carousel">
+              <button class="carousel-btn prev">&#10094;</button>
+              <div class="carousel-track-container">
+                <div class="carousel-track">
+                  <img
+                    src="/resources/pictures/f1leagues/friday/standings/Platzhalter.png"
+                    alt="Fahrer 1"
+                  />
+                </div>
+              </div>
+              <button class="carousel-btn next">&#10095;</button>
+            </div>
+          </div>
+
+          <div class="carousel-box">
+            <h2>Teamstände</h2>
+            <div class="carousel" id="team-carousel">
+              <button class="carousel-btn prev">&#10094;</button>
+              <div class="carousel-track-container">
+                <div class="carousel-track">
+                  <img
+                    src="/resources/pictures/f1leagues/friday/standings/Platzhalter.png"
+                    alt="Team 1"
+                  />
+                </div>
+              </div>
+              <button class="carousel-btn next">&#10095;</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="button">
+          <a
+            id="class-button"
+            class="class-button"
+            href="https://docs.google.com/spreadsheets/d/1kilK9t6rgADmmGJiOHVjQiEvBQMlaC7L0YeokjBSVMg/edit#gid=2065563738&range=A1"
+            >WM TABELLE</a
+          >
+        </div>
+
+        <div class="middle-carousel carousel-box">
+          <h2>GP-Ergebnisse</h2>
+          <div class="carousel" id="gp-carousel">
+            <button class="carousel-btn prev">&#10094;</button>
+            <div class="carousel-track-container">
+              <div class="carousel-track">
+                <img
+                  src="/resources/pictures/f1leagues/friday/results/test.png"
+                  alt="GP 1"
+                />
+              </div>
+            </div>
+            <button class="carousel-btn next">&#10095;</button>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        document.querySelectorAll(".carousel").forEach((carousel) => {
+          const track = carousel.querySelector(".carousel-track");
+          const images = track.querySelectorAll("img");
+          let index = 0;
+
+          const prevBtn = carousel.querySelector(".carousel-btn.prev");
+          const nextBtn = carousel.querySelector(".carousel-btn.next");
+
+          function updateCarousel() {
+            // Berechnung nach Bildbreite dynamisch
+            const imgWidth = images[0].clientWidth;
+            track.style.transform = `translateX(-${index * imgWidth}px)`;
+          }
+
+          prevBtn.addEventListener("click", () => {
+            index = (index - 1 + images.length) % images.length;
+            updateCarousel();
+          });
+
+          nextBtn.addEventListener("click", () => {
+            index = (index + 1) % images.length;
+            updateCarousel();
+          });
+        });
+      </script>
+
+      <h1 class="headlineHistorie">Historie</h1>
+
+      <div class="timeline-container">
+        <div class="timeline-line"></div>
+        <div class="year-marker" id="yearMarker"></div>
+      </div>
+
+      <script>
+        const champions = {
+          2019: { fahrer: "VORSTEPPEN", team: "RED BULL" },
+          2020: { fahrer: "SENDEOX", team: "FERRARI" },
+          2021: { fahrer: "SENDEOX", team: "ALPINE" },
+          2022: { fahrer: "CARBON", team: "RED BULL" },
+          2023: { fahrer: "CHEESYSNICE", team: "ASTON MARTIN" },
+          2024: { fahrer: "TIM BLIM", team: "MCLAREN" },
+        };
+
+        const yearMarker = document.getElementById("yearMarker");
+        let activeDot = null;
+        let currentInfoBox = null;
+
+        Object.entries(champions).forEach(([year, { fahrer, team }]) => {
+          const block = document.createElement("div");
+          block.classList.add("year-block");
+
+          const dot = document.createElement("div");
+          dot.classList.add("dot");
+          dot.id = `dot-${year}`;
+
+          const btn = document.createElement("button");
+          btn.textContent = year;
+          btn.classList.add("year-button");
+
+          function handleClick() {
+            if (activeDot) activeDot.classList.remove("active-dot");
+            dot.classList.add("active-dot");
+            activeDot = dot;
+
+            if (currentInfoBox) currentInfoBox.remove();
+
+            const infoBox = document.createElement("div");
+            infoBox.classList.add("info-box");
+            infoBox.innerHTML = `
+        <p><strong>FAHRER-WELTMEISTER:</strong> ${fahrer}</p>
+        <p><strong>TEAM-WELTMEISTER:</strong> ${team}</p>
+      `;
+
+            block.appendChild(infoBox);
+            currentInfoBox = infoBox;
+          }
+
+          btn.onclick = handleClick;
+          dot.onclick = handleClick;
+
+          block.appendChild(dot);
+          block.appendChild(btn);
+          yearMarker.appendChild(block);
+        });
+      </script>
     </main>
 
     <footer class="footer">
@@ -381,7 +446,7 @@
         <span
           >© 2024-2025 Katzes Racing League. All rights reserved. -
           <a href="https://katzes-racing-league.de/changelog"
-            >Version: 02.01.01</a
+            >Version: 03.00.00</a
           >
           - </span
         ><a href="https://katzes-racing-league.de/impressum">Impressum</a>
@@ -411,16 +476,10 @@
             alt="instagram"
           />
         </a>
-        <a href="https://tiktok.com/@katzesracingleaguef1">
+        <a href="https://tiktok.com/@katzesracingleaguef1liga">
           <img
             src="../../../resources/pictures/general/socials/tiktok.png"
             alt="tiktok"
-          />
-        </a>
-        <a href="https://twitter.com/KatzesLeague">
-          <img
-            src="../../../resources/pictures/general/socials/X.png"
-            alt="x"
           />
         </a>
       </div>

@@ -7,11 +7,13 @@
     <link
       rel="icon"
       type="image/png"
-      href="resources/pictures/general/krllogos/KRL_LOGO.png"
+      href="resources/pictures/general/krllogos/KRL_Community4.png"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/slideshowCounter.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap"
       rel="stylesheet"
@@ -44,7 +46,13 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Concert+One&family=Days+One&family=Orbitron:wght@400..900&family=Patrick+Hand&family=Playpen+Sans:wght@100..800&family=Syne+Mono&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
     <header>
       <nav class="navbar">
@@ -52,7 +60,7 @@
         <a href="https://katzes-racing-league.de/">
           <div class="logo">
             <img
-              src="resources/pictures/general/krllogos/KRL_LOGO.png"
+              src="resources/pictures/general/krllogos/KRL_Community4.png"
               alt="Liga Logo"
             />
           </div>
@@ -100,7 +108,7 @@
             <ul class="dropdown-content sonstiges">
               <li class="text3">
                 <a href="https://katzes-racing-league.de/race-director-notes"
-                  >Race-Director-Notes</a
+                  >RDN</a
                 >
               </li>
               <li class="text3">
@@ -109,15 +117,7 @@
                 >
               </li>
               <li class="text3">
-                <a href="https://katzes-racing-league.de/unser-team"
-                  >Unser Team</a
-                >
-              </li>
-              <li class="text3">
                 <a href="https://katzes-racing-league.de/icons">Icons</a>
-              </li>
-              <li class="text3">
-                <a href="https://katzes-racing-league.de/krlhelp">KRL Help</a>
               </li>
               <li class="text3">
                 <a
@@ -125,19 +125,39 @@
                   >Merch Shop</a
                 >
               </li>
-              <li class="text3">
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSczZykzGcael-D0ulAxffcyaZ096hAEbzIVa8AaAmLcRS8dWg/viewform"
-                  >Teilnahme Formular</a
-                >
-              </li>
             </ul>
           </li>
         </ul>
       </nav>
+
+      <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuToggle.addEventListener("click", () => {
+          navLinks.classList.toggle("open");
+        });
+
+        // Optional: Klick außerhalb schließt das Menü
+        document.addEventListener("click", (e) => {
+          if (!e.target.closest("nav")) {
+            navLinks.classList.remove("open");
+          }
+        });
+        //Scroolbar
+        window.addEventListener("scroll", () => {
+          const scrollTop = window.scrollY;
+          const docHeight = document.body.scrollHeight - window.innerHeight;
+          const scrollPercent = (scrollTop / docHeight) * 100;
+          document.getElementById("progressBar").style.width =
+            scrollPercent + "%";
+        });
+      </script>
+
+      <div id="progressBar"></div>
     </header>
 
-    <section class="background">
+    <main>
       <!--Hintergrund top-->
       <div>
         <img
@@ -147,19 +167,34 @@
       </div>
 
       <!--Welcome Quote-->
-      <div class="header">
-        <h1>
-          <span class="welcomequote">&laquo;</span>
-          <span class="welcome">Willkommen</span>
-          <span class="welcomequote">&raquo;</span>
-        </h1>
-      </div>
+      <p id="greeting"></p>
+      <h1 id="typing" class="welcome"></h1>
+      <script>
+        const text = "<< Willkommen bei der KRL! >>";
+        let index = 0;
+        const speed = 100;
+
+        function typeWriter() {
+          if (index < text.length) {
+            document.getElementById("typing").innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+
+        typeWriter();
+        //Moin
+        const hour = new Date().getHours();
+        let greeting;
+
+        document.getElementById("greeting").textContent = greeting;
+      </script>
 
       <!--Icons-->
       <div class="features">
         <div class="feature-item">
           <i class="fas fa-flag-checkered"></i>
-          <p>Seit 2016</p>
+          <p>Gründung 2016</p>
         </div>
         <div class="feature-item">
           <i class="fas fa-car"></i>
@@ -174,8 +209,8 @@
           <p>Professionelle Organisation</p>
         </div>
         <div class="feature-item">
-          <i class="fas fa-balance-scale"></i>
-          <p>Chancengleichheit</p>
+          <i class="fas fa-video"></i>
+          <p>Liveübertragung aller Rennen</p>
         </div>
         <div class="feature-item">
           <i class="fas fa-handshake"></i>
@@ -189,99 +224,495 @@
 
       <!--Join Now Button-->
       <div class="button">
-        <a class="class-button" href="https://discord.gg/2r9wDfKdSB"
+        <a
+          id="class-button"
+          class="class-button"
+          href="https://discord.gg/2r9wDfKdSB"
           >Jetzt Beitreten</a
         >
       </div>
 
-      <!--Header H1-->
-      <div class="header">
-        <h1>KRL F1 LIGA</h1>
+      <!--Slideshow-->
+      <div class="slider-container">
+        <div class="slider-track" id="slider-track"></div>
       </div>
+
+      <!--Header H1-->
+      <h1>KRL RACING</h1>
 
       <!--Logos der Ligen-->
-      <div class="leaguecontainer">
-        <div class="f1leaguecard">
-          <a href="https://katzes-racing-league.de/freitagsliga">
-            <div class="fridaycard">
-              <img
-                class="f1leaguelogo"
-                src="resources/pictures/general/krllogos/KRL_FR_LOGO.png"
-              />
-              <h2>FREITAGSLIGA</h2>
-              <p>19:30 UHR</p>
-            </div>
-          </a>
+      <section class="LigenContainer">
+        <div id="Friday" class="Friday fly-in">
+          <a href="https://katzes-racing-league.de/freitagsliga"
+            ><img
+              src="/resources/pictures/general/krllogos/KRL_Freitag.png"
+              alt="KRL Freitag"
+          /></a>
         </div>
-        <div class="f1leaguecard">
+        <div id="Saturday" class="Saturday fly-in">
           <a href="https://katzes-racing-league.de/samstagsliga">
-            <div class="saturdaycard">
-              <img
-                class="f1leaguelogo"
-                src="resources/pictures/general/krllogos/KRL_SA_LOGO.png"
-              />
-              <h2>SAMSTAGSLIGA</h2>
-              <p>18:00 UHR</p>
-            </div>
-          </a>
+            <img
+              src="/resources/pictures/general/krllogos/KRL_Samstag.png"
+              alt="KRL Samstag"
+          /></a>
         </div>
-        <div class="f1leaguecard">
+        <div id="Sunday" class="Sunday fly-in">
           <a href="https://katzes-racing-league.de/sonntagsliga">
-            <div class="sundaycard">
-              <img
-                class="f1leaguelogo"
-                src="resources/pictures/general/krllogos/KRL_SO_LOGO.png"
-              />
-              <h2>SONNTAGSLIGA</h2>
-              <p>19:00 UHR</p>
-            </div>
-          </a>
+            <img
+              src="/resources/pictures/general/krllogos/KRL_Sonntag.png"
+              alt="KRL Sonntag"
+          /></a>
         </div>
-      </div>
-
-      <div class="racecalendar">
-        <a
-          href="resources/files/Rennkalender_KRL_S9.ics"
-          download="Rennkalender_KRL_S9.ics"
-        >
-          <img
-            class="calenderimg"
-            src="resources/pictures/general/Kalender_S9.png"
-          />
-        </a>
-      </div>
-
-      <!--WDL & E TEAM-->
-      <div class="leaguecontainer">
-        <div class="f1leaguecard">
-          <a href="https://katzes-racing-league.de/wettkampf-der-ligen">
-            <div class="wdlcard">
-              <img class="f1leaguelogo"
-              src="resources/pictures/general/krllogos/WDL_LOGO_RUND.png"" />
-              <h2>WDL</h2>
-            </div>
-          </a>
-        </div>
-        <div class="f1leaguecard">
+        <div id="Endurance" class="Endurance fly-in">
           <a href="https://katzes-racing-league.de/endurance">
-            <div class="endurancecard">
-              <img
-                class="f1leaguelogo"
-                src="resources/pictures/general/krllogos/KRL_E_LOGO.png"
-              />
-              <h2>ENDURANCE</h2>
-            </div>
-          </a>
+            <img
+              src="/resources/pictures/general/krllogos/KRL_Endurance.png"
+              alt="Endurance"
+          /></a>
+        </div>
+        <div id="WDL" class="WDL fly-in">
+          <a href="https://katzes-racing-league.de/wettkampf-der-ligen">
+            <img
+              src="/resources/pictures/general/krllogos/WDL_LOGO_RUND.png"
+              alt="WDL"
+          /></a>
+        </div>
+      </section>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("visible");
+                  observer.unobserve(entry.target); // nur einmal animieren
+                }
+              });
+            },
+            {
+              threshold: 0.2, // 20% im Sichtfeld reicht
+            }
+          );
+
+          document
+            .querySelectorAll(".fly-in")
+            .forEach((el) => observer.observe(el));
+        });
+      </script>
+
+      <!-- HTML: DEIN BLOCK -->
+      <div class="counter-container">
+        <div class="counter-box">
+          <div class="counter-number" data-target="10">0</div>
+          <div class="counter-label">SAISONS</div>
+        </div>
+        <div class="counter-box">
+          <div class="counter-number" data-target="90">0</div>
+          <div class="counter-label">FAHRER</div>
+        </div>
+        <div class="counter-box">
+          <div class="counter-number" data-target="3">0</div>
+          <div class="counter-label">LIGEN</div>
+        </div>
+        <div class="counter-box">
+          <div class="counter-number" data-target="1030">0</div>
+          <div class="counter-label">TWITCH FOLLOWER</div>
         </div>
       </div>
-    </section>
+
+      <div class="slider-container2">
+        <div class="slider-track2" id="slider-track2"></div>
+      </div>
+
+      <h1>UNSER TEAM</h1>
+      <h2 class="überschrift">Planungsgruppe</h2>
+      <div class="team-grid2">
+        <!-- Admin-Mitglied -->
+        <div class="admin-card">
+          <img
+            src="/resources/pictures/profilbilder/Paul.png"
+            alt="ALARIC01"
+            class="avatar"
+          />
+          <h2>ALARIC01</h2>
+          <div class="role">LIGALEITUNG</div>
+          <p>Mitglied seit 2016</p>
+        </div>
+      </div>
+      <div class="team-grid">
+        <div class="admin-card">
+          <img
+            src="/resources/pictures/profilbilder/EMESHA.png"
+            alt="EMESHA"
+            class="avatar"
+          />
+          <h2>EMESHA</h2>
+          <div class="role">Admin</div>
+          <p>Mitglied seit 2018</p>
+        </div>
+
+        <div class="admin-card">
+          <img
+            src="/resources/pictures/profilbilder/DarioGaming.jpg"
+            alt="DarioGamingTM"
+            class="avatar"
+          />
+          <h2>DARIOGAMINGTM</h2>
+          <div class="role">Admin</div>
+          <p>Mitglied seit 2022</p>
+        </div>
+
+        <div class="admin-card">
+          <img
+            src="/resources/pictures/profilbilder/HellFreeZ3r.png"
+            alt="HELLFREEZ3R"
+            class="avatar"
+          />
+          <h2>HELLFREEZ3R</h2>
+          <div class="role">Admin</div>
+          <p>Mitglied seit 2018</p>
+        </div>
+
+        <div class="admin-card">
+          <img
+            src="/resources/pictures/profilbilder/Han05.jpg"
+            alt="Han05"
+            class="avatar"
+          />
+          <h2>Han05</h2>
+          <div class="role">Admin</div>
+          <p>Mitglied seit 2021</p>
+        </div>
+
+        <div class="admin-card">
+          <img
+            src="/resources/pictures/profilbilder/Juracai.png"
+            alt="JURACAI"
+            class="avatar"
+          />
+          <h2>JURACAI</h2>
+          <div class="role">ADMIN</div>
+          <p>Mitglied seit 2023</p>
+        </div>
+
+        <div class="admin-card">
+          <img
+            src="/resources/pictures/profilbilder/sdsds.PNG"
+            alt="Jan"
+            class="avatar"
+          />
+          <h2>Jan</h2>
+          <div class="role">Admin</div>
+          <a href="https://steamcommunity.com/id/KRLJan/"></a>
+          <p>Mitglied seit 2020</p>
+        </div>
+      </div>
+
+      <h2 class="überschrift2">Team im Hintergrund</h2>
+
+      <div class="team-grid2">
+        <!-- Admin-Mitglied -->
+        <div class="admin-card">
+          <div class="header-image"></div>
+          <img
+            src="/resources/pictures/profilbilder/sdsds.PNG"
+            alt="Jan"
+            class="avatar"
+          />
+          <h2>Jan</h2>
+          <div class="role">Chef</div>
+          <p>Mitglied seit 2020</p>
+        </div>
+        <div class="admin-card">
+          <div class="header-image"></div>
+          <img
+            src="/resources/pictures/profilbilder/Max.png"
+            alt="Max"
+            class="avatar"
+          />
+          <h2>Max</h2>
+          <div class="role">Co-Chef</div>
+          <p>Mitglied seit 2019</p>
+        </div>
+      </div>
+
+      <div class="team-grid">
+        <div class="admin-card">
+          <div
+            class="header-image"
+            style="background-image: url('bg2.jpg')"
+          ></div>
+          <img
+            src="/resources/pictures/profilbilder/robbin.jpg"
+            alt="Robbin"
+            class="avatar"
+          />
+          <h2>Robbin</h2>
+          <div class="role">Social Media</div>
+          <p>Mitglied seit 2024</p>
+        </div>
+
+        <div class="admin-card">
+          <div
+            class="header-image"
+            style="background-image: url('bg2.jpg')"
+          ></div>
+          <img
+            src="/resources/pictures/profilbilder/Han05.jpg"
+            alt="Han05"
+            class="avatar"
+          />
+          <h2>Han05</h2>
+          <div class="role">SOCIAL MEDIA</div>
+          <p>Mitglied seit 2021</p>
+        </div>
+
+        <div class="admin-card">
+          <div
+            class="header-image"
+            style="background-image: url('bg2.jpg')"
+          ></div>
+          <img
+            src="/resources/pictures/profilbilder/DarioGaming.jpg"
+            alt="DarioGamingTM"
+            class="avatar"
+          />
+          <h2>DARIOGAMINGTM</h2>
+          <div class="role">Webseite</div>
+          <p>Mitglied seit 2022</p>
+        </div>
+
+        <div class="admin-card">
+          <div
+            class="header-image"
+            style="background-image: url('bg2.jpg')"
+          ></div>
+          <img
+            src="/resources/pictures/profilbilder/Sendeox.png"
+            alt="Sendeox"
+            class="avatar"
+          />
+          <h2>Sendeox</h2>
+          <div class="role">Social Media</div>
+          <p>Mitglied seit 2019</p>
+        </div>
+      </div>
+
+      <div class="flexcontainer">
+        <!-- Block 1 -->
+        <div class="flexcontainer2">
+          <h2 class="überschrift4">Wettkampf der Ligen</h2>
+          <div class="admin-group2">
+            <div class="admin-card2">
+              <div
+                class="header-image"
+                style="
+                  background-image: url('/resources/pictures/backgrounds/bg2.jpg');
+                "
+              ></div>
+              <img
+                src="/resources/pictures/profilbilder/EMESHA.png"
+                alt="DarioGamingTM"
+                class="avatar"
+              />
+              <h2>EMESHA</h2>
+              <div class="role">Organisator</div>
+              <p>Mitglied seit 2018</p>
+            </div>
+            <div class="admin-card2">
+              <div
+                class="header-image"
+                style="
+                  background-image: url('/resources/pictures/backgrounds/bg2.jpg');
+                "
+              ></div>
+              <img
+                src="/resources/pictures/profilbilder/HellFreeZ3r.png"
+                alt="Max"
+                class="avatar"
+              />
+              <h2>HEELFREEZER</h2>
+              <div class="role">Organisator</div>
+              <p>Mitglied seit 2019</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 2 -->
+        <div class="flexcontainer2">
+          <h2 class="überschrift8">Rennleitung</h2>
+          <div class="admin-group2">
+            <div class="admin-card2">
+              <div
+                class="header-image"
+                style="
+                  background-image: url('/resources/pictures/backgrounds/bg2.jpg');
+                "
+              ></div>
+              <img
+                src="/resources/pictures/profilbilder/masi_lacht.jpg"
+                alt="Paul"
+                class="avatar"
+              />
+              <h2>Michel</h2>
+              <div class="role">Vorsitzender</div>
+              <p>Mitglied seit 2020</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 3 -->
+        <div class="flexcontainer2">
+          <h2 class="überschrift7">Endurance</h2>
+          <div class="admin-group2">
+            <div class="admin-card2">
+              <div
+                class="header-image"
+                style="
+                  background-image: url('/resources/pictures/backgrounds/bg2.jpg');
+                "
+              ></div>
+              <img
+                src="resources/pictures/profilbilder/hammdall.png"
+                alt="Sendeox"
+                class="avatar"
+              />
+              <h2>HAMMDALL</h2>
+              <div class="role">Admin</div>
+              <p>Mitglied seit 2019</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="überschrift6">Kommentatoren</h2>
+
+      <div class="flexcontainer">
+        <!-- Block 1 -->
+        <div class="flexcontainer2">
+          <h2 class="überschrift6">Freitag</h2>
+          <div class="admin-group2">
+            <div class="admin-card2">
+              <div
+                class="header-image"
+                style="
+                  background-image: url('/resources/pictures/backgrounds/bg2.jpg');
+                "
+              ></div>
+              <img
+                src="/resources/pictures/profilbilder/lemi.png"
+                alt="DarioGamingTM"
+                class="avatar"
+              />
+              <h2>LEMI</h2>
+              <div class="role">Streamer</div>
+              <p>Mitglied seit 2020</p>
+            </div>
+            <div class="admin-card2">
+              <div
+                class="header-image"
+                style="
+                  background-image: url('/resources/pictures/backgrounds/bg2.jpg');
+                "
+              ></div>
+              <img
+                src="/resources/pictures/profilbilder/Juracai.png"
+                alt="Max"
+                class="avatar"
+              />
+              <h2>JURACAI</h2>
+              <div class="role">Kommentator</div>
+              <p>Mitglied seit 2023</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 2 -->
+        <div class="flexcontainer2">
+          <h2 class="überschrift6">Samstag</h2>
+          <div class="admin-group2">
+            <div class="admin-card2">
+              <div
+                class="header-image"
+                style="
+                  background-image: url('/resources/pictures/backgrounds/bg2.jpg');
+                "
+              ></div>
+              <img
+                src="/resources/pictures/profilbilder/gamex.png"
+                alt="DarioGamingTM"
+                class="avatar"
+              />
+              <h2>Gamex</h2>
+              <div class="role">Streamer</div>
+              <p>Mitglied seit 2017</p>
+            </div>
+            <div class="admin-card2">
+              <div
+                class="header-image"
+                style="
+                  background-image: url('/resources/pictures/backgrounds/bg2.jpg');
+                "
+              ></div>
+              <img
+                src="/resources/pictures/profilbilder/illu.png"
+                alt="Max"
+                class="avatar"
+              />
+              <h2>ILLU</h2>
+              <div class="role">Kommentator</div>
+              <p>Mitglied seit 2023</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 3 -->
+        <div class="flexcontainer2">
+          <h2 class="überschrift6">Sonntag</h2>
+          <div class="admin-group2">
+            <div class="admin-card2">
+              <div
+                class="header-image"
+                style="
+                  background-image: url('/resources/pictures/backgrounds/bg2.jpg');
+                "
+              ></div>
+              <img
+                src="/resources/pictures/profilbilder/cheesy.jpeg"
+                alt="Jan"
+                class="avatar"
+              />
+              <h2>Cheesy</h2>
+              <div class="role">Streamer</div>
+              <p>Mitglied seit 2023</p>
+            </div>
+            <div class="admin-card2">
+              <div
+                class="header-image"
+                style="
+                  background-image: url('/resources/pictures/backgrounds/bg2.jpg');
+                "
+              ></div>
+              <img
+                src="/resources/pictures/profilbilder/lino.jpg"
+                alt="Sendeox"
+                class="avatar"
+              />
+              <h2>Lino</h2>
+              <div class="role">Kommentator</div>
+              <p>Mitglied seit 2023</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <footer class="footer">
       <div class="container">
         <span
           >© 2024-2025 Katzes Racing League. All rights reserved. -
           <a href="https://katzes-racing-league.de/changelog"
-            >Version: 02.01.01</a
+            >Version: 03.00.00</a
           >
           - </span
         ><a href="https://katzes-racing-league.de/impressum">Impressum</a>
@@ -311,19 +742,15 @@
             alt="instagram"
           />
         </a>
-        <a href="https://tiktok.com/@katzesracingleaguef1">
+        <a href="https://tiktok.com/@katzesracingleaguef1liga">
           <img
             src="resources/pictures/general/socials/tiktok.png"
             alt="tiktok"
           />
         </a>
-        <a href="https://twitter.com/KatzesLeague">
-          <img src="resources/pictures/general/socials/X.png" alt="x" />
-        </a>
       </div>
     </footer>
-
+    <script src="js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="js/script.js" defer></script>
   </body>
 </html>

@@ -6,6 +6,7 @@
     <title>Katzes Racing League</title>
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/icons.styles.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,17 +16,17 @@
     <link
       rel="icon"
       type="image/png"
-      href="../resources/pictures/general/krllogos/KRL_LOGO.png"
+      href="../resources/pictures/general/krllogos/KRL_Community4.png"
     />
   </head>
   <body>
     <header>
       <nav class="navbar">
         <!-- Logo der Liga -->
-        <a href="../index.html">
+        <a href="https://katzes-racing-league.de/">
           <div class="logo">
             <img
-              src="../resources/pictures/general/krllogos/KRL_LOGO.png"
+              src="/resources/pictures/general/krllogos/KRL_Community4.png"
               alt="Liga Logo"
             />
           </div>
@@ -73,7 +74,7 @@
             <ul class="dropdown-content sonstiges">
               <li class="text3">
                 <a href="https://katzes-racing-league.de/race-director-notes"
-                  >Race-Director-Notes</a
+                  >RDN</a
                 >
               </li>
               <li class="text3">
@@ -82,15 +83,7 @@
                 >
               </li>
               <li class="text3">
-                <a href="https://katzes-racing-league.de/unser-team"
-                  >Unser Team</a
-                >
-              </li>
-              <li class="text3">
                 <a href="https://katzes-racing-league.de/icons">Icons</a>
-              </li>
-              <li class="text3">
-                <a href="https://katzes-racing-league.de/krlhelp">KRL Help</a>
               </li>
               <li class="text3">
                 <a
@@ -98,17 +91,35 @@
                   >Merch Shop</a
                 >
               </li>
-              <li class="text3">
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSczZykzGcael-D0ulAxffcyaZ096hAEbzIVa8AaAmLcRS8dWg/viewform"
-                  >Teilnahme Formular</a
-                >
-              </li>
             </ul>
           </li>
         </ul>
       </nav>
     </header>
+
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+      });
+
+      // Optional: Klick außerhalb schließt das Menü
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest("nav")) {
+          navLinks.classList.remove("open");
+        }
+      });
+      //Scroolbar
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        document.getElementById("progressBar").style.width =
+          scrollPercent + "%";
+      });
+    </script>
 
     <main class="background">
       <!--Header H1-->
@@ -570,7 +581,7 @@
         <span
           >© 2024-2025 Katzes Racing League. All rights reserved. -
           <a href="https://katzes-racing-league.de/changelog"
-            >Version: 02.01.01</a
+            >Version: 03.00.00</a
           >
           - </span
         ><a href="https://katzes-racing-league.de/impressum">Impressum</a>
@@ -600,14 +611,11 @@
             alt="instagram"
           />
         </a>
-        <a href="https://tiktok.com/@katzesracingleaguef1">
+        <a href="https://tiktok.com/@katzesracingleaguef1ligs">
           <img
             src="../resources/pictures/general/socials/tiktok.png"
             alt="tiktok"
           />
-        </a>
-        <a href="https://twitter.com/KatzesLeague">
-          <img src="../resources/pictures/general/socials/X.png" alt="x" />
         </a>
       </div>
     </footer>

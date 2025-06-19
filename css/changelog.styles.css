@@ -1,54 +1,65 @@
 .log {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Schattierung */
-  max-width: 1500px; /* Maximale Breite, um die Lesbarkeit zu verbessern */ /* Maximale Breite, um die Lesbarkeit zu verbessern */
-  margin-left: auto;
-  margin-right: auto;
-  padding: 30px;
-  background-color: transparent;
-  box-shadow: var(--borderpicturesize) var(--sundaysplit);
-  margin-top: 50px;
+  width: 90%;
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 50px 40px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  font-family: "Concert One", sans-serif;
+  color: #fff;
+  line-height: 1.6;
 }
 
 .log h1 {
-  font-size: var(--fontsizeheadline);
-  margin-bottom: 20px;
+  color: var(--sundaysplit);
+  font-size: 2.2rem;
+  margin-bottom: 30px;
   text-align: center;
 }
 
 .log h2 {
-  font-size: var(--font-sizetext);
-  color: #ffffff;
-  text-align: center;
+  color: var(--saturdaysplit);
+  font-size: 1.5rem;
+  margin: 30px 0 10px;
+  text-align: left;
+  cursor: pointer;
 }
 
 .log h3 {
-  font-size: var(--font-sizetext);
-  color: #ffffff;
+  color: var(--fridaysplit);
+  font-size: 1.2rem;
+  margin: 15px 0 5px;
+}
+
+.log ul {
+  margin: 0 0 20px 20px;
+}
+
+.log li {
   margin-bottom: 10px;
 }
 
 .log a {
-  color: var(--sundaysplit);
+  color: var(--sundaysplit, #ffffff);
   text-decoration: none;
 }
 
 .log a:hover {
   text-decoration: underline;
-  color: #000000;
+  color: #000;
 }
 
-@media (max-width: 850px) {
-  .log h1 {
-    font-size: var(--font-sizetext);
+@media (max-width: 768px) {
+  .log {
+    padding: 25px 20px;
   }
 
-  section {
-    padding: 20px;
-    width: 80%;
-    margin-top: 20px;
+  .log h1 {
+    font-size: 1.6rem;
+  }
+
+  .log h2 {
+    font-size: 1.2rem;
   }
 }

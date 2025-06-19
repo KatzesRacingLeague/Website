@@ -1,0 +1,41 @@
+.f1-driver-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.team-card {
+  padding: 5px 10px;
+  flex: 1 1 300px;
+  max-width: 300px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.team-logo {
+  max-width: 120px;
+  margin-bottom: 15px;
+  filter: brightness(1.1);
+}
+.image-astonmartin {
+  max-width: 300px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.image-RedBull {
+  max-width: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.drivers {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 15px;
+}
+.drivers h2 {
+  font-size: var(--font-sizetext);
+  margin: 0;
+  text-transform: uppercase;
+}
