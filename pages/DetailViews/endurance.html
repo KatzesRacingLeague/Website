@@ -19,7 +19,7 @@
     />
   </head>
   <body>
- <header>
+    <header>
       <nav class="navbar">
         <!-- Logo der Liga -->
         <a href="https://katzes-racing-league.de/">
@@ -32,7 +32,7 @@
         </a>
 
         <!-- Menü-Button für mobile Ansicht -->
-       <button class="menu-toggle">☰</button>
+        <button class="menu-toggle">☰</button>
 
         <!-- Hauptnavigationslinks -->
         <ul class="nav-links">
@@ -94,59 +94,55 @@
           </li>
         </ul>
       </nav>
-      
+
       <script>
-      
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navLinks = document.querySelector(".nav-links");
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
 
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-  });
+        menuToggle.addEventListener("click", () => {
+          navLinks.classList.toggle("open");
+        });
 
-  // Optional: Klick außerhalb schließt das Menü
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest("nav")) {
-      navLinks.classList.remove("open");
-    }
-  });
-  //Scroolbar
-  window.addEventListener('scroll', () => {
-  const scrollTop = window.scrollY;
-  const docHeight = document.body.scrollHeight - window.innerHeight;
-  const scrollPercent = (scrollTop / docHeight) * 100;
-  document.getElementById('progressBar').style.width = scrollPercent + '%';
-});
-
+        // Optional: Klick außerhalb schließt das Menü
+        document.addEventListener("click", (e) => {
+          if (!e.target.closest("nav")) {
+            navLinks.classList.remove("open");
+          }
+        });
+        //Scroolbar
+        window.addEventListener("scroll", () => {
+          const scrollTop = window.scrollY;
+          const docHeight = document.body.scrollHeight - window.innerHeight;
+          const scrollPercent = (scrollTop / docHeight) * 100;
+          document.getElementById("progressBar").style.width =
+            scrollPercent + "%";
+        });
       </script>
       <div id="progressBar"></div>
     </header>
 
     <main>
- 
-
-<h2 class="header">Fahrer-team</h2>
-<div class="container-3col">
-  <div class="column">
-    <div class="driver-box">Simon Kress</div>
-    <div class="driver-box">Pascal Sonnenberg</div>
-    <div class="driver-box">Alexander Kraft</div>
-    <div class="driver-box">Max Bruhn</div>
-  </div>
-  <div class="column">
-    <div class="driver-box">Lucia Hellmerichs</div>
-    <div class="driver-box">Jan Lyczkowski</div>
-    <div class="driver-box">Merlin Banf</div>
-    <div class="driver-box">Jannick Neve</div>
-  </div>
-  <div class="column">
-    <div class="driver-box">Liam Chantrain</div>
-    <div class="driver-box">Denis Müller</div>
-    <div class="driver-box">Steven Lexow</div>
-    <div class="driver-box">Raphael Dietrich</div>
-  </div>
-</div>
-
+      <h2 class="header">Fahrer-team</h2>
+      <div class="container-3col">
+        <div class="column">
+          <div class="driver-box">Simon Kress</div>
+          <div class="driver-box">Pascal Sonnenberg</div>
+          <div class="driver-box">Alexander Kraft</div>
+          <div class="driver-box">Max Bruhn</div>
+        </div>
+        <div class="column">
+          <div class="driver-box">Lucia Hellmerichs</div>
+          <div class="driver-box">Jan Lyczkowski</div>
+          <div class="driver-box">Merlin Banf</div>
+          <div class="driver-box">Jannick Neve</div>
+        </div>
+        <div class="column">
+          <div class="driver-box">Liam Chantrain</div>
+          <div class="driver-box">Denis Müller</div>
+          <div class="driver-box">Steven Lexow</div>
+          <div class="driver-box">Raphael Dietrich</div>
+        </div>
+      </div>
     </main>
 
     <footer class="footer">
@@ -190,7 +186,6 @@
             alt="tiktok"
           />
         </a>
-  
       </div>
     </footer>
 

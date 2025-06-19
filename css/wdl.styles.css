@@ -1,15 +1,11 @@
 year-button:hover {
-      color: var(--wdl);
-    
-    }
+  color: var(--wdl);
+}
 
-  .timeline-line {
- 
+.timeline-line {
   background: var(--wdl);
-
 }
 .info-box {
-
   border: 2px solid var(--wdl);
 }
 .active-dot {
@@ -17,13 +13,11 @@ year-button:hover {
 }
 
 .carousel-btn {
-  
   background-color: var(--wdl);
-  
 }
 .team-card {
-border-left: 4px solid var(--wdl);
-border-right: 4px solid var(--sundaysplit);
+  border-left: 4px solid var(--wdl);
+  border-right: 4px solid var(--sundaysplit);
 }
 
 .middle-carousel {
@@ -31,13 +25,11 @@ border-right: 4px solid var(--sundaysplit);
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
-.headerGP-Ergebnisse{
-  font-size: var( --fontsizeheadline);
+.headerGP-Ergebnisse {
+  font-size: var(--fontsizeheadline);
   margin-top: 50px;
-
 }
 
 .middle-carousel .carousel,
@@ -48,7 +40,7 @@ border-right: 4px solid var(--sundaysplit);
 }
 
 .middle-carousel .carousel-track img {
-width: 1351px;
+  width: 1351px;
   height: 760px;
   border-radius: 20px;
 }
@@ -71,6 +63,12 @@ width: 1351px;
   transform: translateY(-50%);
   z-index: 1;
 }
+
+.class-button {
+  border: 4px solid;
+  border-image: linear-gradient(70deg, #f26e6e, #6ef2f2) 1;
+}
+
 .points-container {
   text-align: center;
   margin: 40px auto;
@@ -89,7 +87,7 @@ width: 1351px;
   transition: all 0.2s ease-in-out;
   font-size: 40px;
   font-family: var(--fontfamilytext);
-    margin: 40px auto; /* Fügt Abstände hinzu und zentriert den Button in der Mitte */
+  margin: 40px auto; /* Fügt Abstände hinzu und zentriert den Button in der Mitte */
   padding: 20px 40px; /* Fügt Polsterung hinzu, um den Button größer zu machen */
   border: 5px solid var(--wdl);
   color: white; /* Textfarbe weiß für guten Kontrast */
@@ -97,14 +95,20 @@ width: 1351px;
   font-size: 50px;
   text-transform: uppercase;
   text-decoration: none;
-
 }
+
+/* Slideshows */
+.slider-track,
+.slider-track2 {
+  border-top: 5px solid var(--wdl) !important;
+  border-bottom: 5px solid var(--sundaysplit);
+}
+
 .slider-track2 img {
   width: 60px;
   height: 2000px;
   height: auto;
 }
-
 
 .punkte-container {
   max-width: 800px;
@@ -113,15 +117,13 @@ width: 1351px;
 }
 
 .punkte-container h2 {
-  font-size:70px;
- 
+  font-size: 70px;
 }
 
 .punkte-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-
 }
 
 .punkte-item {
@@ -132,26 +134,18 @@ width: 1351px;
   border: 4px solid;
   border-image: linear-gradient(70deg, #f26e6e, #6ef2f2) 1;
   text-transform: uppercase;
-
   transition: transform 0.2s ease;
 }
-
 
 .punkte-platz {
   color: white;
   margin-bottom: 4px;
-
 }
 
 .punkte-wert {
   font-size: 20px;
   color: #ffffff;
 }
-
-
-
-
-
 
 /* Team Zordnung  */
 .team-mapping-section {
@@ -160,13 +154,11 @@ width: 1351px;
   margin: 0 auto;
 }
 
-
 .team-mapping-list {
   display: grid;
   grid-template-columns: 1fr 1fr; /* 2 Spalten */
   gap: 1rem 5rem; /* vertikal / horizontal Abstand */
 }
-
 
 .mapping-item {
   background: transparent;
@@ -182,18 +174,27 @@ width: 1351px;
   align-items: center;
 }
 
-
 .league-name {
   text-transform: uppercase;
-  font-size: var(--font-sizetext)
+  font-size: var(--font-sizetext);
 }
 
 .team-name {
   color: #ffffff;
-    font-size: var(--font-sizetext);
-      text-transform: uppercase;
+  font-size: var(--font-sizetext);
+  text-transform: uppercase;
 }
 
+.f1-driver-grid a {
+  color: white;
+  text-decoration: none;
+}
+
+.f1-driver-grid a:hover {
+  color: var(--wdl);
+  /* text-decoration: underline;
+  text-decoration-color: var(--sundaysplit); */
+}
 
 /* ========== Responsive Anpassung für Mobile & Tablet ========== */
 @media (max-width: 1024px) {

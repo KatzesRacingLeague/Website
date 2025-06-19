@@ -10,7 +10,6 @@
   display: flex;
   flex-wrap: wrap; /* Symbole umbrechen, wenn nicht genug Platz ist */
   justify-content: space-evenly;
-
 }
 
 .feature-item {
@@ -23,14 +22,12 @@
 
 .feature-item i {
   font-size: 70px;
-  color: var(--sundaysplit); 
-
+  color: var(--sundaysplit);
 }
 
 .feature-item p {
   font-size: 27px;
   text-transform: uppercase;
-
 }
 
 /*Button Join NOW*/
@@ -50,17 +47,15 @@
   font-size: 50px;
   text-transform: uppercase;
   text-decoration: none;
-
 }
 
 .class-button:hover {
-  transform: scale(1.1); 
+  transform: scale(1.1);
   transition: 0.3s ease; /* Weicher Übergang bei Hover */
   cursor: pointer; /* Zeigt eine Hand an, wenn man über den Button fährt */
 }
 
 /* Slider*/
-
 
 .LigenContainer {
   width: 100%;
@@ -68,18 +63,25 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap:50px;
-
+  gap: 50px;
 }
 
-.Friday, .Saturday , .Sunday, .WDL, .Endurance{
-  display:flex; 
+.Friday,
+.Saturday,
+.Sunday,
+.WDL,
+.Endurance {
+  display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   font-size: var(--font-sizetext);
 }
-.Friday img, .Saturday img, .Sunday img, .WDL img ,.Endurance img{
+.Friday img,
+.Saturday img,
+.Sunday img,
+.WDL img,
+.Endurance img {
   width: 300px;
 }
 
@@ -94,30 +96,28 @@
   transform: translateY(0);
 }
 
-.überschrift{
+.überschrift {
   text-align: center;
   font-size: var(--fontsizeh2);
   color: var(--administration);
   margin-top: -50px;
   margin-bottom: 100px;
-    text-transform: uppercase;
-
+  text-transform: uppercase;
 }
 
-
-.team-grid,.team-grid2, .team-grid3  {
+.team-grid,
+.team-grid2,
+.team-grid3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
- 
- 
 }
 
 /* Einheitliche Größe für alle Karten */
 .admin-card {
-  width: 250px; 
-  height: 360px; 
+  width: 250px;
+  height: 360px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -134,16 +134,17 @@
 }
 
 .avatar {
-  width: 90px;        
-  height: 90px;      
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   border: 3px solid var(--sundaysplit);
-  margin-top: -45px;  
+  margin-top: -45px;
   background-color: white;
   object-fit: cover;
 }
 
-.admin-card h2,.admin-card2 h2  {
+.admin-card h2,
+.admin-card2 h2 {
   margin: 10px 0 5px 0;
   font-size: 33px;
   color: #ffffff;
@@ -158,16 +159,14 @@
   text-transform: uppercase;
 }
 
-.admin-card p, .admincard2 p {
+.admin-card p,
+.admin-card2 p {
   font-size: 18px;
-  color: #bbb;
   margin: 0;
   text-transform: uppercase;
 }
 
-
-
-.überschrift2{
+.überschrift2 {
   text-align: center;
   font-size: var(--fontsizeh2);
   color: #f26eec;
@@ -176,14 +175,14 @@
   text-transform: uppercase;
 }
 
-.überschrift3{
+.überschrift3 {
   text-align: center;
   font-size: var(--fontsizeh2);
   color: var(--wdl);
   margin-bottom: 20px;
   text-transform: uppercase;
 }
-.überschrift4{
+.überschrift4 {
   text-align: center;
   font-size: var(--fontsizeh2);
   text-align: center;
@@ -192,7 +191,7 @@
   text-transform: uppercase;
 }
 
-.überschrift5{
+.überschrift5 {
   margin-top: 80px;
   text-align: center;
   font-size: var(--fontsizeh2);
@@ -201,26 +200,16 @@
   margin-bottom: 20px;
   text-transform: uppercase;
 }
-.überschrift6{
+.überschrift6 {
   text-align: center;
   font-size: var(--fontsizeh2);
   text-align: center;
-  color: grey;
+  color: #923bfe;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
 
-
-.überschrift7{
-  text-align: center;
-  font-size: var(--fontsizeh2);
-  text-align: center;
-  color: var(--endurance);
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-
-.überschrift8{
+.überschrift7 {
   text-align: center;
   font-size: var(--fontsizeh2);
   text-align: center;
@@ -229,7 +218,7 @@
   text-transform: uppercase;
 }
 
-.überschrift8{
+.überschrift8 {
   text-align: center;
   font-size: var(--fontsizeh2);
   text-align: center;
@@ -248,17 +237,15 @@
   background-color: transparent;
   width: 100%;
   max-width: 700px;
-
 }
 .admin-group2 {
-  display: flex;         /* -> nebeneinander statt untereinander */
-  flex-wrap: wrap;       /* -> bei wenig Platz auch untereinander möglich */
-  gap: 20px;             /* -> Abstand zwischen den Karten */
+  display: flex; /* -> nebeneinander statt untereinander */
+  flex-wrap: wrap; /* -> bei wenig Platz auch untereinander möglich */
+  gap: 20px; /* -> Abstand zwischen den Karten */
   justify-content: center; /* -> Karten zentrieren */
-   gap: 100px;
-   text-align: center;
+  gap: 100px;
+  text-align: center;
 }
-
 
 @media (max-width: 768px) {
   body {
@@ -275,7 +262,6 @@
 
   /* Icons */
 
-
   .feature-item i {
     font-size: 40px; /* Kleinere Icons für bessere Anpassung */
     margin-top: 30px; /* Weniger Abstand oben */
@@ -288,7 +274,7 @@
 
   /* H1 Headlines */
   body h1 {
-    font-size: 25px; 
+    font-size: 25px;
   }
 
   .class-button {
@@ -297,6 +283,4 @@
     width: auto; /* Stellt sicher, dass der Button sich an die Breite anpasst */
     margin: 0 auto; /* Zentriert den Button auf mobilen Geräten */
   }
-
-
 }

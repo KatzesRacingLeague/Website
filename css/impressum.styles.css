@@ -6,24 +6,30 @@
   border-radius: 12px;
   background-color: rgba(0, 0, 0, 0.6);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  font-family: 'Concert One', sans-serif;
+  font-family: "Concert One", sans-serif;
   color: #fff;
   line-height: 1.6;
 }
 
 .Angaben h1 {
-  color: var(--sundaysplit, #f39c12);
+  color: var(--sundaysplit);
   font-size: 2.2rem;
   margin-bottom: 30px;
   text-align: center;
 }
 
-.Angaben h2, .Angaben h3 {
-  color: var(--sundaysplit); /* Blau für Kontakt, Datenschutz, etc. */
+.Angaben h2 {
+  color: var(--saturdaysplit);
   font-size: 1.3rem;
   margin-top: 30px;
   margin-bottom: 10px;
   text-align: left;
+}
+
+.Angaben h3 {
+  color: var(--fridaysplit);
+  font-size: 1.2rem;
+  margin: 15px 0 5px;
 }
 
 .Angaben p {
@@ -33,13 +39,13 @@
 }
 
 .Angaben a {
-  color: var(--sundaysplit, #f39c12);
+  color: var(--sundaysplit);
   text-decoration: none;
 }
 
 .Angaben a:hover {
   text-decoration: underline;
-  color: #000;
+  color: white;
 }
 
 @media (max-width: 768px) {

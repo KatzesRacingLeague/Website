@@ -1,8 +1,9 @@
-  
+
 // Slideshow 1
 const imagePaths = [
   'F1Logos/16.png', 'F1Logos/17.png', 'F1Logos/18.png', 'F1Logos/19.png',
-  'F1Logos/20.png', 'F1Logos/21.png', 'F1Logos/22.png', 'F1Logos/23.png', 'F1Logos/24.png', 'F1Logos/25.png'
+  'F1Logos/20.png', 'F1Logos/21.png', 'F1Logos/22.png', 'F1Logos/23.png',
+  'F1Logos/24.png', 'F1Logos/25.png'
 ];
 const track = document.getElementById('slider-track');
 const allImages = imagePaths.concat(imagePaths); // Duplizieren für Endlosschleife
@@ -48,50 +49,50 @@ allTextItems.forEach(text => {
   track2.appendChild(div);
 });
 
-  //Counter
-  window.addEventListener("DOMContentLoaded", () => {
-    const counters = document.querySelectorAll('.counter-number');
+//Counter
+window.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll('.counter-number');
 
-    const startCounting = (counter) => {
-      const target = +counter.getAttribute('data-target');
-      const duration = 1000;
-      const steps = 100;
-      const increment = target / steps;
-      const delay = duration / steps;
+  const startCounting = (counter) => {
+    const target = +counter.getAttribute('data-target');
+    const duration = 1000;
+    const steps = 100;
+    const increment = target / steps;
+    const delay = duration / steps;
 
-      const updateCount = () => {
-        const current = +counter.innerText;
+    const updateCount = () => {
+      const current = +counter.innerText;
 
-        if (current < target) {
-          counter.innerText = Math.ceil(current + increment);
-          setTimeout(updateCount, delay);
-        } else {
-          counter.innerText = target;
-          counter.classList.add("highlight");
+      if (current < target) {
+        counter.innerText = Math.ceil(current + increment);
+        setTimeout(updateCount, delay);
+      } else {
+        counter.innerText = target;
+        counter.classList.add("highlight");
 
-          if (target === 10) {
-            counter.classList.add("gold-highlight");
-          }
+        if (target === 10) {
+          counter.classList.add("gold-highlight");
         }
-      };
-
-      updateCount();
+      }
     };
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-          entry.target.classList.add('counted');
-          entry.target.classList.add('fade-in'); // Optional: reinfliegen lassen
-          startCounting(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.5
-    });
+    updateCount();
+  };
 
-    counters.forEach(counter => {
-      observer.observe(counter);
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+        entry.target.classList.add('counted');
+        entry.target.classList.add('fade-in'); // Optional: reinfliegen lassen
+        startCounting(entry.target);
+      }
     });
+  }, {
+    threshold: 0.5
   });
+
+  counters.forEach(counter => {
+    observer.observe(counter);
+  });
+});
 

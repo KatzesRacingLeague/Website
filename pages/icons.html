@@ -16,11 +16,11 @@
     <link
       rel="icon"
       type="image/png"
-      href="../resources/pictures/general/krllogos/KRL_LOGO.png"
+      href="../resources/pictures/general/krllogos/KRL_Community4.png"
     />
   </head>
   <body>
-   <header>
+    <header>
       <nav class="navbar">
         <!-- Logo der Liga -->
         <a href="https://katzes-racing-league.de/">
@@ -95,31 +95,31 @@
           </li>
         </ul>
       </nav>
-      
-      <script>
-      
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navLinks = document.querySelector(".nav-links");
+    </header>
 
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-  });
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
 
-  // Optional: Klick außerhalb schließt das Menü
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest("nav")) {
-      navLinks.classList.remove("open");
-    }
-  });
-  //Scroolbar
-  window.addEventListener('scroll', () => {
-  const scrollTop = window.scrollY;
-  const docHeight = document.body.scrollHeight - window.innerHeight;
-  const scrollPercent = (scrollTop / docHeight) * 100;
-  document.getElementById('progressBar').style.width = scrollPercent + '%';
-});
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+      });
 
-      </script>
+      // Optional: Klick außerhalb schließt das Menü
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest("nav")) {
+          navLinks.classList.remove("open");
+        }
+      });
+      //Scroolbar
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        document.getElementById("progressBar").style.width =
+          scrollPercent + "%";
+      });
+    </script>
 
     <main class="background">
       <!--Header H1-->
@@ -576,7 +576,7 @@
       </details>
     </main>
 
-   <footer class="footer">
+    <footer class="footer">
       <div class="container">
         <span
           >© 2024-2025 Katzes Racing League. All rights reserved. -

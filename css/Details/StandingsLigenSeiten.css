@@ -2,7 +2,7 @@ h2 {
   font-size: 80px;
   text-align: center;
   text-transform: uppercase;
-margin-top: 100px;
+  margin-top: 100px;
 }
 
 .carousel-btn.prev {
@@ -11,7 +11,6 @@ margin-top: 100px;
 
 .carousel-btn.next {
   right: -60px;
-  
 }
 
 .carousel-section {
@@ -25,8 +24,7 @@ margin-top: 100px;
   display: flex;
   justify-content: center;
   gap: 100px;
-    gap: 200px; /* vorher 100px */
-
+  gap: 200px; /* vorher 100px */
 }
 
 .carousel-box {
@@ -90,8 +88,32 @@ margin-top: 100px;
   height: 800px;
 }
 
+.middle-carousel > h2 {
+  margin-top: 20px;
+}
 
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
+.class-button {
+  margin: 40px auto;
+  padding: 20px 40px;
+  color: white; /* Textfarbe weiß für guten Kontrast */
+  border-radius: 8px; /* Abgerundete Ecken */
+  font-size: 50px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.class-button:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease; /* Weicher Übergang bei Hover */
+  cursor: pointer; /* Zeigt eine Hand an, wenn man über den Button fährt */
+}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -120,5 +142,12 @@ margin-top: 100px;
 
   h2 {
     font-size: 48px;
+  }
+
+  .class-button {
+    padding: 15px 30px;
+    font-size: 25px;
+    width: auto; /* Stellt sicher, dass der Button sich an die Breite anpasst */
+    margin: 0 auto; /* Zentriert den Button auf mobilen Geräten */
   }
 }

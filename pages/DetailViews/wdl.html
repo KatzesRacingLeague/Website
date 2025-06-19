@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Katzes Racing League</title>
     <link rel="stylesheet" href="/css/navbar.css" />
-    <link rel="stylesheet" href="/css/wdl.styles.css">
+    <link rel="stylesheet" href="/css/wdl.styles.css" />
     <link rel="stylesheet" href="/css/Details/Cockpit.css" />
     <link rel="stylesheet" href="/css/slideshowCounter.css" />
     <link rel="stylesheet" href="/css/Details/ZeitstrahlLigen.css" />
@@ -23,7 +23,7 @@
     />
   </head>
   <body>
- <header>
+    <header>
       <nav class="navbar">
         <!-- Logo der Liga -->
         <a href="https://katzes-racing-league.de/">
@@ -36,7 +36,7 @@
         </a>
 
         <!-- Menü-Button für mobile Ansicht -->
-       <button class="menu-toggle">☰</button>
+        <button class="menu-toggle">☰</button>
 
         <!-- Hauptnavigationslinks -->
         <ul class="nav-links">
@@ -98,333 +98,466 @@
           </li>
         </ul>
       </nav>
-      
+
       <script>
-      
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navLinks = document.querySelector(".nav-links");
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
 
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-  });
+        menuToggle.addEventListener("click", () => {
+          navLinks.classList.toggle("open");
+        });
 
-  // Optional: Klick außerhalb schließt das Menü
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest("nav")) {
-      navLinks.classList.remove("open");
-    }
-  });
-  //Scroolbar
-  window.addEventListener('scroll', () => {
-  const scrollTop = window.scrollY;
-  const docHeight = document.body.scrollHeight - window.innerHeight;
-  const scrollPercent = (scrollTop / docHeight) * 100;
-  document.getElementById('progressBar').style.width = scrollPercent + '%';
-});
-
+        // Optional: Klick außerhalb schließt das Menü
+        document.addEventListener("click", (e) => {
+          if (!e.target.closest("nav")) {
+            navLinks.classList.remove("open");
+          }
+        });
+        //Scroolbar
+        window.addEventListener("scroll", () => {
+          const scrollTop = window.scrollY;
+          const docHeight = document.body.scrollHeight - window.innerHeight;
+          const scrollPercent = (scrollTop / docHeight) * 100;
+          document.getElementById("progressBar").style.width =
+            scrollPercent + "%";
+        });
       </script>
-     
+
       <div id="progressBar"></div>
     </header>
 
     <main>
- <h1>Teilnehmende Ligen</h1>
-<section class="f1-driver-grid">
-  <!-- Red Bull Racing -->
-  <div class="team-card redbull">
-    <img src="/resources/pictures/wdl/ligen/arl.png" alt="Red Bull Racing" class="team-logo">
-    <div class="drivers">
-      <div>
-        <h2>Airborne Racing League</h2>
-      </div>
-    </div>
-  </div>
-  <!-- Mercedes -->
-  <div class="team-card mercedes">
-    <img src="/resources/pictures/wdl/ligen/pd-playingducks.png" alt="Mercedes" class="team-logo">
-    <div class="drivers">
-      <div>
-        <h2>Playing Ducks Energy League</h2>
-      </div>
-   
-    </div>
-  </div>
-  <!-- Ferrari -->
-  <div class="team-card ferrari">
-    <img src="/resources/pictures/wdl/ligen/erc.png" alt="Ferrari" class="team-logo">
-    <div class="drivers">
-      <div>
-        <h2>Erdis Racing Community</h2>
-      </div>
-    </div>
-  </div>
-  <!-- McLaren -->
-  <div class="team-card mclaren">
-    <img src="/resources/pictures/wdl/ligen/grl.png" alt="McLaren" class="team-logo">
-    <div class="drivers">
-      <div>
-        <h2>Goldfinger Racing League</h2>
-      </div>
-    </div>
-  </div>
-  <!-- Aston Martin -->
-  <div class="team-card aston-martin">
-    <img src="/resources/pictures/wdl/ligen//crl.png" alt="Aston Martin" class="team-logo">
-    <div class="drivers">
-      <div>
-        <h2>Competitive Formula Racing League</h2>
-      </div>
-    </div>
-  </div>
-  <!-- Alpine -->
-  <div class="team-card alpine">
-    <img src="/resources/pictures/wdl/ligen/mrl-mulchainracingleague.png" alt="Alpine" class="team-logo">
-    <div class="drivers">
-      <div>
-        <h2>Mulchian Racing League</h2>
-      </div>
-    </div>
-  </div>
-  <!-- Williams -->
-  <div class="team-card williams">
-    <img src="/resources/pictures/wdl/ligen/sdc-sundaydrivercup.png" alt="Williams" class="team-logo">
-    <div class="drivers">
-      <div>
-        <h2>Sunday Driver Cup</h2>
-      </div>
-    </div>
-  </div>
-  <!-- VCARB -->
-  <div class="team-card vcrb">
-    <img src="/resources/pictures/wdl/ligen/rf1-racingfriendsone.png" alt="VCARB" class="team-logo">
-    <div class="drivers">
-      <div>
-        <h2>Race friends one</h2>
-      </div>
-    </div>
-  </div>
-  <!-- Kick Sauber -->
-  <div class="team-card kick-sauber">
-    <img src="/resources/pictures/wdl/ligen/gsl.png" alt="Kick Sauber" class="team-logo">
-    <div class="drivers">
-      <div>
-        <h2>German Sports League</h2>
-      </div>
-    </div>
-  </div>
-  <!-- Haas -->
-  <div class="team-card haas">
-    <img src="/resources/pictures/general/krllogos/KRL_Community4.png" alt="Haas" class="team-logo">
-    <div class="drivers">
-      <div>
-        <h2>Katzes Racing League</h2>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="team-mapping-section">
-  <div class="team-mapping-list" id="teamMappingContainer"></div>
-</section>
+      <h1>Teilnehmende Ligen</h1>
+      <section class="f1-driver-grid">
+        <!-- Red Bull Racing -->
+        <div class="team-card redbull">
+          <a href="https://airborne-racing.de/">
+            <img
+              src="/resources/pictures/wdl/ligen/arl.png"
+              alt="Red Bull Racing"
+              class="team-logo"
+            />
+            <div class="drivers">
+              <div>
+                <h2>Airborne Racing League</h2>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- Mercedes -->
+        <div class="team-card mercedes">
+          <a href="https://playing-ducks.com/ducks-f1-league/">
+            <img
+              src="/resources/pictures/wdl/ligen/pd-playingducks.png"
+              alt="Mercedes"
+              class="team-logo"
+            />
+            <div class="drivers">
+              <div>
+                <h2>Playing Ducks Energy League</h2>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- Ferrari -->
+        <div class="team-card ferrari">
+          <a href="https://steamcommunity.com/groups/ErdiRacingCommunity">
+            <img
+              src="/resources/pictures/wdl/ligen/erc.png"
+              alt="Ferrari"
+              class="team-logo"
+            />
+            <div class="drivers">
+              <div>
+                <h2>Erdis Racing Community</h2>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- McLaren -->
+        <div class="team-card mclaren">
+          <a href="https://goldfinger-racing-league.jimdosite.com/">
+            <img
+              src="/resources/pictures/wdl/ligen/grl.png"
+              alt="McLaren"
+              class="team-logo"
+            />
+            <div class="drivers">
+              <div>
+                <h2>Goldfinger Racing League</h2>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- Aston Martin -->
+        <div class="team-card aston-martin">
+          <a href="https://discord.gg/6Y6v2AssqC">
+            <img
+              src="/resources/pictures/wdl/ligen//crl.png"
+              alt="Aston Martin"
+              class="team-logo"
+            />
+            <div class="drivers">
+              <div>
+                <h2>Competitive Formula Racing League</h2>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- Alpine -->
+        <div class="team-card alpine">
+          <a href="https://www.mulchianracingleague.de/">
+            <img
+              src="/resources/pictures/wdl/ligen/mrl-mulchainracingleague.png"
+              alt="Alpine"
+              class="team-logo"
+            />
+            <div class="drivers">
+              <div>
+                <h2>Mulchian Racing League</h2>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- Williams -->
+        <div class="team-card williams">
+          <a href="https://discord.gg/MGaghE76ch">
+            <img
+              src="/resources/pictures/wdl/ligen/sdc-sundaydrivercup.png"
+              alt="Williams"
+              class="team-logo"
+            />
+            <div class="drivers">
+              <div>
+                <h2>Sunday Driver Cup</h2>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- VCARB -->
+        <div class="team-card vcrb">
+          <a href="https://youtube.com/@racefriends1?si=xccHwCGB3R-T_KN9">
+            <img
+              src="/resources/pictures/wdl/ligen/rf1-racingfriendsone.png"
+              alt="VCARB"
+              class="team-logo"
+            />
+            <div class="drivers">
+              <div>
+                <h2>Race friends one</h2>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- Kick Sauber -->
+        <div class="team-card kick-sauber">
+          <a href="https://discord.gg/wurwygkBR3">
+            <img
+              src="/resources/pictures/wdl/ligen/gsl.png"
+              alt="Kick Sauber"
+              class="team-logo"
+            />
+            <div class="drivers">
+              <div>
+                <h2>German Sports League</h2>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- Haas -->
+        <div class="team-card haas">
+          <a href="https://discord.gg/2r9wDfKdSB">
+            <img
+              src="/resources/pictures/general/krllogos/KRL_Community4.png"
+              alt="Haas"
+              class="team-logo"
+            />
+            <div class="drivers">
+              <div>
+                <h2>Katzes Racing League</h2>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="team-mapping-section">
+        <div class="team-mapping-list" id="teamMappingContainer"></div>
+      </section>
 
-<script>
-  const mappings = {
-    "Katzes Racing League": "McLaren",
-    "Goldfinger Racing League": "Mercedes",
-    "Airborne Racing League": "Williams",
-    "Erdis Racing Community": "Ferrari",
-    "Competitive Formula Racing League": "Sauber",
-    "Playing Ducks Energy League": "Red Bull",
-    "Sunday Driver Cup": "Haas",
-    "Mulchian Racing League": "Aston Martin",
-    "German Sports League": "Alpine",
-    "Race friends One": "Racing Bulls"
-  };
+      <script>
+        const mappings = {
+          "Katzes Racing League": "McLaren",
+          "Goldfinger Racing League": "Mercedes",
+          "Airborne Racing League": "Williams",
+          "Erdis Racing Community": "Ferrari",
+          "Competitive Formula Racing League": "Sauber",
+          "Playing Ducks Energy League": "Red Bull",
+          "Sunday Driver Cup": "Haas",
+          "Mulchian Racing League": "Aston Martin",
+          "German Sports League": "Alpine",
+          "Race friends One": "Racing Bulls",
+        };
 
-  const container = document.getElementById("teamMappingContainer");
+        const container = document.getElementById("teamMappingContainer");
 
-  Object.entries(mappings).forEach(([league, team]) => {
-    const item = document.createElement("div");
-    item.className = "mapping-item";
-    item.innerHTML = `<span class="league-name">${league}</span><span class="team-name">${team}</span>`;
-    container.appendChild(item);
-  });
-</script>
+        Object.entries(mappings).forEach(([league, team]) => {
+          const item = document.createElement("div");
+          item.className = "mapping-item";
+          item.innerHTML = `<span class="league-name">${league}</span><span class="team-name">${team}</span>`;
+          container.appendChild(item);
+        });
+      </script>
 
-<div class="slider-container">
-  <div class="slider-track" id="slider-track"></div>
-</div>
+      <div class="slider-container">
+        <div class="slider-track" id="slider-track"></div>
+      </div>
 
-<script>
-const imagePaths = [
-   'F1Logos/17.png', 'F1Logos/18.png', 'F1Logos/19.png',
-  'F1Logos/20.png', 'F1Logos/21.png', 'F1Logos/22.png', 'F1Logos/23.png', 'F1Logos/24.png', 'F1Logos/25.png'
-];
-const track = document.getElementById('slider-track');
-const allImages = imagePaths.concat(imagePaths); // Duplizieren für Endlosschleife
+      <script>
+        const imagePaths = [
+          "F1Logos/17.png",
+          "F1Logos/18.png",
+          "F1Logos/19.png",
+          "F1Logos/20.png",
+          "F1Logos/21.png",
+          "F1Logos/22.png",
+          "F1Logos/23.png",
+          "F1Logos/24.png",
+          "F1Logos/25.png",
+        ];
+        const track = document.getElementById("slider-track");
+        const allImages = imagePaths.concat(imagePaths); // Duplizieren für Endlosschleife
 
-allImages.forEach(src => {
-  const img = document.createElement('img');
-  img.src = src;
-  img.alt = 'Slideshow Bild';
-  track.appendChild(img);
-});
-</script>
-<!-- <section class="carousel-section">
-  <div class="middle-carousel">
-    <h2 class="headerGP-Ergebnisse">Übersicht</h2>
-    <div class="carousel" id="gp-carousel">
-      <button class="carousel-btn prev">&#10094;</button>
-      <div class="carousel-track-container">
-        <div class="carousel-track">
-          <img src="/resources/pictures/Thumbnail_S9.png" alt="GP 1" />
-          <img src="pfad/zu/gp2.png" alt="GP 2" />
-          <img src="pfad/zu/gp3.png" alt="GP 3" />
+        allImages.forEach((src) => {
+          const img = document.createElement("img");
+          img.src = src;
+          img.alt = "Slideshow Bild";
+          track.appendChild(img);
+        });
+      </script>
+      <section class="carousel-section">
+        <div class="middle-carousel">
+          <h2 class="headerGP-Ergebnisse">Übersicht</h2>
+          <div class="carousel" id="gp-carousel">
+            <button class="carousel-btn prev">&#10094;</button>
+            <div class="carousel-track-container">
+              <div class="carousel-track">
+                <img
+                  src="/resources/pictures/f1leagues/friday/standings/Platzhalter.png"
+                  alt="GP 1"
+                />
+              </div>
+            </div>
+            <button class="carousel-btn next">&#10095;</button>
+          </div>
+        </div>
+      </section>
+      <script>
+        document.querySelectorAll(".carousel").forEach((carousel) => {
+          const track = carousel.querySelector(".carousel-track");
+          const images = track.querySelectorAll("img");
+          let index = 0;
+
+          const prevBtn = carousel.querySelector(".carousel-btn.prev");
+          const nextBtn = carousel.querySelector(".carousel-btn.next");
+
+          function updateCarousel() {
+            // Berechnung nach Bildbreite dynamisch
+            const imgWidth = images[0].clientWidth;
+            track.style.transform = `translateX(-${index * imgWidth}px)`;
+          }
+
+          prevBtn.addEventListener("click", () => {
+            index = (index - 1 + images.length) % images.length;
+            updateCarousel();
+          });
+
+          nextBtn.addEventListener("click", () => {
+            index = (index + 1) % images.length;
+            updateCarousel();
+          });
+        });
+      </script>
+
+      <div class="button">
+        <a
+          id="class-button"
+          class="class-button"
+          href="https://docs.google.com/spreadsheets/d/1R2uX54t8MvYZuadbEX8i5OvcPL4niThnCDE5aTU2A_A/edit"
+          >WM TABELLE</a
+        >
+      </div>
+
+      <div class="slider-container2">
+        <div class="slider-track2" id="slider-track2"></div>
+      </div>
+
+      <script>
+        const textItems = [
+          "1. Brasilien",
+          "2. Mexiko",
+          "3. China",
+          "4. Kanada",
+          "5. Großbritannien",
+          "6. Saudi Arabien",
+          "7. Katar",
+          "8. Singapur",
+          "9. Italien",
+          "10. Abu Dhabi",
+        ];
+        const track2 = document.getElementById("slider-track2");
+        const allTextItems = textItems.concat(textItems); // doppeln für Endlosschleife
+
+        allTextItems.forEach((text) => {
+          const div = document.createElement("div");
+          div.classList.add("text-slide");
+          div.textContent = text;
+          track2.appendChild(div);
+        });
+      </script>
+
+      <div class="punkte-container">
+        <h2>Punktesystem</h2>
+        <div class="punkte-grid">
+          <!-- Wird per JS automatisch befüllt -->
         </div>
       </div>
-      <button class="carousel-btn next">&#10095;</button>
-    </div>
-  </div>
-</section> -->
-<script>
-document.querySelectorAll('.carousel').forEach(carousel => {
-  const track = carousel.querySelector('.carousel-track');
-  const images = track.querySelectorAll('img');
-  let index = 0;
 
-  const prevBtn = carousel.querySelector('.carousel-btn.prev');
-  const nextBtn = carousel.querySelector('.carousel-btn.next');
+      <script>
+        const punkteSystem = [
+          { platz: "1. Platz", punkte: 25 },
+          { platz: "2. Platz", punkte: 21 },
+          { platz: "3. Platz", punkte: 18 },
+          { platz: "4. Platz", punkte: 16 },
+          { platz: "5. Platz", punkte: 14 },
+          { platz: "6. Platz", punkte: 12 },
+          { platz: "7. Platz", punkte: 10 },
+          { platz: "8. Platz", punkte: 8 },
+          { platz: "9. Platz", punkte: 7 },
+          { platz: "10. Platz", punkte: 6 },
+          { platz: "11. Platz", punkte: 5 },
+          { platz: "12. Platz", punkte: 4 },
+          { platz: "13. Platz", punkte: 3 },
+          { platz: "14. Platz", punkte: 2 },
+          { platz: "15. Platz", punkte: 1 },
+          { platz: "16. Platz", punkte: 0 },
+          { platz: "17. Platz", punkte: 0 },
+          { platz: "18. Platz", punkte: 0 },
+          { platz: "19. Platz", punkte: 0 },
+          { platz: "20. Platz", punkte: 0 },
+        ];
 
-  function updateCarousel() {
-    // Berechnung nach Bildbreite dynamisch
-    const imgWidth = images[0].clientWidth;
-    track.style.transform = `translateX(-${index * imgWidth}px)`;
-  }
-
-  prevBtn.addEventListener('click', () => {
-    index = (index - 1 + images.length) % images.length;
-    updateCarousel();
-  });
-
-  nextBtn.addEventListener('click', () => {
-    index = (index + 1) % images.length;
-    updateCarousel();
-  });
-});
-</script>
-<div class="punkte-container">
-  <h2>Punktesystem</h2>
-  <div class="punkte-grid">
-    <!-- Wird per JS automatisch befüllt -->
-  </div>
-</div>
-
-<script>
-  const punkteSystem = [
-    { platz: "1. Platz", punkte: 25 },
-    { platz: "2. Platz", punkte: 21 },
-    { platz: "3. Platz", punkte: 18 },
-    { platz: "4. Platz", punkte: 16 },
-    { platz: "5. Platz", punkte: 14 },
-    { platz: "6. Platz", punkte: 12 },
-    { platz: "7. Platz", punkte: 10 },
-    { platz: "8. Platz", punkte: 8 },
-    { platz: "9. Platz", punkte: 7 },
-    { platz: "10. Platz", punkte: 6 },
-    { platz: "11. Platz", punkte: 5 },
-    { platz: "12. Platz", punkte: 4 },
-    { platz: "13. Platz", punkte: 3 },
-    { platz: "14. Platz", punkte: 2 },
-    { platz: "15. Platz", punkte: 1 },
-    { platz: "16. Platz", punkte: 0 },
-     {platz: "17. Platz", punkte: 0 },
-    { platz: "18. Platz", punkte: 0 },
-    { platz: "19. Platz", punkte: 0},
-    { platz: "20. Platz", punkte: 0 },
-    
-  ];
-
- const grid = document.querySelector(".punkte-grid");
-  punkteSystem.forEach(eintrag => {
-    const item = document.createElement("div");
-    item.className = "punkte-item";
-    item.innerHTML = `
+        const grid = document.querySelector(".punkte-grid");
+        punkteSystem.forEach((eintrag) => {
+          const item = document.createElement("div");
+          item.className = "punkte-item";
+          item.innerHTML = `
       <div class="punkte-platz">${eintrag.platz}</div>
-      <div class="punkte-wert">${eintrag.punkte} Punkt${eintrag.punkte === 1 ? "" : "e"}</div>
+      <div class="punkte-wert">${eintrag.punkte} Punkt${
+            eintrag.punkte === 1 ? "" : "e"
+          }</div>
     `;
-    grid.appendChild(item);
-  });
-</script>
+          grid.appendChild(item);
+        });
+      </script>
 
+      <h1 class="headlineHistorie">Historie</h1>
 
+      <div class="timeline-container">
+        <div class="timeline-line"></div>
+        <div class="year-marker" id="yearMarker"></div>
+      </div>
 
+      <script>
+        // DATA AS ARRAY FOR BETTER SORTING
+        const champions = [
+          {
+            year: "2017",
+            fahrer: "[KRL] SCHENICO",
+            liga: "MULCHIAN FORMULA 1 LIGA",
+          },
+          { year: "2018", fahrer: "[KRL] CORNI", liga: "KATZES RACING LEAGUE" },
+          { year: "2019", fahrer: "[KRL] CORNI", liga: "KATZES RACING LEAGUE" },
+          {
+            year: "2020",
+            fahrer: "[AIR] TBSCHMD",
+            liga: "AIRBORNE RACING LEAGUES",
+          },
+          {
+            year: "2021",
+            fahrer: "[AIR] FSKS100",
+            liga: "KATZES RACING LEAGUE",
+          },
+          {
+            year: "2022",
+            fahrer: "[AIR] RIPSN",
+            liga: "AIRBORNE RACING LEAGUE",
+          },
+          {
+            year: "2023 S1",
+            fahrer: "[KRL] CORNI",
+            liga: "KATZES RACING LEAGUE",
+          },
+          {
+            year: "2023 S2",
+            fahrer: "[KRL] CORNI",
+            liga: "KATZES RACING LEAGUE",
+          },
+          {
+            year: "2024",
+            fahrer: "[ERC] LEMI",
+            liga: "GOLDFINGER RACING LEAGUE",
+          },
+        ];
 
+        // SORT BY NUMERIC PART OF YEAR TO KEEP ORDER
+        champions.sort((a, b) => {
+          const getYear = (y) => parseInt(y);
+          return (
+            getYear(a.year) - getYear(b.year) || a.year.localeCompare(b.year)
+          );
+        });
 
+        const yearMarker = document.getElementById("yearMarker");
+        let activeDot = null;
+        let currentInfoBox = null;
 
+        champions.forEach(({ year, fahrer, liga }) => {
+          const block = document.createElement("div");
+          block.classList.add("year-block");
 
-<h1 class="headlineHistorie">Historie</h1>
+          const dot = document.createElement("div");
+          dot.classList.add("dot");
 
-<div class="timeline-container">
-  <div class="timeline-line"></div>
-  <div class="year-marker" id="yearMarker"></div>
-</div>
+          const btn = document.createElement("button");
+          btn.textContent = year.toUpperCase(); // MAKE YEAR CAPS
+          btn.classList.add("year-button");
 
-<script>
-const champions = {
-  2017: { Fahrerweltmeister: "[KRL] SCHENICO", Ligaweltmeister: "MULCHIAN FORMULA 1 LIGA" },
-  2018: { Fahrerweltmeister: "[KRL] CORNI", Ligaweltmeister: "KATZES RACING LEAGUE" },
-  2019: { Fahrerweltmeister: "[KRL] CORNI", Ligaweltmeister: "KATZES RACING LEAGUE" },
-  2020: { Fahrerweltmeister: "[AIR] TBSCHMD", Ligaweltmeister: "AIRBORNE RACING LEAGUES" },
-  2021: { Fahrerweltmeister: "[AIR] FSKS100", Ligaweltmeister: "KATZES RACING LEAGUE" },
-  2022: { Fahrerweltmeister: "[AIR] RIPSN", Ligaweltmeister: "AIRBORNE RACING LEAGUE" },
-  2023: { Fahrerweltmeister: "[KRL] CORNI", Ligaweltmeister: "KATZES RACING LEAGUE" },
-  2024: { Fahrerweltmeister: "[ERC] LEMI", Ligaweltmeister: "GOLDFINGER RACING LEAGUE" }
-};
+          function handleClick() {
+            if (activeDot) activeDot.classList.remove("active-dot");
+            dot.classList.add("active-dot");
+            activeDot = dot;
 
+            if (currentInfoBox) currentInfoBox.remove();
 
-const yearMarker = document.getElementById("yearMarker");
-let activeDot = null;
-let currentInfoBox = null;
-
-Object.entries(champions).forEach(([year, { Fahrerweltmeister, Ligaweltmeister }]) => {
-  const block = document.createElement("div");
-  block.classList.add("year-block");
-
-  const dot = document.createElement("div");
-  dot.classList.add("dot");
-  dot.id = `dot-${year}`;
-
-  const btn = document.createElement("button");
-  btn.textContent = year;
-  btn.classList.add("year-button");
-
-  btn.onclick = () => {
-    if (activeDot) activeDot.classList.remove("active-dot");
-    dot.classList.add("active-dot");
-    activeDot = dot;
-
-    if (currentInfoBox) currentInfoBox.remove();
-
-    const infoBox = document.createElement("div");
-    infoBox.classList.add("info-box");
-    infoBox.innerHTML = `
-      <p><strong>Fahrer-Weltmeister:</strong> ${Fahrerweltmeister}</p>
-      <p><strong>Team-Weltmeister:</strong> ${Ligaweltmeister}</p>
+            const infoBox = document.createElement("div");
+            infoBox.classList.add("info-box");
+            infoBox.innerHTML = `
+      <p><strong>FAHRER-WELTMEISTER:</strong> ${fahrer.toUpperCase()}</p>
+      <p><strong>TEAM-WELTMEISTER:</strong> ${liga.toUpperCase()}</p>
     `;
 
-    block.appendChild(infoBox);
-    currentInfoBox = infoBox;
-  };
+            block.appendChild(infoBox);
+            currentInfoBox = infoBox;
+          }
 
-  block.appendChild(dot);
-  block.appendChild(btn);
-  yearMarker.appendChild(block);
-});
+          btn.onclick = handleClick;
+          dot.onclick = handleClick;
 
-</script>
-
-
-
-
+          block.appendChild(dot);
+          block.appendChild(btn);
+          yearMarker.appendChild(block);
+        });
+      </script>
     </main>
 
     <footer class="footer">
@@ -467,8 +600,6 @@ Object.entries(champions).forEach(([year, { Fahrerweltmeister, Ligaweltmeister }
             src="../../../resources/pictures/general/socials/tiktok.png"
             alt="tiktok"
           />
-        </a>
-
         </a>
       </div>
     </footer>

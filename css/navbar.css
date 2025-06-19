@@ -1,15 +1,14 @@
 body {
- overflow-x: hidden;
+  overflow-x: hidden;
   position: relative;
-
   width: 100%;
   font-family: var(--fontfamilytext);
   background-image: url(../resources/pictures/general/Season10.png);
   background-position: center center; /* Zentriert das Bild */
   background-attachment: fixed;
   color: white;
-
 }
+
 body h1 {
   font-size: var(--fontsizeheadline);
   text-transform: uppercase;
@@ -18,20 +17,19 @@ body h1 {
 
 @media (max-width: 768px) {
   body h1 {
-  font-size: 80px;
-  text-transform: uppercase;
-  text-align: center;
+    font-size: 80px;
+    text-transform: uppercase;
+    text-align: center;
+  }
 }
-}
-
 
 /* Variablen*/
 :root {
   --backgroundcolor: #171717;
   --fridaysplit: #6ef28a;
   --saturdaysplit: #c56ef2;
-  --sundaysplit:#6ef2f2;
-  --gold: #B8860B;
+  --sundaysplit: #6ef2f2;
+  --gold: #b8860b;
   --endurance: #f09d51;
   --wdl: #f26e6e;
   --wdlblue: #429396;
@@ -46,7 +44,7 @@ body h1 {
   --font-sizetext: 28px;
   --borderpictureradius: 40px;
   --borderpicturesize: 0 8px 32px 0;
-  --rennleitung:#6e6ef2;
+  --rennleitung: #6e6ef2;
 }
 
 /* NAVIGATION DEFAULT FOR EVERY PAGE */
@@ -68,7 +66,6 @@ body h1 {
   z-index: 100;
 }
 
-
 .navbar {
   display: flex;
   align-items: center;
@@ -81,30 +78,23 @@ body h1 {
   text-transform: uppercase;
 }
 
+.logo img {
+  width: 100px;
+  transition: transform var(--transition);
+}
 
+.logo img:hover {
+  transform: scale(1.05);
+}
 
-
-
-
-
-    .logo img {
-      width: 100px;
-      transition: transform var(--transition);
-      margin
-    }
-
-    .logo img:hover {
-      transform: scale(1.05);
-    }
-
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 28px;
-      color: var(--accent-color);
-      cursor: pointer;
-    }
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--accent-color);
+  cursor: pointer;
+}
 
 .nav-links {
   position: absolute;
@@ -114,105 +104,99 @@ body h1 {
   list-style: none;
   gap: 120px;
   text-align: center;
-    white-space: nowrap;
-
+  white-space: nowrap;
 }
 
+.nav-links li {
+  position: relative;
+  list-style: none;
+  transition: transform var(--transition);
+}
 
+.nav-links a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color var(--transition), color var(--transition);
+  font-size: 30px;
+}
 
+.nav-links a:hover {
+  background-color: var(--hover-bg);
+}
 
-    .nav-links li {
-      position: relative;
-      list-style: none;
-      transition: transform var(--transition);
+.dropdown-content {
+  position: absolute;
+  top: 130%;
+  left: 0;
+  background-color: var(--main-bg);
+  min-width: 200px;
+  padding: 0.5rem 0;
+  border-radius: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: var(--transition);
+  z-index: 10;
+}
 
-    
-    }
+.nav-links li:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 
-    .nav-links a {
-      color: var(--accent-color);
-      text-decoration: none;
-      font-size: 1rem;
-      padding: 0.5rem;
-      border-radius: 4px;
-      transition: background-color var(--transition), color var(--transition);
-       font-size: 30px;
-      
-    }
+.dropdown-content li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--accent-color);
+  transition: background-color var(--transition);
+}
 
-    .nav-links a:hover {
-      background-color: var(--hover-bg);
-    }
+.dropdown-content li a:hover {
+  background-color: var(--hover-bg);
+}
 
-    .dropdown-content {
-      position: absolute;
-      top: 130%;
-      left: 0;
-      background-color: var(--main-bg);
-      min-width: 200px;
-      padding: 0.5rem 0;
-      border-radius: 6px;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-10px);
-      transition: var(--transition);
-      z-index: 10;
-    }
+/* Responsive: Burger-Menü */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
 
-    .nav-links li:hover .dropdown-content {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
+  .nav-links {
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+  }
 
-    .dropdown-content li a {
-      display: block;
-      padding: 0.5rem 1rem;
-      color: var(--accent-color);
-      transition: background-color var(--transition);
-    }
+  .nav-links.open {
+    max-height: 500px;
+  }
 
-    .dropdown-content li a:hover {
-      background-color: var(--hover-bg);
-    }
+  .nav-links li {
+    width: 100%;
+  }
 
-    /* Responsive: Burger-Menü */
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
+  .dropdown-content {
+    position: relative;
+    top: 0;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    background-color: transparent;
+    box-shadow: none;
+  }
 
-      .nav-links {
-        flex-direction: column;
-        max-height: 0;
-        overflow: hidden;
-        width: 100%;
-      }
+  .dropdown-content li a {
+    padding-left: 2rem;
+  }
+}
 
-      .nav-links.open {
-        max-height: 500px;
-      }
-
-      .nav-links li {
-        width: 100%;
-      }
-
-      .dropdown-content {
-        position: relative;
-        top: 0;
-        transform: none;
-        opacity: 1;
-        visibility: visible;
-        background-color: transparent;
-        box-shadow: none;
-      }
-
-      .dropdown-content li a {
-        padding-left: 2rem;
-      }
-    }
-
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   display: flex;
@@ -223,10 +207,7 @@ main {
   flex: 1;
 }
 
- 
-
 .footer {
-
   position: fixed;
   bottom: 0;
   left: 0;
@@ -237,17 +218,16 @@ main {
   backdrop-filter: blur(8px); /* moderner Blur-Effekt */
   position: relative;
   z-index: 10;
-   padding: 20px;
+  padding: 20px;
   text-align: center;
   background-size: cover;
   bottom: -16px;
-    background-color: rgba(0, 0, 0, 0.6); /* 60 % transparent schwarz */
-  backdrop-filter: blur(6px);           /* moderner Weichzeichner */
+  background-color: rgba(0, 0, 0, 0.6); /* 60 % transparent schwarz */
+  backdrop-filter: blur(6px); /* moderner Weichzeichner */
   color: white;
   padding: 30px 20px;
   text-align: center;
 }
-
 
 .footer-container {
   max-width: 1200px;
@@ -338,8 +318,4 @@ main {
     font-size: 1em; /* Schriftgröße anpassen */
     padding: 15px; /* Mehr Padding für einfache Klickbarkeit */
   }
-
- 
 }
-
-

@@ -26,7 +26,6 @@
   color: var(--sundaysplit);
   margin-bottom: 12px;
   text-transform: uppercase;
-
 }
 
 /* Navigation */
@@ -36,7 +35,6 @@ nav.regelwerk-nav {
   text-align: center;
   max-width: 700px;
   font-size: 60px;
-  
 }
 
 nav.regelwerk-nav input {

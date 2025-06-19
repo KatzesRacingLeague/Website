@@ -23,7 +23,7 @@
     />
   </head>
   <body>
-     <header>
+    <header>
       <nav class="navbar">
         <!-- Logo der Liga -->
         <a href="https://katzes-racing-league.de/">
@@ -36,7 +36,7 @@
         </a>
 
         <!-- Menü-Button für mobile Ansicht -->
-       <button class="menu-toggle">☰</button>
+        <button class="menu-toggle">☰</button>
 
         <!-- Hauptnavigationslinks -->
         <ul class="nav-links">
@@ -98,59 +98,60 @@
           </li>
         </ul>
       </nav>
-      
+
       <script>
-      
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navLinks = document.querySelector(".nav-links");
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
 
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-  });
+        menuToggle.addEventListener("click", () => {
+          navLinks.classList.toggle("open");
+        });
 
-  // Optional: Klick außerhalb schließt das Menü
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest("nav")) {
-      navLinks.classList.remove("open");
-    }
-  });
-  //Scroolbar
-  window.addEventListener('scroll', () => {
-  const scrollTop = window.scrollY;
-  const docHeight = document.body.scrollHeight - window.innerHeight;
-  const scrollPercent = (scrollTop / docHeight) * 100;
-  document.getElementById('progressBar').style.width = scrollPercent + '%';
-});
-
+        // Optional: Klick außerhalb schließt das Menü
+        document.addEventListener("click", (e) => {
+          if (!e.target.closest("nav")) {
+            navLinks.classList.remove("open");
+          }
+        });
+        //Scroolbar
+        window.addEventListener("scroll", () => {
+          const scrollTop = window.scrollY;
+          const docHeight = document.body.scrollHeight - window.innerHeight;
+          const scrollPercent = (scrollTop / docHeight) * 100;
+          document.getElementById("progressBar").style.width =
+            scrollPercent + "%";
+        });
       </script>
-     
+
       <div id="progressBar"></div>
     </header>
 
+    <section class="background">
+      <div class="header">
+        <h1>Race-Director-Notes</h1>
+      </div>
 
- <section class="background">
-  <div class="header">
-    <h1>Race-Director-Notes</h1>
-  </div>
+      <div class="currentRDN">
+        <div class="header">
+          <h2>2. Testtag: Japan</h2>
+        </div>
+        <iframe
+          class="pdf"
+          src="../resources/files/race-director-notes/Race_director_notes_fuer_Japan_Testtag.pdf"
+          frameborder="0"
+        ></iframe>
 
-  <div class="currentRDN">
-    <div class="header">
-      <h2>2. Testtag: Japan</h2>
-    </div>
-    <iframe
-      class="pdf"
-      src="../resources/files/race-director-notes/Race_director_notes_fuer_Japan_Testtag.pdf"
-      frameborder="0"
-    ></iframe>
-    <a
-      class="class-button"
-      href="../resources/files/race-director-notes/Race_director_notes_fur_Australien.pdf"
-      download="Race_director_notes_fur_Australien.pdf"
-    >
-      Datei herunterladen
-    </a>
-  </div>
-<!--Kästen als Archiv
+        <div class="button">
+          <a
+            id="class-button"
+            class="class-button"
+            href="../resources/files/race-director-notes/Race_director_notes_fur_Australien.pdf"
+            download="Race_director_notes_fur_Australien.pdf"
+            >WM TABELLE</a
+          >
+        </div>
+      </div>
+      <!--Kästen als Archiv
   <div class="header">
     <h1>Weitere Dateien</h1>
   </div>
@@ -175,11 +176,7 @@
       </a>
     </div>
      Weitere RDN-Elemente können nach Bedarf manuell hinzugefügt werden -->
-  </div> 
-</section>
-
-
-
+    </section>
 
     <footer class="footer">
       <div class="container">
@@ -222,7 +219,6 @@
             alt="tiktok"
           />
         </a>
-
       </div>
     </footer>
 

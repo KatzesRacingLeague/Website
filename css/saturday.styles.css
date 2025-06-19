@@ -1,15 +1,11 @@
 year-button:hover {
-      color: var(--saturdaysplit);
-    
-    }
+  color: var(--saturdaysplit);
+}
 
-  .timeline-line {
- 
+.timeline-line {
   background: var(--saturdaysplit);
-
 }
 .info-box {
-
   border: 2px solid var(--saturdaysplit);
 }
 .active-dot {
@@ -17,20 +13,18 @@ year-button:hover {
 }
 
 .carousel-btn {
-  
   background-color: var(--saturdaysplit);
-  
 }
 .team-card {
-border-left: 4px solid var(--saturdaysplit);
-border-right: 4px solid var(--saturdaysplit);
+  border-left: 4px solid var(--saturdaysplit);
+  border-right: 4px solid var(--saturdaysplit);
 }
 
 .middle-carousel {
-    width: 800px;
+  width: 800px;
   height: 800px;
   text-align: center;
- margin-bottom: 200px;
+  margin-bottom: 200px;
 }
 
 .middle-carousel .carousel,
@@ -39,6 +33,7 @@ border-right: 4px solid var(--saturdaysplit);
   width: 800px;
   height: 800px;
   border-radius: 20px;
- 
-}  
-
+}
+.class-button {
+  border: 5px solid var(--saturdaysplit) !important;
+}

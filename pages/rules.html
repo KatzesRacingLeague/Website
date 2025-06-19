@@ -10,9 +10,9 @@
       href="/resources/pictures/general/krllogos/KRL_Community4.png"
     />
     <link rel="stylesheet" href="css/styles.css" />
-     <link rel="stylesheet" href="/css/navbar.css" />
-  <link rel="stylesheet" href="/css/rules.styles.css" />
-     
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/rules.styles.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -47,9 +47,12 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Concert+One&family=Days+One&family=Orbitron:wght@400..900&family=Patrick+Hand&family=Playpen+Sans:wght@100..800&family=Syne+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Concert+One&family=Days+One&family=Orbitron:wght@400..900&family=Patrick+Hand&family=Playpen+Sans:wght@100..800&family=Syne+Mono&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -118,7 +121,7 @@
               <li class="text3">
                 <a href="https://katzes-racing-league.de/icons">Icons</a>
               </li>
-  
+
               <li class="text3">
                 <a
                   href="https://xoose.de/produkt-kategorie/katzes-racing-league/"
@@ -129,363 +132,593 @@
           </li>
         </ul>
       </nav>
-      
+
       <script>
-      
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navLinks = document.querySelector(".nav-links");
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
 
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-  });
+        menuToggle.addEventListener("click", () => {
+          navLinks.classList.toggle("open");
+        });
 
-  // Optional: Klick außerhalb schließt das Menü
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest("nav")) {
-      navLinks.classList.remove("open");
-    }
-  });
-  //Scroolbar
-  window.addEventListener('scroll', () => {
-  const scrollTop = window.scrollY;
-  const docHeight = document.body.scrollHeight - window.innerHeight;
-  const scrollPercent = (scrollTop / docHeight) * 100;
-  document.getElementById('progressBar').style.width = scrollPercent + '%';
-});
-
+        // Optional: Klick außerhalb schließt das Menü
+        document.addEventListener("click", (e) => {
+          if (!e.target.closest("nav")) {
+            navLinks.classList.remove("open");
+          }
+        });
+        //Scroolbar
+        window.addEventListener("scroll", () => {
+          const scrollTop = window.scrollY;
+          const docHeight = document.body.scrollHeight - window.innerHeight;
+          const scrollPercent = (scrollTop / docHeight) * 100;
+          document.getElementById("progressBar").style.width =
+            scrollPercent + "%";
+        });
       </script>
-     
+
       <div id="progressBar"></div>
-</header>
-<nav class="regelwerk-nav">
-  <h2>Inhaltsverzeichnis</h2>
-  <input type="text" id="regelSuche" placeholder="Suche im Regelwerk..." onkeyup="regelFilter()">
-  <ul id="regelListe">
-    <li><a href="#praeambel"></a></li>
-    <li><a href="#rennwochenende"></a></li>
-    <li><a href="#startzeit"></a></li>
-    <li><a href="#ablauf"></a></li>
-    <li><a href="#neustart"></a></li>
-    <li><a href="#rennleitung"></a></li>
-    <li><a href="#renningenieur"></a></li>
-    <li><a href="#wertung"></a></li>
-    <li><a href="#cockpit"></a></li>
-    <li><a href="#verhalten"></a></li>
-    <li><a href="#strafpunkte"></a></li>
-    <li><a href="#rennleitung2"></a></li>
-    <li><a href="#postambel"></a></li>
-    <li><a href="#strafenkatalog1"></a></li>
-    <li><a href="#strafenkatalog2"></a></li>
-  </ul>
-</nav>
-
-<section class="regelwerk background">
- <article class="regel-block" id="praeambel">
-  <h2>Präambel</h2>
-  <p>
-    Wir sind eine junge, dynamische und aufgeschlossene Racing-Community mit Schwerpunkt auf die F1 Serie von Codemasters.
-    Wir erwarten einen freundlichen und aufgeschlossenen Umgang mit anderen Mitgliedern der Katzes Racing League.
-    Beleidigungen und unangemessenes Verhalten sind generell verboten.<br><br>
-    Wenn du uns beitreten möchtest, solltest du mindestens 17 Jahre alt sein, ein Mikrofon sowie Controller oder Lenkrad besitzen.
-  </p>
-</article>
-<article class="regel-block" id="rennwochenende">
-  <h2>Rennwochenende (§1 – §1.2)</h2>
-  <p>
-    §1 Eine Saison der Katzes Racing League umfasst 21 Rennwochenenden.<br><br>
-    §1.1 Ein Rennwochenende besteht aus der Vorbesprechung, einem kurzen Qualifying, einem 50% Rennen und der Nachbesprechung.<br><br>
-    §1.2 An vier Rennwochenenden in der Saison enthält dieses zusätzlich ein Sprint-Qualifying & Sprintrennen.
-  </p>
-</article>
-<article class="regel-block" id="startzeit">
-  <h2>Startzeit (§2 – §2.3)</h2>
-  <p>
-    §2 Die Startzeiten der jeweiligen Ligen sind:<br>
-    Freitag = 19:30 Uhr<br>
-    Samstag = 18:00 Uhr<br>
-    Sonntag = 19:00 Uhr<br><br>
-
-    §2.1 Die Startzeiten der jeweiligen Ligen an Sprintwochenenden sind:<br>
-    Freitag = 19:15 Uhr<br>
-    Samstag = 17:45 Uhr<br>
-    Sonntag = 18:45 Uhr<br><br>
-
-    §2.2 Verschiebungen der Startzeit sind maximal um 30 Minuten möglich.<br><br>
-    §2.3 Kurzfristig kann bis zu 5 min. auf Fahrer gewartet werden.
-  </p>
-</article>
-<article class="regel-block" id="ablauf">
-  <h2>Ablauf & Organisation des Rennwochenendes (§3 – §3.9)</h2>
-  <p>
-    §3 Jeder PC-Fahrer hat sich während des gesamten Rennwochenendes ansprechbar auf dem Teamspeak aufzuhalten. Ausnahmen müssen mit den zuständigen Admins abgesprochen werden.<br><br>
-
-    §3.1 Jeder Konsolen-Fahrer hat sich während des gesamten Rennwochenendes ansprechbar auf dem Discord aufzuhalten. Ausnahmen müssen mit den zuständigen Admins abgesprochen werden.<br><br>
-
-    §3.2 Die Vorbesprechung beginnt 15 Minuten vor Lobbystart. 5 Minuten vor dem Start soll sich jeder Fahrer in der Ingame-Lobby einfinden. Sobald sich alle Fahrer in der Lobby befinden, kann diese auch vorzeitig gestartet werden.<br><br>
-
-    §3.3 Scheidet ein Fahrer während des Rennens aus, so hat er trotzdem an der Nachbesprechung teilzunehmen.<br><br>
-
-    §3.4 Die zuständigen Admins behalten sich die Möglichkeit vor, ein Rennen bei 15 oder weniger anwesenden Fahrern zu verschieben.<br><br>
-
-    §3.5 Jeder Ligafahrer muss die Ligaleitung, Admins, sowie Kommentatoren in der Steam/EA-Freundesliste haben.<br><br>
-
-    §3.6 Alle Stammfahrer, die an einem Rennwochenende nicht teilnehmen können, haben sich bis zum Renntag um 00:00 Uhr bei der Administration abzumelden. Abmeldungen sind im jeweiligen Discord-Channel mitzuteilen.<br><br>
-
-    §3.7 Stammfahrer haben die Möglichkeit sich bis zum Renntag um 00:00 Uhr im jeweiligen Discord-Channel als unsicher zu melden. Bis 2 Stunden vor Rennbeginn hat ein auf unsicher gestellter Fahrer Rückmeldung über die Teilnahme zu geben. Bei rechtzeitiger Rückmeldung fallen keine Strafen an.<br><br>
-
-    §3.8 Bereits eingeteilte Ersatzfahrer müssen sich bis zum Rennbeginn im Ersatzfahrer-Channel abmelden.<br><br>
-
-    §3.9 Stammfahrer dürfen als Ersatzfahrer in den anderen Ligen eingesetzt werden, wenn keine regulären Ersatzfahrer verfügbar sind. Die Einteilung liegt im Ermessen der Administration.
-  </p>
-</article>
-<article class="regel-block" id="neustart">
-  <h2>Neustart (§4 – §4.7)</h2>
-  <p>
-    §4 Rennen werden nur bei Spielfehlern oder falschen Lobbyeinstellungen neugestartet. Es besteht die Möglichkeit aus sonstigen, triftigen Gründen neu zu starten.<br><br>
-
-    §4.1 Ein Rennen kann maximal zwei Mal neugestartet werden. Jeder weitere Neustart am selben Tag bedarf einer Abstimmung und benötigt eine Zustimmung von mindestens 80% der teilnehmenden Fahrer.<br><br>
-
-    §4.2 Der Sprintteil des Wochenendes kann einmal neugestartet werden. Der Zeitrahmen dafür beträgt maximal 50% der Sprintrenndistanz.<br><br>
-
-    §4.3 Nach dem Sprintteil des Wochenendes wird die Lobby regulär neugestartet. Dieser Neustart zählt nicht unter §4.1.<br><br>
-
-    §4.4 Sollte der Sprintteil trotz einmaligem Neustart nicht verwertbar sein, so entfallen auch die Punkte für das Sprintrennen.<br><br>
-
-    §4.5 Der Zeitrahmen in dem ein Rennen neu gestartet werden kann, beträgt 25% der Renndistanz. Wird ein nachweisbarer Grund innerhalb der Neustartfrist gemeldet, so wird das Rennen neu gestartet. Der Nachweis muss auf Verlangen nach dem Rennen erbracht werden.<br><br>
-
-    §4.6 Sollte ein Rennen nach Ablauf von 25% der Renndistanz nicht weitergeführt werden können, entscheidet die Administration über Wertung oder Wiederholung.<br><br>
-
-    §4.7 Wird ein Rennen neu gestartet, entspricht die Startreihenfolge der ursprünglichen Startaufstellung. Es besteht freie Reifenwahl.
-  </p>
-</article>
-<article class="regel-block" id="rennleitung">
-  <h2>Interaktive Rennleitung (§5 – §5.3)</h2>
-  <p>
-    §5 Jeder Fahrer hat den Anweisungen des Rennleiters Folge zu leisten. Jede Session wird durch Kommando des Rennleiters gestartet.<br><br>
+    </header>
+    <nav class="regelwerk-nav">
+      <h2>Inhaltsverzeichnis</h2>
+      <input
+        type="text"
+        id="regelSuche"
+        placeholder="Suche im Regelwerk..."
+        onkeyup="regelFilter()"
+      />
+      <ul id="regelListe">
+        <li><a href="#praeambel"></a></li>
+        <li><a href="#rennwochenende"></a></li>
+        <li><a href="#startzeit"></a></li>
+        <li><a href="#ablauf"></a></li>
+        <li><a href="#neustart"></a></li>
+        <li><a href="#rennleitung"></a></li>
+        <li><a href="#renningenieur"></a></li>
+        <li><a href="#wertung"></a></li>
+        <li><a href="#cockpit"></a></li>
+        <li><a href="#verhalten"></a></li>
+        <li><a href="#strafpunkte"></a></li>
+        <li><a href="#rennleitung2"></a></li>
+        <li><a href="#postambel"></a></li>
+        <li><a href="#strafenkatalog1"></a></li>
+        <li><a href="#strafenkatalog2"></a></li>
+      </ul>
+    </nav>
+
+    <section class="regelwerk background">
+      <article class="regel-block" id="praeambel">
+        <h2>Präambel</h2>
+        <p>
+          Wir sind eine junge, dynamische und aufgeschlossene Racing-Community
+          mit Schwerpunkt auf die F1 Serie von Codemasters. Wir erwarten einen
+          freundlichen und aufgeschlossenen Umgang mit anderen Mitgliedern der
+          Katzes Racing League. Beleidigungen und unangemessenes Verhalten sind
+          generell verboten.<br /><br />
+          Wenn du uns beitreten möchtest, solltest du mindestens 17 Jahre alt
+          sein, ein Mikrofon sowie Controller oder Lenkrad besitzen.
+        </p>
+      </article>
+      <article class="regel-block" id="rennwochenende">
+        <h2>Rennwochenende (§1 – §1.2)</h2>
+        <p>
+          §1 Eine Saison der Katzes Racing League umfasst 21 Rennwochenenden.<br /><br />
+          §1.1 Ein Rennwochenende besteht aus der Vorbesprechung, einem kurzen
+          Qualifying, einem 50% Rennen und der Nachbesprechung.<br /><br />
+          §1.2 An vier Rennwochenenden in der Saison enthält dieses zusätzlich
+          ein Sprint-Qualifying & Sprintrennen.
+        </p>
+      </article>
+      <article class="regel-block" id="startzeit">
+        <h2>Startzeit (§2 – §2.3)</h2>
+        <p>
+          §2 Die Startzeiten der jeweiligen Ligen sind:<br />
+          Freitag = 19:30 Uhr<br />
+          Samstag = 18:00 Uhr<br />
+          Sonntag = 19:00 Uhr<br /><br />
+
+          §2.1 Die Startzeiten der jeweiligen Ligen an Sprintwochenenden
+          sind:<br />
+          Freitag = 19:15 Uhr<br />
+          Samstag = 17:45 Uhr<br />
+          Sonntag = 18:45 Uhr<br /><br />
+
+          §2.2 Verschiebungen der Startzeit sind maximal um 30 Minuten
+          möglich.<br /><br />
+          §2.3 Kurzfristig kann bis zu 5 min. auf Fahrer gewartet werden.
+        </p>
+      </article>
+      <article class="regel-block" id="ablauf">
+        <h2>Ablauf & Organisation des Rennwochenendes (§3 – §3.9)</h2>
+        <p>
+          §3 Jeder PC-Fahrer hat sich während des gesamten Rennwochenendes
+          ansprechbar auf dem Teamspeak aufzuhalten. Ausnahmen müssen mit den
+          zuständigen Admins abgesprochen werden.<br /><br />
+
+          §3.1 Jeder Konsolen-Fahrer hat sich während des gesamten
+          Rennwochenendes ansprechbar auf dem Discord aufzuhalten. Ausnahmen
+          müssen mit den zuständigen Admins abgesprochen werden.<br /><br />
+
+          §3.2 Die Vorbesprechung beginnt 15 Minuten vor Lobbystart. 5 Minuten
+          vor dem Start soll sich jeder Fahrer in der Ingame-Lobby einfinden.
+          Sobald sich alle Fahrer in der Lobby befinden, kann diese auch
+          vorzeitig gestartet werden.<br /><br />
+
+          §3.3 Scheidet ein Fahrer während des Rennens aus, so hat er trotzdem
+          an der Nachbesprechung teilzunehmen.<br /><br />
+
+          §3.4 Die zuständigen Admins behalten sich die Möglichkeit vor, ein
+          Rennen bei 15 oder weniger anwesenden Fahrern zu verschieben.<br /><br />
+
+          §3.5 Jeder Ligafahrer muss die Ligaleitung, Admins, sowie
+          Kommentatoren in der Steam/EA-Freundesliste haben.<br /><br />
+
+          §3.6 Alle Stammfahrer, die an einem Rennwochenende nicht teilnehmen
+          können, haben sich bis zum Renntag um 00:00 Uhr bei der Administration
+          abzumelden. Abmeldungen sind im jeweiligen Discord-Channel
+          mitzuteilen.<br /><br />
+
+          §3.7 Stammfahrer haben die Möglichkeit sich bis zum Renntag um 00:00
+          Uhr im jeweiligen Discord-Channel als unsicher zu melden. Bis 2
+          Stunden vor Rennbeginn hat ein auf unsicher gestellter Fahrer
+          Rückmeldung über die Teilnahme zu geben. Bei rechtzeitiger Rückmeldung
+          fallen keine Strafen an.<br /><br />
+
+          §3.8 Bereits eingeteilte Ersatzfahrer müssen sich bis zum Rennbeginn
+          im Ersatzfahrer-Channel abmelden.<br /><br />
+
+          §3.9 Stammfahrer dürfen als Ersatzfahrer in den anderen Ligen
+          eingesetzt werden, wenn keine regulären Ersatzfahrer verfügbar sind.
+          Die Einteilung liegt im Ermessen der Administration.
+        </p>
+      </article>
+      <article class="regel-block" id="neustart">
+        <h2>Neustart (§4 – §4.7)</h2>
+        <p>
+          §4 Rennen werden nur bei Spielfehlern oder falschen Lobbyeinstellungen
+          neugestartet. Es besteht die Möglichkeit aus sonstigen, triftigen
+          Gründen neu zu starten.<br /><br />
+
+          §4.1 Ein Rennen kann maximal zwei Mal neugestartet werden. Jeder
+          weitere Neustart am selben Tag bedarf einer Abstimmung und benötigt
+          eine Zustimmung von mindestens 80% der teilnehmenden Fahrer.<br /><br />
+
+          §4.2 Der Sprintteil des Wochenendes kann einmal neugestartet werden.
+          Der Zeitrahmen dafür beträgt maximal 50% der Sprintrenndistanz.<br /><br />
+
+          §4.3 Nach dem Sprintteil des Wochenendes wird die Lobby regulär
+          neugestartet. Dieser Neustart zählt nicht unter §4.1.<br /><br />
+
+          §4.4 Sollte der Sprintteil trotz einmaligem Neustart nicht verwertbar
+          sein, so entfallen auch die Punkte für das Sprintrennen.<br /><br />
+
+          §4.5 Der Zeitrahmen in dem ein Rennen neu gestartet werden kann,
+          beträgt 25% der Renndistanz. Wird ein nachweisbarer Grund innerhalb
+          der Neustartfrist gemeldet, so wird das Rennen neu gestartet. Der
+          Nachweis muss auf Verlangen nach dem Rennen erbracht werden.<br /><br />
+
+          §4.6 Sollte ein Rennen nach Ablauf von 25% der Renndistanz nicht
+          weitergeführt werden können, entscheidet die Administration über
+          Wertung oder Wiederholung.<br /><br />
+
+          §4.7 Wird ein Rennen neu gestartet, entspricht die Startreihenfolge
+          der ursprünglichen Startaufstellung. Es besteht freie Reifenwahl.
+        </p>
+      </article>
+      <article class="regel-block" id="rennleitung">
+        <h2>Interaktive Rennleitung (§5 – §5.3)</h2>
+        <p>
+          §5 Jeder Fahrer hat den Anweisungen des Rennleiters Folge zu leisten.
+          Jede Session wird durch Kommando des Rennleiters gestartet.<br /><br />
+
+          §5.1 Jeder Fahrer hat die Möglichkeit ausschließlich mit dem
+          Rennleiter über die Whisper-Funktion Kontakt aufzunehmen. Whispern ist
+          nur gestattet, um technische Probleme zu melden oder zu klären.<br /><br />
+
+          §5.2 Der Rennleiter behält sich die Möglichkeit vor, Fahrer mit
+          technischen Problemen aus dem Rennen zu nehmen. Meldungen müssen von
+          mindestens drei Teams (Fahrer in einem Channel zählen als ein Team)
+          eingereicht werden. Wenn diese in mehrfachen Fällen nachweisbar sind,
+          kann der Fahrer durch den Rennleiter zur Aufgabe aufgefordert
+          werden.<br /><br />
+
+          §5.3 Die absichtliche Aufgabe des Rennens ist nur in Absprache mit dem
+          Rennleiter in der Boxengasse erlaubt.
+        </p>
+      </article>
+      <article class="regel-block" id="renningenieur">
+        <h2>Renningenieur (§6 – §6.2)</h2>
+        <p>
+          §6 Jedes Team hat die Möglichkeit einen persönlichen Renningenieur
+          einzusetzen.<br /><br />
+
+          §6.1 Der Renningenieur darf sich während des Rennens im Channel des
+          Teams aufhalten und die Streams der Fahrer auf dem Discord anschauen.
+          Dafür sind die vorgesehenen Team-Channel zu verwenden.<br /><br />
+
+          §6.2 Dieser darf im Namen seines Teams mit dem Rennleiter whispern und
+          während des Rennwochenendes keinen Kontakt mit anderen Teams
+          aufnehmen.
+        </p>
+      </article>
+      <article class="regel-block" id="wertung">
+        <h2>Wertung (§7 – §7.8)</h2>
+        <p>
+          §7 Gewertet wird immer das Ergebnis, welches das Spiel anzeigt.<br /><br />
+
+          §7.1 Die Rennleitung kann dieses Ergebnis durch Ausspruch oder Abzug
+          von Strafen beeinflussen.<br /><br />
+
+          §7.2 Bei durch Spielfehlern verursachten Verschiebungen wird
+          situationsbedingt entschieden.<br /><br />
+
+          §7.3 Die Punktevergabe für das Rennen erfolgt gemäß dem Schema:<br />
+          „26, 22, 19, 16, 14, 12, 10, 8, 6, 4, 2, 1“. <br /><br />
+
+          §7.4 Die Punktevergabe für das Sprintrennen erfolgt gemäß dem
+          Schema:<br />
+          „8, 7, 6, 5, 4, 3, 2, 1“. <br /><br />
+
+          §7.5 Der Fahrer mit der schnellsten Rennrunde erhält einen extra
+          Punkt, sofern seine Endposition gewertet wird. Für die schnellste
+          Rennrunde im Sprintrennen gibt es keinen Punkt.<br /><br />
+
+          §7.6 Absolviert ein Fahrer mindestens 80% der gefahrenen Renndistanz
+          selbst, so wird seine Endposition gewertet. Erreicht er die 80% nicht,
+          wird er als DNF gewertet.<br /><br />
+
+          §7.7 Wird ein Fahrer vom Spiel disqualifiziert, wird er als DNF
+          gewertet, es sei denn §7.6 tritt ein.<br /><br />
+
+          §7.8 Das endgültige Rennergebnis steht erst nach der
+          Rennleitungssitzung fest.
+        </p>
+      </article>
+      <article class="regel-block" id="cockpit">
+        <h2>Cockpitvergabe (§8 – §8.2)</h2>
+        <p>
+          §8 Ist ein Stammfahrer für mehr als 3 Rennen in Folge nicht verfügbar
+          oder generell unzuverlässig, so kann die Administration ihn
+          ersetzen.<br /><br />
+
+          §8.1 Ein interner Ligawechsel während der Saison ist nur möglich, wenn
+          ein Stammcockpit frei oder ein anderer Stammfahrer zum Tausch bereit
+          ist. Die Entscheidung liegt bei der Administration.<br /><br />
+
+          §8.2 Die Fahrerweltmeister haben für die nächste Saison freie
+          Wagenwahl.
+        </p>
+      </article>
+      <article class="regel-block" id="verhalten">
+        <h2>Verhalten auf der Strecke (§9 – §9.7)</h2>
+        <p>
+          §9 Grundsätzlich gilt für das Verhalten auf der Strecke das sportliche
+          Reglement der Formel 1, ohne jedoch im Wortlaut Anwendung finden zu
+          müssen.<br /><br />
+
+          §9.1 Ein Fahrzeug, welches unter gelber Flagge steht oder langsam
+          fährt, darf überholt werden.<br /><br />
+
+          §9.2 Jeder Fahrer ist verpflichtet die Race-Director-Notes zu
+          befolgen.<br /><br />
+
+          §9.3 Während des Safety-Car Restarts ist es nicht erlaubt sich neben
+          einem Auto zu positionieren, bis das Renntempo vom Führenden wieder
+          aufgenommen wurde. Entsprechend versetzt wirkt sich das weiter hinten
+          im Feld aus. Bei kurzzeitigem Nebeneinanderfahren ist der hintere
+          Fahrer dazu verpflichtet sich wieder einzuordnen. Das Überholen vor
+          der Start- & Ziellinie ist nicht erlaubt.<br /><br />
+
+          §9.4 Das Zurücksetzen des Fahrzeugs über das Pause-Menü ist lediglich
+          bei abgeschnittenem Weg erlaubt. Bleibt ein Fahrer im Kies oder auf
+          einem Randstein stecken, darf er sich nicht über das Pause-Menü
+          zurücksetzen lassen.<br /><br />
+
+          §9.5 Das absichtliche Starten von einem hinteren Startplatz, durch
+          etwa ein kontrolliertes, unverhältnismäßig schlechtes
+          Qualifying-Ergebnis, ist nicht erlaubt. Die endgültige Entscheidung
+          obliegt der Administration.<br /><br />
+
+          §9.6 Das Brechen des Windschattens ist verboten, wenn davon eine
+          Gefahr für andere Fahrer ausgeht. Die Rennleitung bestimmt situativ,
+          ob durch das gemeldete Verhalten eine Gefahrensituation entstanden
+          ist.<br /><br />
+
+          §9.7 Das Überfahren der Boxenein- und ausfahrtslinie ist verboten. Für
+          einen Report ist eine eigene ONBOARD-Aufnahme notwendig.
+        </p>
+      </article>
+      <article class="regel-block" id="strafpunkte">
+        <h2>Strafpunktesystem (§10 – §10.2)</h2>
+        <p>
+          §10 Strafpunkte verfallen nach einer Saison rollierend. Beim Erreichen
+          von 12 Strafpunkten innerhalb einer Saison erhält der Fahrer eine
+          Rennsperre.<br /><br />
+
+          §10.1 Erhält ein Fahrer, innerhalb eines Zyklus des rollierenden
+          Systems, zweimal 12 Strafpunkte, kann dies zum Ligaausschluss
+          führen.<br /><br />
+
+          §10.2 Erhält ein Fahrer innerhalb einer Saison 2 Verwarnungen, erhält
+          er dafür einen Strafpunkt.
+        </p>
+      </article>
+      <article class="regel-block" id="rennleitung2">
+        <h2>Rennleitung (§11 – §11.15.2)</h2>
+        <p>
+          §11 Die Rennleitung besteht neben den Vorsitzenden aus mindestens 5
+          weiteren Stewards. Zusätzlich ist bei jeder Rennleitungssitzung ein
+          Ligaleiter oder Admin als "Stiller Beobachter" und Ansprechpartner
+          anwesend.<br /><br />
+
+          §11.1 Der Rennleitungsvorsitz hat kein Stimmrecht. Im Falle eines
+          Gleichstands, ist dessen Stimme jedoch entscheidend.<br /><br />
+
+          §11.2 Das Ergebnis der Rennleitungssitzung wird am Mittwoch nach dem
+          jeweiligen Rennwochenende bekannt gegeben.<br /><br />
+
+          §11.3 Das Einreichen einer Beschwerde ist erst am Folgetag des Rennens
+          ab 10:00 Uhr möglich.<br /><br />
+
+          §11.4 Eine Beschwerde muss bis spätestens Dienstag 20:00 Uhr
+          eingereicht werden. Ausschließlich Fahrer haben die Möglichkeit
+          dazu.<br /><br />
+
+          §11.5 Eine Beschwerde kann mittels der Threadfunktion im jeweiligen
+          Rennleitungsbereich des Discord eingereicht werden. Dabei ist
+          folgendes Formular zu beachten:<br /><br />
+          Beteiligte: xyz & abc<br />
+          Session & Runde: Z. B. Sprintrennen R. 27<br />
+          Vorfall: Kollision/abdrängen/unfaire Strafe (siehe Strafenkatalog)<br />
+          Details: Fließtext (falls nötig oder gewünscht)<br />
+          Link: Screenshots oder Videolink (kann auch nachgereicht werden,
+          sollte aber im Vorfeld vermerkt werden; Video kann auch der Livestream
+          sein)<br /><br />
+
+          §11.6 Bis zum Mittwoch um 18:30 Uhr dürfen alle an einem Fall
+          beteiligten Fahrer einmalig eine Verteidigung in Form eines Kommentars
+          abgeben. Unbeteiligte dürfen ebenfalls bis Mittwoch 18:30 Uhr
+          kommentarlos ihre Aufnahme ergänzen.<br /><br />
+
+          §11.6.1 Beteiligt sind jene, die direkt in den Vorfall verwickelt
+          sind.<br /><br />
+
+          §11.6.2 Die Verteidigung sowie ergänzende Aufnahmen sind in den
+          jeweiligen Thread zu posten.<br /><br />
+
+          §11.7 Die Rennleitung hat die Möglichkeit zu Unrecht vergebene
+          Zeitstrafen des Spiels abzuerkennen.<br /><br />
+
+          §11.7.1 Verwarnungen und 3-Sek.-Strafen können nur bei
+          Unfallvermeidung, Zwischenfällen im Positionskampf oder mehrfacher
+          Vergabe für denselben Vorfall aberkannt werden.<br /><br />
+
+          §11.7.2 Verwarnungen und 3-Sek.-Strafen können nur abgezogen werden,
+          wenn ein Nachweis aus dem Reiter „Rennleitung“ des Spiels mit allen
+          Verwarnungen vorgelegt wird. Direkt erhaltene 3-Sek.-Strafen können
+          auch ohne diesen Nachweis abgezogen werden, wenn es aus der Aufnahme
+          ersichtlich ist.<br /><br />
+
+          §11.7.3 Ungerechtfertigte 20-Sekunden-Strafen im Zusammenhang mit dem
+          angeblichen oder tatsächlichen Nicht-Absitzen einer Durchfahrtsstrafe
+          können durch die Administration abgezogen werden.<br /><br />
+
+          §11.7.4 Ungerechtfertigte, abgesessene Durchfahrtsstrafen können
+          ausschließlich durch die Administration und nur dann abgezogen werden,
+          wenn es nach dem Absitzen keine grundlegende Änderung der Situation
+          (Safety-Car oder Red Flag) gab & eine zweifelsfreie Beweislage
+          vorliegt. Dabei ist der tatsächliche Zeitverlust bei einer
+          Durchfahrtsstrafe auf dieser Strecke im Spiel zu ermitteln &
+          abzuziehen. Es wird der im Spiel angezeigte Zeitverlust direkt in der
+          Boxengasse auf die nächste halbe Sekunde aufgerundet. (Bsp: 19,8 Sek.
+          = 20,0 Sek.) Andere im Zusammenhang mit der Durchfahrtsstrafe
+          entstandene Zeitstrafen (z. B. Rasen in der Boxengasse) können nicht
+          abgezogen werden.<br /><br />
+
+          §11.8 Bereits abgesessene Zeitstrafen können nur abgezogen werden,
+          wenn es nach dem Absitzen keine grundlegende Änderung der Situation
+          (Safety-Car oder Red Flag) gibt.<br /><br />
+
+          §11.9 Sollten nach der Rennleitungssitzung noch gravierende Vergehen
+          wie z. B. absichtliche Kollision festgestellt werden, können diese das
+          Ergebnis noch verändern.<br /><br />
+
+          §11.10 Die Rennleitung kann Strafen für das Sprintrennen aussprechen
+          und abziehen. Eine Disqualifikation durch die Rennleitung wirkt sich
+          nur auf den jeweiligen Teil des Rennwochenendes aus.<br /><br />
+
+          §11.11 Stellt die Rennleitung fest, dass ein Fahrer wiederholt für
+          Vergehen bestraft wird, ist diese befugt der Administration eine
+          Empfehlung für eine Rennsperre zu geben. Anschließend entscheidet die
+          Administration über das weitere Verfahren.<br /><br />
+
+          §11.12 Die Rennleitung kann auch nicht gemeldete Fahrer, die aufgrund
+          von Fehlverhalten mit dem Vorfall in Verbindung zu bringen sind,
+          bestrafen. Dies betrifft keine Reports für das Abziehen von
+          Strafen.<br /><br />
+
+          §11.13 Die Rennleitung hat die Möglichkeit folgende Strafen
+          auszusprechen:<br />
+          Verwarnung, 5 Sekunden Zeitstrafe, 10 Sekunden Zeitstrafe, 20 Sekunden
+          Zeitstrafe, Disqualifikation, Rennsperre.<br /><br />
+
+          §11.13.1 Die Rennleitung kann diese Strafen (Verwarnungen ausgenommen)
+          mit Strafpunkten kombinieren.<br /><br />
+
+          §11.14 Stellt die Rennleitung ein aus ihrer Sicht grob unsportliches
+          Verhalten fest, so entscheidet die Rennleitung gemeinsam mit der
+          Administration situativ. Die betroffenen Fahrer können für die
+          besagten Rennwochenenden disqualifiziert, mit Strafpunkten belegt, für
+          eine je nach Situation angemessene Anzahl an Rennen gesperrt oder aus
+          der gesamten Saison sowie Wertung ausgeschlossen werden. Als grob
+          unsportlich wird ein Fahrverhalten verstanden, welches einem oder
+          mehreren Fahrern auf eine besonders schwere Art und Weise unfair
+          gegenüber ist.<br /><br />
+
+          §11.15 An einem Fall beteiligte Fahrer können gegen ein
+          Rennleitungsurteil Einspruch einlegen, indem sie eine ausführliche,
+          schriftliche Argumentation im jeweiligen Rennleitungs-Thread im Sinne
+          ihrer Sache darlegen. Rennleitungsvorsitz & ein Admin entscheiden in
+          einfacher Mehrheit über die Zulässigkeit des Einspruchs.<br /><br />
+
+          §11.15.1 Ein Einspruch kann bis zum auf das Urteil folgenden Freitag
+          um 18:00 Uhr eingereicht werden.<br /><br />
+
+          §11.15.2 Ist der Einspruch zulässig, befasst sich die Rennleitung zu
+          Beginn der nächsten Sitzung damit.
+        </p>
+      </article>
+      <article class="regel-block" id="postambel">
+        <h2>Postambel</h2>
+        <p>
+          Sollte sich eine Regel als fehlend erweisen, so wird diese ergänzt und
+          tritt im nächsten Rennen nach Ergänzung in Kraft.
+        </p>
+      </article>
+      <article class="regel-block" id="strafenkatalog1">
+        <h2>Strafenkatalog – durch die Rennleitung</h2>
+        <ul>
+          <li>
+            Fehlverhalten (zu großer Abstand, Kollisionen & Überholmanöver) in
+            der Einführungsrunde – <strong>Verwarnung – 1 STP</strong>
+          </li>
+          <li>
+            Unangemessenes auf die Strecke fahren (ohne Kollision) –
+            <strong>Verwarnung – 10 Sek. + 2 STP</strong>
+          </li>
+          <li>
+            Missachtung der Race-Director-Notes –
+            <strong>Verwarnung – 10 Sek. + 2 STP</strong>
+          </li>
+          <li>
+            Unangemessene Boxenein/ausfahrt –
+            <strong>Verwarnung – 5 Sek. + 2 STP</strong>
+          </li>
+          <li>
+            Blockieren von schnelleren Fahrzeugen im Qualifying –
+            <strong>Verwarnung – 5 Sek. + 3 STP</strong>
+          </li>
+          <li>
+            Missachtung von Überrundungen –
+            <strong>Verwarnung – 5 Sek. + 3 STP</strong>
+          </li>
+          <li>
+            Missachten der Safety-Car Restart-Regelung:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;Nebeneinanderfahren –
+            <strong>Verwarnung – 5 Sek. + 2 STP</strong><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;Überholen eines Fahrzeugs –
+            <strong>5 Sek. + 2 STP</strong><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;Überholen von mehreren Fahrzeugen –
+            <strong>10 Sek. + 3 STP</strong>
+          </li>
+          <li>
+            Abkürzen/Vorteilverschaffung neben der Strecke –
+            <strong>Verwarnung – 5 Sek. + 3 STP</strong>
+          </li>
+          <li>
+            Fahrzeug von der Strecke drängen –
+            <strong>Verwarnung – 5 Sek. + 3 STP</strong>
+          </li>
+          <li>
+            Aggressive/unfaire Fahrweise (z. B. Weaving, Moving-Under-Braking) –
+            <strong>Verwarnung – 10 Sek. + 3 STP</strong>
+          </li>
+          <li>
+            Kollision verursachen –
+            <strong>Verwarnung – 20 Sek. + 4 STP</strong>
+          </li>
+          <li>
+            Absichtliche Kollision mit der Wand zur Aufgabe –
+            <strong>Rennsperre + DSQ + 4 STP</strong>
+          </li>
+          <li>
+            Absichtliche Kollision mit anderen Fahrzeugen –
+            <strong>Rennsperre + DSQ + 6 STP</strong>
+          </li>
+        </ul>
+      </article>
+      <article class="regel-block" id="strafenkatalog2">
+        <h2>Strafenkatalog – durch die Admins</h2>
+        <ul>
+          <li>
+            Absichtliche Kollision mit anderen Fahrzeugen –
+            <strong>Kann Saison-Ausschluss nach sich ziehen</strong>
+          </li>
+          <li>
+            Aufgabe des Blitz-Qualifyings an Sprintwochenenden, wenn Runde
+            vorher ungültig – <strong>DSQ fürs Sprint + 3 STP</strong>
+          </li>
+          <li>
+            Zurücksetzen des Autos (Ausnahme siehe §9.4) –
+            <strong>DSQ + 2 STP</strong>
+          </li>
+          <li>
+            Absichtliches Aufgeben des Rennens ohne Absprache –
+            <strong>3 STP</strong>
+          </li>
+          <li>
+            Absichtliches in die Wand fahren bei der Zieleinfahrt –
+            <strong>3 STP</strong>
+          </li>
+          <li>Zu früh auf „Bereit“ drücken – <strong>3 STP</strong></li>
+          <li>Unnötiges Whispern – <strong>Verwarnung – 1 STP</strong></li>
+          <li>
+            Zu späte Abmeldung/Rückmeldung bei „unsicher“ –
+            <strong>1 STP</strong>
+          </li>
+          <li>Unabgemeldetes Fehlen – <strong>3 STP</strong></li>
+          <li>
+            Unabgemeldete Nichtteilnahme an Nachbesprechung –
+            <strong>Verwarnung – 1 STP</strong>
+          </li>
+          <li>
+            Unabgemeldetes Fehlen bei der Anwesenheitskontrolle (Vorbesprechung)
+            – <strong>Verwarnung – 1 STP</strong>
+          </li>
+          <li>
+            Sonstiges störendes Verhalten der Vor- & Nachbesprechung –
+            <strong>Verwarnung – 1 STP</strong>
+          </li>
+          <li>Beleidigungen – <strong>1 STP – 4 STP</strong></li>
+          <li>
+            Missachtung der Anweisung der interaktiven Rennleitung –
+            <strong>DSQ + 3 STP</strong>
+          </li>
+          <li>Rennsperre nach §11.11 – <strong>Rennsperre</strong></li>
+          <li>
+            Hacks, Cheats, Bugusing, Nutzung von nicht zwingend erforderlichen
+            Programmen – <strong>1 STP – Permanenter Liga-Ausschluss</strong>
+          </li>
+        </ul>
+      </article>
+      <script>
+        function regelFilter() {
+          const input = document.getElementById("regelSuche");
+          const filter = input.value.toLowerCase();
+
+          // Inhaltsverzeichnis filtern
+          const ul = document.getElementById("regelListe");
+          const li = ul.getElementsByTagName("li");
+          for (let i = 0; i < li.length; i++) {
+            const a = li[i].getElementsByTagName("a")[0];
+            const txtValue = a.textContent || a.innerText;
+            li[i].style.display = txtValue.toLowerCase().includes(filter)
+              ? ""
+              : "none";
+          }
+
+          // Alle Regel-Artikel filtern
+          const articles = document.querySelectorAll(
+            "section.regelwerk article"
+          );
+          articles.forEach((article) => {
+            const text = article.textContent.toLowerCase();
+            article.style.display = text.includes(filter) ? "" : "none";
+          });
+        }
+      </script>
+    </section>
 
-    §5.1 Jeder Fahrer hat die Möglichkeit ausschließlich mit dem Rennleiter über die Whisper-Funktion Kontakt aufzunehmen. Whispern ist nur gestattet, um technische Probleme zu melden oder zu klären.<br><br>
-
-    §5.2 Der Rennleiter behält sich die Möglichkeit vor, Fahrer mit technischen Problemen aus dem Rennen zu nehmen. Meldungen müssen von mindestens drei Teams (Fahrer in einem Channel zählen als ein Team) eingereicht werden. Wenn diese in mehrfachen Fällen nachweisbar sind, kann der Fahrer durch den Rennleiter zur Aufgabe aufgefordert werden.<br><br>
-
-    §5.3 Die absichtliche Aufgabe des Rennens ist nur in Absprache mit dem Rennleiter in der Boxengasse erlaubt.
-  </p>
-</article>
-<article class="regel-block" id="renningenieur">
-  <h2>Renningenieur (§6 – §6.2)</h2>
-  <p>
-    §6 Jedes Team hat die Möglichkeit einen persönlichen Renningenieur einzusetzen.<br><br>
-
-    §6.1 Der Renningenieur darf sich während des Rennens im Channel des Teams aufhalten und die Streams der Fahrer auf dem Discord anschauen. Dafür sind die vorgesehenen Team-Channel zu verwenden.<br><br>
-
-    §6.2 Dieser darf im Namen seines Teams mit dem Rennleiter whispern und während des Rennwochenendes keinen Kontakt mit anderen Teams aufnehmen.
-  </p>
-</article>
-<article class="regel-block" id="wertung">
-  <h2>Wertung (§7 – §7.8)</h2>
-  <p>
-    §7 Gewertet wird immer das Ergebnis, welches das Spiel anzeigt.<br><br>
-
-    §7.1 Die Rennleitung kann dieses Ergebnis durch Ausspruch oder Abzug von Strafen beeinflussen.<br><br>
-
-    §7.2 Bei durch Spielfehlern verursachten Verschiebungen wird situationsbedingt entschieden.<br><br>
-
-    §7.3 Die Punktevergabe für das Rennen erfolgt gemäß dem Schema:<br>
-    „26, 22, 19, 16, 14, 12, 10, 8, 6, 4, 2, 1“. <br><br>
-
-    §7.4 Die Punktevergabe für das Sprintrennen erfolgt gemäß dem Schema:<br>
-    „8, 7, 6, 5, 4, 3, 2, 1“. <br><br>
-
-    §7.5 Der Fahrer mit der schnellsten Rennrunde erhält einen extra Punkt, sofern seine Endposition gewertet wird. Für die schnellste Rennrunde im Sprintrennen gibt es keinen Punkt.<br><br>
-
-    §7.6 Absolviert ein Fahrer mindestens 80% der gefahrenen Renndistanz selbst, so wird seine Endposition gewertet. Erreicht er die 80% nicht, wird er als DNF gewertet.<br><br>
-
-    §7.7 Wird ein Fahrer vom Spiel disqualifiziert, wird er als DNF gewertet, es sei denn §7.6 tritt ein.<br><br>
-
-    §7.8 Das endgültige Rennergebnis steht erst nach der Rennleitungssitzung fest.
-  </p>
-</article>
-<article class="regel-block" id="cockpit">
-  <h2>Cockpitvergabe (§8 – §8.2)</h2>
-  <p>
-    §8 Ist ein Stammfahrer für mehr als 3 Rennen in Folge nicht verfügbar oder generell unzuverlässig, so kann die Administration ihn ersetzen.<br><br>
-
-    §8.1 Ein interner Ligawechsel während der Saison ist nur möglich, wenn ein Stammcockpit frei oder ein anderer Stammfahrer zum Tausch bereit ist. Die Entscheidung liegt bei der Administration.<br><br>
-
-    §8.2 Die Fahrerweltmeister haben für die nächste Saison freie Wagenwahl.
-  </p>
-</article>
-<article class="regel-block" id="verhalten">
-  <h2>Verhalten auf der Strecke (§9 – §9.7)</h2>
-  <p>
-    §9 Grundsätzlich gilt für das Verhalten auf der Strecke das sportliche Reglement der Formel 1, ohne jedoch im Wortlaut Anwendung finden zu müssen.<br><br>
-
-    §9.1 Ein Fahrzeug, welches unter gelber Flagge steht oder langsam fährt, darf überholt werden.<br><br>
-
-    §9.2 Jeder Fahrer ist verpflichtet die Race-Director-Notes zu befolgen.<br><br>
-
-    §9.3 Während des Safety-Car Restarts ist es nicht erlaubt sich neben einem Auto zu positionieren, bis das Renntempo vom Führenden wieder aufgenommen wurde. Entsprechend versetzt wirkt sich das weiter hinten im Feld aus. Bei kurzzeitigem Nebeneinanderfahren ist der hintere Fahrer dazu verpflichtet sich wieder einzuordnen. Das Überholen vor der Start- & Ziellinie ist nicht erlaubt.<br><br>
-
-    §9.4 Das Zurücksetzen des Fahrzeugs über das Pause-Menü ist lediglich bei abgeschnittenem Weg erlaubt. Bleibt ein Fahrer im Kies oder auf einem Randstein stecken, darf er sich nicht über das Pause-Menü zurücksetzen lassen.<br><br>
-
-    §9.5 Das absichtliche Starten von einem hinteren Startplatz, durch etwa ein kontrolliertes, unverhältnismäßig schlechtes Qualifying-Ergebnis, ist nicht erlaubt. Die endgültige Entscheidung obliegt der Administration.<br><br>
-
-    §9.6 Das Brechen des Windschattens ist verboten, wenn davon eine Gefahr für andere Fahrer ausgeht. Die Rennleitung bestimmt situativ, ob durch das gemeldete Verhalten eine Gefahrensituation entstanden ist.<br><br>
-
-    §9.7 Das Überfahren der Boxenein- und ausfahrtslinie ist verboten. Für einen Report ist eine eigene ONBOARD-Aufnahme notwendig.
-  </p>
-</article>
-<article class="regel-block" id="strafpunkte">
-  <h2>Strafpunktesystem (§10 – §10.2)</h2>
-  <p>
-    §10 Strafpunkte verfallen nach einer Saison rollierend. Beim Erreichen von 12 Strafpunkten innerhalb einer Saison erhält der Fahrer eine Rennsperre.<br><br>
-
-    §10.1 Erhält ein Fahrer, innerhalb eines Zyklus des rollierenden Systems, zweimal 12 Strafpunkte, kann dies zum Ligaausschluss führen.<br><br>
-
-    §10.2 Erhält ein Fahrer innerhalb einer Saison 2 Verwarnungen, erhält er dafür einen Strafpunkt.
-  </p>
-</article>
-<article class="regel-block" id="rennleitung2">
-  <h2>Rennleitung (§11 – §11.15.2)</h2>
-  <p>
-    §11 Die Rennleitung besteht neben den Vorsitzenden aus mindestens 5 weiteren Stewards. Zusätzlich ist bei jeder Rennleitungssitzung ein Ligaleiter oder Admin als "Stiller Beobachter" und Ansprechpartner anwesend.<br><br>
-
-    §11.1 Der Rennleitungsvorsitz hat kein Stimmrecht. Im Falle eines Gleichstands, ist dessen Stimme jedoch entscheidend.<br><br>
-
-    §11.2 Das Ergebnis der Rennleitungssitzung wird am Mittwoch nach dem jeweiligen Rennwochenende bekannt gegeben.<br><br>
-
-    §11.3 Das Einreichen einer Beschwerde ist erst am Folgetag des Rennens ab 10:00 Uhr möglich.<br><br>
-
-    §11.4 Eine Beschwerde muss bis spätestens Dienstag 20:00 Uhr eingereicht werden. Ausschließlich Fahrer haben die Möglichkeit dazu.<br><br>
-
-    §11.5 Eine Beschwerde kann mittels der Threadfunktion im jeweiligen Rennleitungsbereich des Discord eingereicht werden. Dabei ist folgendes Formular zu beachten:<br><br>
-    Beteiligte: xyz & abc<br>
-    Session & Runde: Z. B. Sprintrennen R. 27<br>
-    Vorfall: Kollision/abdrängen/unfaire Strafe (siehe Strafenkatalog)<br>
-    Details: Fließtext (falls nötig oder gewünscht)<br>
-    Link: Screenshots oder Videolink (kann auch nachgereicht werden, sollte aber im Vorfeld vermerkt werden; Video kann auch der Livestream sein)<br><br>
-
-    §11.6 Bis zum Mittwoch um 18:30 Uhr dürfen alle an einem Fall beteiligten Fahrer einmalig eine Verteidigung in Form eines Kommentars abgeben. Unbeteiligte dürfen ebenfalls bis Mittwoch 18:30 Uhr kommentarlos ihre Aufnahme ergänzen.<br><br>
-
-    §11.6.1 Beteiligt sind jene, die direkt in den Vorfall verwickelt sind.<br><br>
-
-    §11.6.2 Die Verteidigung sowie ergänzende Aufnahmen sind in den jeweiligen Thread zu posten.<br><br>
-
-    §11.7 Die Rennleitung hat die Möglichkeit zu Unrecht vergebene Zeitstrafen des Spiels abzuerkennen.<br><br>
-
-    §11.7.1 Verwarnungen und 3-Sek.-Strafen können nur bei Unfallvermeidung, Zwischenfällen im Positionskampf oder mehrfacher Vergabe für denselben Vorfall aberkannt werden.<br><br>
-
-    §11.7.2 Verwarnungen und 3-Sek.-Strafen können nur abgezogen werden, wenn ein Nachweis aus dem Reiter „Rennleitung“ des Spiels mit allen Verwarnungen vorgelegt wird. Direkt erhaltene 3-Sek.-Strafen können auch ohne diesen Nachweis abgezogen werden, wenn es aus der Aufnahme ersichtlich ist.<br><br>
-
-    §11.7.3 Ungerechtfertigte 20-Sekunden-Strafen im Zusammenhang mit dem angeblichen oder tatsächlichen Nicht-Absitzen einer Durchfahrtsstrafe können durch die Administration abgezogen werden.<br><br>
-
-    §11.7.4 Ungerechtfertigte, abgesessene Durchfahrtsstrafen können ausschließlich durch die Administration und nur dann abgezogen werden, wenn es nach dem Absitzen keine grundlegende Änderung der Situation (Safety-Car oder Red Flag) gab & eine zweifelsfreie Beweislage vorliegt. Dabei ist der tatsächliche Zeitverlust bei einer Durchfahrtsstrafe auf dieser Strecke im Spiel zu ermitteln & abzuziehen. Es wird der im Spiel angezeigte Zeitverlust direkt in der Boxengasse auf die nächste halbe Sekunde aufgerundet. (Bsp: 19,8 Sek. = 20,0 Sek.) Andere im Zusammenhang mit der Durchfahrtsstrafe entstandene Zeitstrafen (z. B. Rasen in der Boxengasse) können nicht abgezogen werden.<br><br>
-
-    §11.8 Bereits abgesessene Zeitstrafen können nur abgezogen werden, wenn es nach dem Absitzen keine grundlegende Änderung der Situation (Safety-Car oder Red Flag) gibt.<br><br>
-
-    §11.9 Sollten nach der Rennleitungssitzung noch gravierende Vergehen wie z. B. absichtliche Kollision festgestellt werden, können diese das Ergebnis noch verändern.<br><br>
-
-    §11.10 Die Rennleitung kann Strafen für das Sprintrennen aussprechen und abziehen. Eine Disqualifikation durch die Rennleitung wirkt sich nur auf den jeweiligen Teil des Rennwochenendes aus.<br><br>
-
-    §11.11 Stellt die Rennleitung fest, dass ein Fahrer wiederholt für Vergehen bestraft wird, ist diese befugt der Administration eine Empfehlung für eine Rennsperre zu geben. Anschließend entscheidet die Administration über das weitere Verfahren.<br><br>
-
-    §11.12 Die Rennleitung kann auch nicht gemeldete Fahrer, die aufgrund von Fehlverhalten mit dem Vorfall in Verbindung zu bringen sind, bestrafen. Dies betrifft keine Reports für das Abziehen von Strafen.<br><br>
-
-    §11.13 Die Rennleitung hat die Möglichkeit folgende Strafen auszusprechen:<br>
-    Verwarnung, 5 Sekunden Zeitstrafe, 10 Sekunden Zeitstrafe, 20 Sekunden Zeitstrafe, Disqualifikation, Rennsperre.<br><br>
-
-    §11.13.1 Die Rennleitung kann diese Strafen (Verwarnungen ausgenommen) mit Strafpunkten kombinieren.<br><br>
-
-    §11.14 Stellt die Rennleitung ein aus ihrer Sicht grob unsportliches Verhalten fest, so entscheidet die Rennleitung gemeinsam mit der Administration situativ. Die betroffenen Fahrer können für die besagten Rennwochenenden disqualifiziert, mit Strafpunkten belegt, für eine je nach Situation angemessene Anzahl an Rennen gesperrt oder aus der gesamten Saison sowie Wertung ausgeschlossen werden. Als grob unsportlich wird ein Fahrverhalten verstanden, welches einem oder mehreren Fahrern auf eine besonders schwere Art und Weise unfair gegenüber ist.<br><br>
-
-    §11.15 An einem Fall beteiligte Fahrer können gegen ein Rennleitungsurteil Einspruch einlegen, indem sie eine ausführliche, schriftliche Argumentation im jeweiligen Rennleitungs-Thread im Sinne ihrer Sache darlegen. Rennleitungsvorsitz & ein Admin entscheiden in einfacher Mehrheit über die Zulässigkeit des Einspruchs.<br><br>
-
-    §11.15.1 Ein Einspruch kann bis zum auf das Urteil folgenden Freitag um 18:00 Uhr eingereicht werden.<br><br>
-
-    §11.15.2 Ist der Einspruch zulässig, befasst sich die Rennleitung zu Beginn der nächsten Sitzung damit.
-  </p>
-</article>
-<article class="regel-block" id="postambel">
-  <h2>Postambel</h2>
-  <p>
-    Sollte sich eine Regel als fehlend erweisen, so wird diese ergänzt und tritt im nächsten Rennen nach Ergänzung in Kraft.
-  </p>
-</article>
-<article class="regel-block" id="strafenkatalog1">
-  <h2>Strafenkatalog – durch die Rennleitung</h2>
-  <ul>
-    <li>Fehlverhalten (zu großer Abstand, Kollisionen & Überholmanöver) in der Einführungsrunde – <strong>Verwarnung – 1 STP</strong></li>
-    <li>Unangemessenes auf die Strecke fahren (ohne Kollision) – <strong>Verwarnung – 10 Sek. + 2 STP</strong></li>
-    <li>Missachtung der Race-Director-Notes – <strong>Verwarnung – 10 Sek. + 2 STP</strong></li>
-    <li>Unangemessene Boxenein/ausfahrt – <strong>Verwarnung – 5 Sek. + 2 STP</strong></li>
-    <li>Blockieren von schnelleren Fahrzeugen im Qualifying – <strong>Verwarnung – 5 Sek. + 3 STP</strong></li>
-    <li>Missachtung von Überrundungen – <strong>Verwarnung – 5 Sek. + 3 STP</strong></li>
-    <li>Missachten der Safety-Car Restart-Regelung:<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;Nebeneinanderfahren – <strong>Verwarnung – 5 Sek. + 2 STP</strong><br>
-      &nbsp;&nbsp;&nbsp;&nbsp;Überholen eines Fahrzeugs – <strong>5 Sek. + 2 STP</strong><br>
-      &nbsp;&nbsp;&nbsp;&nbsp;Überholen von mehreren Fahrzeugen – <strong>10 Sek. + 3 STP</strong>
-    </li>
-    <li>Abkürzen/Vorteilverschaffung neben der Strecke – <strong>Verwarnung – 5 Sek. + 3 STP</strong></li>
-    <li>Fahrzeug von der Strecke drängen – <strong>Verwarnung – 5 Sek. + 3 STP</strong></li>
-    <li>Aggressive/unfaire Fahrweise (z. B. Weaving, Moving-Under-Braking) – <strong>Verwarnung – 10 Sek. + 3 STP</strong></li>
-    <li>Kollision verursachen – <strong>Verwarnung – 20 Sek. + 4 STP</strong></li>
-    <li>Absichtliche Kollision mit der Wand zur Aufgabe – <strong>Rennsperre + DSQ + 4 STP</strong></li>
-    <li>Absichtliche Kollision mit anderen Fahrzeugen – <strong>Rennsperre + DSQ + 6 STP</strong></li>
-  </ul>
-</article>
-<article class="regel-block" id="strafenkatalog2">
-  <h2>Strafenkatalog – durch die Admins</h2>
-  <ul>
-    <li>Absichtliche Kollision mit anderen Fahrzeugen – <strong>Kann Saison-Ausschluss nach sich ziehen</strong></li>
-    <li>Aufgabe des Blitz-Qualifyings an Sprintwochenenden, wenn Runde vorher ungültig – <strong>DSQ fürs Sprint + 3 STP</strong></li>
-    <li>Zurücksetzen des Autos (Ausnahme siehe §9.4) – <strong>DSQ + 2 STP</strong></li>
-    <li>Absichtliches Aufgeben des Rennens ohne Absprache – <strong>3 STP</strong></li>
-    <li>Absichtliches in die Wand fahren bei der Zieleinfahrt – <strong>3 STP</strong></li>
-    <li>Zu früh auf „Bereit“ drücken – <strong>3 STP</strong></li>
-    <li>Unnötiges Whispern – <strong>Verwarnung – 1 STP</strong></li>
-    <li>Zu späte Abmeldung/Rückmeldung bei „unsicher“ – <strong>1 STP</strong></li>
-    <li>Unabgemeldetes Fehlen – <strong>3 STP</strong></li>
-    <li>Unabgemeldete Nichtteilnahme an Nachbesprechung – <strong>Verwarnung – 1 STP</strong></li>
-    <li>Unabgemeldetes Fehlen bei der Anwesenheitskontrolle (Vorbesprechung) – <strong>Verwarnung – 1 STP</strong></li>
-    <li>Sonstiges störendes Verhalten der Vor- & Nachbesprechung – <strong>Verwarnung – 1 STP</strong></li>
-    <li>Beleidigungen – <strong>1 STP – 4 STP</strong></li>
-    <li>Missachtung der Anweisung der interaktiven Rennleitung – <strong>DSQ + 3 STP</strong></li>
-    <li>Rennsperre nach §11.11 – <strong>Rennsperre</strong></li>
-    <li>Hacks, Cheats, Bugusing, Nutzung von nicht zwingend erforderlichen Programmen – <strong>1 STP – Permanenter Liga-Ausschluss</strong></li>
-  </ul>
-</article>
-<script>
-  function regelFilter() {
-    const input = document.getElementById('regelSuche');
-    const filter = input.value.toLowerCase();
-
-    // Inhaltsverzeichnis filtern
-    const ul = document.getElementById('regelListe');
-    const li = ul.getElementsByTagName('li');
-    for (let i = 0; i < li.length; i++) {
-      const a = li[i].getElementsByTagName('a')[0];
-      const txtValue = a.textContent || a.innerText;
-      li[i].style.display = txtValue.toLowerCase().includes(filter) ? "" : "none";
-    }
-
-    // Alle Regel-Artikel filtern
-    const articles = document.querySelectorAll('section.regelwerk article');
-    articles.forEach(article => {
-      const text = article.textContent.toLowerCase();
-      article.style.display = text.includes(filter) ? "" : "none";
-    });
-  }
-</script>
-
-</section>
-
-
-
-
-
-
-    
-
-    
     <footer class="footer">
       <div class="container">
         <span

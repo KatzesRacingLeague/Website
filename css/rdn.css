@@ -1,46 +1,48 @@
 .background {
-
-
   margin: auto;
   color: white;
   font-family: "Concert One", sans-serif;
 }
 
 .header h1 {
-    font-size: 127px    ;
+  font-size: 127px;
   text-align: center;
   text-transform: uppercase;
-
 }
 .header h2 {
-        font-size: 40px    ;
+  font-size: 40px;
   text-align: center;
   text-transform: uppercase;
-  
 }
 .pdf {
   width: 100%;
   height: 600px;
   border: none;
-
   border-radius: 12px;
 }
 
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .class-button {
-  display: inline-block;
-  background-color: var(--sundaysplit);
-  color: white;
+  margin: 40px auto;
+  padding: 20px 40px;
+  color: white; /* Textfarbe weiß für guten Kontrast */
+  border: 5px solid var(--sundaysplit);
+  border-radius: 8px; /* Abgerundete Ecken */
+  font-size: 50px;
+  text-transform: uppercase;
   text-decoration: none;
-  padding: 14px 28px;
-  border-radius: 10px;
-  font-size: 1.2rem;
-  text-align: center;
-  margin: 20px auto;
-  display: block;
-  width: fit-content;
-  font-weight: bold;
-  letter-spacing: 1px;
-  box-shadow: 0 0 10px var(--sundaysplit);
+}
+
+.class-button:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease; /* Weicher Übergang bei Hover */
+  cursor: pointer; /* Zeigt eine Hand an, wenn man über den Button fährt */
 }
 
 .rdncontainer {
@@ -78,4 +80,14 @@
 .rdn-feature-item i {
   font-size: 2.4rem;
   color: var(--sundaysplit);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .class-button {
+    padding: 15px 30px;
+    font-size: 25px;
+    width: auto; /* Stellt sicher, dass der Button sich an die Breite anpasst */
+    margin: 0 auto; /* Zentriert den Button auf mobilen Geräten */
+  }
 }

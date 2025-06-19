@@ -14,32 +14,28 @@
   gap: 100px; /* Abstand zwischen Bildern */
   animation: scroll 30s linear infinite;
   width: max-content;
-     border-bottom: 5px solid var(--sundaysplit);
+  border-bottom: 5px solid var(--sundaysplit);
   border-top: 5px solid var(--sundaysplit);
-
 }
 
 .slider-track2 {
   display: flex;
   gap: 100px; /* Abstand zwischen Bildern */
   margin-top: 4px;
-   margin-bottom: 4px;
+  margin-bottom: 4px;
+  padding: 2px 0;
   animation: scroll 30s linear infinite;
   width: max-content;
-     border-bottom: 5px solid var(--sundaysplit);
+  border-bottom: 5px solid var(--sundaysplit);
   border-top: 5px solid var(--sundaysplit);
-
-
 }
 
 .slider-track img {
   width: 120px;
   height: auto;
   margin-top: 4px;
-   margin-bottom: 4px;
+  margin-bottom: 4px;
 }
-
-
 
 .text-slide {
   font-size: 25px; /* größerer Text */
@@ -48,13 +44,15 @@
   text-transform: uppercase;
   margin-top: 4px;
   margin-bottom: 4px;
-
 }
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-25%); } 
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-25%);
+  }
 }
-
 
 /*Counter*/
 .counter-container {
@@ -67,13 +65,11 @@
   gap: 180px;
 }
 
-
 .counter-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
-
 }
 
 .counter-number {
@@ -81,7 +77,6 @@
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.8s ease-out;
-
 }
 
 .counter-number.fade-in {
@@ -107,10 +102,13 @@
 }
 
 @keyframes pop {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.4); }
-  100% { transform: scale(1.2); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1.2);
+  }
 }
-
-
-

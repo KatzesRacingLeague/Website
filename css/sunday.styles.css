@@ -1,15 +1,11 @@
 year-button:hover {
-      color: var(--sundaysplit);
-    
-    }
+  color: var(--sundaysplit);
+}
 
-  .timeline-line {
- 
+.timeline-line {
   background: var(--sundaysplit);
-
 }
 .info-box {
-
   border: 2px solid var(--sundaysplit);
 }
 .active-dot {
@@ -17,20 +13,22 @@ year-button:hover {
 }
 
 .carousel-btn {
-  
   background-color: var(--sundaysplit);
-  
-}
-.team-card {
-border-left: 4px solid var(--sundaysplit);
-border-right: 4px solid var(--sundaysplit);
 }
 
- .middle-carousel {
-    width: 800px;
+.class-button {
+  border: 5px solid var(--sundaysplit) !important;
+}
+.team-card {
+  border-left: 4px solid var(--sundaysplit);
+  border-right: 4px solid var(--sundaysplit);
+}
+
+.middle-carousel {
+  width: 800px;
   height: 800px;
   text-align: center;
- margin-bottom: 200px;
+  margin-bottom: 200px;
 }
 
 .middle-carousel .carousel,
@@ -39,5 +37,4 @@ border-right: 4px solid var(--sundaysplit);
   width: 800px;
   height: 800px;
   border-radius: 20px;
- 
-}  
+}

@@ -1,5 +1,5 @@
-.headlineHistorie{
-margin-top: 100px;
+.headlineHistorie {
+  margin-top: 100px;
 }
 
 .timeline-container {
@@ -58,9 +58,15 @@ margin-top: 100px;
 }
 
 @keyframes pop {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.6); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.6);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes fadeIn {
@@ -139,60 +145,52 @@ margin-top: 100px;
     font-size: 12px;
   }
   @media (max-width: 678px) {
-  .timeline-container {
-    margin-left: 10px;
-    margin-right: 10px;
-    overflow-x: auto;
-  }
+    .timeline-container {
+      margin-left: 10px;
+      margin-right: 10px;
+      overflow-x: auto;
+    }
 
-  .year-marker {
-    display: flex;
-    gap: 6px;
-    overflow-x: auto;
-    padding-top: 20px;
-  }
+    .year-marker {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-top: 20px;
+    }
 
-  .year-button {
-    position: relative;
-    font-size: 12px;
-    padding: 3px 6px;
-    min-width: 60px;
-    text-align: center;
-    white-space: nowrap;
-    flex-shrink: 0;
-    background-color: #ccc;
-    border-radius: 6px;
-    margin-top: 10px;
-  }
+    .year-button {
+      position: relative;
+      font-size: 12px;
+      padding: 3px 6px;
+      min-width: 60px;
+      text-align: center;
+      white-space: nowrap;
+      flex-shrink: 0;
+      background-color: #ccc;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
 
-  .dot {
-    display: none; /* Punkt wird auf Handys ausgeblendet */
-  }
+    .dot {
+      display: none; /* Punkt wird auf Handys ausgeblendet */
+    }
 
-  .info-box {
-    font-size: 12px;
-    max-width: 100%;
-    padding: 8px;
-    margin: 10px;
-  }
+    .info-box {
+      font-size: 12px;
+      max-width: 100%;
+      padding: 8px;
+      margin: 10px;
+    }
 
-  .info-box h2 {
-    font-size: 16px;
-  }
+    .info-box h2 {
+      font-size: 16px;
+    }
 
-  .info-box p {
-    font-size: 12px;
+    .info-box p {
+      font-size: 12px;
+    }
   }
-}
   .timeline-line {
- 
     display: none; /* Punkt wird auf Handys ausgeblendet */
-
+  }
 }
-
-
-}
-
-
-
-

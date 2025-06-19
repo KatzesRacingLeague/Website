@@ -10,11 +10,10 @@
       href="resources/pictures/general/krllogos/KRL_Community4.png"
     />
     <link rel="stylesheet" href="css/styles.css" />
-     <link rel="stylesheet" href="css/navbar.css" />
-     <link rel="stylesheet" href="css/slideshowCounter.css" />
-     
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/slideshowCounter.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap"
       rel="stylesheet"
@@ -47,9 +46,11 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Concert+One&family=Days+One&family=Orbitron:wght@400..900&family=Patrick+Hand&family=Playpen+Sans:wght@100..800&family=Syne+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Concert+One&family=Days+One&family=Orbitron:wght@400..900&family=Patrick+Hand&family=Playpen+Sans:wght@100..800&family=Syne+Mono&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -128,36 +129,35 @@
           </li>
         </ul>
       </nav>
-      
+
       <script>
-      
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navLinks = document.querySelector(".nav-links");
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
 
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-  });
+        menuToggle.addEventListener("click", () => {
+          navLinks.classList.toggle("open");
+        });
 
-  // Optional: Klick außerhalb schließt das Menü
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest("nav")) {
-      navLinks.classList.remove("open");
-    }
-  });
-  //Scroolbar
-  window.addEventListener('scroll', () => {
-  const scrollTop = window.scrollY;
-  const docHeight = document.body.scrollHeight - window.innerHeight;
-  const scrollPercent = (scrollTop / docHeight) * 100;
-  document.getElementById('progressBar').style.width = scrollPercent + '%';
-});
-
+        // Optional: Klick außerhalb schließt das Menü
+        document.addEventListener("click", (e) => {
+          if (!e.target.closest("nav")) {
+            navLinks.classList.remove("open");
+          }
+        });
+        //Scroolbar
+        window.addEventListener("scroll", () => {
+          const scrollTop = window.scrollY;
+          const docHeight = document.body.scrollHeight - window.innerHeight;
+          const scrollPercent = (scrollTop / docHeight) * 100;
+          document.getElementById("progressBar").style.width =
+            scrollPercent + "%";
+        });
       </script>
-     
+
       <div id="progressBar"></div>
     </header>
 
-  
+    <main>
       <!--Hintergrund top-->
       <div>
         <img
@@ -165,32 +165,30 @@
           src="resources/pictures/general/landing_page.png"
         />
       </div>
-   
-      
+
       <!--Welcome Quote-->
-       <p id="greeting"></p>
-     <h1 id="typing" class="welcome"></h1>
-<script>const text = "<< Willkommen bei der KRL! >>";
-let index = 0;
-const speed = 100;
+      <p id="greeting"></p>
+      <h1 id="typing" class="welcome"></h1>
+      <script>
+        const text = "<< Willkommen bei der KRL! >>";
+        let index = 0;
+        const speed = 100;
 
-function typeWriter() {
-  if (index < text.length) {
-    document.getElementById('typing').innerHTML += text.charAt(index);
-    index++;
-    setTimeout(typeWriter, speed);
-  }
-}
+        function typeWriter() {
+          if (index < text.length) {
+            document.getElementById("typing").innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, speed);
+          }
+        }
 
-typeWriter();
-//Moin
-const hour = new Date().getHours();
-let greeting;
+        typeWriter();
+        //Moin
+        const hour = new Date().getHours();
+        let greeting;
 
-document.getElementById("greeting").textContent = greeting;
-
-</script>
-    
+        document.getElementById("greeting").textContent = greeting;
+      </script>
 
       <!--Icons-->
       <div class="features">
@@ -211,7 +209,7 @@ document.getElementById("greeting").textContent = greeting;
           <p>Professionelle Organisation</p>
         </div>
         <div class="feature-item">
-          <i class="fas fa-balance-scale"></i>
+          <i class="fas fa-video"></i>
           <p>Liveübertragung aller Rennen</p>
         </div>
         <div class="feature-item">
@@ -226,318 +224,488 @@ document.getElementById("greeting").textContent = greeting;
 
       <!--Join Now Button-->
       <div class="button">
-        <a id="class-button" class="class-button" href="https://discord.gg/2r9wDfKdSB">Jetzt Beitreten</a>
+        <a
+          id="class-button"
+          class="class-button"
+          href="https://discord.gg/2r9wDfKdSB"
+          >Jetzt Beitreten</a
+        >
       </div>
 
-    <!--Slideshow-->
-
-  <div class="slider-container">
-  <div class="slider-track" id="slider-track"></div>
-  </div>
+      <!--Slideshow-->
+      <div class="slider-container">
+        <div class="slider-track" id="slider-track"></div>
+      </div>
 
       <!--Header H1-->
       <h1>KRL RACING</h1>
-    
 
       <!--Logos der Ligen-->
- <section class="LigenContainer">
-  <div id="Friday" class="Friday fly-in">
-    <a href="/pages/DetailViews/F1Leagues/friday.html"><img src="/resources/pictures/general/krllogos/KRL_Freitag.png" alt="KRL Freitag" ></div></a>
-  <div id="Saturday" class="Saturday fly-in">
-  <a href="">  <img src="/resources/pictures/general/krllogos/KRL_Samstag.png" alt="KRL Samstag"></div></a>
-  <div id="Sunday" class="Sunday fly-in">
-     <a href=""> <img src="/resources/pictures/general/krllogos/KRL_Sonntag.png" alt="KRL Sonntag"></div></a>
-       <div id="Endurance" class="Endurance fly-in">
-        <a href="">  <img src="/resources/pictures/general/krllogos/KRL_Endurance.png" alt="Endurance"></div> </a>
-     <div id="WDL" class="WDL fly-in">
-     <a href=""></a>  <img src="/resources/pictures/general/krllogos/WDL_LOGO_RUND.png" alt="WDL"></div> </a>
-   
-  </div>
-  
+      <section class="LigenContainer">
+        <div id="Friday" class="Friday fly-in">
+          <a href="https://katzes-racing-league.de/freitagsliga"
+            ><img
+              src="/resources/pictures/general/krllogos/KRL_Freitag.png"
+              alt="KRL Freitag"
+          /></a>
+        </div>
+        <div id="Saturday" class="Saturday fly-in">
+          <a href="https://katzes-racing-league.de/samstagsliga">
+            <img
+              src="/resources/pictures/general/krllogos/KRL_Samstag.png"
+              alt="KRL Samstag"
+          /></a>
+        </div>
+        <div id="Sunday" class="Sunday fly-in">
+          <a href="https://katzes-racing-league.de/sonntagsliga">
+            <img
+              src="/resources/pictures/general/krllogos/KRL_Sonntag.png"
+              alt="KRL Sonntag"
+          /></a>
+        </div>
+        <div id="Endurance" class="Endurance fly-in">
+          <a href="https://katzes-racing-league.de/endurance">
+            <img
+              src="/resources/pictures/general/krllogos/KRL_Endurance.png"
+              alt="Endurance"
+          /></a>
+        </div>
+        <div id="WDL" class="WDL fly-in">
+          <a href="https://katzes-racing-league.de/wettkampf-der-ligen">
+            <img
+              src="/resources/pictures/general/krllogos/WDL_LOGO_RUND.png"
+              alt="WDL"
+          /></a>
+        </div>
+      </section>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("visible");
+                  observer.unobserve(entry.target); // nur einmal animieren
+                }
+              });
+            },
+            {
+              threshold: 0.2, // 20% im Sichtfeld reicht
+            }
+          );
 
-   
-</section>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target); // nur einmal animieren
-        }
-      });
-    }, {
-      threshold: 0.2 // 20% im Sichtfeld reicht
-    });
+          document
+            .querySelectorAll(".fly-in")
+            .forEach((el) => observer.observe(el));
+        });
+      </script>
 
-    document.querySelectorAll('.fly-in').forEach(el => observer.observe(el));
-  });
-</script>
-
-      
-    <!-- HTML: DEIN BLOCK -->
-<div class="counter-container">
-  <div class="counter-box">
-    <div class="counter-number" data-target="10">0</div>
-    <div class="counter-label">SAISONS</div>
-  </div>
-  <div class="counter-box">
-    <div class="counter-number" data-target="80">0</div>
-    <div class="counter-label">FAHRER</div>
-  </div>
-  <div class="counter-box">
-    <div class="counter-number" data-target="3">0</div>
-    <div class="counter-label">LIGEN</div>
-  </div>
-  <div class="counter-box">
-    <div class="counter-number" data-target="1030">0</div>
-    <div class="counter-label">TWITCH FOLLOWER</div>
-  </div>
-</div>
-
-<div class="slider-container2">
-  <div class="slider-track2" id="slider-track2"></div>
-</div>
-
-  <h1>UNSER TEAM</h1>
-   <h2 class = "überschrift">Planungsgruppe</h2>
-  <div class="team-grid2">
-    <!-- Admin-Mitglied -->
-    <div class="admin-card">
-      <img src="/resources/pictures/profilbilder/Paul.png" alt="ALARIC01" class="avatar">
-      <h2>ALARIC01</h2>
-      <div class="role">LIGALEITUNG</div>
-      <p>Mitglied seit 2016</p>
-    </div>
-  </div>
- <div class="team-grid">
-    <div class="admin-card">
-      <img src="/resources/pictures/profilbilder/EMESHA.png" alt="EMESHA" class="avatar">
-      <h2>EMESHA</h2>
-      <div class="role">Admin</div>
-      <p>Mitglied seit 2018</p>
-    </div>
-
-   <div class="admin-card">
-      <img src="/resources/pictures/profilbilder/DarioGaming.jpg" alt="DarioGamingTM" class="avatar">
-      <h2>DARIOGAMINGTM</h2>
-      <div class="role">Admin</div>
-      <p>Mitglied seit 2022</p>
-    </div>
-
-    
-   <div class="admin-card">
-      <img src="/resources/pictures/profilbilder/HellFreeZ3r.png" alt="HELLFREEZ3R" class="avatar">
-      <h2>HELLFREEZ3R</h2>
-      <div class="role">Admin</div>
-      <p>Mitglied seit 2018</p>
-    </div>
-
-    
-   <div class="admin-card">
-      <img src="/resources/pictures/profilbilder/Han05.jpg" alt="Han05" class="avatar">
-      <h2>Han05</h2>
-      <div class="role">Admin</div>
-      <p>Mitglied seit 2021</p>
- 
-    </div>
-
-    
-   <div class="admin-card">
-      <img src="/resources/pictures/profilbilder/Juracai.png" alt="JURACAI" class="avatar">
-      <h2>JURACAI</h2>
-      <div class="role">ADMIN</div>
-      <p>Mitglied seit 2023</p>
-    </div>
-
-    
-   <div class="admin-card">
-      <img src="/resources/pictures/profilbilder/sdsds.PNG" alt="Jan" class="avatar">
-      <h2>Jan</h2>
-      <div class="role">Admin</div>
-      <a href="https://steamcommunity.com/id/KRLJan/"></a>
-      <p>Mitglied seit 2020</p>
-   
-    </div>
-
-  </div>
-  
-  <h2 class = "überschrift2">Team im Hintergrund</h2>
-
- <div class="team-grid2">
-    <!-- Admin-Mitglied -->
-    <div class="admin-card">
-      <div class="header-image"></div>
-      <img src="/resources/pictures/profilbilder/sdsds.PNG" alt="Jan" class="avatar">
-      <h2>Jan</h2>
-      <div class="role">Chef</div>
-      <p>Mitglied seit 2020</p>
-    </div>
-    <div class="admin-card">
-      <div class="header-image"></div>
-      <img src="/resources/pictures/profilbilder/Max.png" alt="Max" class="avatar">
-      <h2>Max</h2>
-      <div class="role">Co-Chef</div>
-      <p>Mitglied seit 2019</p>
-    </div>
-  </div>
-
- <div class="team-grid">
-    <div class="admin-card">
-      <div class="header-image" style="background-image: url('bg2.jpg');"></div>
-      <img src="/resources/pictures/profilbilder/robbin.jpg" alt="Robbin" class="avatar">
-      <h2>Robbin</h2>
-      <div class="role">Social Media</div>
-      <p>Mitglied seit 2024</p>
-    </div>
-
-   <div class="admin-card">
-      <div class="header-image" style="background-image: url('bg2.jpg');"></div>
-      <img src="/resources/pictures/profilbilder/Han05.jpg" alt="Han05" class="avatar">
-      <h2>Han05</h2>
-      <div class="role">SOCIAL MEDIa</div>
-      <p>Mitglied seit 2021</p>
-    </div>
-
-    <div class="admin-card">
-      <div class="header-image" style="background-image: url('bg2.jpg');"></div>
-      <img src="/resources/pictures/profilbilder/DarioGaming.jpg" alt="DarioGamingTM" class="avatar">
-      <h2>DARIOGAMINGTM</h2>
-      <div class="role">Webseite</div>
-      <p>Mitglied seit 2022</p>
-    </div>
-
-    
-   <div class="admin-card">
-      <div class="header-image" style="background-image: url('bg2.jpg');"></div>
-      <img src="/resources/pictures/profilbilder/Sendeox.png" alt="Sendeox" class="avatar">
-      <h2>Sendeox</h2>
-      <div class="role">Social Media</div>
-      <p>Mitglied seit 2019</p>
-    </div>
-</div>
-  
-<div class="flexcontainer">
-  <!-- Block 1 -->
-  <div class="flexcontainer2">
-    <h2 class="überschrift4">Wettkampf der Ligen</h2>
-    <div class="admin-group2">
-      <div class="admin-card2">
-        <div class="header-image" style="background-image: url('/resources/pictures/backgrounds/bg2.jpg');"></div>
-        <img src="/resources/pictures/profilbilder/EMESHA.png" alt="DarioGamingTM" class="avatar">
-        <h2>EMESHA</h2>
-        <div class="role">Organisator</div>
-        <p>Mitglied seit 2018</p>
+      <!-- HTML: DEIN BLOCK -->
+      <div class="counter-container">
+        <div class="counter-box">
+          <div class="counter-number" data-target="10">0</div>
+          <div class="counter-label">SAISONS</div>
+        </div>
+        <div class="counter-box">
+          <div class="counter-number" data-target="90">0</div>
+          <div class="counter-label">FAHRER</div>
+        </div>
+        <div class="counter-box">
+          <div class="counter-number" data-target="3">0</div>
+          <div class="counter-label">LIGEN</div>
+        </div>
+        <div class="counter-box">
+          <div class="counter-number" data-target="1030">0</div>
+          <div class="counter-label">TWITCH FOLLOWER</div>
+        </div>
       </div>
-      <div class="admin-card2">
-        <div class="header-image" style="background-image: url('/resources/pictures/backgrounds/bg2.jpg');"></div>
-        <img src="/resources/pictures/profilbilder/HellFreeZ3r.png" alt="Max" class="avatar">
-        <h2>HEELFREEZER</h2>
-        <div class="role">Organisator</div>
-        <p>Mitglied seit 2019</p>
-      </div>
-    </div>
-  </div>
 
-  <!-- Block 2 -->
-  <div class="flexcontainer2">
-    <h2 class="überschrift8">Rennleitung</h2>
-    <div class="admin-group2">
-      <div class="admin-card2">
-        <div class="header-image" style="background-image: url('/resources/pictures/backgrounds/bg2.jpg');"></div>
-        <img src="/resources/pictures/profilbilder/masi_lacht.jpg" alt="Paul" class="avatar">
-        <h2>Michel</h2>
-        <div class="role">Vorsitzender</div>
-        <p>Mitglied seit 2020</p>
+      <div class="slider-container2">
+        <div class="slider-track2" id="slider-track2"></div>
       </div>
-    </div>
-  </div>
 
-  <!-- Block 3 -->
-  <div class="flexcontainer2">
-    <h2 class="überschrift7">Endurance</h2>
-    <div class="admin-group2">
-      <div class="admin-card2">
-        <div class="header-image" style="background-image: url('/resources/pictures/backgrounds/bg2.jpg');"></div>
-        <img src="/resources/pictures/profilbilder/Sendeox.jpg" alt="Sendeox" class="avatar">
-        <h2>HAMMDALL</h2>
-        <div class="role">Admin</div>
-        <p>Mitglied seit 2023</p>
+      <h1>UNSER TEAM</h1>
+      <h2 class="überschrift">Planungsgruppe</h2>
+      <div class="team-grid2">
+        <!-- Admin-Mitglied -->
+        <div class="admin-card">
+          <img
+            src="/resources/pictures/profilbilder/Paul.png"
+            alt="ALARIC01"
+            class="avatar"
+          />
+          <h2>ALARIC01</h2>
+          <div class="role">LIGALEITUNG</div>
+          <p>Mitglied seit 2016</p>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
+      <div class="team-grid">
+        <div class="admin-card">
+          <img
+            src="/resources/pictures/profilbilder/EMESHA.png"
+            alt="EMESHA"
+            class="avatar"
+          />
+          <h2>EMESHA</h2>
+          <div class="role">Admin</div>
+          <p>Mitglied seit 2018</p>
+        </div>
 
-  <h2 class = "überschrift6">Kommentatoren</h2>
+        <div class="admin-card">
+          <img
+            src="/resources/pictures/profilbilder/DarioGaming.jpg"
+            alt="DarioGamingTM"
+            class="avatar"
+          />
+          <h2>DARIOGAMINGTM</h2>
+          <div class="role">Admin</div>
+          <p>Mitglied seit 2022</p>
+        </div>
 
+        <div class="admin-card">
+          <img
+            src="/resources/pictures/profilbilder/HellFreeZ3r.png"
+            alt="HELLFREEZ3R"
+            class="avatar"
+          />
+          <h2>HELLFREEZ3R</h2>
+          <div class="role">Admin</div>
+          <p>Mitglied seit 2018</p>
+        </div>
 
-<div class="flexcontainer">
-  <!-- Block 1 -->
-  <div class="flexcontainer2">
-    <h2 class="überschrift6">Freitag</h2>
-    <div class="admin-group2">
-        <div class="admin-card2">
-        <div class="header-image" style="background-image: url('/resources/pictures/backgrounds/bg2.jpg');"></div>
-        <img src="/resources/pictures/profilbilder/Juracai.png" alt="Max" class="avatar">
-        <h2>JURACAI</h2>
-        <div class="role">Streamer</div>
-        <p>Mitglied seit 2023</p>
+        <div class="admin-card">
+          <img
+            src="/resources/pictures/profilbilder/Han05.jpg"
+            alt="Han05"
+            class="avatar"
+          />
+          <h2>Han05</h2>
+          <div class="role">Admin</div>
+          <p>Mitglied seit 2021</p>
+        </div>
+
+        <div class="admin-card">
+          <img
+            src="/resources/pictures/profilbilder/Juracai.png"
+            alt="JURACAI"
+            class="avatar"
+          />
+          <h2>JURACAI</h2>
+          <div class="role">ADMIN</div>
+          <p>Mitglied seit 2023</p>
+        </div>
+
+        <div class="admin-card">
+          <img
+            src="/resources/pictures/profilbilder/sdsds.PNG"
+            alt="Jan"
+            class="avatar"
+          />
+          <h2>Jan</h2>
+          <div class="role">Admin</div>
+          <a href="https://steamcommunity.com/id/KRLJan/"></a>
+          <p>Mitglied seit 2020</p>
+        </div>
       </div>
-      <div class="admin-card2">
-        <div class="header-image" style="background-image: url('/resources/pictures/backgrounds/bg2.jpg');"></div>
-        <img src="/resources/pictures/profilbilder/EMESHA.png" alt="DarioGamingTM" class="avatar">
-        <h2>Lemi</h2>
-        <div class="role">Kommentator</div>
-        <p>Mitglied seit 2018</p>
-      </div>
-    
-    </div>
-  </div>
 
-  <!-- Block 2 -->
- <div class="flexcontainer2">
-    <h2 class="überschrift6">Samstag</h2>
-    <div class="admin-group2">
-      <div class="admin-card2">
-        <div class="header-image" style="background-image: url('/resources/pictures/backgrounds/bg2.jpg');"></div>
-        <img src="/resources/pictures/profilbilder/" alt="DarioGamingTM" class="avatar">
-        <h2>Gamex</h2>
-        <div class="role">Streamer</div>
-        <p>Mitglied seit 2018</p>
-      </div>
-      <div class="admin-card2">
-        <div class="header-image" style="background-image: url('/resources/pictures/backgrounds/bg2.jpg');"></div>
-        <img src="/resources/pictures/profilbilder/illu.png" alt="Max" class="avatar">
-        <h2>ILLU</h2>
-        <div class="role">Kommentator</div>
-        <p>Mitglied seit 2023</p>
-      </div>
-    </div>
-  </div>
+      <h2 class="überschrift2">Team im Hintergrund</h2>
 
-  <!-- Block 3 -->
-  <div class="flexcontainer2">
-    <h2 class="überschrift6">Sonntag</h2>
-    <div class="admin-group2">
-      <div class="admin-card2">
-        <div class="header-image" style="background-image: url('/resources/pictures/backgrounds/bg2.jpg');"></div>
-        <img src="/resources/pictures/profilbilder/cheesy.jpeg" alt="Jan" class="avatar">
-        <h2>Cheesy</h2>
-        <div class="role">Streamer</div>
-        <p>Mitglied seit 2023</p>
+      <div class="team-grid2">
+        <!-- Admin-Mitglied -->
+        <div class="admin-card">
+          <div class="header-image"></div>
+          <img
+            src="/resources/pictures/profilbilder/sdsds.PNG"
+            alt="Jan"
+            class="avatar"
+          />
+          <h2>Jan</h2>
+          <div class="role">Chef</div>
+          <p>Mitglied seit 2020</p>
+        </div>
+        <div class="admin-card">
+          <div class="header-image"></div>
+          <img
+            src="/resources/pictures/profilbilder/Max.png"
+            alt="Max"
+            class="avatar"
+          />
+          <h2>Max</h2>
+          <div class="role">Co-Chef</div>
+          <p>Mitglied seit 2019</p>
+        </div>
       </div>
-      <div class="admin-card2">
-        <div class="header-image" style="background-image: url('/resources/pictures/backgrounds/bg2.jpg');"></div>
-        <img src="/resources/pictures/profilbilder/lino.jpg" alt="Sendeox" class="avatar">
-        <h2>Lino</h2>
-        <div class="role">Kommentator</div>
-        <p>Mitglied seit 2023</p>
+
+      <div class="team-grid">
+        <div class="admin-card">
+          <div
+            class="header-image"
+            style="background-image: url('bg2.jpg')"
+          ></div>
+          <img
+            src="/resources/pictures/profilbilder/robbin.jpg"
+            alt="Robbin"
+            class="avatar"
+          />
+          <h2>Robbin</h2>
+          <div class="role">Social Media</div>
+          <p>Mitglied seit 2024</p>
+        </div>
+
+        <div class="admin-card">
+          <div
+            class="header-image"
+            style="background-image: url('bg2.jpg')"
+          ></div>
+          <img
+            src="/resources/pictures/profilbilder/Han05.jpg"
+            alt="Han05"
+            class="avatar"
+          />
+          <h2>Han05</h2>
+          <div class="role">SOCIAL MEDIA</div>
+          <p>Mitglied seit 2021</p>
+        </div>
+
+        <div class="admin-card">
+          <div
+            class="header-image"
+            style="background-image: url('bg2.jpg')"
+          ></div>
+          <img
+            src="/resources/pictures/profilbilder/DarioGaming.jpg"
+            alt="DarioGamingTM"
+            class="avatar"
+          />
+          <h2>DARIOGAMINGTM</h2>
+          <div class="role">Webseite</div>
+          <p>Mitglied seit 2022</p>
+        </div>
+
+        <div class="admin-card">
+          <div
+            class="header-image"
+            style="background-image: url('bg2.jpg')"
+          ></div>
+          <img
+            src="/resources/pictures/profilbilder/Sendeox.png"
+            alt="Sendeox"
+            class="avatar"
+          />
+          <h2>Sendeox</h2>
+          <div class="role">Social Media</div>
+          <p>Mitglied seit 2019</p>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
 
+      <div class="flexcontainer">
+        <!-- Block 1 -->
+        <div class="flexcontainer2">
+          <h2 class="überschrift4">Wettkampf der Ligen</h2>
+          <div class="admin-group2">
+            <div class="admin-card2">
+              <div
+                class="header-image"
+                style="
+                  background-image: url('/resources/pictures/backgrounds/bg2.jpg');
+                "
+              ></div>
+              <img
+                src="/resources/pictures/profilbilder/EMESHA.png"
+                alt="DarioGamingTM"
+                class="avatar"
+              />
+              <h2>EMESHA</h2>
+              <div class="role">Organisator</div>
+              <p>Mitglied seit 2018</p>
+            </div>
+            <div class="admin-card2">
+              <div
+                class="header-image"
+                style="
+                  background-image: url('/resources/pictures/backgrounds/bg2.jpg');
+                "
+              ></div>
+              <img
+                src="/resources/pictures/profilbilder/HellFreeZ3r.png"
+                alt="Max"
+                class="avatar"
+              />
+              <h2>HEELFREEZER</h2>
+              <div class="role">Organisator</div>
+              <p>Mitglied seit 2019</p>
+            </div>
+          </div>
+        </div>
 
+        <!-- Block 2 -->
+        <div class="flexcontainer2">
+          <h2 class="überschrift8">Rennleitung</h2>
+          <div class="admin-group2">
+            <div class="admin-card2">
+              <div
+                class="header-image"
+                style="
+                  background-image: url('/resources/pictures/backgrounds/bg2.jpg');
+                "
+              ></div>
+              <img
+                src="/resources/pictures/profilbilder/masi_lacht.jpg"
+                alt="Paul"
+                class="avatar"
+              />
+              <h2>Michel</h2>
+              <div class="role">Vorsitzender</div>
+              <p>Mitglied seit 2020</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 3 -->
+        <div class="flexcontainer2">
+          <h2 class="überschrift7">Endurance</h2>
+          <div class="admin-group2">
+            <div class="admin-card2">
+              <div
+                class="header-image"
+                style="
+                  background-image: url('/resources/pictures/backgrounds/bg2.jpg');
+                "
+              ></div>
+              <img
+                src="resources/pictures/profilbilder/hammdall.png"
+                alt="Sendeox"
+                class="avatar"
+              />
+              <h2>HAMMDALL</h2>
+              <div class="role">Admin</div>
+              <p>Mitglied seit 2019</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="überschrift6">Kommentatoren</h2>
+
+      <div class="flexcontainer">
+        <!-- Block 1 -->
+        <div class="flexcontainer2">
+          <h2 class="überschrift6">Freitag</h2>
+          <div class="admin-group2">
+            <div class="admin-card2">
+              <div
+                class="header-image"
+                style="
+                  background-image: url('/resources/pictures/backgrounds/bg2.jpg');
+                "
+              ></div>
+              <img
+                src="/resources/pictures/profilbilder/lemi.png"
+                alt="DarioGamingTM"
+                class="avatar"
+              />
+              <h2>LEMI</h2>
+              <div class="role">Streamer</div>
+              <p>Mitglied seit 2020</p>
+            </div>
+            <div class="admin-card2">
+              <div
+                class="header-image"
+                style="
+                  background-image: url('/resources/pictures/backgrounds/bg2.jpg');
+                "
+              ></div>
+              <img
+                src="/resources/pictures/profilbilder/Juracai.png"
+                alt="Max"
+                class="avatar"
+              />
+              <h2>JURACAI</h2>
+              <div class="role">Kommentator</div>
+              <p>Mitglied seit 2023</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 2 -->
+        <div class="flexcontainer2">
+          <h2 class="überschrift6">Samstag</h2>
+          <div class="admin-group2">
+            <div class="admin-card2">
+              <div
+                class="header-image"
+                style="
+                  background-image: url('/resources/pictures/backgrounds/bg2.jpg');
+                "
+              ></div>
+              <img
+                src="/resources/pictures/profilbilder/gamex.png"
+                alt="DarioGamingTM"
+                class="avatar"
+              />
+              <h2>Gamex</h2>
+              <div class="role">Streamer</div>
+              <p>Mitglied seit 2017</p>
+            </div>
+            <div class="admin-card2">
+              <div
+                class="header-image"
+                style="
+                  background-image: url('/resources/pictures/backgrounds/bg2.jpg');
+                "
+              ></div>
+              <img
+                src="/resources/pictures/profilbilder/illu.png"
+                alt="Max"
+                class="avatar"
+              />
+              <h2>ILLU</h2>
+              <div class="role">Kommentator</div>
+              <p>Mitglied seit 2023</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 3 -->
+        <div class="flexcontainer2">
+          <h2 class="überschrift6">Sonntag</h2>
+          <div class="admin-group2">
+            <div class="admin-card2">
+              <div
+                class="header-image"
+                style="
+                  background-image: url('/resources/pictures/backgrounds/bg2.jpg');
+                "
+              ></div>
+              <img
+                src="/resources/pictures/profilbilder/cheesy.jpeg"
+                alt="Jan"
+                class="avatar"
+              />
+              <h2>Cheesy</h2>
+              <div class="role">Streamer</div>
+              <p>Mitglied seit 2023</p>
+            </div>
+            <div class="admin-card2">
+              <div
+                class="header-image"
+                style="
+                  background-image: url('/resources/pictures/backgrounds/bg2.jpg');
+                "
+              ></div>
+              <img
+                src="/resources/pictures/profilbilder/lino.jpg"
+                alt="Sendeox"
+                class="avatar"
+              />
+              <h2>Lino</h2>
+              <div class="role">Kommentator</div>
+              <p>Mitglied seit 2023</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <footer class="footer">
       <div class="container">
@@ -582,8 +750,7 @@ document.getElementById("greeting").textContent = greeting;
         </a>
       </div>
     </footer>
-
+    <script src="js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="js/script.js" defer></script>
   </body>
 </html>
