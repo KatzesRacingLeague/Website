@@ -109,6 +109,7 @@ body h1 {
 
 .nav-links li {
   position: relative;
+  list-style: none;
   transition: transform var(--transition);
 }
 
@@ -197,10 +198,10 @@ body h1 {
     margin: 0;
     padding: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-     margin: 0;
-  padding: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  line-height: 1.2; /* kompaktere Zeilenhöhe */
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    line-height: 1.2; /* kompaktere Zeilenhöhe */
   }
 
   .nav-links li:last-child {
@@ -208,14 +209,14 @@ body h1 {
   }
 
   .nav-links > li > a {
-   font-weight: bold;
-  padding: 0.6rem 1rem; /* Weniger Padding oben/unten */
-  font-size: 0.95rem;   /* Etwas kleinerer Text */
-  display: block;
-  text-align: left;
-  color: white;
-  text-decoration: none;
-  transition: background 0.3s ease;
+    font-weight: bold;
+    padding: 0.6rem 1rem; /* Weniger Padding oben/unten */
+    font-size: 0.95rem; /* Etwas kleinerer Text */
+    display: block;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s ease;
   }
 
   .nav-links a:hover {
@@ -235,38 +236,31 @@ body h1 {
   }
 
   .dropdown-content li a {
-  
     font-size: 0.9rem;
     border-left: 2px solid rgba(255, 255, 255, 0.15);
     color: white;
     text-decoration: none;
     display: block;
     text-align: left;
-     padding: 0.4rem 1.5rem; /* Etwas schmaler */
-  font-size: 0.85rem;     /* Kleinerer Dropdown-Text */
-}
-  }
-
-
-  .dropdown-content li a:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-  }
-
-  .logo img {
-    width: 90px;
-  }
-
-  .navbar {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 1.5rem; /* Etwas schmaler */
+    font-size: 0.85rem; /* Kleinerer Dropdown-Text */
   }
 }
 
+.dropdown-content li a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
 
+.logo img {
+  width: 90px;
+}
 
-
+.navbar {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
 
 /* === FOOTER (unverändert gelassen) === */
 
