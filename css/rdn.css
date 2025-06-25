@@ -14,8 +14,16 @@
   text-align: center;
   text-transform: uppercase;
 }
-.pdf {
+
+.pdf-wrapper {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pdf {
+  width: 75%;
   height: 600px;
   border: none;
   border-radius: 12px;
