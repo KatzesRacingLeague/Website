@@ -13,6 +13,9 @@ year-button:hover {
 .carousel-btn {
   background-color: var(--fridaysplit);
 }
+.carousel-track-container {
+  border: 5px solid var(--fridaysplit);
+}
 .team-card {
   border-left: 4px solid var(--fridaysplit);
   border-right: 4px solid var(--fridaysplit);

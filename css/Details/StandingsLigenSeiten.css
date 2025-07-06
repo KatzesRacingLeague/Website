@@ -51,16 +51,13 @@ h2 {
 
 .carousel-track-container {
   overflow: hidden;
+  border-radius: 8px; /* Abgerundete Ecken */
 }
 
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: max-content;
-}
-
-.carousel-track img {
-  border-radius: 20px;
 }
 
 /* Navigationspfeile */

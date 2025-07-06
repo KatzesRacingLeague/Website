@@ -55,6 +55,11 @@
   cursor: pointer; /* Zeigt eine Hand an, wenn man über den Button fährt */
 }
 
+.graphics {
+  border: 5px solid var(--sundaysplit);
+  border-radius: 8px; /* Abgerundete Ecken */
+}
+
 /* Slider*/
 
 .LigenContainer {

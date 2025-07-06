@@ -297,11 +297,9 @@ body h1 {
   text-decoration: underline;
 }
 
-.socials {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  justify-content: center;
+.socials a:hover {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .footer img {
