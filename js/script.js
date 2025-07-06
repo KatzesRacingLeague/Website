@@ -42,10 +42,15 @@ const textItems = [
 const track2 = document.getElementById('slider-track2');
 const allTextItems = textItems.concat(textItems); // doppeln für Endlosschleife
 
-allTextItems.forEach(text => {
+allTextItems.forEach((text, index) => {
   const div = document.createElement('div');
   div.classList.add('text-slide');
   div.textContent = text;
+
+  if (index === 0) {
+    div.style.color = 'var(--sundaysplit)';
+  }
+
   track2.appendChild(div);
 });
 

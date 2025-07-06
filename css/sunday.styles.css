@@ -31,6 +31,10 @@ year-button:hover {
   margin-bottom: 200px;
 }
 
+.carousel-track-container {
+  border: 5px solid var(--sundaysplit);
+}
+
 .middle-carousel .carousel,
 .middle-carousel .carousel-track-container,
 .middle-carousel .carousel-track img {

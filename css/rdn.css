@@ -10,7 +10,7 @@
   text-transform: uppercase;
 }
 .header h2 {
-  font-size: 40px;
+  font-size: 50px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -24,7 +24,7 @@
 
 .pdf {
   width: 75%;
-  height: 600px;
+  height: 100vh;
   border: none;
   border-radius: 12px;
 }
@@ -42,7 +42,7 @@
   color: white; /* Textfarbe weiß für guten Kontrast */
   border: 5px solid var(--sundaysplit);
   border-radius: 8px; /* Abgerundete Ecken */
-  font-size: 50px;
+  font-size: 30px;
   text-transform: uppercase;
   text-decoration: none;
 }

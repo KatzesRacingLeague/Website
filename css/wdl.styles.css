@@ -2,6 +2,38 @@ year-button:hover {
   color: var(--wdl);
 }
 
+.features {
+  display: flex;
+  flex-wrap: wrap; /* Symbole umbrechen, wenn nicht genug Platz ist */
+  justify-content: space-evenly;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px; /* Größe für jedes Feature-Element */
+  text-align: center;
+}
+
+.feature-item i {
+  font-size: 70px;
+  color: var(--sundaysplit);
+}
+
+.feature-item p {
+  font-size: 27px;
+  text-transform: uppercase;
+}
+
+.feature-item {
+  width: 420px;
+}
+
+.feature-item i {
+  color: var(--wdl);
+}
+
 .timeline-line {
   background: var(--wdl);
 }
