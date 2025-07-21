@@ -64,15 +64,20 @@ year-button:hover {
   margin-top: 50px;
 }
 
+.carousel-track-container {
+  border: 5px solid;
+  border-image: linear-gradient(70deg, #f26e6e, #6ef2f2) 1;
+}
+
 .middle-carousel .carousel,
 .middle-carousel .carousel-track-container {
   margin-top: -50px;
-  width: 1351px;
+  width: 1350px;
   height: 760px;
 }
 
 .middle-carousel .carousel-track img {
-  width: 1351px;
+  width: 1350px;
   height: 760px;
   border-radius: 20px;
 }

@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Katzes Racing League</title>
     <link rel="stylesheet" href="/css/navbar.css" />
-    <link rel="stylesheet" href="/css/wdl.styles.css" />
     <link rel="stylesheet" href="/css/Details/Cockpit.css" />
     <link rel="stylesheet" href="/css/slideshowCounter.css" />
     <link rel="stylesheet" href="/css/Details/ZeitstrahlLigen.css" />
     <link rel="stylesheet" href="/css/Details/StandingsLigenSeiten.css" />
+    <link rel="stylesheet" href="/css/wdl.styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -365,7 +365,7 @@
             <div class="carousel-track-container">
               <div class="carousel-track">
                 <img
-                  src="/resources/pictures/wdl/results/test.png"
+                  src="/resources/pictures/wdl/standings/standings.png"
                   alt="GP 1"
                 />
               </div>
@@ -430,10 +430,15 @@
         const track2 = document.getElementById("slider-track2");
         const allTextItems = textItems.concat(textItems); // doppeln für Endlosschleife
 
-        allTextItems.forEach((text) => {
+        allTextItems.forEach((text, index) => {
           const div = document.createElement("div");
           div.classList.add("text-slide");
           div.textContent = text;
+
+          if (index === 0) {
+            div.style.color = 'var(--wdl)';
+          }
+
           track2.appendChild(div);
         });
       </script>
