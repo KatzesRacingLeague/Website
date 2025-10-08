@@ -376,6 +376,10 @@
                   src="/resources/pictures/wdl/standings/R3.png"
                   alt="GP 3"
                 />
+                <img
+                  src="/resources/pictures/wdl/standings/R4.png"
+                  alt="GP 4"
+                />
               </div>
             </div>
             <button class="carousel-btn next">&#10095;</button>
@@ -386,7 +390,7 @@
         document.querySelectorAll(".carousel").forEach((carousel) => {
           const track = carousel.querySelector(".carousel-track");
           const images = track.querySelectorAll("img");
-          let index = 0;
+          let index = images.length - 1; // Start with the last image
 
           const prevBtn = carousel.querySelector(".carousel-btn.prev");
           const nextBtn = carousel.querySelector(".carousel-btn.next");
@@ -396,6 +400,11 @@
             const imgWidth = images[0].clientWidth;
             track.style.transform = `translateX(-${index * imgWidth}px)`;
           }
+
+          // Show the last image by default
+          window.addEventListener('load', updateCarousel);
+          // In case the images are not loaded yet, also update after a short delay
+          setTimeout(updateCarousel, 200);
 
           prevBtn.addEventListener("click", () => {
             index = (index - 1 + images.length) % images.length;
@@ -443,7 +452,7 @@
           div.classList.add("text-slide");
           div.textContent = text;
 
-          if (index < 4) {
+          if (index < 5) {
             div.style.color = 'var(--wdl)';
           }
 

@@ -329,6 +329,10 @@
                     src="/resources/pictures/f1leagues/friday/standings/R8_FWM.png"
                     alt="Fahrer 8"
                   />
+                  <img
+                    src="/resources/pictures/f1leagues/friday/standings/R9_FWM.png"
+                    alt="Fahrer 9"
+                  />
                 </div>
               </div>
               <button class="carousel-btn next">&#10095;</button>
@@ -372,6 +376,10 @@
                   <img
                     src="/resources/pictures/f1leagues/friday/standings/R8_KWM.png"
                     alt="Team 8"
+                  />
+                  <img
+                    src="/resources/pictures/f1leagues/friday/standings/R9_KWM.png"
+                    alt="Team 9"
                   />
                 </div>
               </div>
@@ -427,6 +435,10 @@
                   src="/resources/pictures/f1leagues/friday/results/R8_Result.png"
                   alt="GP 8"
                 />
+                <img
+                  src="/resources/pictures/f1leagues/friday/results/R9_Result.png"
+                  alt="GP 9"
+                />
               </div>
             </div>
             <button class="carousel-btn next">&#10095;</button>
@@ -438,7 +450,7 @@
         document.querySelectorAll(".carousel").forEach((carousel) => {
           const track = carousel.querySelector(".carousel-track");
           const images = track.querySelectorAll("img");
-          let index = 0;
+          let index = images.length - 1; // Start with the last image
 
           const prevBtn = carousel.querySelector(".carousel-btn.prev");
           const nextBtn = carousel.querySelector(".carousel-btn.next");
@@ -448,6 +460,10 @@
             const imgWidth = images[0].clientWidth;
             track.style.transform = `translateX(-${index * imgWidth}px)`;
           }
+
+          // Show the last image by default
+          window.addEventListener('load', updateCarousel);
+          setTimeout(updateCarousel, 200);
 
           prevBtn.addEventListener("click", () => {
             index = (index - 1 + images.length) % images.length;
