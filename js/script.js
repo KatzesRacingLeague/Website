@@ -28,7 +28,7 @@ const textItems = [
   '9. Australien',
   '10. Singapur',
   '11. Italien',
-  '12. Texas',
+  '12. USA (Texas)',
   '13. Kanada',
   '14. Österreich',
   '15. Abu Dhabi',
@@ -47,7 +47,7 @@ allTextItems.forEach((text, index) => {
   div.classList.add('text-slide');
   div.textContent = text;
 
-  if (index < 11) {
+  if (index < 12) {
     div.style.color = 'var(--sundaysplit)';
   }
 
