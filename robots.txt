@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://katzes-racing-league.de/sitemap.xml
