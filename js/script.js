@@ -51,10 +51,7 @@ allTextItems.forEach((text, index) => {
   const div = document.createElement("div");
   div.classList.add("text-slide");
   div.textContent = text;
-
-  if (index < 19) {
-    div.style.color = "var(--sundaysplit)";
-  }
+  div.style.color = "var(--sundaysplit)";
 
   track2.appendChild(div);
 });
