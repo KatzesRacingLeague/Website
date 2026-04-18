@@ -5,6 +5,7 @@
   --sundaysplit: #6ef2f2;
   --gold: #b8860b;
   --endurance: #f09d51;
+  --lmu: #e84753;
   --wdl: #f26e6e;
   --wdlblue: #429396;
   --ligaleiter: #ff0000;
@@ -182,7 +183,9 @@ body h1 {
     overflow: hidden;
     max-height: 0;
     opacity: 0;
-    transition: max-height 0.4s ease, opacity 0.3s ease;
+    transition:
+      max-height 0.4s ease,
+      opacity 0.3s ease;
     flex-direction: column;
     display: flex;
     z-index: 1000;

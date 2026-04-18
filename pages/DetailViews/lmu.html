@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katzes Racing League</title>
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/Details/Cockpit.css" />
+    <link rel="stylesheet" href="/css/slideshowCounter.css" />
+    <link rel="stylesheet" href="/css/Details/ZeitstrahlLigen.css" />
+    <link rel="stylesheet" href="/css/Details/StandingsLigenSeiten.css" />
+    <link rel="stylesheet" href="/css/lmu.styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/resources/pictures/general/krllogos/KRL_LMU.png"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <!-- Logo der Liga -->
+        <a href="https://katzes-racing-league.de/">
+          <div class="logo">
+            <img
+              src="/resources/pictures/general/krllogos/KRL_LMU.png"
+              alt="Liga Logo"
+            />
+          </div>
+        </a>
+
+        <!-- Menü-Button für mobile Ansicht -->
+        <button class="menu-toggle">☰</button>
+
+        <!-- Hauptnavigationslinks -->
+        <ul class="nav-links">
+          <li class="dropdown">
+            <a class="Formel1">KRL F1 Liga</a>
+            <ul class="dropdown-content f1ligen">
+              <li class="text1">
+                <a href="https://katzes-racing-league.de/freitagsliga"
+                  >Freitagsliga</a
+                >
+              </li>
+              <li class="text2">
+                <a href="https://katzes-racing-league.de/samstagsliga"
+                  >Samstagsliga</a
+                >
+              </li>
+              <li class="text3">
+                <a href="https://katzes-racing-league.de/sonntagsliga"
+                  >Sonntagsliga</a
+                >
+              </li>
+              <li class="text3">
+                <a href="https://katzes-racing-league.de/f1/race-director-notes"
+                  >RDN</a
+                >
+              </li>
+              <li class="text3">
+                <a href="https://katzes-racing-league.de/f1/regelwerk"
+                  >Regelwerk</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="lmu-nav" href="https://katzes-racing-league.de/lmu"
+              >KRL LMU LIGA</a
+            >
+            <ul class="dropdown-content sonstiges">
+              <li class="text3">
+                <a
+                  href="https://katzes-racing-league.de/lmu/race-director-notes"
+                  >RDN</a
+                >
+              </li>
+              <li class="text3">
+                <a href="https://katzes-racing-league.de/lmu/regelwerk"
+                  >Regelwerk</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              class="WDL-nav"
+              href="https://katzes-racing-league.de/wettkampf-der-ligen"
+              >Wettkampf der Ligen</a
+            >
+          </li>
+          <li>
+            <a class="ETeam" href="https://katzes-racing-league.de/endurance"
+              >Endurance</a
+            >
+          </li>
+          <li class="dropdown">
+            <a class="Formel1">Sonstiges</a>
+            <ul class="dropdown-content sonstiges">
+              <li class="text3">
+                <a href="https://katzes-racing-league.de/icons">Icons</a>
+              </li>
+              <li class="text3">
+                <a href="https://xoose.de/krl/">Merch Shop</a>
+              </li>
+
+              <li class="text3">
+                <a href="https://paypal.me/katzesracingleague">Spenden</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuToggle.addEventListener("click", () => {
+          navLinks.classList.toggle("open");
+        });
+
+        // Optional: Klick außerhalb schließt das Menü
+        document.addEventListener("click", (e) => {
+          if (!e.target.closest("nav")) {
+            navLinks.classList.remove("open");
+          }
+        });
+        //Scroolbar
+        window.addEventListener("scroll", () => {
+          const scrollTop = window.scrollY;
+          const docHeight = document.body.scrollHeight - window.innerHeight;
+          const scrollPercent = (scrollTop / docHeight) * 100;
+          document.getElementById("progressBar").style.width =
+            scrollPercent + "%";
+        });
+      </script>
+
+      <div id="progressBar"></div>
+    </header>
+
+    <main>
+      <div class="header">
+        <h1>LE MANS ULTIMATE</h1>
+      </div>
+      <div class="features">
+        <div class="feature-item">
+          <i class="fas fa-car"></i>
+          <p>GT3 - Freie Fahrzeugwahl</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-flag-checkered"></i>
+          <p>3 Fahrer pro Team</p>
+        </div>
+        <div class="feature-item">
+          <i class="fab fa-twitch"></i>
+          <p>Sonntag 19:00 Uhr</p>
+        </div>
+      </div>
+
+      <h1>FAHRERFELD</h1>
+      <section class="f1-driver-grid">
+        <div class="team-card">
+          <h2>A.C.N Racing</h2>
+          <div class="drivers">
+            <div>
+              <h2>P. SCHOBER</h2>
+            </div>
+            <div>
+              <h2>A. SNIZEK</h2>
+            </div>
+            <div>
+              <h2>L. KLEIN</h2>
+            </div>
+          </div>
+        </div>
+        <div class="team-card">
+          <h2>Blackline Racing</h2>
+          <div class="drivers">
+            <div>
+              <h2>J. SHEPPARD</h2>
+            </div>
+            <div>
+              <h2>J. VAUPEL</h2>
+            </div>
+            <div>
+              <h2>L. KNAB</h2>
+            </div>
+          </div>
+        </div>
+        <div class="team-card">
+          <h2>Erdbeermarmelade</h2>
+          <div class="drivers">
+            <div>
+              <h2>M. NEUBER</h2>
+            </div>
+            <div>
+              <h2>J. SINGH</h2>
+            </div>
+            <div>
+              <h2>M. STOLL</h2>
+            </div>
+          </div>
+        </div>
+        <div class="team-card">
+          <h2>Leopard Motorsport</h2>
+          <div class="drivers">
+            <div>
+              <h2>F. SCHUSTER</h2>
+            </div>
+            <div>
+              <h2>A. LEHMANN</h2>
+            </div>
+            <div>
+              <h2>M. MEHLER</h2>
+            </div>
+          </div>
+        </div>
+        <div class="team-card">
+          <h2>Mexximus Prime Racing</h2>
+          <div class="drivers">
+            <div>
+              <h2>J. ODERMATT</h2>
+            </div>
+            <div>
+              <h2>J. JURACAI</h2>
+            </div>
+            <div>
+              <h2>M. MÜLLER</h2>
+            </div>
+          </div>
+        </div>
+        <div class="team-card">
+          <h2>Mythen Racing</h2>
+          <div class="drivers">
+            <div>
+              <h2>U. ROTHENFLUH</h2>
+            </div>
+            <div>
+              <h2>B. BETSCHART</h2>
+            </div>
+            <div>
+              <h2>H. NORINHA</h2>
+            </div>
+          </div>
+        </div>
+        <div class="team-card">
+          <h2>Plan C Racing</h2>
+          <div class="drivers">
+            <div>
+              <h2>H. RACINGPOTTER</h2>
+            </div>
+            <div>
+              <h2>K. SANDIKCI</h2>
+            </div>
+            <div>
+              <h2>L. DECKERS</h2>
+            </div>
+          </div>
+        </div>
+        <div class="team-card">
+          <h2>PROJECT.D</h2>
+          <div class="drivers">
+            <div>
+              <h2>M. HOELZER</h2>
+            </div>
+            <div>
+              <h2>D. MÜLLER</h2>
+            </div>
+            <div>
+              <h2>M. BRUHN</h2>
+            </div>
+          </div>
+        </div>
+        <div class="team-card">
+          <h2>Sch(R)ott Gaming</h2>
+          <div class="drivers">
+            <div>
+              <h2>L. VON HOF</h2>
+            </div>
+            <div>
+              <h2>Y. FRICKE</h2>
+            </div>
+            <div>
+              <h2>P. 90R32</h2>
+            </div>
+          </div>
+        </div>
+        <div class="team-card">
+          <h2>Sinful Titans Racing</h2>
+          <div class="drivers">
+            <div>
+              <h2>M. DITTMAIER</h2>
+            </div>
+            <div>
+              <h2>L. HERMANN</h2>
+            </div>
+            <div>
+              <h2>V. LOKI</h2>
+            </div>
+          </div>
+        </div>
+        <div class="team-card">
+          <h2>Team Spica</h2>
+          <div class="drivers">
+            <div>
+              <h2>J. BAISCHKEL</h2>
+            </div>
+            <div>
+              <h2>F. GRUENER</h2>
+            </div>
+            <div>
+              <h2>A. LUCA</h2>
+            </div>
+          </div>
+        </div>
+        <div class="team-card">
+          <h2>TNT Racing Team</h2>
+          <div class="drivers">
+            <div>
+              <h2>M. LEHMBERG</h2>
+            </div>
+            <div>
+              <h2>L. IMPULSIV</h2>
+            </div>
+            <div>
+              <h2>M. SIMROTH</h2>
+            </div>
+          </div>
+        </div>
+        <div class="team-card">
+          <h2>Wylde13 Motorsport</h2>
+          <div class="drivers">
+            <div>
+              <h2>K. CANSEVER</h2>
+            </div>
+            <div>
+              <h2>C. MARTIN</h2>
+            </div>
+            <div>
+              <h2>S. VREUND</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="carousel-section">
+        <div class="top-carousels">
+          <div class="carousel-box">
+            <h2>Fahrerstände</h2>
+            <div class="carousel" id="fahrer-carousel">
+              <button class="carousel-btn prev">&#10094;</button>
+              <div class="carousel-track-container">
+                <div class="carousel-track">
+                  <img
+                    src="/resources/pictures/general/krllogos/KRL_LMU.png"
+                    alt="Fahrer 1"
+                  />
+                </div>
+              </div>
+              <button class="carousel-btn next">&#10095;</button>
+            </div>
+          </div>
+
+          <div class="carousel-box">
+            <h2>Teamstände</h2>
+            <div class="carousel" id="team-carousel">
+              <button class="carousel-btn prev">&#10094;</button>
+              <div class="carousel-track-container">
+                <div class="carousel-track">
+                  <img
+                    src="/resources/pictures/general/krllogos/KRL_LMU.png"
+                    alt="Team 1"
+                  />
+                </div>
+              </div>
+              <button class="carousel-btn next">&#10095;</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="button">
+          <a id="class-button" class="class-button" href=""
+            >WM TABELLE - COMING SOON</a
+          >
+        </div>
+
+        <div class="middle-carousel carousel-box">
+          <h2>GP-Ergebnisse</h2>
+          <div class="carousel" id="gp-carousel">
+            <button class="carousel-btn prev">&#10094;</button>
+            <div class="carousel-track-container">
+              <div class="carousel-track">
+                <img
+                  src="/resources/pictures/general/krllogos/KRL_LMU.png"
+                  alt="GP 1"
+                />
+              </div>
+            </div>
+            <button class="carousel-btn next">&#10095;</button>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        document.querySelectorAll(".carousel").forEach((carousel) => {
+          const track = carousel.querySelector(".carousel-track");
+          const images = track.querySelectorAll("img");
+          let index = images.length - 1; // Start with the last image
+
+          const prevBtn = carousel.querySelector(".carousel-btn.prev");
+          const nextBtn = carousel.querySelector(".carousel-btn.next");
+
+          function updateCarousel() {
+            // Berechnung nach Bildbreite dynamisch
+            const imgWidth = images[0].clientWidth;
+            track.style.transform = `translateX(-${index * imgWidth}px)`;
+          }
+
+          // Show the last image by default
+          window.addEventListener("load", updateCarousel);
+          setTimeout(updateCarousel, 200);
+
+          prevBtn.addEventListener("click", () => {
+            index = (index - 1 + images.length) % images.length;
+            updateCarousel();
+          });
+
+          nextBtn.addEventListener("click", () => {
+            index = (index + 1) % images.length;
+            updateCarousel();
+          });
+        });
+      </script>
+
+      <div class="slider-container2">
+        <div class="slider-track2" id="slider-track2"></div>
+      </div>
+
+      <script>
+        const textItems = [
+          "T. Fuji (Classic Circuit) - 19.04.26",
+          "1. Le Mans (WEC) - 26.04.26",
+          "2. Portugal - 10.05.26",
+          "3. Brasilien - 24.05.26",
+          "4. Bahrain (WEC) - 07.06.26",
+          "5. Fuji (Classic Circuit) - 28.06.26",
+          "6. Monza (Default) - 19.07.26",
+          "7. Spa (WEC) - 02.08.26",
+          "8. Sebring (Default) - 13.09.26",
+          "9. Bahrain (Outer Circuit) - 27.09.26",
+          "10. Le Mans (WEC) - 11.10.26",
+        ];
+        const track2 = document.getElementById("slider-track2");
+        const allTextItems = textItems.concat(textItems); // doppeln für Endlosschleife
+
+        allTextItems.forEach((text, index) => {
+          const div = document.createElement("div");
+          div.classList.add("text-slide");
+          div.textContent = text;
+
+          if (index < 0) {
+            div.style.color = "var(--wdl)";
+          }
+
+          track2.appendChild(div);
+        });
+      </script>
+
+      <div class="punkte-container">
+        <h2>Punktesystem</h2>
+        <div class="punkte-grid">
+          <!-- Wird per JS automatisch befüllt -->
+        </div>
+      </div>
+
+      <script>
+        const punkteSystem = [
+          { platz: "1. Platz", punkte: 40 },
+          { platz: "2. Platz", punkte: 35 },
+          { platz: "3. Platz", punkte: 31 },
+          { platz: "4. Platz", punkte: 28 },
+          { platz: "5. Platz", punkte: 26 },
+          { platz: "6. Platz", punkte: 24 },
+          { platz: "7. Platz", punkte: 22 },
+          { platz: "8. Platz", punkte: 20 },
+          { platz: "9. Platz", punkte: 18 },
+          { platz: "10. Platz", punkte: 16 },
+          { platz: "11. Platz", punkte: 14 },
+          { platz: "12. Platz", punkte: 12 },
+          { platz: "13. Platz", punkte: 10 },
+          { platz: "14. Platz", punkte: 8 },
+          { platz: "15. Platz", punkte: 6 },
+          { platz: "16. Platz", punkte: 5 },
+          { platz: "17. Platz", punkte: 4 },
+          { platz: "18. Platz", punkte: 3 },
+          { platz: "19. Platz", punkte: 2 },
+          { platz: "20. Platz", punkte: 1 },
+          { platz: "21+ Platz", punkte: 0 },
+          { platz: "FL (80%)", punkte: 1 },
+          { platz: "Pole", punkte: 2 },
+        ];
+
+        const grid = document.querySelector(".punkte-grid");
+        punkteSystem.forEach((eintrag) => {
+          const item = document.createElement("div");
+          item.className = "punkte-item";
+          item.innerHTML = `
+      <div class="punkte-platz">${eintrag.platz}</div>
+      <div class="punkte-wert">${eintrag.punkte} Punkt${
+        eintrag.punkte === 1 ? "" : "e"
+      }</div>
+    `;
+          grid.appendChild(item);
+        });
+      </script>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <span
+          >© 2024-2026 Katzes Racing League. All rights reserved. -
+          <a href="https://katzes-racing-league.de/changelog"
+            >Version: 03.01.00</a
+          >
+          - </span
+        ><a href="https://katzes-racing-league.de/impressum">Impressum</a>
+      </div>
+      <div>
+        <a href="https://discord.gg/2r9wDfKdSB">
+          <img
+            src="../../../resources/pictures/general/socials/discord.png"
+            alt="discord"
+          />
+        </a>
+        <a href="https://twitch.tv/katzesracingleague">
+          <img
+            src="../../../resources/pictures/general/socials/twitch.png"
+            alt="twitch"
+          />
+        </a>
+        <a href="https://youtube.com/@KatzesRacingLeague">
+          <img
+            src="../../../resources/pictures/general/socials/youtube.png"
+            alt="youtube"
+          />
+        </a>
+        <a href="https://instagram.com/katzesracingleague">
+          <img
+            src="../../../resources/pictures/general/socials/instagram.png"
+            alt="instagram"
+          />
+        </a>
+        <a href="https://tiktok.com/@katzesracingleaguef1liga">
+          <img
+            src="../../../resources/pictures/general/socials/tiktok.png"
+            alt="tiktok"
+          />
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

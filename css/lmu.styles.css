@@ -1,0 +1,228 @@
+/* ========== General ========== */
+.year-button:hover {
+  color: var(--lmu);
+}
+.timeline-line {
+  background: var(--lmu);
+}
+.info-box {
+  border: 2px solid var(--lmu);
+}
+.active-dot {
+  background-color: var(--lmu);
+}
+
+/* ========== Features ========== */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 420px;
+  text-align: center;
+}
+.feature-item i {
+  font-size: 70px;
+  color: var(--lmu);
+}
+.feature-item p {
+  font-size: 27px;
+  text-transform: uppercase;
+}
+
+/* ========== Carousel ========== */
+.carousel {
+  position: relative;
+}
+.carousel-btn {
+  background-color: var(--lmu);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.carousel-btn.prev {
+  left: -60px;
+}
+.carousel-btn.next {
+  right: -60px;
+}
+.carousel-track-container {
+  /* TODO: Add*/
+  /* border: 5px solid var(--lmu); */
+}
+.middle-carousel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.headerGP-Ergebnisse {
+  font-size: var(--fontsizeheadline);
+  margin-top: 50px;
+}
+
+/* ========== Team Cards ========== */
+.team-card {
+  padding: 5px 10px;
+  flex: 1 1 350px;
+  max-width: 350px;
+  border-radius: 20px;
+  text-align: center;
+  border-left: 4px solid var(--lmu);
+  border-right: 4px solid var(--lmu);
+}
+
+.team-card h2 {
+  font-size: 30px;
+  color: var(--lmu);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.drivers h2 {
+  font-size: 28px;
+  color: white;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* ========== Buttons ========== */
+.class-button {
+  border: 4px solid var(--lmu);
+}
+#toggle-points-btn {
+  background: transparent;
+  border: 5px solid var(--lmu);
+  color: white;
+  padding: 20px 40px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  font-size: 50px;
+  font-family: var(--fontfamilytext);
+  margin: 40px auto;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* ========== Slideshows ========== */
+.slider-track,
+.slider-track2 {
+  border-top: 5px solid var(--lmu) !important;
+  border-bottom: 5px solid var(--lmu);
+}
+.slider-track2 img {
+  width: 60px;
+  height: auto;
+}
+
+/* ========== Punkte (Points) ========== */
+.punkte-container {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+}
+.punkte-container h2 {
+  font-size: 70px;
+}
+.punkte-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.punkte-item {
+  background: transparent;
+  border: 4px solid var(--lmu);
+  padding: 12px;
+  font-size: 25px;
+  text-transform: uppercase;
+  transition: transform 0.2s ease;
+}
+.punkte-platz {
+  color: white;
+  margin-bottom: 4px;
+}
+.punkte-wert {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+/* ========== F1 Driver Grid ========== */
+.f1-driver-grid a {
+  color: white;
+  text-decoration: none;
+}
+.f1-driver-grid a:hover {
+  color: var(--lmu);
+}
+
+/* ========== Responsive Anpassung für Mobile & Tablet ========== */
+@media (max-width: 1024px) {
+  .middle-carousel .carousel,
+  .middle-carousel .carousel-track-container,
+  .middle-carousel .carousel-track img {
+    width: 100%;
+    height: auto;
+  }
+  .carousel-btn.prev {
+    left: -30px;
+  }
+  .carousel-btn.next {
+    right: -30px;
+  }
+  .punkte-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .punkte-container h2 {
+    font-size: 50px;
+  }
+  .punkte-item {
+    font-size: 20px;
+    padding: 10px;
+  }
+  .punkte-wert {
+    font-size: 18px;
+  }
+  .team-mapping-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .punkte-grid {
+    grid-template-columns: 1fr;
+  }
+  .punkte-container h2 {
+    font-size: 36px;
+  }
+  .punkte-item {
+    font-size: 18px;
+    padding: 8px;
+  }
+  .punkte-wert {
+    font-size: 16px;
+  }
+  .carousel-btn {
+    display: none;
+  }
+}
+
+/* ========== TODO: Remove ========== */
+.carousel,
+.carousel-track-container,
+.carousel-track img {
+  width: 620px;
+  height: 620px;
+}
+.middle-carousel .carousel,
+.middle-carousel .carousel-track-container,
+.middle-carousel .carousel-track img {
+  width: 620px;
+  height: 620px;
+}
