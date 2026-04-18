@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
@@ -12,7 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap"
       rel="stylesheet"
     />
-    
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -25,7 +25,7 @@
   </head>
   <body>
     <header>
-     <nav class="navbar">
+      <nav class="navbar">
         <!-- Logo der Liga -->
         <a href="https://katzes-racing-league.de/">
           <div class="logo">
@@ -59,6 +59,34 @@
                   >Sonntagsliga</a
                 >
               </li>
+              <li class="text3">
+                <a href="https://katzes-racing-league.de/f1/race-director-notes"
+                  >RDN</a
+                >
+              </li>
+              <li class="text3">
+                <a href="https://katzes-racing-league.de/f1/regelwerk"
+                  >Regelwerk</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="lmu-nav" href="https://katzes-racing-league.de/lmu"
+              >KRL LMU LIGA</a
+            >
+            <ul class="dropdown-content sonstiges">
+              <li class="text3">
+                <a
+                  href="https://katzes-racing-league.de/lmu/race-director-notes"
+                  >RDN</a
+                >
+              </li>
+              <li class="text3">
+                <a href="https://katzes-racing-league.de/lmu/regelwerk"
+                  >Regelwerk</a
+                >
+              </li>
             </ul>
           </li>
           <li>
@@ -77,28 +105,12 @@
             <a class="Formel1">Sonstiges</a>
             <ul class="dropdown-content sonstiges">
               <li class="text3">
-                <a href="https://katzes-racing-league.de/race-director-notes"
-                  >RDN</a
-                >
-              </li>
-              <li class="text3">
-                <a href="https://katzes-racing-league.de/regelwerk"
-                  >Regelwerk</a
-                >
-              </li>
-              <li class="text3">
                 <a href="https://katzes-racing-league.de/icons">Icons</a>
               </li>
               <li class="text3">
-                <a href="https://katzes-racing-league.de/krlhelp">KRL Help</a>
+                <a href="https://xoose.de/krl/">Merch Shop</a>
               </li>
-              <li class="text3">
-                <a
-                  href="https://xoose.de/krl/"
-                  >Merch Shop</a
-                >
-              </li>
-               
+
               <li class="text3">
                 <a href="https://paypal.me/katzesracingleague">Spenden</a>
               </li>
@@ -107,41 +119,30 @@
         </ul>
       </nav>
       <script>
-      
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navLinks = document.querySelector(".nav-links");
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
 
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-  });
+        menuToggle.addEventListener("click", () => {
+          navLinks.classList.toggle("open");
+        });
 
-  // Optional: Klick außerhalb schließt das Menü
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest("nav")) {
-      navLinks.classList.remove("open");
-    }
-  });
-  //Scroolbar
-  window.addEventListener('scroll', () => {
-  const scrollTop = window.scrollY;
-  const docHeight = document.body.scrollHeight - window.innerHeight;
-  const scrollPercent = (scrollTop / docHeight) * 100;
-  document.getElementById('progressBar').style.width = scrollPercent + '%';
-});
-
- </script>
-<main> 
-
-</main>
-
-
-
-
-
-
-
-
-
+        // Optional: Klick außerhalb schließt das Menü
+        document.addEventListener("click", (e) => {
+          if (!e.target.closest("nav")) {
+            navLinks.classList.remove("open");
+          }
+        });
+        //Scroolbar
+        window.addEventListener("scroll", () => {
+          const scrollTop = window.scrollY;
+          const docHeight = document.body.scrollHeight - window.innerHeight;
+          const scrollPercent = (scrollTop / docHeight) * 100;
+          document.getElementById("progressBar").style.width =
+            scrollPercent + "%";
+        });
+      </script>
+    </header>
+    <main></main>
     <footer class="footer">
       <div class="container">
         <span

@@ -147,3 +147,9 @@ article.regel-block ul {
     font-size: 0.9rem;
   }
 }
+
+.coming-soon {
+  font-size: 60px;
+  text-align: center;
+  margin-top: 100px;
+}

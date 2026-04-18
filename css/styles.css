@@ -74,6 +74,7 @@
 .Friday,
 .Saturday,
 .Sunday,
+.LMU,
 .WDL,
 .Endurance {
   display: flex;
@@ -85,6 +86,7 @@
 .Friday img,
 .Saturday img,
 .Sunday img,
+.LMU img,
 .WDL img,
 .Endurance img {
   width: 300px;
@@ -228,6 +230,15 @@
   font-size: var(--fontsizeh2);
   text-align: center;
   color: var(--rennleitung);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.überschrift9 {
+  text-align: center;
+  font-size: var(--fontsizeh2);
+  text-align: center;
+  color: var(--lmu);
   margin-bottom: 20px;
   text-transform: uppercase;
 }
