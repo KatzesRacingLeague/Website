@@ -52,8 +52,8 @@
   right: -60px;
 }
 .carousel-track-container {
-  /* TODO: Add*/
-  /* border: 5px solid var(--lmu); */
+  border: 5px solid var(--lmu);
+  border-radius: 20px;
 }
 .middle-carousel {
   width: 100%;
@@ -214,15 +214,10 @@
 }
 
 /* ========== TODO: Remove ========== */
-.carousel,
-.carousel-track-container,
-.carousel-track img {
-  width: 620px;
-  height: 620px;
-}
+
 .middle-carousel .carousel,
 .middle-carousel .carousel-track-container,
 .middle-carousel .carousel-track img {
-  width: 620px;
-  height: 620px;
+  width: fit-content;
+  height: 700px;
 }
