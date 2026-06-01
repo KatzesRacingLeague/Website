@@ -218,6 +218,6 @@
 .middle-carousel .carousel,
 .middle-carousel .carousel-track-container,
 .middle-carousel .carousel-track img {
-  width: fit-content;
+  width: 1200px;
   height: 700px;
 }
