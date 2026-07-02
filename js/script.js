@@ -22,27 +22,25 @@ allImages.forEach((src) => {
 });
 
 const textItems = [
-  "1. Belgien",
-  "2. Niederlande",
-  "3. Bahrain",
-  "4. Mexiko",
-  "5. Brasilien",
-  "6. Aserbaidschan",
-  "7. Saudi Arabien",
-  "8. China",
-  "9. Australien",
-  "10. Singapur",
-  "11. Italien",
-  "12. USA (Texas)",
-  "13. Kanada",
-  "14. Österreich",
-  "15. Abu Dhabi",
-  "16. Imola",
-  "17. Katar",
-  "18. Großbritannien",
-  "19. Ungarn",
-  "20. Japan",
-  "21. Spanien",
+  "1. Bahrain",
+  "2. Australien",
+  "3. Ungarn",
+  "4. USA (Texas)",
+  "5. Miami",
+  "6. Madrid",
+  "7. Italien",
+  "8. Imola",
+  "9. Brasilien",
+  "10. Spanien",
+  "11. Österreich",
+  "12. Belgien",
+  "13. Niederlande",
+  "14. Abu Dhabi",
+  "15. Saudi Arabien",
+  "16. China",
+  "17. Großbritannien",
+  "18. Aserbaidschan",
+  "19. Japan",
 ];
 const track2 = document.getElementById("slider-track2");
 const allTextItems = textItems.concat(textItems); // doppeln für Endlosschleife
@@ -51,7 +49,10 @@ allTextItems.forEach((text, index) => {
   const div = document.createElement("div");
   div.classList.add("text-slide");
   div.textContent = text;
-  div.style.color = "var(--sundaysplit)";
+
+  if (index < 0) {
+    div.style.color = "var(--sundaysplit)";
+  }
 
   track2.appendChild(div);
 });
