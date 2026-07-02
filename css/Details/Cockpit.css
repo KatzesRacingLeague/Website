@@ -28,6 +28,11 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+.image-Audi {
+  max-width: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 .drivers {
   display: flex;
   flex-direction: column;
