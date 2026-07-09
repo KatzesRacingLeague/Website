@@ -50,7 +50,7 @@ allTextItems.forEach((text, index) => {
   div.classList.add("text-slide");
   div.textContent = text;
 
-  if (index < 0) {
+  if (index < 1) {
     div.style.color = "var(--sundaysplit)";
   }
 
