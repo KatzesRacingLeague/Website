@@ -185,13 +185,13 @@
           <h2>Blackline Racing</h2>
           <div class="drivers">
             <div>
-              <h2>J. SHEPPARD</h2>
+              <h2>V. SIMPLY</h2>
             </div>
             <div>
               <h2>J. VAUPEL</h2>
             </div>
             <div>
-              <h2>L. KNAB</h2>
+              <h2>M. OTTEN</h2>
             </div>
           </div>
         </div>
@@ -213,13 +213,13 @@
           <h2>Leopard Motorsport</h2>
           <div class="drivers">
             <div>
+              <h2>F. BERGMANN</h2>
+            </div>
+            <div>
               <h2>F. SCHUSTER</h2>
             </div>
             <div>
               <h2>A. LEHMANN</h2>
-            </div>
-            <div>
-              <h2>M. MEHLER</h2>
             </div>
           </div>
         </div>
@@ -244,10 +244,10 @@
               <h2>U. ROTHENFLUH</h2>
             </div>
             <div>
-              <h2>B. BETSCHART</h2>
+              <h2>H. NORINHA</h2>
             </div>
             <div>
-              <h2>H. NORINHA</h2>
+              <h2>M. LINDNER</h2>
             </div>
           </div>
         </div>
@@ -258,7 +258,7 @@
               <h2>H. RACINGPOTTER</h2>
             </div>
             <div>
-              <h2>K. SANDIKCI</h2>
+              <h2>J. AKRITIDIS</h2>
             </div>
             <div>
               <h2>L. DECKERS</h2>
@@ -311,13 +311,13 @@
           <h2>Team Spica</h2>
           <div class="drivers">
             <div>
-              <h2>J. BAISCHKEL</h2>
-            </div>
-            <div>
               <h2>F. GRUENER</h2>
             </div>
             <div>
               <h2>A. LUCA</h2>
+            </div>
+            <div>
+              <h2>FREI</h2>
             </div>
           </div>
         </div>
@@ -339,13 +339,13 @@
           <h2>Wylde13 Motorsport</h2>
           <div class="drivers">
             <div>
-              <h2>K. CANSEVER</h2>
-            </div>
-            <div>
               <h2>C. MARTIN</h2>
             </div>
             <div>
               <h2>S. VREUND</h2>
+            </div>
+            <div>
+              <h2>FREI</h2>
             </div>
           </div>
         </div>
@@ -369,6 +369,18 @@
                 <img
                   src="/resources/pictures/lmu/standings/DriverTeamStandings_3.png"
                   alt="WM 3"
+                />
+                <img
+                  src="/resources/pictures/lmu/standings/DriverTeamStandings_4.png"
+                  alt="WM 4"
+                />
+                <img
+                  src="/resources/pictures/lmu/standings/DriverTeamStandings_5.png"
+                  alt="WM 5"
+                />
+                <img
+                  src="/resources/pictures/lmu/standings/DriverTeamStandings_6.png"
+                  alt="WM 6"
                 />
               </div>
             </div>
@@ -438,12 +450,27 @@
         const track2 = document.getElementById("slider-track2");
         const allTextItems = textItems.concat(textItems); // doppeln für Endlosschleife
 
+        // Parse date from strings like "1. Belgien - 06.07.26"
+        function parseDateFromText(str) {
+          const m = str.match(/(\d{1,2})\.(\d{1,2})\.(\d{2,4})/);
+          if (!m) return null;
+          const day = parseInt(m[1], 10);
+          const month = parseInt(m[2], 10);
+          let year = parseInt(m[3], 10);
+          if (year < 100) year += 2000; // interpret 2-digit years as 20xx
+          return new Date(year, month - 1, day);
+        }
+
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
         allTextItems.forEach((text, index) => {
           const div = document.createElement("div");
           div.classList.add("text-slide");
           div.textContent = text;
 
-          if (index < 7) {
+          const date = parseDateFromText(text);
+          if (date && date < today) {
             div.style.color = "var(--wdl)";
           }
 
